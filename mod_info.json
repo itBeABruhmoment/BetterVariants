@@ -1,0 +1,15 @@
+{
+    "id": "better_variants",
+    "name": "Better Variants",
+    "author": "itBeABruhmoment",
+    "utility": "false",
+    "version": "0.1",
+    "description": "Make variants better",
+    "gameVersion": "0.95.1a-RC6",
+    "jars":["jars/BetterVariantsProj/BetterVariantsProj.jar"],
+    "modPlugin":"better_variants.scripts.BetterVariantsModPlugin",
+    "replace":[
+    	"data/world/factions/default_ship_roles.json",
+    	"data/world/factions/luddic_church.faction",
+    ]
+}
