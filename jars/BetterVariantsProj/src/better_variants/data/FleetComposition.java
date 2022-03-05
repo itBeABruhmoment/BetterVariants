@@ -12,6 +12,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 
 public class FleetComposition {
     private static final Logger log = Global.getLogger(better_variants.data.FleetComposition.class);
@@ -91,7 +92,7 @@ public class FleetComposition {
         try {
             defaultFleetWidePersonality = fleetDataJson.getString("defaultFleetWidePersonality");
         } catch(Exception e) {
-            defaultFleetWidePersonality = null;
+            defaultFleetWidePersonality = Personalities.STEADY;
         }
         if(defaultFleetWidePersonality != null && !CommonStrings.PERSONALITIES.contains(defaultFleetWidePersonality)) {
             throw new Exception(loadedFileInfo + " has invalid personality in \"defaultFleetWidePersonality\" field");

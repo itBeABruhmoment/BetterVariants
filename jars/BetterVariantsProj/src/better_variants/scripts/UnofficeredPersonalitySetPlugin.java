@@ -93,7 +93,6 @@ public class UnofficeredPersonalitySetPlugin implements EveryFrameCombatPlugin {
 
     public static void innitDefaultAggressionValues()
     {
-        log.debug("resetting faction aggression to defaults");
         FACTION_DEFAULT_AGRESSION = new HashMap<String, Integer>();
         for(FactionAPI faction : Global.getSector().getAllFactions()) {
             FACTION_DEFAULT_AGRESSION.put(faction.getId(), faction.getDoctrine().getAggression());
