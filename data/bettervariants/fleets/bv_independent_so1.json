@@ -1,6 +1,6 @@
 {
 	"fleetDataId":"bv_independent_so1",
-	"spawnWeight":10,
+	"spawnWeight":50,
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",

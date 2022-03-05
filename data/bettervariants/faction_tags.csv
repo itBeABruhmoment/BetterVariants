@@ -1,12 +1,12 @@
 factionID,fleets,specialFleetSpawnRate,tags
-hegemony,"bv_hegemony_lowtech, bv_hegemony_xiv, bv_hegemony_so",0.8,no_autofit
-independent,"bv_independent_so1, bv_independent_ranged",0.8,no_autofit
-knights_of_ludd,,0.8,no_autofit
-lions_guard,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.8,no_autofit
-luddic_church,bv_luddic_church_carrier,0.8,no_autofit
+hegemony,"bv_hegemony_lowtech, bv_hegemony_xiv, bv_hegemony_so",0.6,no_autofit
+independent,"bv_independent_so1, bv_independent_ranged",0.5,no_autofit
+knights_of_ludd,bv_luddic_church_carrier,0.5,no_autofit
+lions_guard,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.5,no_autofit
+luddic_church,bv_luddic_church_carrier,0.3,no_autofit
 luddic_path,,0.8,no_autofit
-mercenary,"bv_independent_so1, bv_independent_ranged",0.8,no_autofit
-persean,"bv_persian_ranged, bv_persian_so",0.8,no_autofit
-pirates,bv_pirates_salvage,0.9,no_autofit
-sindrian_diktat,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.8,no_autofit
+mercenary,"bv_independent_so1, bv_independent_ranged",0.5,no_autofit
+persean,"bv_persian_ranged, bv_persian_so",0.5,no_autofit
+pirates,bv_pirates_salvage,0.5,no_autofit
+sindrian_diktat,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.5,no_autofit
 tritachyon,"bv_tritachyon_wolfpack1, bv_tritachyon_ranged, bv_tritachyon_so, bv_tritachyon_regular",0.8,no_autofit
