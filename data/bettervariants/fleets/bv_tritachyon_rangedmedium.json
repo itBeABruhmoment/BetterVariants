@@ -1,6 +1,6 @@
 {
 	"fleetDataId":"bv_tritachyon_ranged",
-	"spawnWeight":1000,
+	"spawnWeight":10,
 	"minDP":70,
 	"maxDP":400,
 	

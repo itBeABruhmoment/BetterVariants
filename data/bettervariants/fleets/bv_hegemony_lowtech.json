@@ -1,6 +1,6 @@
 {
 	"fleetDataId":"bv_hegemony_lowtech",
-	"spawnWeight":10,
+	"spawnWeight":40,
 	"minDP":40,
 	"maxDP":400,
 	
