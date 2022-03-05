@@ -6,3 +6,4 @@ A Starsector mod that aims to make ai fleets more challenging and interesting to
 * Allowing special fleets from this mod that only spawn in a specific type of fleet (ie. nexerlin revenge fleets)
 * Bounties that spawn special fleets from this mod
 * A framework that allows other mods to use this mod's features
+* Some settings for customizability
