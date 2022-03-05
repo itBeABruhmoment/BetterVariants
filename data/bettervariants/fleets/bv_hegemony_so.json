@@ -1,6 +1,6 @@
 {
 	"fleetDataId":"bv_hegemony_so",
-	"spawnWeight":40,
+	"spawnWeight":20,
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
