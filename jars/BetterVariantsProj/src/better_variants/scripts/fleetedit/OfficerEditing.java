@@ -158,9 +158,9 @@ public class OfficerEditing {
                 return;
             }
 
-            //if(fleetCompId != null) {
-            //    fleetMember.getCaptain().setPersonality(FleetBuildData.FLEET_DATA.get(fleetCompId).defaultFleetWidePersonality);
-            //}
+            if(fleetCompId != null) {
+                fleetMember.getCaptain().setPersonality(FleetBuildData.FLEET_DATA.get(fleetCompId).defaultFleetWidePersonality);
+            }
 
             Vector<String> skillEditQueue = new Vector<String>(10);
             for(String tag : tags) {
