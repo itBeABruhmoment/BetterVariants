@@ -50,6 +50,11 @@ import org.apache.log4j.Logger;
 
 public class NoAutofitFleetInflater extends DefaultFleetInflater 
 {
+    private static final Logger log = Global.getLogger(better_variants.scripts.NoAutofitFleetInflater.class);
+    static {
+        log.setLevel(Level.ALL);
+    }
+
     private Random rand;
 
     NoAutofitFleetInflater(DefaultFleetInflaterParams params) {
