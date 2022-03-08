@@ -68,8 +68,12 @@ public class NoAutofitFleetInflater extends DefaultFleetInflater
         quality = quality + (0.05f * quality); // noticed a abnormal amount dmods in factions such as diktat
         for(FleetMemberAPI memberAPI : fleet.getMembersWithFightersCopy()) {
             if(!memberAPI.isFighterWing() && !memberAPI.isMothballed() && !memberAPI.isStation()) {
+                int numExistingDmods = DModManager.getNumDMods(memberAPI.getVariant());
                 if(quality <= 0.0f) {
-                    DModManager.addDMods(memberAPI, true, 5, rand);
+                    int numDmods = 5 - numExistingDmods;
+                    if(numDmods > 0) {
+                        DModManager.addDMods(memberAPI, true, numDmods, rand);
+                    } // otherwise do nothing
                 } else if(quality <= 1.0f) {
                     int numDmods = Math.round(5.0f - (quality + (rand.nextFloat() / 5.0f - 0.1f)) * 5.0f);
                     if(numDmods < 0) {
@@ -78,7 +82,10 @@ public class NoAutofitFleetInflater extends DefaultFleetInflater
                     if(numDmods > 5) {
                         numDmods = 5;
                     }
-                    DModManager.addDMods(memberAPI, true, numDmods, rand);
+                    numDmods = numDmods - numExistingDmods;
+                    if(numDmods > 0) {
+                        DModManager.addDMods(memberAPI, true, numDmods, rand);
+                    }
                 } // otherwise apply no dmods
             }
         }
