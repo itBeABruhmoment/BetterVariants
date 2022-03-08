@@ -7,3 +7,4 @@ A Starsector mod that aims to make ai fleets more challenging and interesting to
 * Bounties that spawn special fleets from this mod
 * A framework that allows other mods to use this mod's features
 * Some settings for customizability
+* Tweaks to special fleet variants
