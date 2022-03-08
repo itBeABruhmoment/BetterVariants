@@ -65,7 +65,7 @@ public class NoAutofitFleetInflater extends DefaultFleetInflater
     public void inflate(CampaignFleetAPI fleet)
     {
         float quality = getQuality();
-        quality = quality + (0.05f * quality); // noticed a abnormal amount dmods in factions such as diktat
+        quality = quality + (0.05f * quality); // noticed an abnormal amount dmods in factions such as diktat
         for(FleetMemberAPI memberAPI : fleet.getMembersWithFightersCopy()) {
             if(!memberAPI.isFighterWing() && !memberAPI.isMothballed() && !memberAPI.isStation()) {
                 int numExistingDmods = DModManager.getNumDMods(memberAPI.getVariant());
