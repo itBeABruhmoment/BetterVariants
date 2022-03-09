@@ -120,7 +120,6 @@ public class FleetRandomizer {
     public static void modify(CampaignFleetAPI fleet)
     {
         // disable autofit
-        System.out.println("start mod");
         String factionId = fleet.getFaction().getId();
 
         FleetInflater inflater = fleet.getInflater();
@@ -152,7 +151,6 @@ public class FleetRandomizer {
         }
 
         FleetCompEditing.setProperCr(fleet);
-        System.out.println("end mod");
     }
 
     public static boolean alreadyModified(CampaignFleetAPI fleet)
