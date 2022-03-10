@@ -1,6 +1,7 @@
 package better_variants.data;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.io.IOException;
 
 import org.json.JSONArray;
@@ -12,6 +13,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 
 public class FleetComposition {
@@ -20,6 +22,13 @@ public class FleetComposition {
         log.setLevel(Level.ALL);
     }
 
+    public static final HashSet<String> DEFAULT_TARGET_FLEET_TYPES = new HashSet<String>() {{
+        add(FleetTypes.MERC_ARMADA);    add(FleetTypes.MERC_BOUNTY_HUNTER); add(FleetTypes.MERC_PATROL);
+        add(FleetTypes.MERC_PRIVATEER); add(FleetTypes.MERC_SCOUT);         add(FleetTypes.PATROL_LARGE);
+        add(FleetTypes.PATROL_MEDIUM);  add(FleetTypes.PATROL_SMALL);       add(FleetTypes.TASK_FORCE);
+    }};
+
+    public HashSet<String> targetFleetTypes;
     public AlwaysBuildMember[] alwaysInclude;
     public FleetPartition[] partitions;
     public String id;
@@ -96,6 +105,28 @@ public class FleetComposition {
         }
         if(defaultFleetWidePersonality != null && !CommonStrings.PERSONALITIES.contains(defaultFleetWidePersonality)) {
             throw new Exception(loadedFileInfo + " has invalid personality in \"defaultFleetWidePersonality\" field");
+        }
+
+        // read "targetFleetTypes" field
+        JSONArray targetFleetTypesJson = null;
+        try {
+            targetFleetTypesJson  = fleetDataJson.getJSONArray("targetFleetTypes");
+        } catch(Exception e) {
+            log.debug(loadedFileInfo + " has no \"targetFleetTypes\" field, setting to some default value");
+            targetFleetTypesJson = null;
+        }
+
+        if(targetFleetTypesJson != null) {
+            targetFleetTypes = new HashSet<String>();
+            for(int i = 0; i < targetFleetTypesJson.length(); i++) {
+                try {
+                    targetFleetTypes.add(targetFleetTypesJson.getString(i));
+                } catch(Exception e) {
+                    throw new Exception(loadedFileInfo + " could not have element in \"targetFleetTypes\" field read");
+                }
+            }
+        } else {
+            targetFleetTypes = DEFAULT_TARGET_FLEET_TYPES;
         }
 
         // read partitions data field

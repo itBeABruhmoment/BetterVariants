@@ -74,6 +74,15 @@ public class FleetRandomizer {
     private static HashMap<String, FleetInflater> inflators = new HashMap<String, FleetInflater>();
     private static final Random rand = new Random();
 
+    private static String getFleetType(CampaignFleetAPI fleet)
+    {
+        String type = fleet.getMemoryWithoutUpdate().getString(MemFlags.MEMORY_KEY_FLEET_TYPE);
+        if(type == null) {
+            type = "";
+        }
+        return type;
+    }
+
     private static boolean allowModificationFleet(CampaignFleetAPI fleet)
     {
         
@@ -89,11 +98,6 @@ public class FleetRandomizer {
                 log.debug("refused to modify because fleet had the flag " + flag);
                 return false;
             }
-        }
-
-        // check if fleet is of modifyable type
-        if(!MODIFYABLE_FLEET_WHITELIST.contains(fleet.getMemoryWithoutUpdate().getString(MemFlags.MEMORY_KEY_FLEET_TYPE))) {
-            return false;
         }
 
         return true;
@@ -139,7 +143,7 @@ public class FleetRandomizer {
             return;
         }
 
-        String fleetCompId = FleetCompEditing.editFleet(fleet, fleet.getFaction().getId());
+        String fleetCompId = FleetCompEditing.editFleet(fleet, fleet.getFaction().getId(), getFleetType(fleet));
         if(fleetCompId != null) {
             fleet.getMemoryWithoutUpdate().set(CommonStrings.FLEET_VARIANT_KEY, fleetCompId);
         }
