@@ -284,21 +284,20 @@ public class FleetCompEditing {
         }
     }
 
-    private static Vector<FleetComposition> getValidFleetChoices(FleetInfo info, String factionId)
+    private static Vector<FleetComposition> getValidFleetChoices(FleetInfo info, String factionId, String fleetType)
     {
         Vector<FleetComposition> fleetComps = new Vector<FleetComposition>(5);
         for(String compId : FactionData.FACTION_DATA.get(factionId).customFleetIds) {
-            if(!FleetBuildData.FLEET_DATA.containsKey(compId)) {
-            }
             FleetComposition comp = FleetBuildData.FLEET_DATA.get(compId);
-            if(comp.maxDP >= info.originalDP && info.originalDP >= comp.minDP) {
+            if(comp != null && comp.maxDP >= info.originalDP && info.originalDP >= comp.minDP 
+            && comp.targetFleetTypes.contains(fleetType)) {
                 fleetComps.add(comp);
             }
         }
         return fleetComps;
     }
 
-    private static FleetComposition pickFleet(FleetInfo info, String factionId)
+    private static FleetComposition pickFleet(FleetInfo info, String factionId, String fleetType)
     {
         if(!FactionData.FACTION_DATA.containsKey(factionId)) {
             log.debug(factionId + " not registered");
@@ -309,7 +308,7 @@ public class FleetCompEditing {
             return null;
         }
 
-        Vector<FleetComposition> validFleetComps = getValidFleetChoices(info, factionId);
+        Vector<FleetComposition> validFleetComps = getValidFleetChoices(info, factionId, fleetType);
 
         if(validFleetComps.size() == 0) {
             return null;
@@ -330,7 +329,7 @@ public class FleetCompEditing {
         return validFleetComps.get(validFleetComps.size() - 1);
     }
 
-    public static String editFleet(CampaignFleetAPI fleetAPI, String factionId) 
+    public static String editFleet(CampaignFleetAPI fleetAPI, String factionId, String fleetType) 
     {
 
         log.debug("editing " + fleetAPI.getFullName());
@@ -341,9 +340,9 @@ public class FleetCompEditing {
             return null;
         }
 
-        FleetComposition compInfo = pickFleet(info, factionId);
+        FleetComposition compInfo = pickFleet(info, factionId, fleetType);
         if(compInfo == null) {
-            log.debug("edit failed, no elligible fleets found");
+            log.debug("fleet not edited");
             return null;
         }
 

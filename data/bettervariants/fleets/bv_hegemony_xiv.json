@@ -3,6 +3,7 @@
 	"spawnWeight":30,
 	"minDP":40,
 	"maxDP":400,
+	"targetFleetTypes": ["patrolLarge", "patrolMedium"],
 	
 	"fleetPartitions": [
 		{
