@@ -25,6 +25,7 @@ import org.apache.log4j.Logger;
 import better_variants.data.BetterVariantsTags;
 import better_variants.data.CommonStrings;
 import better_variants.data.FactionData;
+import better_variants.data.SettingsData;
 import better_variants.data.VariantData;
 import better_variants.scripts.fleetedit.FleetCompEditing;
 import better_variants.scripts.fleetedit.OfficerEditing;
@@ -123,7 +124,8 @@ public class FleetRandomizer {
         String factionId = fleet.getFaction().getId();
 
         FleetInflater inflater = fleet.getInflater();
-        if(FactionData.FACTION_DATA.get(factionId) != null 
+        if(!SettingsData.autofitEnabled()
+        && FactionData.FACTION_DATA.get(factionId) != null 
         && FactionData.FACTION_DATA.get(factionId).hasTag("no_autofit")
         && inflater instanceof DefaultFleetInflater
         && !(inflater instanceof NoAutofitFleetInflater)) {
@@ -143,10 +145,13 @@ public class FleetRandomizer {
         }
 
         // edit officers of fleet
-        for(FleetMemberAPI member : fleet.getMembersWithFightersCopy()) {
-            String variantId = isRegisteredVariant(member);
-            if(variantId != null) {
-                OfficerEditing.editOfficer(member, variantId, fleetCompId);
+        if(SettingsData.OfficerEditingEnabled())
+        {
+            for(FleetMemberAPI member : fleet.getMembersWithFightersCopy()) {
+                String variantId = isRegisteredVariant(member);
+                if(variantId != null) {
+                    OfficerEditing.editOfficer(member, variantId, fleetCompId);
+                }
             }
         }
 

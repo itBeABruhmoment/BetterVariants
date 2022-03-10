@@ -4,6 +4,7 @@ import better_variants.data.FactionData;
 import better_variants.data.VariantData;
 import better_variants.data.CommonStrings;
 import better_variants.data.FleetBuildData;
+import better_variants.data.SettingsData;
 
 import java.io.IOException;
 import javax.xml.bind.JAXBException;
@@ -26,6 +27,8 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
     @Override
     public void onApplicationLoad() throws IOException, JSONException, Exception
     {
+        log.debug(CommonStrings.MOD_ID + ": loading settings");
+        SettingsData.loadSettings();
         log.debug(CommonStrings.MOD_ID + ": loading faction data");
         FactionData.loadData();
         log.debug(CommonStrings.MOD_ID + ": loading variant data");
