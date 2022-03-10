@@ -98,6 +98,8 @@ public class FactionData {
             if(specialFleetSpawnRate < 0 || specialFleetSpawnRate > 1) {
                 throw new Exception(CommonStrings.MOD_ID + ": the faction " + factionId + " has invalid number in \"specialFleetSpawnRateRaw\" field");
             }
+            // apply a setting
+            specialFleetSpawnRate *= SettingsData.getSpecialFleetSpawnMult();
 
             // read tags
             String tagsRaw = row.optString(CSV_FOURTH_COLUMN_NAME);
