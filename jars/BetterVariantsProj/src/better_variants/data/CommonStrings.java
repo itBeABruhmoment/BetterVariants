@@ -17,6 +17,15 @@ public class CommonStrings {
         add(Personalities.AGGRESSIVE);  add(Personalities.CAUTIOUS); add(Personalities.RECKLESS);
         add(Personalities.STEADY);      add(Personalities.TIMID);
     }};
+    public static final String NEX_VENGANCE_FLEET = "vengeanceFleet";
+    public static final String NEX_INVASION_FLEET = "exerelinInvasionFleet";
+    public static final String NEX_INVASION_SUPPORT_FLEET = "exerelinInvasionSupportFleet";
+    public static final String NEX_SUPPRESSION_FLEET = "nex_suppressionFleet";
+    public static final String NEX_SPECIAL_FORCES_FLEET = "nex_specialForces";
+    public static final String NEX_RELIEF_FLEET = "nex_reliefFleet";
+    public static final String NEX_RESPONSE_FLEET =  "exerelinResponseFleet";
+    public static final String NEX_VULTURE_FLEET =  "nex_vultureFleet";
+    public static final String NEX_MINING_FLEET =  "exerelinMiningFleet";
 
     private CommonStrings() {}
 }

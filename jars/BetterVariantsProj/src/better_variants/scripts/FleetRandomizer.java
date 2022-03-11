@@ -63,14 +63,7 @@ public class FleetRandomizer {
         add(MemFlags.ENTITY_MISSION_IMPORTANT); add(MemFlags.MEMORY_KEY_MISSION_IMPORTANT); add(MemFlags.STORY_CRITICAL);
         add(MemFlags.STATION_BASE_FLEET);       add(MemFlags.STATION_FLEET);
     }};
-    private static final HashSet<String> MODIFYABLE_FLEET_WHITELIST =  new HashSet<String>() {{
-        add(FleetTypes.INSPECTION_FLEET); add(FleetTypes.MERC_ARMADA); add(FleetTypes.MERC_BOUNTY_HUNTER); add(FleetTypes.MERC_PATROL); 
-        add(FleetTypes.MERC_SCOUT);       add(FleetTypes.PATROL_LARGE);add(FleetTypes.PATROL_MEDIUM);      add(FleetTypes.PATROL_SMALL);
-        add(FleetTypes.PERSON_BOUNTY_FLEET);add(FleetTypes.TASK_FORCE);
-        /*nex stuff*/
-        add("vengeanceFleet");            add("exerelinInvasionFleet");add("exerelinInvasionSupportFleet");add("nex_suppressionFleet");
-        add("nex_specialForces");         add("nex_reliefFleet");      add("exerelinResponseFleet");  
-    }};
+    
     private static HashMap<String, FleetInflater> inflators = new HashMap<String, FleetInflater>();
     private static final Random rand = new Random();
 
