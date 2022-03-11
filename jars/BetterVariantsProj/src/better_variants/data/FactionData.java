@@ -29,6 +29,7 @@ public class FactionData {
     private static final String CSV_SECOND_COLUMN_NAME = "fleets";
     private static final String CSV_THIRD_COLUMN_NAME = "specialFleetSpawnRate";
     private static final String CSV_FOURTH_COLUMN_NAME = "tags";
+    private static final String CSV_FIFTH_COLUMN_NAME = "specialFleetSpawnRateOverrides";
 
     private static boolean hasDuplicate(String original, Vector<String> strings)
     {
@@ -113,6 +114,9 @@ public class FactionData {
                 throw new Exception(CommonStrings.MOD_ID + ": the faction " + factionId + " has duplicate tags. Remove them");
             }
 
+            // read specialFleetSpawnRateOverrides
+            
+
             FACTION_DATA.put(factionId, new FactionConfig(tagsHash, fleetIds, specialFleetSpawnRate));
         }
         
@@ -120,6 +124,7 @@ public class FactionData {
 
     public static class FactionConfig
     {
+        public final HashMap<String, Double> specialFleetSpawnRateOverrides;
         public final HashSet<String> tags;
         public final Vector<String> customFleetIds;
         public final double specialFleetSpawnRate;
@@ -129,11 +134,13 @@ public class FactionData {
             return tags.contains(tag);
         }
 
-        FactionConfig(HashSet<String> Tags, Vector<String> CustomFleetIds, double SpecialFleetSpawnRate)
+        FactionConfig(HashSet<String> Tags, Vector<String> CustomFleetIds, double SpecialFleetSpawnRate, 
+        HashMap<String, Double> SpecialFleetSpawnRateOverrides)
         {
             tags = Tags;
             customFleetIds = CustomFleetIds;
             specialFleetSpawnRate = SpecialFleetSpawnRate;
+            specialFleetSpawnRateOverrides = SpecialFleetSpawnRateOverrides;
         }
 
         @Override
