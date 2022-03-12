@@ -130,6 +130,10 @@ public class FleetRandomizer {
         }
 
         log.debug("trying to modify " + fleet.getFullName());
+        if(fleet.getMemoryWithoutUpdate().contains(HAS_BEEN_MODIFYED_KEY)) {
+            return;
+        }
+
         fleet.getMemoryWithoutUpdate().set(HAS_BEEN_MODIFYED_KEY, true);
         if(!allowModificationFleet(fleet)) {
             log.debug("modification barred");
