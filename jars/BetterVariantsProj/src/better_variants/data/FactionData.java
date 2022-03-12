@@ -84,6 +84,8 @@ public class FactionData {
                 continue;
             }
 
+            //log.debug(CommonStrings.MOD_ID + ": loading data for " + factionId);
+
             // read custom fleets the faction can spawn
             String fleetRaw = row.optString(CSV_SECOND_COLUMN_NAME);
             Vector<String> fleetIds = processTags(fleetRaw);
@@ -115,9 +117,31 @@ public class FactionData {
             }
 
             // read specialFleetSpawnRateOverrides
+            HashMap<String, Double> weightOverrides = new HashMap<String, Double>();
+            String overridesRaw = row.optString(CSV_FIFTH_COLUMN_NAME);
+            if(!overridesRaw.equals("")) {
+                JSONObject weightOverridesJson = null;
+                try {
+                    weightOverridesJson = new JSONObject("{ "+ overridesRaw + " }");
+                } catch(Exception e) {
+                    throw new Exception(CommonStrings.MOD_ID + ": the faction " + factionId + " has impropery formatted " + CSV_FIFTH_COLUMN_NAME);
+                }
+                if(weightOverridesJson != null) {
+                    for(String key : JSONObject.getNames(weightOverridesJson)) {
+                        double weight = specialFleetSpawnRate;
+                        try {
+                            weight = weightOverridesJson.getDouble(key);
+                        } catch(Exception e) {
+                            throw new Exception(CommonStrings.MOD_ID + ": the faction " + factionId + " has impropery formatted double in " + CSV_FIFTH_COLUMN_NAME);
+                        }
+                        weightOverrides.put(key, weight);
+                    }
+                }
+            }
             
 
-            FACTION_DATA.put(factionId, new FactionConfig(tagsHash, fleetIds, specialFleetSpawnRate));
+            FACTION_DATA.put(factionId, new FactionConfig(tagsHash, fleetIds, specialFleetSpawnRate, weightOverrides));
+            //log.debug(FACTION_DATA.get(factionId).toString());
         }
         
     }
@@ -146,17 +170,25 @@ public class FactionData {
         @Override
         public String toString() {
             String str = "";
+
+            str += "tags: \n";
             for(String tag : tags) {
-                str += tag + " ";
+                str += tag + ", ";
             }
             str += "\n";
 
-            for(String id : customFleetIds) {
-                str += id + " ";
+            str += "fleetIds\n";
+            for(String fleet : customFleetIds) {
+                str += fleet + " ,";
             }
             str += "\n";
 
-            str += specialFleetSpawnRate + "\n";
+
+            str += "weight: " + specialFleetSpawnRate + "\n";
+            str += "weight overrides\n";
+            for(String key : specialFleetSpawnRateOverrides.keySet()) {
+                str += "key: " + key + " weight: " + specialFleetSpawnRateOverrides.get(key) + ", ";
+            }
 
             return str;
         }
