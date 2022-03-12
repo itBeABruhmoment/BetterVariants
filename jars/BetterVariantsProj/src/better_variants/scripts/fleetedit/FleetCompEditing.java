@@ -309,6 +309,11 @@ public class FleetCompEditing {
         }
 
         Vector<FleetComposition> validFleetComps = getValidFleetChoices(info, factionId, fleetType);
+        String info1 = "";
+        for(FleetComposition comp : validFleetComps) {
+            info1 += comp.id + " " + comp.spawnWeight + ", ";
+        }
+        log.debug(info1);
 
         if(validFleetComps.size() == 0) {
             return null;
@@ -319,8 +324,10 @@ public class FleetCompEditing {
         for(FleetComposition comp : validFleetComps) {
             totalWeightsSum += comp.spawnWeight;
         }
+        log.debug("rand: " + random + " weightSum: " + totalWeightsSum);
         double runningWeightsSum = 0;
         for(FleetComposition comp : validFleetComps) {
+            log.debug("add: " + comp.spawnWeight / totalWeightsSum);
             runningWeightsSum += comp.spawnWeight / totalWeightsSum;
             if(runningWeightsSum > random) {
                 return comp;
