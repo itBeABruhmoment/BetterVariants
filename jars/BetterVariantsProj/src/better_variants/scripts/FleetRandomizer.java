@@ -129,11 +129,12 @@ public class FleetRandomizer {
             fleet.setInflater(new NoAutofitFleetInflater((DefaultFleetInflater) inflater, rand));
         }
 
-        log.debug("trying to modify " + fleet.getFullName());
+        
         if(fleet.getMemoryWithoutUpdate().contains(HAS_BEEN_MODIFYED_KEY)) {
             return;
         }
 
+        log.debug("trying to modify " + fleet.getFullName());
         fleet.getMemoryWithoutUpdate().set(HAS_BEEN_MODIFYED_KEY, true);
         if(!allowModificationFleet(fleet)) {
             log.debug("modification barred");
