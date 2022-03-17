@@ -8,6 +8,7 @@ import java.util.Queue;
 import java.util.Random;
 import java.util.Vector;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Collections;
 
@@ -23,6 +24,7 @@ import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
@@ -42,6 +44,7 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.campaign.FleetInflater;
+import com.fs.starfarer.api.plugins.impl.CoreAutofitPlugin;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -49,6 +52,8 @@ import org.apache.log4j.Logger;
 public class FleetCompEditing {
     private static final int MAX_OVERBUDGET = 3;
     private static final Random rand = new Random();
+    private static final String[] FALLBACK_HULLMODS = {"hardenedshieldemitter", "fluxdistributor", 
+    "fluxbreakers", "reinforcedhull", "targetingunit", "solar_shielding"};
 
     private static final Logger log = Global.getLogger(better_variants.scripts.fleetedit.FleetCompEditing.class);
     static {
@@ -220,6 +225,32 @@ public class FleetCompEditing {
         Collections.sort(combatShips, new SortByDP());
         Collections.sort(civilianShips, new SortByDP());
 
+        // add smods
+        if(info.averageSmods > 0.1)
+        {
+            // kind of a placeholder smodding function
+            log.debug("adding smods");
+            for(FleetMemberAPI member : combatShips) {
+                int numSModsToAdd = Math.round((float)(info.averageSmods + rand.nextDouble() * 0.5));
+                ShipVariantAPI variant  = member.getVariant();
+
+                Collection<String> hullMods = variant.getNonBuiltInHullmods();
+
+                int start = rand.nextInt() & Integer.MAX_VALUE; // get positive int
+                start = start % FALLBACK_HULLMODS.length;
+                int numHullModsAdded = 0;
+                for(int i = 0; i < FALLBACK_HULLMODS.length && numHullModsAdded < numSModsToAdd; i++) {
+                    int index = (start + i) % FALLBACK_HULLMODS.length;
+                    if(!hullMods.contains(FALLBACK_HULLMODS[index])) {
+                        variant.addPermaMod(FALLBACK_HULLMODS[index], true);
+                        numHullModsAdded++;
+                    }
+                }
+    
+            }
+        }
+
+
         // add ships to fleet
         for(FleetMemberAPI member : combatShips) {
             //RepairTrackerAPI repairTracker = member.getRepairTracker();
@@ -229,6 +260,10 @@ public class FleetCompEditing {
         for(FleetMemberAPI member : civilianShips) {
             //RepairTrackerAPI repairTracker = member.getRepairTracker();
             //repairTracker.setCR(0.7f);
+            fleetAPI.getFleetData().addFleetMember(member);
+        }
+        for(FleetMemberAPI member : info.mothballedShips)
+        {
             fleetAPI.getFleetData().addFleetMember(member);
         }
     }
@@ -241,7 +276,9 @@ public class FleetCompEditing {
         float totalDp = 0;
         Vector<FleetMemberAPI> mothballedShips = new Vector<FleetMemberAPI>(5);
         int numShips = 0;
+        int numSMods = 0;
         boolean isStationFleet = false;
+
 
         // count dp, count dmods and save officers
         List<FleetMemberAPI> members = fleetAPI.getMembersWithFightersCopy();
@@ -255,10 +292,13 @@ public class FleetCompEditing {
             } else {
                 officers.add(member.getCaptain());
                 totalDp += member.getBaseDeploymentCostSupplies();
+                numShips++;
+                numSMods += member.getVariant().getSMods().size();
             }
         }
 
-        return new FleetInfo(captain, officers, Math.round(totalDp), mothballedShips, isStationFleet);
+        return new FleetInfo(captain, officers, Math.round(totalDp), mothballedShips, 
+        isStationFleet, ((double)numSMods) / numShips);
     }
 
     // delete all members in fleet
@@ -341,6 +381,7 @@ public class FleetCompEditing {
 
         log.debug("editing " + fleetAPI.getFullName());
         FleetInfo info = getInfo(fleetAPI);
+        log.debug(info.toString());
 
         if(info.isStationFleet) {
             log.debug("edit failed, station");
@@ -375,20 +416,23 @@ public class FleetCompEditing {
         public final int originalDP;
         public final Vector<FleetMemberAPI> mothballedShips;
         public final boolean isStationFleet;
+        public final double averageSmods;
 
-        public FleetInfo(PersonAPI Captain, Vector<PersonAPI> Officers, int TotalDp, Vector<FleetMemberAPI> MothballedShips, boolean IsStationFleet)
+        public FleetInfo(PersonAPI Captain, Vector<PersonAPI> Officers, int TotalDp, 
+        Vector<FleetMemberAPI> MothballedShips, boolean IsStationFleet, double AverageSmods)
         {
             captain = Captain;
             officers = Officers;
             originalDP = TotalDp;
             mothballedShips = MothballedShips;
             isStationFleet = IsStationFleet;
+            averageSmods = AverageSmods;
         }
 
         @Override
         public String toString()
         {
-            return "cap: " + captain + " officers: " + officers + " DP: " + originalDP;
+            return "cap: " + captain + " officers: " + officers + " DP: " + originalDP + " smods: " + averageSmods;
         }
     }
 
