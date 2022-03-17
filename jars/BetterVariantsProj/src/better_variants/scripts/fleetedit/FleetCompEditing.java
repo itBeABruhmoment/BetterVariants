@@ -35,6 +35,7 @@ import better_variants.data.CommonStrings;
 import better_variants.data.FactionData;
 import better_variants.data.FleetBuildData;
 import better_variants.data.VariantData;
+import better_variants.data.FactionData.FactionConfig;
 import better_variants.data.FleetComposition;
 import better_variants.data.FleetPartition;
 import better_variants.data.FleetPartitionMember;
@@ -344,7 +345,16 @@ public class FleetCompEditing {
             return null;
         }
 
-        if(!(FactionData.FACTION_DATA.get(factionId).specialFleetSpawnRate > rand.nextDouble())) {
+        // get correct special fleet spawn rate
+        double specialFleetSpawnRate = 0.0;
+        FactionConfig config = FactionData.FACTION_DATA.get(factionId);
+        if(config.specialFleetSpawnRateOverrides.containsKey(fleetType)) {
+            specialFleetSpawnRate = config.specialFleetSpawnRateOverrides.get(fleetType);
+        } else {
+            specialFleetSpawnRate = config.specialFleetSpawnRate;
+        }
+
+        if(specialFleetSpawnRate < rand.nextDouble()) {
             return null;
         }
 
