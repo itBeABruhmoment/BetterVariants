@@ -229,7 +229,7 @@ public class FleetCompEditing {
         if(info.averageSmods > 0.1)
         {
             // kind of a placeholder smodding function
-            log.debug("adding smods");
+            //log.debug("adding smods");
             for(FleetMemberAPI member : combatShips) {
                 int numSModsToAdd = Math.round((float)(info.averageSmods + rand.nextDouble() * 0.5));
                 ShipVariantAPI variant  = member.getVariant();
@@ -381,7 +381,7 @@ public class FleetCompEditing {
 
         log.debug("editing " + fleetAPI.getFullName());
         FleetInfo info = getInfo(fleetAPI);
-        log.debug(info.toString());
+        //log.debug(info.toString());
 
         if(info.isStationFleet) {
             log.debug("edit failed, station");
