@@ -235,9 +235,8 @@
 		"falcon_CS_bv":5,
 		"falcon_xiv_Overdriven_bv":5,
 		"falcon_xiv_Support_bv":5,
-		"falcon_p_Strike_bv":4,
-		"falcon_p_Strike2_bv":3,
-		"falcon_p_Strike3_bv":3,
+		"falcon_p_Strike2_bv":5,
+		"falcon_p_Strike3_bv":5,
 		
 		"eradicator_Assault_bv":4,
 		"eradicator_Strike_bv":3,
