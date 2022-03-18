@@ -10,6 +10,7 @@ bv_hegemony_xiv.json,better_variants
 bv_hegemony_so.json,better_variants
 ,
 bv_pirates_salvage.json,better_variants
+bv_pirates_elite.json,better_variants
 ,
 bv_persian_ranged.json,better_variants
 bv_persian_so.json,better_variants
@@ -21,3 +22,4 @@ bv_luddic_church_carrier.json,better_variants
 ,
 bv_independent_so1.json,better_variants
 bv_independent_ranged.json,better_variants
+bv_over_test.json,better_variants

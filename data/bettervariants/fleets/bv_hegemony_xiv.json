@@ -3,7 +3,8 @@
 	"spawnWeight":30,
 	"minDP":40,
 	"maxDP":400,
-	"targetFleetTypes": ["patrolLarge", "patrolMedium"],
+	"defaultFleetWidePersonality":"aggressive",
+	"targetFleetTypes": ["vengeanceFleet", "nex_specialForces", "taskForce", "inspectionFleet"],
 	
 	"fleetPartitions": [
 		{
