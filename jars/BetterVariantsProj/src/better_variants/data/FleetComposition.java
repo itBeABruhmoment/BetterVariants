@@ -2,6 +2,7 @@ package better_variants.data;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.io.IOException;
 
 import org.json.JSONArray;
@@ -31,6 +32,7 @@ public class FleetComposition {
     public HashSet<String> targetFleetTypes;
     public AlwaysBuildMember[] alwaysInclude;
     public FleetPartition[] partitions;
+    public String[] commanderSkills;
     public String id;
     public double spawnWeight;
     public int minDP;
@@ -127,6 +129,42 @@ public class FleetComposition {
             }
         } else {
             targetFleetTypes = DEFAULT_TARGET_FLEET_TYPES;
+        }
+
+        // read "additionalCommanderSkills" field
+        JSONArray commanderSkillsJson = null;
+        try {
+            commanderSkillsJson  = fleetDataJson.getJSONArray("additionalCommanderSkills");
+        } catch(Exception e) {
+            log.debug(loadedFileInfo + " has no \"additionalCommanderSkills\" field, setting to nothing");
+            commanderSkillsJson = null;
+        }
+
+        if(commanderSkillsJson == null) {
+            commanderSkills = null;
+        } else {
+            List<String> skillIds = Global.getSettings().getSkillIds();
+            commanderSkills = new String[commanderSkillsJson.length()];
+            for(int i = 0; i < commanderSkillsJson.length(); i++) {
+                try {
+                    commanderSkills[i] = commanderSkillsJson.getString(i);
+                } catch(Exception e) {
+                    throw new Exception(loadedFileInfo + " could not have element in \"additionalCommanderSkills\" field read");
+                }
+
+                // verify if String is skill
+                boolean found = false;
+                for(String skillId : skillIds) {
+                    if(skillId.equals(commanderSkills[i])) {
+                        found = true;
+                        break;
+                    }
+                }
+                if(!found) {
+                    throw new Exception(loadedFileInfo + " has invalid skill \"" + commanderSkills[i] + "\"");
+                }
+            }
+
         }
 
         // read partitions data field
