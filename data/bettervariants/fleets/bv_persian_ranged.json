@@ -4,6 +4,8 @@
 	"minDP":40,
 	"maxDP":400,
 	
+	"targetFleetTypes": ["%combatplus"],
+	
 	"fleetPartitions": [
 		{
 			"partitionWeight":35,

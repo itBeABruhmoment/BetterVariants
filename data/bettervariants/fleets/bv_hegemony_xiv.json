@@ -1,10 +1,11 @@
 {
 	"fleetDataId":"bv_hegemony_xiv",
-	"spawnWeight":30,
+	"spawnWeight":100,
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"aggressive",
-	"targetFleetTypes": ["vengeanceFleet", "nex_specialForces", "taskForce", "inspectionFleet"],
+	"additionalCommanderSkills":["support_doctrine"],
+	"targetFleetTypes": ["%boss"],
 	
 	"fleetPartitions": [
 		{
