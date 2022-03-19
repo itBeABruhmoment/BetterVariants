@@ -23,10 +23,26 @@ public class FleetComposition {
         log.setLevel(Level.ALL);
     }
 
+    public static final String DEFAULT_FLEET_TYPES_MACRO = "%combat";
     public static final HashSet<String> DEFAULT_TARGET_FLEET_TYPES = new HashSet<String>() {{
         add(FleetTypes.MERC_ARMADA);    add(FleetTypes.MERC_BOUNTY_HUNTER); add(FleetTypes.MERC_PATROL);
         add(FleetTypes.MERC_PRIVATEER); add(FleetTypes.MERC_SCOUT);         add(FleetTypes.PATROL_LARGE);
+        add(FleetTypes.PATROL_MEDIUM);  add(FleetTypes.PATROL_SMALL);       
+    }};
+
+    public static final String COMBAT_FLEET_TYPES_MACRO = "%combatplus";
+    public static final HashSet<String> COMBAT_PRESET_TARGET_FLEET_TYPES = new HashSet<String>() {{
+        add(FleetTypes.MERC_ARMADA);    add(FleetTypes.MERC_BOUNTY_HUNTER); add(FleetTypes.MERC_PATROL);
+        add(FleetTypes.MERC_PRIVATEER); add(FleetTypes.MERC_SCOUT);         add(FleetTypes.PATROL_LARGE);
         add(FleetTypes.PATROL_MEDIUM);  add(FleetTypes.PATROL_SMALL);       add(FleetTypes.TASK_FORCE);
+        add(FleetTypes.INSPECTION_FLEET);add("vengeanceFleet");             add("nex_specialForces");
+        add("exerelinInvasionFleet");   add("exerelinInvasionSupportFleet");
+    }};
+
+    public static final String BOSS_FLEET_TYPES_MACRO = "%boss";
+    public static final HashSet<String> BOSS_PRESET_TARGET_FLEET_TYPES = new HashSet<String>() {{
+        add(FleetTypes.TASK_FORCE);     add(FleetTypes.INSPECTION_FLEET);   add("vengeanceFleet");
+        add("nex_specialForces");       add("exerelinInvasionFleet");   add("exerelinInvasionSupportFleet");
     }};
 
     public HashSet<String> targetFleetTypes;
@@ -122,7 +138,19 @@ public class FleetComposition {
             targetFleetTypes = new HashSet<String>();
             for(int i = 0; i < targetFleetTypesJson.length(); i++) {
                 try {
-                    targetFleetTypes.add(targetFleetTypesJson.getString(i));
+                    String fleetType = targetFleetTypesJson.getString(i);
+                    // check for macros
+                    if(fleetType.equals(DEFAULT_FLEET_TYPES_MACRO)) {
+                        targetFleetTypes = DEFAULT_TARGET_FLEET_TYPES;
+                        break;
+                    } else if(fleetType.equals(COMBAT_FLEET_TYPES_MACRO)) {
+                        targetFleetTypes = COMBAT_PRESET_TARGET_FLEET_TYPES;
+                        break;
+                    } else if(fleetType.equals(BOSS_FLEET_TYPES_MACRO)) {
+                        targetFleetTypes = BOSS_PRESET_TARGET_FLEET_TYPES;
+                        break;
+                    }
+                    targetFleetTypes.add(fleetType);
                 } catch(Exception e) {
                     throw new Exception(loadedFileInfo + " could not have element in \"targetFleetTypes\" field read");
                 }
