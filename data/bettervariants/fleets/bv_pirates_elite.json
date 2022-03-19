@@ -5,7 +5,7 @@
 	"maxDP":300,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine", "derelict_contingent"],
-	"targetFleetTypes": ["vengeanceFleet", "nex_specialForces", "exerelinInvasionFleet", "exerelinInvasionSupportFleet", "taskForce", "inspectionFleet"],
+	"targetFleetTypes": ["%boss"],
 	
 	"fleetPartitions": [
 		{
