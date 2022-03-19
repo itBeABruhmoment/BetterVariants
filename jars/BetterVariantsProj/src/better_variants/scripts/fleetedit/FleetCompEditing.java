@@ -25,6 +25,7 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
@@ -386,6 +387,20 @@ public class FleetCompEditing {
         return validFleetComps.get(validFleetComps.size() - 1);
     }
 
+    // give commander any addition skills specified in fleet json
+    private static void editCommander(PersonAPI commander, FleetComposition compInfo) 
+    {
+        if(compInfo.commanderSkills != null) {
+            log.debug("adding additional skills");
+            MutableCharacterStatsAPI stats = commander.getStats();
+            for(String skill : compInfo.commanderSkills) {
+                if(!stats.hasSkill(skill)) {
+                    stats.increaseSkill(skill);
+                }
+            }
+        }
+    }
+
     public static String editFleet(CampaignFleetAPI fleetAPI, String factionId, String fleetType) 
     {
 
@@ -407,6 +422,7 @@ public class FleetCompEditing {
         log.debug("changing to " + compInfo.id);
         clearMembers(fleetAPI);
         createFleet(fleetAPI, info, compInfo);
+        editCommander(info.captain, compInfo);
 
         return compInfo.id;
     }
