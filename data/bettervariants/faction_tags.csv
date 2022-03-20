@@ -1,12 +1,12 @@
 factionID,fleets,specialFleetSpawnRate,tags,specialFleetSpawnRateOverrides
-hegemony,"bv_hegemony_lowtech, bv_hegemony_xiv, bv_hegemony_so",0.3,no_autofit,“vengeanceFleet”:0.4
-independent,"bv_independent_so1, bv_independent_ranged",0.3,no_autofit,“vengeanceFleet”:0.4
-knights_of_ludd,bv_luddic_church_carrier,0.3,no_autofit,“vengeanceFleet”:0.4
-lions_guard,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.3,no_autofit,“vengeanceFleet”:0.4
-luddic_church,bv_luddic_church_carrier,0.3,no_autofit,“vengeanceFleet”:0.4
+hegemony,"bv_hegemony_lowtech, bv_hegemony_xiv, bv_hegemony_so, bv_hegemony_eliteso",1,no_autofit,“vengeanceFleet”:0.7
+independent,"bv_independent_so1, bv_independent_ranged",0.3,no_autofit,“vengeanceFleet”:0.7
+knights_of_ludd,bv_luddic_church_carrier,0.3,no_autofit,“vengeanceFleet”:0.7
+lions_guard,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.3,no_autofit,“vengeanceFleet”:0.7
+luddic_church,bv_luddic_church_carrier,0.3,no_autofit,“vengeanceFleet”:0.7
 luddic_path,,0.3,no_autofit,
-mercenary,"bv_independent_so1, bv_independent_ranged",0.3,no_autofit,“vengeanceFleet”:0.4
-persean,"bv_persian_ranged, bv_persian_so",0.3,no_autofit,“vengeanceFleet”:0.4
-pirates,"bv_pirates_salvage, bv_pirates_elite",0.5,no_autofit,"“vengeanceFleet”:0.4, “taskForce”:0.4"
-sindrian_diktat,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.3,no_autofit,“vengeanceFleet”:0.4
-tritachyon,"bv_tritachyon_wolfpack1, bv_tritachyon_ranged, bv_tritachyon_so, bv_tritachyon_regular",0.6,no_autofit,“vengeanceFleet”:0.4
+mercenary,"bv_independent_so1, bv_independent_ranged",0.3,no_autofit,“vengeanceFleet”:0.7
+persean,"bv_persian_ranged, bv_persian_so",0.3,no_autofit,“vengeanceFleet”:0.7
+pirates,"bv_pirates_salvage, bv_pirates_elite, bv_pirates_elitecarrier",0.5,no_autofit,"“vengeanceFleet”:0.6, “taskForce”:0.4"
+sindrian_diktat,"bv_sindrian_diktat_ranged, bv_sindrian_diktat_so",0.3,no_autofit,“vengeanceFleet”:0.7
+tritachyon,"bv_tritachyon_wolfpack1, bv_tritachyon_ranged, bv_tritachyon_so, bv_tritachyon_regular, bv_tritachyon_elite_wolfpack",0.6,no_autofit,“vengeanceFleet”:0.8
