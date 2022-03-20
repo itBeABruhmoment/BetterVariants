@@ -1,10 +1,10 @@
 {
-    "masterVersionFile": "https://raw.githubusercontent.com/LazyWizard/console-commands/master/src/main/mod/console.version",
-    "modName": "Console Commands",
-    "modThreadId": 4106,
+    "masterVersionFile": "https://raw.githubusercontent.com/itBeABruhMoment/BetterVariants/master/BetterVariants.version",
+    "modName": "Better Variants",
+    "modThreadId": 24237,
     "modVersion": {
-        "major": 2021,
-        "minor": 12,
-        "patch": "25"
+        "major": 0,
+        "minor": 1,
+        "patch": "0"
     }
 }
