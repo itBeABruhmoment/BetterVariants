@@ -4,13 +4,16 @@ bv_tritachyon_regular.json,better_variants
 bv_tritachyon_wolfpack1.json,better_variants
 bv_tritachyon_ranged.json,better_variants
 bv_tritachyon_so.json,better_variants
+bv_tritachyon_elite_wolfpack.json,better_variants
 ,
 bv_hegemony_lowtech.json,better_variants
 bv_hegemony_xiv.json,better_variants
 bv_hegemony_so.json,better_variants
+bv_hegemony_eliteso.json,better_variants
 ,
 bv_pirates_salvage.json,better_variants
 bv_pirates_elite.json,better_variants
+bv_pirates_elitecarrier.json,better_variants
 ,
 bv_persian_ranged.json,better_variants
 bv_persian_so.json,better_variants
