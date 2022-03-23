@@ -38,6 +38,11 @@ public class FleetComposition {
         add("nex_specialForces");
     }};
 
+    public static final String NON_INVASION_BOSS_FLEET_TYPES_MACRO = "%notinvasionboss";
+    public static final HashSet<String> NON_INVASION_BOSS_TARGET_FLEET_TYPES = new HashSet<String>() {{
+        add("vengeanceFleet"); add("nex_specialForces");
+    }};
+
     public static final String INVASION_FLEET_TYPES_MACRO = "%invasion";
     public static final HashSet<String> INVASION_TARGET_FLEET_TYPES = new HashSet<String>() {{
         add(FleetTypes.TASK_FORCE);     add(FleetTypes.INSPECTION_FLEET);   add("exerelinInvasionFleet");
@@ -62,7 +67,7 @@ public class FleetComposition {
     public static final HashMap<String, HashSet<String>> FLEET_TYPE_MACROS = new HashMap<String, HashSet<String>>() {{
         put(DEFAULT_FLEET_TYPES_MACRO, DEFAULT_TARGET_FLEET_TYPES); put(NON_INVASION_FLEET_TYPES_MACRO, NON_INVASION_TARGET_FLEET_TYPES);
         put(INVASION_FLEET_TYPES_MACRO, INVASION_TARGET_FLEET_TYPES); put(COMBAT_FLEET_TYPES_MACRO, COMBAT_PRESET_TARGET_FLEET_TYPES);
-        put(BOSS_FLEET_TYPES_MACRO, BOSS_PRESET_TARGET_FLEET_TYPES);
+        put(BOSS_FLEET_TYPES_MACRO, BOSS_PRESET_TARGET_FLEET_TYPES); put(NON_INVASION_BOSS_FLEET_TYPES_MACRO, NON_INVASION_BOSS_TARGET_FLEET_TYPES);
     }};
 
     public HashSet<String> targetFleetTypes;
