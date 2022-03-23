@@ -2,6 +2,7 @@ package better_variants.data;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Vector;
 import java.io.IOException;
 
@@ -104,18 +105,6 @@ public class FactionData {
             // apply a setting
             specialFleetSpawnRate *= SettingsData.getSpecialFleetSpawnMult();
 
-            // read tags
-            String tagsRaw = row.optString(CSV_FOURTH_COLUMN_NAME);
-            Vector<String> tags = processTags(tagsRaw);
-            HashSet<String> tagsHash = new HashSet<String>();
-            for(String tag : tags) {
-                tagsHash.add(tag);
-            }
-
-            if(hasDuplicateTags(tags)) {
-                throw new Exception(CommonStrings.MOD_ID + ": the faction " + factionId + " has duplicate tags. Remove them");
-            }
-
             // read specialFleetSpawnRateOverrides
             HashMap<String, Double> weightOverrides = new HashMap<String, Double>();
             String overridesRaw = row.optString(CSV_FIFTH_COLUMN_NAME);
@@ -134,10 +123,26 @@ public class FactionData {
                         } catch(Exception e) {
                             throw new Exception(CommonStrings.MOD_ID + ": the faction " + factionId + " has impropery formatted double in " + CSV_FIFTH_COLUMN_NAME);
                         }
+                        // apply setting
+                        weight *= SettingsData.getSpecialFleetSpawnMult();
                         weightOverrides.put(key, weight);
                     }
                 }
             }
+
+            // read tags
+            String tagsRaw = row.optString(CSV_FOURTH_COLUMN_NAME);
+            Vector<String> tags = processTags(tagsRaw);
+            HashSet<String> tagsHash = new HashSet<String>();
+            for(String tag : tags) {
+                tagsHash.add(tag);
+            }
+
+            if(hasDuplicateTags(tags)) {
+                throw new Exception(CommonStrings.MOD_ID + ": the faction " + factionId + " has duplicate tags. Remove them");
+            }
+
+            
             
 
             FACTION_DATA.put(factionId, new FactionConfig(tagsHash, fleetIds, specialFleetSpawnRate, weightOverrides));
