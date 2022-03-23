@@ -30,6 +30,20 @@ public class FleetComposition {
         add(FleetTypes.PATROL_MEDIUM);  add(FleetTypes.PATROL_SMALL);       
     }};
 
+    public static final String NON_INVASION_FLEET_TYPES_MACRO = "%notinvasion";
+    public static final HashSet<String> NON_INVASION_TARGET_FLEET_TYPES = new HashSet<String>() {{
+        add(FleetTypes.MERC_ARMADA);    add(FleetTypes.MERC_BOUNTY_HUNTER); add(FleetTypes.MERC_PATROL);
+        add(FleetTypes.MERC_PRIVATEER); add(FleetTypes.MERC_SCOUT);         add(FleetTypes.PATROL_LARGE);
+        add(FleetTypes.PATROL_MEDIUM);  add(FleetTypes.PATROL_SMALL);       add("vengeanceFleet");
+        add("nex_specialForces");
+    }};
+
+    public static final String INVASION_FLEET_TYPES_MACRO = "%invasion";
+    public static final HashSet<String> INVASION_TARGET_FLEET_TYPES = new HashSet<String>() {{
+        add(FleetTypes.TASK_FORCE);     add(FleetTypes.INSPECTION_FLEET);   add("exerelinInvasionFleet");
+        add("exerelinInvasionSupportFleet");
+    }};
+
     public static final String COMBAT_FLEET_TYPES_MACRO = "%combatplus";
     public static final HashSet<String> COMBAT_PRESET_TARGET_FLEET_TYPES = new HashSet<String>() {{
         add(FleetTypes.MERC_ARMADA);    add(FleetTypes.MERC_BOUNTY_HUNTER); add(FleetTypes.MERC_PATROL);
@@ -43,6 +57,12 @@ public class FleetComposition {
     public static final HashSet<String> BOSS_PRESET_TARGET_FLEET_TYPES = new HashSet<String>() {{
         add(FleetTypes.TASK_FORCE);     add(FleetTypes.INSPECTION_FLEET);   add("vengeanceFleet");
         add("nex_specialForces");       add("exerelinInvasionFleet");   add("exerelinInvasionSupportFleet");
+    }};
+
+    public static final HashMap<String, HashSet<String>> FLEET_TYPE_MACROS = new HashMap<String, HashSet<String>>() {{
+        put(DEFAULT_FLEET_TYPES_MACRO, DEFAULT_TARGET_FLEET_TYPES); put(NON_INVASION_FLEET_TYPES_MACRO, NON_INVASION_TARGET_FLEET_TYPES);
+        put(INVASION_FLEET_TYPES_MACRO, INVASION_TARGET_FLEET_TYPES); put(COMBAT_FLEET_TYPES_MACRO, COMBAT_PRESET_TARGET_FLEET_TYPES);
+        put(BOSS_FLEET_TYPES_MACRO, BOSS_PRESET_TARGET_FLEET_TYPES);
     }};
 
     public HashSet<String> targetFleetTypes;
@@ -140,14 +160,9 @@ public class FleetComposition {
                 try {
                     String fleetType = targetFleetTypesJson.getString(i);
                     // check for macros
-                    if(fleetType.equals(DEFAULT_FLEET_TYPES_MACRO)) {
-                        targetFleetTypes = DEFAULT_TARGET_FLEET_TYPES;
-                        break;
-                    } else if(fleetType.equals(COMBAT_FLEET_TYPES_MACRO)) {
-                        targetFleetTypes = COMBAT_PRESET_TARGET_FLEET_TYPES;
-                        break;
-                    } else if(fleetType.equals(BOSS_FLEET_TYPES_MACRO)) {
-                        targetFleetTypes = BOSS_PRESET_TARGET_FLEET_TYPES;
+                    final HashSet<String> preset = FLEET_TYPE_MACROS.get(fleetType);
+                    if(preset != null) {
+                        targetFleetTypes = preset;
                         break;
                     }
                     targetFleetTypes.add(fleetType);
