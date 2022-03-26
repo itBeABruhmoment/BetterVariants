@@ -5,6 +5,7 @@ bv_tritachyon_wolfpack1.json,better_variants
 bv_tritachyon_ranged.json,better_variants
 bv_tritachyon_so.json,better_variants
 bv_tritachyon_elite_wolfpack.json,better_variants
+bv_tritachyon_phase.json,better_variants
 ,
 bv_hegemony_lowtech.json,better_variants
 bv_hegemony_xiv.json,better_variants
@@ -20,9 +21,12 @@ bv_persian_so.json,better_variants
 ,
 bv_sindrian_diktat_ranged.json,better_variants
 bv_sindrian_diktat_so.json,better_variants
+bv_sindrian_diktat_rangedSmall.json,better_variants
 ,
 bv_luddic_church_carrier.json,better_variants
+bv_luddic_church_elite.json,better_variants
 ,
+bv_independent_explore.json,better_variants
 bv_independent_so1.json,better_variants
 bv_independent_ranged.json,better_variants
 bv_over_test.json,better_variants
