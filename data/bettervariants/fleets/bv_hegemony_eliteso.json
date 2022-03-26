@@ -5,7 +5,7 @@
 	"maxDP":400,
 	"alwaysInclude":[{"id":"ox_Standard", "amount":2}],
 	"defaultFleetWidePersonality":"reckless",
-	"targetFleetTypes": ["%boss"],
+	"targetFleetTypes": ["%notinvasionboss"],
 	
 	"fleetPartitions": [
 		{

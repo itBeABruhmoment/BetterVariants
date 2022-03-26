@@ -6,7 +6,7 @@
 	"alwaysInclude":[{"id":"ox_Standard", "amount":2}],
 	"additionalCommanderSkills":["support_doctrine", "crew_training"],
 	"defaultFleetWidePersonality":"reckless",
-	"targetFleetTypes": ["%boss"],
+	"targetFleetTypes": ["%notinvasionboss"],
 	
 	"fleetPartitions": [
 		{

@@ -253,8 +253,8 @@
 		"champion_Elite_bv":4,
 		"champion_Support_bv":4,
 		
-		"gryphon_Standard_bv":7,
-		"gryphon_Strike_bv":3,
+		"gryphon_FS_bv":5,
+		"gryphon_Overdriven_bv":5,
 		
 		"rampart_Standard":10,
 		"brilliant_Elite_bv":3,
