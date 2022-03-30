@@ -152,6 +152,9 @@
 	"shipRoles":{
 		"carrierSmall":{
 			"includeDefault":true,
+			
+			"condor_Strike":0,
+			
 			"condor_Strike1_bv":10,
 			"condor_Strike2_bv":40,
 		},
@@ -160,6 +163,9 @@
 			"mora_Strike":50,
 		},
 		"carrierLarge":{
+			"legion_FS":0,
+			"legion_Strike":0,
+		
 			"legion_FS1_bv":15,
 			"legion_FS2_bv":20,
 			"legion_FS3_bv":15,
@@ -168,6 +174,9 @@
 		},
 		"combatMedium":{
 			"includeDefault":true,
+			
+			"buffalo2_Fighter_Support":0,
+			
 			"buffalo2_Fighter_Support_bv":25,
 			"buffalo2_Bomber_Support_bv":25,
 			"enforcer_Fighter_Support":50,

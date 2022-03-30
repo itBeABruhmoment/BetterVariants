@@ -10,11 +10,19 @@
 		"glimmer_Assault":5,
 		"lumen_Standard":10,
 		
+		"brawler_Assault":0,
+		"brawler_Elite":0,
+		"brawler_tritachyon_Standard":0,
+		"brawler_pather_Raider":0,
+		
 		"brawler_Assault_bv":7,
 		"brawler_Elite_bv":3,
 		"brawler_tritachyon_Standard1_bv":5,
 		"brawler_tritachyon_Standard2_bv":5,
 		"brawler_pather_Raider_bv":10,
+		
+		"cerberus_d_pirates_Shielded":0,
+		"cerberus_luddic_path_Attack":0,
 		
 		"cerberus_d_pirates_Overdriven_bv":4,
 		"cerberus_d_pirates_Standard":6,
@@ -31,6 +39,15 @@
 		"kite_pirates_Raider":10,
 		"kite_luddic_path_Raider":5,
 		"kite_luddic_path_Strike":5,
+		
+		"lasher_CS":0,
+		"lasher_Assault":0,
+		"lasher_Overdriven":0,
+		"lasher_PD":0,
+		"lasher_Standard":0,
+		"lasher_Strike":0,
+		"lasher_luddic_church_Standard":0,
+		"lasher_luddic_path_Raider":0,
 		
 		"lasher_Standard1_bv":5,
 		"lasher_Standard2_bv":5,
@@ -77,6 +94,11 @@
 		"glimmer_Support":5,
 		"lumen_Standard":10,
 		
+		"brawler_Assault":0,
+		"brawler_Elite":0,
+		"brawler_tritachyon_Standard":0,
+		"brawler_pather_Raider":0,
+		
 		"brawler_Assault_bv":7,
 		"brawler_Elite_bv":3,
 		"brawler_tritachyon_Standard1_bv":3,
@@ -84,7 +106,12 @@
 		"brawler_tritachyon_Support_bv":4,
 		"brawler_pather_Raider_bv":10,
 		
+		"centurion_Assault":0,
+		
 		"centurion_Assault_bv":10,
+		
+		"cerberus_d_pirates_Shielded":0,
+		"cerberus_luddic_path_Attack":0,
 		
 		"cerberus_d_pirates_Overdriven_bv":4,
 		"cerberus_d_pirates_Standard":6,
@@ -97,6 +124,11 @@
 		"hound_luddic_church_Standard":10,
 		"hound_luddic_path_Attack":10,
 		
+		"hyperion_Attack":0,
+		"hyperion_Strike":0,
+		"scarab_Experimental":0,
+		"omen_PD":0,
+		"tempest_Attack":0,
 		
 		"scarab_Emp_bv":5,
 		"scarab_Strike_bv":5,
@@ -109,6 +141,15 @@
 		"kite_pirates_Raider":10,
 		"kite_luddic_path_Raider":5,
 		"kite_luddic_path_Strike":5,
+		
+		"lasher_CS":0,
+		"lasher_Assault":0,
+		"lasher_Overdriven":0,
+		"lasher_PD":0,
+		"lasher_Standard":0,
+		"lasher_Strike":0,
+		"lasher_luddic_church_Standard":0,
+		"lasher_luddic_path_Raider":0,
 		
 		"lasher_Standard1_bv":5,
 		"lasher_Standard2_bv":5,
@@ -135,6 +176,7 @@
 		"wolf_Overdriven":1,
 		"wolf_PD":2,
 		"wolf_Strike":2,
+		"wolf_d_pirates_Attack":0,
 		"wolf_d_pirates_Attack_bv":10,
 		"wolf_hegemony_Assault":4,
 		"wolf_hegemony_CS":3,
@@ -143,7 +185,6 @@
 		"shard_left_Attack":5,
 		"shard_left_Attack2":5,
 		"shard_right_Attack":10,
-		"shard_left_Sigma_bv":0.1,
 		
 		"fallback":{"combatMedium":0.5},
 	},
@@ -151,8 +192,15 @@
 		"bastillon_Standard":10,
 		"berserker_Assault":10,
 		
+		"buffalo2_FS":0,
+		
 		"buffalo2_Bomber_Support_bv":5,
 		"buffalo2_Fighter_Support_bv":5,
+		
+		"enforcer_Assault":0,
+		"enforcer_Overdriven":0,
+		"enforcer_XIV_Elite":0,
+		"enforcer_d_pirates_Strike":0,
 		
 		"enforcer_Assault_bv":1.43,
 		"enforcer_Balanced":1.43,
@@ -171,8 +219,15 @@
 		"enforcer_d_pirates_Overdriven2_bv":2,
 		"enforcer_d_pirates_Standard_bv":3,
 		
+		"fulgent_Assault":0,
+		"fulgent_Support":0,
+		
 		"fulgent_Overdriven_bv":5,
 		"fulgent_Strike_bv":5,
+		
+		"hammerhead_Balanced":0,
+		"hammerhead_Elite":0,
+		"hammerhead_Overdriven":0,
 		
 		"hammerhead_Balanced_bv":3,
 		"hammerhead_Elite_bv":3,
@@ -182,11 +237,16 @@
 		"hyperion_Assault_bv":3,
 		"hyperion_Support_bv":3,
 		
-		"manticore_Support":3.3,
+		"manticore_Support":0,
+		
 		"manticore_Support2_bv":3.3,
 		"manticore_Assault":3.3,
 		"manticore_pirates_Support":5,
 		"manticore_pirates_Assault":5,
+		
+		"medusa_Attack":0,
+		"medusa_CS":0,
+		"medusa_PD":0,
 		
 		"medusa_Attack_bv":6,
 		"medusa_Overdriven_bv":4,
@@ -194,9 +254,17 @@
 		"mule_d_pirates_Smuggler":5,
 		"mule_d_pirates_Standard":5,
 		
+		"shrike_Support":0,
+		"shrike_Attack":0,
+		"shrike_p_Attack":0,
+		
 		"shrike_Support_bv":3,
 		"shrike_Attack_bv":7,
 		"shrike_p_Attack_bv":10,
+		
+		"sunder_Assault":0,
+		"sunder_CS":0,
+		"sunder_Overdriven":0,
 		
 		"sunder_Assault_bv":4,
 		"sunder_Support_bv":4,
@@ -208,15 +276,32 @@
 		"fallback":{"combatSmall":1},
 	},
 	"combatLarge":{
+		"aurora_Assault_Support":0,
+		"aurora_Escort":0,
+		"aurora_FS":0,
+		"aurora_Strike":0,
+	
 		"aurora_Assault":3,
 		"aurora_Overdriven_bv":3,
 		"aurora_Balanced":2,
 		"aurora_Strike_bv":2,
+		
+		"apogee_Balanced":0,
+		
 		"apogee_Elite_bv":5,
 		"apogee_Standard_bv":5,
 		
+		"colossus2_Pather":0,
+		
 		"colossus2_Pather_bv":10,
 		"colossus3_Pirate":10,
+		
+		"dominator_AntiCV":0,
+		"dominator_Assault":0,
+		"dominator_Support":0,
+		"dominator_Outdated":0,
+		"dominator_XIV_Elite":0,
+		
 		"dominator_AntiCV_bv":2,
 		"dominator_Assault_bv":2,
 		"dominator_Shield_Breaker_bv":2,
@@ -226,6 +311,17 @@
 		"dominator_XIV_Elite2_bv":2.5,
 		"dominator_XIV_Elite3_bv":2.5,
 		"dominator_XIV_Elite4_bv":2.5,
+		
+		"eagle_Assault":0,
+		"eagle_Balanced":0,
+		"eagle_xiv_Elite":0,
+		
+		"falcon_Attack":0,
+		"falcon_CS":0,
+		"falcon_xiv_Elite":0,
+		"falcon_xiv_Escort":0,
+		"falcon_p_Strike":0,
+		
 		"eagle_Standard_bv":2,
 		"eagle_Balanced_bv":2,
 		"eagle_Overdriven_bv":6,
@@ -238,6 +334,13 @@
 		"falcon_p_Strike2_bv":5,
 		"falcon_p_Strike3_bv":5,
 		
+		"eradicator_Assault":0,
+		"eradicator_Strike":0,
+		"eradicator_Support":0,
+		"eradicator_Overdriven":0,
+		"eradicator_pirates_Attack":0,
+		"eradicator_pirates_Overdriven":0,
+		
 		"eradicator_Assault_bv":4,
 		"eradicator_Strike_bv":3,
 		"eradicator_Support_bv":2,
@@ -245,16 +348,29 @@
 		"eradicator_pirates_Attack_bv":8,
 		"eradicator_pirates_Overdriven_bv":2,
 		
+		"fury_Attack":0,
+		"fury_Support":0,
+		
 		"fury_Attack1_bv":2.5,
 		"fury_Attack2_bv":2.5,
 		"fury_Strike_bv":5,
+		
+		"champion_Assault":0,
+		"champion_Elite":0,
+		"champion_Support":0,
+		"champion_Escort":0,
 		
 		"champion_Overdriven_bv":2,
 		"champion_Elite_bv":4,
 		"champion_Support_bv":4,
 		
+		"gryphon_Standard":0,
+		"gryphon_FS":0,
+		
 		"gryphon_FS_bv":5,
 		"gryphon_Overdriven_bv":5,
+		
+		"brilliant_Standard":0,
 		
 		"rampart_Standard":10,
 		"brilliant_Elite_bv":3,
@@ -269,6 +385,19 @@
 		"fallback":{"combatMedium":1},
 	},
 	"combatCapital":{
+		"conquest_Standard":0,
+		"conquest_Elite":0,
+		"onslaught_Standard":0,
+		"onslaught_Outdated":0,
+		"onslaught_xiv_Elite":0,
+		"paragon_Escort":0,
+		"paragon_Raider":0,
+		
+		"radiant_Standard":0,
+		"radiant_Strike":0,
+		
+		"atlas2_Standard":0,
+	
 		"conquest_Standard_bv":5,
 		"conquest_Elite_bv":3,
 		"conquest_Elite2_bv":2,
@@ -298,6 +427,10 @@
 	
 	# hybrid ships with good combat and cargo capacity
 	"combatFreighterSmall":{
+		"cerberus_Hardened":0,
+		"cerberus_d_pirates_Shielded":0,
+		"cerberus_luddic_path_Attack":0,
+	
 		"cerberus_Hardened_bv":2.5,
 		"cerberus_Overdriven":2.5,
 		"cerberus_Shielded":2.5,
@@ -334,6 +467,8 @@
 		"fallback":{"combatFreighterSmall":1},
 	},
 	"combatFreighterLarge":{
+		"venture_Outdated":0,
+	
 		"venture_Balanced":4,
 		"venture_Rocket_bv":4,
 		"venture_Exploration":3,
@@ -341,6 +476,16 @@
 	},
 	
 	"civilianRandom":{
+		"dram_Light":0,
+		"phaeton_Standard":0,
+		"buffalo_hegemony_Standard":0,
+		"buffalo_luddic_church_Standard":0,
+		"buffalo_pirates_Standard":0,
+		"buffalo_tritachyon_Standard":0,
+		"tarsus_Standard":0,
+		"buffalo_Standard":0,
+		"colossus_Standard":0,
+	
 		"mercury_Standard":10,
 		"hermes_Standard":10,
 		"kite_original_Stock":1,
@@ -362,7 +507,13 @@
 	},
 
 	# carriers
-	"carrierSmall":{
+	"carrierSmall":{		
+		"condor_Strike":0,
+		"condor_Attack":0,
+		"condor_Support":0,
+		"drover_Strike":0,
+
+	
 		"shepherd_Frontier":2,
 		
 		"condor_Strike1_bv":7,
@@ -378,6 +529,10 @@
 		"fallback2":{"carrierLarge":0.25},
 	},
 	"carrierMedium":{
+		"mora_Assault":0,
+		"mora_Support":0,
+		
+	
 		"heron_Strike":5,
 		"heron_Attack":5,
 		"mora_Assault_bv":5,
@@ -386,6 +541,16 @@
 		"fallback2":{"carrierLarge":0.5},
 	},
 	"carrierLarge":{
+		"astral_Strike":0,
+		"astral_Attack":0,
+		"astral_Elite":0,
+		
+		"legion_Assault":0,
+		"legion_Escort":0,
+		"legion_FS":0,
+		"legion_Strike":0,
+	
+	
 		"astral_Strike_bv":6,
 		"astral_Elite_bv":4,
 		
@@ -401,6 +566,12 @@
 
 	# phase ships
 	"phaseSmall":{
+		"afflictor_d_pirates_Strike":0,
+		"afflictor_Strike":0,
+		"shade_d_pirates_Assault":0,
+		"shade_Assault":0,
+		
+	
 		"afflictor_d_pirates_Strike_bv":10,
 		"afflictor_Strike_bv":10,
 		"shade_d_pirates_Assault_bv":10,
@@ -412,12 +583,18 @@
 		"fallback2":{"phaseLarge":0.25},
 	},
 	"phaseMedium":{
+		"harbinger_Strike":0,
+	
 		"harbinger_Overdriven1_bv":5,
 		"harbinger_Overdriven2_bv":5,
 		"fallback":{"phaseSmall":1},
 		"fallback2":{"phaseLarge":0.5},
 	},
 	"phaseLarge":{
+		"doom_Strike":0,
+		"doom_Support":0,
+		
+	
 		"doom_Overdriven_bv":3,
 		"doom_Support_bv":7,
 		"fallback":{"phaseMedium":1},
@@ -428,6 +605,14 @@
 
 	# freighters and such
 	"freighterSmall":{
+		"buffalo_hegemony_Standard":0,
+		"buffalo_luddic_church_Standard":0,
+		"buffalo_pirates_Standard":0,
+		"buffalo_tritachyon_Standard":0,
+		"tarsus_Standard":0,
+		"buffalo_Standard":0,
+		
+	
 		"hermes_Standard":1,
 		
 		"buffalo_hegemony_Standard_bv":10,
@@ -437,34 +622,46 @@
 		"tarsus_Standard_bv":5,
 		"tarsus_Carrier_bv":5,
 		"buffalo_Standard_bv":10,
-		#"gemini_Standard":5,
 		"revenant_Elite":3,
 		"fallback":{"freighterMedium":0.5},
 		"fallback2":{"freighterLarge":0.25},
 	},
 	"freighterMedium":{
+		"colossus_Standard":0,
+	
+	
 		"colossus_Standard_bv":10,
 		"fallback":{"freighterSmall":1},
 		"fallback2":{"freighterLarge":0.5},
 	},
 	"freighterLarge":{
+		"atlas_Standard":0,
+	
+		
 		"atlas_Standard_bv":10,
 		"fallback":{"freighterMedium":1},
 		"fallback2":{"freighterSmall":1},
 	},
 	
 	"tankerSmall":{
+		"dram_Light":0,
+	
 		"dram_Light_bv":10,
 		"fallback":{"tankerMedium":0.5},
 		"fallback2":{"tankerLarge":0.25},
 	},
 	"tankerMedium":{
+		"phaeton_Standard":0,
+		
+	
 		"phaeton_Standard_bv":10,
 		"revenant_Elite":3,
 		"fallback":{"tankerSmall":1},
 		"fallback2":{"tankerLarge":0.5},
 	},
 	"tankerLarge":{
+		"prometheus_Super":0,
+	
 		"prometheus_Super_bv":10,
 		"fallback":{"tankerMedium":1},
 		"fallback2":{"tankerSmall":1},
@@ -527,41 +724,4 @@
 	"battlestationLowTech":{
 		"station2_Standard":10,
 	},
-	
-	
-
-
-	# Old/unused below this line
-	"fastAttack":{
-		"hound_d_Standard":10,
-		"wolf_d_Attack":10,	
-		"lasher_Standard":10,
-		"hound_Standard":10,
-		"tempest_Attack":10,
-		"hyperion_Attack":1,
-		"wolf_Assault":10,
-		"fallback":{"combatSmall":1},
-	},
-
-	"escortSmall":{
-		"wolf_CS":10,
-		"lasher_d_CS":10,
-		"wolf_d_Attack":10,
-		"lasher_CS":10,
-		"omen_PD":10,
-		"monitor_Escort":2,
-		"wolf_PD":10,
-		"fallback":{"combatSmall":1},
-	},
-	"escortMedium":{
-		"enforcer_d_Strike":10,
-		"hammerhead_d_CS":10,
-		"sunder_d_Assault":10,
-		"buffalo2_Bomber_Support_bv":5,
-		"buffalo2_Fighter_Support_bv":5,
-		"enforcer_Assault_bv":10,
-		"medusa_PD":10,
-		"fallback":{"combatMedium":1},
-	},
-	
 }
