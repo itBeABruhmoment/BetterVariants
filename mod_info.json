@@ -3,7 +3,7 @@
     "name": "Better Variants",
     "author": "itBeABruhmoment",
     "utility": "false",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Make variants better",
     "gameVersion": "0.95.1a-RC6",
     "jars":["jars/BetterVariantsProj/BetterVariantsProj.jar"],
