@@ -35,10 +35,10 @@
 			"partitionWeight":10,
 			"partitionWeightVariance":5,
 			"variants": [
-				{"id":"mora_StrikeE_bv", "weight":80},
+				{"id":"mora_StrikeE_bv", "weight":25},
 				{"id":"condor_StrikeE1_bv", "weight":10},
-				{"id":"condor_Strike1_bv", "weight":5},
-				{"id":"condor_Strike2_bv", "weight":5},
+				{"id":"gryphon_Overdriven_bv", "weight":50},
+				{"id":"condor_Strike2_bv", "weight":15},
 			]
 		},
 		{

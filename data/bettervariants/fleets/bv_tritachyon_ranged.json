@@ -7,7 +7,7 @@
 	
 	"fleetPartitions": [
 		{
-			"partitionWeight":40,
+			"partitionWeight":50,
 			"partitionWeightVariance":5,
 			"variants": [
 				{"id":"paragon_Elite", "weight":5},
@@ -19,7 +19,7 @@
 			]
 		},
 		{
-			"partitionWeight":40,
+			"partitionWeight":30,
 			"partitionWeightVariance":5,
 			"variants": [
 				{"id":"eagle_Standard_bv", "weight":15},
