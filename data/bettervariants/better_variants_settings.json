@@ -1,5 +1,5 @@
 {
 	"enableAutofit":false,
-	"specialFleetSpawnMult":1.0,
+	"specialFleetSpawnMult":10.0,
 	"enableOfficerEditing":true,
 }
