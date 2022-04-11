@@ -1,6 +1,6 @@
 {
     "displayName": "Overdriven",
-    "fluxCapacitors": 15,
+    "fluxCapacitors": 11,
     "fluxVents": 0,
     "hullId": "gryphon",
     "hullMods": [
@@ -27,11 +27,14 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "vulcan",
-                "WS 004": "vulcan",
                 "WS 006": "vulcan",
                 "WS 007": "vulcan"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "dualflak"}
         }
     ]
 }
