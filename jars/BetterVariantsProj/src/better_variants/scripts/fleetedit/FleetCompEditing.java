@@ -52,6 +52,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 public class FleetCompEditing {
+    public static final String ALWAYS_EDIT = "ALWAYS_EDIT";
     private static final int MAX_OVERBUDGET = 3;
     private static final Random rand = new Random();
     private static final String[] FALLBACK_HULLMODS = {"hardenedshieldemitter", "fluxdistributor", 
@@ -331,8 +332,10 @@ public class FleetCompEditing {
         Vector<FleetComposition> fleetComps = new Vector<FleetComposition>(5);
         for(String compId : FactionData.FACTION_DATA.get(factionId).customFleetIds) {
             FleetComposition comp = FleetBuildData.FLEET_DATA.get(compId);
-            if(comp != null && comp.maxDP >= info.originalDP && info.originalDP >= comp.minDP 
-            && comp.targetFleetTypes.contains(fleetType)) {
+            if(comp != null 
+            && comp.maxDP >= info.originalDP 
+            && info.originalDP >= comp.minDP 
+            && (comp.targetFleetTypes.contains(fleetType) || fleetType.equals(ALWAYS_EDIT))) {
                 fleetComps.add(comp);
             }
         }

@@ -96,24 +96,7 @@ public class FleetRandomizer {
         return true;
     }
 
-    // if the variant is registered return the variantId, if not return null
-    private static String isRegisteredVariant(FleetMemberAPI ship)
-    {
-        if(ship.isFighterWing()) {
-            return null;
-        }
-
-        // do not modify unregistered ships
-        if(VariantData.VARIANT_DATA.containsKey(ship.getVariant().getHullVariantId())) {
-            return ship.getVariant().getHullVariantId();
-        }
-
-        if(VariantData.VARIANT_DATA.containsKey(ship.getVariant().getOriginalVariant())) {
-            return ship.getVariant().getOriginalVariant();
-        }
-        
-        return null;
-    }
+    
 
     public static void modify(CampaignFleetAPI fleet)
     {
@@ -147,14 +130,8 @@ public class FleetRandomizer {
         }
 
         // edit officers of fleet
-        if(SettingsData.OfficerEditingEnabled())
-        {
-            for(FleetMemberAPI member : fleet.getMembersWithFightersCopy()) {
-                String variantId = isRegisteredVariant(member);
-                if(variantId != null) {
-                    OfficerEditing.editOfficer(member, variantId, fleetCompId);
-                }
-            }
+        if(SettingsData.OfficerEditingEnabled()) {
+            OfficerEditing.editAllOfficers(fleet, fleetCompId);
         }
 
         FleetCompEditing.setProperCr(fleet);

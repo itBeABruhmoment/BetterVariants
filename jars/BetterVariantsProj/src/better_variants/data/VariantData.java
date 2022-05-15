@@ -9,6 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -23,6 +24,24 @@ public class VariantData {
     public static final HashMap<String, Vector<String>> VARIANT_DATA = new HashMap<String, Vector<String>>();
     private static final String CSV_FIRST_COLUMN_NAME = "variantID";
     private static final String CSV_SECOND_COLUMN_NAME = "tags";
+
+    // if the variant is registered return the variantId, if not return null
+    public static String isRegisteredVariant(FleetMemberAPI ship)
+    {
+        if(ship.isFighterWing()) {
+            return null;
+        }
+
+        if(VARIANT_DATA.containsKey(ship.getVariant().getHullVariantId())) {
+            return ship.getVariant().getHullVariantId();
+        }
+
+        if(VARIANT_DATA.containsKey(ship.getVariant().getOriginalVariant())) {
+            return ship.getVariant().getOriginalVariant();
+        }
+        
+        return null;
+    }
 
     private static boolean hasDuplicate(String original, Vector<String> strings)
     {
