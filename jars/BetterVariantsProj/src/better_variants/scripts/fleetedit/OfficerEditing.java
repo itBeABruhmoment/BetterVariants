@@ -143,6 +143,16 @@ public class OfficerEditing {
             }
         }
     }
+
+    public static void editAllOfficers(CampaignFleetAPI fleet, String fleetCompId)
+    {
+        for(FleetMemberAPI member : fleet.getMembersWithFightersCopy()) {
+            String variantId = VariantData.isRegisteredVariant(member);
+            if(variantId != null) {
+                OfficerEditing.editOfficer(member, variantId, fleetCompId);
+            }
+        }
+    }
     
     public static void editOfficer(FleetMemberAPI fleetMember, String variantId, String fleetCompId)
     {

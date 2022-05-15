@@ -8,4 +8,10 @@
     "gameVersion": "0.95.1a-RC6",
     "jars":["jars/BetterVariantsProj/BetterVariantsProj.jar"],
     "modPlugin":"better_variants.scripts.BetterVariantsModPlugin",
+    "dependencies": [
+        {
+            "id": "MagicLib",
+            "name": "MagicLib",
+        },
+    ],
 }
