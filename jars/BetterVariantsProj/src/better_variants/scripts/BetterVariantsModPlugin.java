@@ -18,6 +18,7 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.GenericBarEventCreator;
 
 import data.scripts.bounty.MagicBountyData;
 import data.scripts.bounty.MagicBountyData.bountyData;
@@ -60,7 +61,7 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
         if (!barEventManager.hasEventCreator(TestEvent.class)) {
             barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
         }
-
+        
         // BountyData.addBounty("bv_test", 999999.0f);
         // runcode com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance().addEventCreator(new better_variants.bar_events.BetterVariantsBarEventCreator());
     }
