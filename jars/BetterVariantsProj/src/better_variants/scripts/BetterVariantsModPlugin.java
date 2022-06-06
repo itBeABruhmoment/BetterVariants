@@ -49,7 +49,7 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
     public void onGameLoad(boolean newGame)
     {
         log.debug(CommonStrings.MOD_ID + ": adding listener");
-        Global.getSector().addListener(new BetterVariantsListener(false));
+        Global.getSector().addTransientListener(new BetterVariantsListener(false));
         log.debug(CommonStrings.MOD_ID + ": initializing faction aggression values");
         UnofficeredPersonalitySetPlugin.innitDefaultAggressionValues();
         log.debug(CommonStrings.MOD_ID + ": adding bar event manager");
@@ -57,7 +57,7 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
 
         // If the prerequisites for the quest have been met (optional) and the game isn't already aware of the bar event,
         // add it to the BarEventManager so that it shows up in bars
-        if (!barEventManager.hasEventCreator(TestEvent.class)) {
+        if (!barEventManager.hasEventCreator(BetterVariantsBarEventCreator.class)) {
             barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
         }
         
