@@ -14,7 +14,7 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-// static class for storing data of "data/bettervariants/variant_tags.csv"
+// loads data of "data/bettervariants/variant_tags.csv"
 public class VariantData {
     private static final Logger log = Global.getLogger(better_variants.data.VariantData.class);
     static {

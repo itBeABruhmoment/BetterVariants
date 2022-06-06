@@ -13,6 +13,8 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
+
+// loads settings for this mod
 public class SettingsData {
     private static final Logger log = Global.getLogger(better_variants.data.SettingsData.class);
     static {

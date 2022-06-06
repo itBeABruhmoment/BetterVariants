@@ -18,6 +18,8 @@ data.BetterVariants_FactionData.FactionConfig da = (data.BetterVariants_FactionD
 String s = da.toString();
 Console.showMessage(s);
 */
+
+// loads data found in faction_tags.csv
 public class FactionData {
     private static final Logger log = Global.getLogger(better_variants.data.FactionData.class);
     static {
