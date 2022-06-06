@@ -139,7 +139,7 @@
         #BOUNTY DESCRIPTION
         
         "job_name": "Bounty - $firstName $lastName", # Default: "Unnamed job". Job name shown in the dialog pick list
-        "job_description": "Kill deserter", # Default: blank. The description shown upon selecting the job.
+        "job_description": "Assasinate enemy officer", # Default: blank. The description shown upon selecting the job.
                                                                # \n creates a line break, for example "Line one.\nLine two."
 															   # \" adds quotation marks.
                                                                # == brackets create a highlight, for example "Text ==highlight== text."
