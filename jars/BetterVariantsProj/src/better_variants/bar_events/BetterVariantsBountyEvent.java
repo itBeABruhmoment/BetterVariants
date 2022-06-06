@@ -148,7 +148,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
 
             // Handle all possible options the player can choose
             switch ((OptionId) optionData) {
-                case INIT: { // scope because everything in a switch is the same scope apparently
+                case INIT: {
                     dialog.getTextPanel().addPara("You approach and the officer gives you a prefunctory nod. \"Captian,\" he says, all business.");
                     dialog.getTextPanel().addPara("\"I have several assignments on the docket,\" he looks down, scrolling his datapad. \"What sort of job can you handle?\"");
 
@@ -409,7 +409,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
             bountyGen = BountyUtils.createCopy(MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY));
             target = giverFaction.createRandomPerson();
         }
-        
+        bountyGen.job_name = "Bounty - " + target.getName().getFirst() + " " + target.getName().getLast();
         bountyGen.fleet_min_FP = minFleetPoints;
         bountyGen.target_first_name = target.getName().getFirst();
         bountyGen.target_last_name = target.getName().getLast();
