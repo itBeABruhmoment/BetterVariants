@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.Vector;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -16,9 +17,12 @@ import data.scripts.bounty.MagicBountyData;
 import data.scripts.bounty.MagicBountyData.bountyData;
 
 import java.awt.Color;
+import java.security.Key;
+
 import org.lwjgl.util.vector.Vector2f;
 
 import better_variants.data.CommonStrings;
+import better_variants.data.FactionData;
 import better_variants.data.FleetBuildData;
 import better_variants.data.SettingsData;
 import better_variants.scripts.fleetedit.FleetCompEditing;
@@ -42,6 +46,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel.BountyType;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventWithPerson;
@@ -51,18 +56,22 @@ import com.fs.starfarer.api.util.Misc;
 
 import static data.scripts.util.MagicTxt.getString;
 
+// bar event for "talk to the officer offering exotic bounties"
 public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
     private static final Logger log = Global.getLogger(better_variants.bar_events.BetterVariantsBountyEvent.class);
     static {
         log.setLevel(Level.ALL);
     }
 
+    private static final Random RAND = new Random();
     private static final float BOUNTY_NO_CHANGE_DURATION = 30.0f;
     private static final String EASY_BOUNTY_MEMKEY = "$bv_existingbounty_easy";
     private static final String MEDIUM_BOUNTY_MEMKEY = "$bv_existingbounty_med";
     private static final String HARD_BOUNTY_MEMKEY = "$bv_existingbounty_hard";
     private static final String LAST_VIEWED_BOUNTY_MEMKEY = "$bv_last_viewed_bounty";
-    private static final String BOUNTY_DATA_KEY = "better_variants_bounty";
+    private static final String TRAITOR_BOUNTY_DATA_KEY = "better_variants_traitor";
+    private static final String ENEMY_BOUNTY_DATA_KEY = "better_variants_enemy";
+    private static final String OFFERED_AS_BOUNTY_TAG = "bounty";
 
     private static String generateUniqueBountyKey()
     {
@@ -74,45 +83,6 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
             key = "better_variants_bounty" + count;
         }
         return key;
-    }
-
-    private static void createFleetTest()
-    {
-        // Create fleet
-        final FactionAPI faction = Global.getSector().getFaction("pirates");
-        final FactionDoctrineAPI doctrine = faction.getDoctrine();
-        final int totalFP = 100;
-        final float freighterFP = totalFP * doctrine.getCombatFreighterProbability(); // TEMP
-        final FleetParamsV3 params = new FleetParamsV3(
-            null,
-            faction.getId(),
-            null, 
-            FleetTypes.PATROL_LARGE, 
-            totalFP,
-            freighterFP * 0.3f, 
-            freighterFP * 0.3f, 
-            freighterFP * 0.1f, 
-            freighterFP * 0.1f, 
-            freighterFP * 0.1f,
-            0.0f
-        );
-        final CampaignFleetAPI toSpawn = FleetFactoryV3.createFleet(params);
-
-        FleetFactoryV3.addCommanderAndOfficers(toSpawn, params, new Random());
-        toSpawn.setName("your opponent");
-
-        // Spawn fleet around player
-        Global.getSector().getCurrentLocation().spawnFleet(Global.getSector().getPlayerFleet(), 0.0f, 0.0f, toSpawn);
-        Global.getSector().addPing(toSpawn, "danger");
-
-        // Update combat readiness
-        toSpawn.getFleetData().sort();
-        toSpawn.forceSync();
-        for (FleetMemberAPI member : toSpawn.getFleetData().getMembersListCopy())
-        {
-            final RepairTrackerAPI repairs = member.getRepairTracker();
-            repairs.setCR(repairs.getMaxCR());
-        }
     }
 
     @Override
@@ -143,6 +113,15 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         super.init(dialog, memoryMap);
         // Choose where the player has to travel to
         //TestEvent.initQuest();
+
+        // set the bounty giver to person appropriate to market
+        PersonAPI bountyGiver = getPerson();
+        FactionAPI marketFaction = getMarket().getFaction();
+
+        PersonAPI temp = marketFaction.createRandomPerson();
+        bountyGiver.setFaction(marketFaction.getId());
+        bountyGiver.setName(temp.getName());
+        bountyGiver.setPortraitSprite(temp.getPortraitSprite());
 
         // If player starts our event, then backs out of it, `done` will be set to true.
         // If they then start the event again without leaving the bar, we should reset `done` to false.
@@ -185,24 +164,42 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
                     // get a key for the bounty coordinator
-                    String activeBountyKey = null;
+                    final String activeBountyKey;
+                    final TargetType bountyType;
                     if(bountyGiverMemory.contains(EASY_BOUNTY_MEMKEY)) {
-                        activeBountyKey = (String) bountyGiverMemory.get(EASY_BOUNTY_MEMKEY);
+                        BountyInfo info = (BountyInfo) bountyGiverMemory.get(EASY_BOUNTY_MEMKEY);
+                        activeBountyKey = info.activeBountyKey;
+                        bountyType = info.type;
                     } else {
                         activeBountyKey = generateUniqueBountyKey();
-                        bountyGiverMemory.set(EASY_BOUNTY_MEMKEY, activeBountyKey, BOUNTY_NO_CHANGE_DURATION);
+                        bountyType = pickRandomTargetType(getPerson().getFaction());
+                        bountyGiverMemory.set(EASY_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                    }
+
+                    if(bountyType == TargetType.TRAITOR) {
+                        log.debug("traitor");
+                    } else {
+                        log.debug("enemy");
                     }
 
                     // store the last viewed bounty for the accept case
                     bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, EASY_BOUNTY_MEMKEY, 1.0f);
 
                     int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 0.7) + 10;
+                    if(bountyFleetDP < 70) {
+                        bountyFleetDP = 70;
+                    }
 
                     // get active bounty for the job
-                    final MagicBountyData.bountyData bounty = MagicBountyData.getBountyData(BOUNTY_DATA_KEY);
+                    final MagicBountyData.bountyData bounty;
+                    if(bountyType == TargetType.ENEMY) {
+                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                    } else {
+                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                    }
                     ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
                     if(active == null) {
-                        active = createActiveBounty(dialog.getInteractionTarget(), activeBountyKey, bountyFleetDP);
+                        active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
                     }
 
                     // if active bounty fails to generate
@@ -211,7 +208,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                         break;
                     }
 
-                    displayBountyInfo(dialog, active, bounty);
+                    displayBountyInfo(dialog, active, bounty, bountyType);
 
                     dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
                     dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
@@ -223,24 +220,42 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
                     // get a key for the bounty coordinator
-                    String activeBountyKey = null;
+                    final String activeBountyKey;
+                    final TargetType bountyType;
                     if(bountyGiverMemory.contains(MEDIUM_BOUNTY_MEMKEY)) {
-                        activeBountyKey = (String) bountyGiverMemory.get(MEDIUM_BOUNTY_MEMKEY);
+                        BountyInfo info = (BountyInfo) bountyGiverMemory.get(MEDIUM_BOUNTY_MEMKEY);
+                        activeBountyKey = info.activeBountyKey;
+                        bountyType = info.type;
                     } else {
                         activeBountyKey = generateUniqueBountyKey();
-                        bountyGiverMemory.set(MEDIUM_BOUNTY_MEMKEY, activeBountyKey, BOUNTY_NO_CHANGE_DURATION);
+                        bountyType = pickRandomTargetType(getPerson().getFaction());
+                        bountyGiverMemory.set(MEDIUM_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                    }
+
+                    if(bountyType == TargetType.TRAITOR) {
+                        log.debug("traitor");
+                    } else {
+                        log.debug("enemy");
                     }
 
                     // store the last viewed bounty for the accept case
                     bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, MEDIUM_BOUNTY_MEMKEY, 1.0f);
 
                     int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.0) + 10;
+                    if(bountyFleetDP < 100) {
+                        bountyFleetDP = 100;
+                    }
 
                     // get active bounty for the job
-                    final MagicBountyData.bountyData bounty = MagicBountyData.getBountyData(BOUNTY_DATA_KEY);
+                    final MagicBountyData.bountyData bounty;
+                    if(bountyType == TargetType.ENEMY) {
+                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                    } else {
+                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                    }
                     ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
                     if(active == null) {
-                        active = createActiveBounty(dialog.getInteractionTarget(), activeBountyKey, bountyFleetDP);
+                        active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
                     }
 
                     // if active bounty fails to generate
@@ -249,7 +264,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                         break;
                     }
 
-                    displayBountyInfo(dialog, active, bounty);
+                    displayBountyInfo(dialog, active, bounty, bountyType);
 
                     dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
                     dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
@@ -261,24 +276,42 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
                     // get a key for the bounty coordinator
-                    String activeBountyKey = null;
+                    final String activeBountyKey;
+                    final TargetType bountyType;
                     if(bountyGiverMemory.contains(HARD_BOUNTY_MEMKEY)) {
-                        activeBountyKey = (String) bountyGiverMemory.get(HARD_BOUNTY_MEMKEY);
+                        BountyInfo info = (BountyInfo) bountyGiverMemory.get(HARD_BOUNTY_MEMKEY);
+                        activeBountyKey = info.activeBountyKey;
+                        bountyType = info.type;
                     } else {
                         activeBountyKey = generateUniqueBountyKey();
-                        bountyGiverMemory.set(HARD_BOUNTY_MEMKEY, activeBountyKey, BOUNTY_NO_CHANGE_DURATION);
+                        bountyType = pickRandomTargetType(getPerson().getFaction());
+                        bountyGiverMemory.set(HARD_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                    }
+
+                    if(bountyType == TargetType.TRAITOR) {
+                        log.debug("traitor");
+                    } else {
+                        log.debug("enemy");
                     }
 
                     // store the last viewed bounty for the accept case
                     bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, HARD_BOUNTY_MEMKEY, 1.0f);
 
                     int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.3) + 10;
+                    if(bountyFleetDP < 130) {
+                        bountyFleetDP = 130;
+                    }
 
                     // get active bounty for the job
-                    final MagicBountyData.bountyData bounty = MagicBountyData.getBountyData(BOUNTY_DATA_KEY);
+                    final MagicBountyData.bountyData bounty;
+                    if(bountyType == TargetType.ENEMY) {
+                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                    } else {
+                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                    }
                     ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
                     if(active == null) {
-                        active = createActiveBounty(dialog.getInteractionTarget(), activeBountyKey, bountyFleetDP);
+                        active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
                     }
 
                     // if active bounty fails to generate
@@ -287,7 +320,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                         break;
                     }
 
-                    displayBountyInfo(dialog, active, bounty);
+                    displayBountyInfo(dialog, active, bounty, bountyType);
 
                     dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
                     dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
@@ -299,10 +332,18 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
                     String bountyToAccept = bountyGiverMemory.getString(LAST_VIEWED_BOUNTY_MEMKEY);
-                    String activeBountyKey = bountyGiverMemory.getString(bountyToAccept);
+                    BountyInfo bountyInfo = (BountyInfo) bountyGiverMemory.get(bountyToAccept);
+                    String activeBountyKey = bountyInfo.activeBountyKey;
+                    TargetType bountyType = bountyInfo.type;
+
+                    final MagicBountyData.bountyData bounty;
+                    if(bountyType == TargetType.ENEMY) {
+                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                    } else {
+                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                    }
 
                     // get active bounty for the job
-                    final MagicBountyData.bountyData bounty = MagicBountyData.getBountyData(BOUNTY_DATA_KEY);
                     ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
 
                     // incase active is missing for some reason
@@ -342,34 +383,46 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
 
     // creates an active bounty
     // returns true if an active bounty is sucessfully created, false otherwise
-    private static ActiveBounty createActiveBounty(SectorEntityToken bountyGiver, String activeBountyKey, int minFleetPoints)
+    private static ActiveBounty createActiveBounty(PersonAPI bountyGiver, String activeBountyKey, int minFleetPoints, TargetType type)
     {
         final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
 
         // determine faction of person
         FactionAPI giverFaction = bountyGiver.getFaction();
-        String factionId = null;
-        if(giverFaction == null) {
-            factionId = "independents";
+        FactionAPI targetFleetTypeFaction = null;
+        if(type == TargetType.ENEMY) {
+            targetFleetTypeFaction = getRandomEnemyFaction(giverFaction);
         } else {
-            factionId = bountyGiver.getFaction().getId();
+            targetFleetTypeFaction = bountyGiver.getFaction();
         }
 
         // try creating ActiveBounty
-        bountyData bountyGen = BountyUtils.createCopy(MagicBountyData.getBountyData(BOUNTY_DATA_KEY));
-        PersonAPI target = giverFaction.createRandomPerson();
+        bountyData bountyGen = null;
+        PersonAPI target = null;
+        if(type == TargetType.ENEMY) {
+            bountyGen = BountyUtils.createCopy(MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY));
+            target = targetFleetTypeFaction.createRandomPerson();
+            bountyGen.fleet_faction = targetFleetTypeFaction.getId();
+            bountyGen.location_marketFactions = new ArrayList<>();
+            bountyGen.location_marketFactions.add(targetFleetTypeFaction.getId());
+        } else {
+            bountyGen = BountyUtils.createCopy(MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY));
+            target = giverFaction.createRandomPerson();
+        }
+        
         bountyGen.fleet_min_FP = minFleetPoints;
         bountyGen.target_first_name = target.getName().getFirst();
         bountyGen.target_last_name = target.getName().getLast();
         bountyGen.target_gender = target.getGender();
         bountyGen.target_portrait = target.getPortraitSprite();
+
         ActiveBounty active = bountyCoordinator.createActiveBounty(activeBountyKey, bountyGen);
         if(active == null) {
             return null;
         }
 
         // edit fleet of active bounty
-        String fleetCompId = FleetCompEditing.editFleet(active.getFleet(), factionId, FleetCompEditing.ALWAYS_EDIT);
+        String fleetCompId = FleetCompEditing.editFleet(active.getFleet(), targetFleetTypeFaction.getId(), FleetCompEditing.ALWAYS_EDIT);
         if(fleetCompId != null) {
             active.getFleet().getMemoryWithoutUpdate().set(CommonStrings.FLEET_VARIANT_KEY, fleetCompId);
         }
@@ -384,12 +437,32 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         return active;
     }
 
-    private void displayBountyInfo(InteractionDialogAPI dialog, ActiveBounty active, MagicBountyData.bountyData bounty)
+    private static TargetType pickRandomTargetType(FactionAPI faction)
+    {
+        Vector<FactionAPI> enemies = getEnemyFactions(faction);
+        if(enemies.size() == 0) {
+            return TargetType.TRAITOR;
+        }
+
+        int random = RAND.nextInt();
+        if(random % 2 == 0) {
+            return TargetType.TRAITOR;
+        } else {
+            return TargetType.ENEMY;
+        }
+    }
+
+    private void displayBountyInfo(InteractionDialogAPI dialog, ActiveBounty active, MagicBountyData.bountyData bounty, TargetType type)
     {
         PersonAPI target = active.getFleet().getCommander();
-        dialog.getTextPanel().addPara("\"I'd take this one on myself if I had a warfleet to command,\" " + getHeOrShe() + 
-        " makes an expression like " + getHeOrShe() + " bit into something sour, \"" + target.getNameString() + 
-        "  is a betrayer and deserter. An example has to be made.");
+
+        if(type == TargetType.TRAITOR) {
+            dialog.getTextPanel().addPara("\"I'd take this one on myself if I had a warfleet to command,\" " + getHeOrShe() + 
+                " makes an expression like " + getHeOrShe() + " bit into something sour, \"" + target.getNameString() + 
+                "  is a betrayer and deserter. An example has to be made.");
+        } else {
+            dialog.getTextPanel().addPara("\"" + target.getNameString() + "has been involved in numerous raids and must be eliminated\"");
+        }
 
         text.addPara("\"" + createLocationEstimateText(active) + " " + getString("mb_distance") + ".\"",
             Misc.getTextColor(),
@@ -432,9 +505,65 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
 
     }
 
-    private int calculateReward(ActiveBounty active)
+    private static int calculateReward(ActiveBounty active)
     {
         return active.getFleet().getFleetPoints() * 1000 + 10000;
+    }
+
+    private static FactionAPI getRandomEnemyFaction(FactionAPI faction)
+    {
+        Vector<FactionAPI> enemies = getEnemyFactions(faction);
+        int index = RAND.nextInt() % enemies.size();
+        if(index < 0 || index >= enemies.size()) { // index evaluated to -1 somehow
+            index = 1;
+        }
+        return enemies.get(index);
+    }
+
+    private static Vector<FactionAPI> getEnemyFactions(FactionAPI faction)
+    {
+        Vector<FactionAPI> enemies = new Vector<>();
+        List<FactionAPI> allFactions = Global.getSector().getAllFactions();
+
+        for(FactionAPI otherFaction : allFactions) {
+            String otherFactionId = otherFaction.getId();
+            if(faction != otherFaction
+            && FactionData.FACTION_DATA.containsKey(otherFactionId)
+            && FactionData.FACTION_DATA.get(otherFactionId).hasTag(OFFERED_AS_BOUNTY_TAG)
+            && faction.getRelationship(otherFactionId) < -0.4f) {
+                enemies.add(otherFaction);
+            }
+        }
+
+        return enemies;
+    }
+
+    private static Vector<FactionAPI> getAllyFactions(FactionAPI faction)
+    {
+        Vector<FactionAPI> allies = new Vector<>();
+        List<FactionAPI> allFactions = Global.getSector().getAllFactions();
+
+        for(FactionAPI otherFaction : allFactions) {
+            String otherFactionId = otherFaction.getId();
+            if(faction != otherFaction
+            && FactionData.FACTION_DATA.containsKey(otherFactionId)
+            && FactionData.FACTION_DATA.get(otherFactionId).hasTag(OFFERED_AS_BOUNTY_TAG)
+            && faction.getRelationship(otherFactionId) > 0.6f) {
+                allies.add(otherFaction);
+            }
+        }
+
+        return allies;
+    }
+
+    private class BountyInfo {
+        public TargetType type;
+        public String activeBountyKey;
+
+        public BountyInfo(TargetType Type, String ActiveBountyKey) {
+            type = Type;
+            activeBountyKey = ActiveBountyKey;
+        }
     }
 
     private void showFleet(
@@ -684,6 +813,11 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         loc = sheIs + getString("mb_distance_rumor") + loc + getString(".");
 
         return loc;
+    }
+
+    enum TargetType {
+        TRAITOR,
+        ENEMY
     }
 
     enum OptionId {

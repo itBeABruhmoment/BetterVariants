@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
 
+// loads data on fleet types
 public class FleetBuildData {
     private static final Logger log = Global.getLogger(better_variants.data.FleetBuildData.class);
     static {

@@ -4,7 +4,6 @@ import better_variants.data.FactionData;
 import better_variants.data.VariantData;
 import better_variants.bar_events.BetterVariantsBarEventCreator;
 import better_variants.bar_events.TestEvent;
-import better_variants.data.BountyData;
 import better_variants.data.CommonStrings;
 import better_variants.data.FleetBuildData;
 import better_variants.data.SettingsData;
