@@ -152,6 +152,10 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     dialog.getTextPanel().addPara("You approach and the officer gives you a prefunctory nod. \"Captian,\" he says, all business.");
                     dialog.getTextPanel().addPara("\"I have several assignments on the docket,\" he looks down, scrolling his datapad. \"What sort of job can you handle?\"");
 
+                    // make bounty giving person display properly
+                    dialog.getVisualPanel().showPersonInfo(getPerson());
+
+
                     // And give them some options on what to do next
                     dialog.getOptionPanel().addOption("A managable target", OptionId.EASY_BOUNTY);
                     dialog.getOptionPanel().addOption("A standard target", OptionId.MEDIUM_BOUNTY);
