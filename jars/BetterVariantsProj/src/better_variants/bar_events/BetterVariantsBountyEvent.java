@@ -192,6 +192,8 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 0.7) + 10;
                     if(bountyFleetDP < 70) {
                         bountyFleetDP = 70;
+                    } else if(bountyFleetDP > 500) {
+                        bountyFleetDP = 500;
                     }
 
                     // get active bounty for the job
@@ -248,6 +250,8 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.0) + 10;
                     if(bountyFleetDP < 100) {
                         bountyFleetDP = 100;
+                    } else if(bountyFleetDP > 500) {
+                        bountyFleetDP = 500;
                     }
 
                     // get active bounty for the job
@@ -304,6 +308,8 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.3) + 10;
                     if(bountyFleetDP < 130) {
                         bountyFleetDP = 130;
+                    } else if(bountyFleetDP > 500) {
+                        bountyFleetDP = 500;
                     }
 
                     // get active bounty for the job
@@ -509,9 +515,11 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
 
     }
 
-    private static int calculateReward(ActiveBounty active)
+    private int calculateReward(ActiveBounty active)
     {
-        return active.getFleet().getFleetPoints() * 1000 + 10000;
+        float travelCostEstimate = Math.round(Misc.getDistanceLY(market.getPrimaryEntity(), active.getFleetSpawnLocation())) * 0.25f;
+        float fleetValueEstimate = active.getFleet().getFleetPoints() * 0.19f;
+        return Math.round(travelCostEstimate + fleetValueEstimate) * 10000 + 10000;
     }
 
     private static FactionAPI getRandomEnemyFaction(FactionAPI faction)
