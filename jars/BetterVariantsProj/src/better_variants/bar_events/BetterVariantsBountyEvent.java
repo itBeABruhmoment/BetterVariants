@@ -88,7 +88,8 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
     @Override
     public boolean shouldShowAtMarket(MarketAPI market)
     {
-        return true;
+        String marketFaction = market.getFaction().getId();
+        return FactionData.FACTION_DATA.containsKey(marketFaction) && FactionData.FACTION_DATA.get(marketFaction).hasTag(OFFERED_AS_BOUNTY_TAG);
     }
 
     @Override
