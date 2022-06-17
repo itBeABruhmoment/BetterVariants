@@ -519,8 +519,8 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
 
     private int calculateReward(ActiveBounty active)
     {
-        float travelCostEstimate = Math.round(Misc.getDistanceLY(market.getPrimaryEntity(), active.getFleetSpawnLocation())) * 0.25f;
-        float fleetValueEstimate = active.getFleet().getFleetPoints() * 0.19f;
+        float travelCostEstimate = Math.round(Misc.getDistanceLY(market.getPrimaryEntity(), active.getFleetSpawnLocation())) * 0.50f;
+        float fleetValueEstimate = active.getFleet().getFleetPoints() * 0.20f;
         return Math.round(travelCostEstimate + fleetValueEstimate) * 10000 + 10000;
     }
 
