@@ -95,7 +95,7 @@
         "fleet_composition_quality": 1, # Default: 1, use 2 for no Dmods.
         "fleet_transponder": false, # Default: true.
 		"fleet_no_retreat": false, #Default: false.
-        "fleet_behavior": "PASSIVE", # Default:"GUARDED". The fleet's behavior on the campaign layer. Options: ["PASSIVE", "GUARDED", "AGGRESSIVE", "ROAMING"].
+        "fleet_behavior": "ROAMING", # Default:"GUARDED". The fleet's behavior on the campaign layer. Options: ["PASSIVE", "GUARDED", "AGGRESSIVE", "ROAMING"].
     
         #LOCATION
         "location_themes": [ # Default: no preference. System themes that are valid to spawn the fleet at.
@@ -110,14 +110,6 @@
             "theme_derelict_survey_ship",
             "theme_derelict_probes",
             "theme_unsafe",
-            "theme_remnant_secondary",
-            "theme_remnant_no_fleets",
-            "theme_remnant_destroyed",
-            "theme_remnant_suppressed",
-            "theme_remnant_resurgent",
-            
-            "procgen_no_theme", #not so special bounties should add this attribute
-            "procgen_no_theme_pulsar_blackhole", #or this one
         ],
         
         "location_defaultToAnyEntity": true,
@@ -125,7 +117,7 @@
 
     #this bounty exists solely for the purpose of acting as a template for the bounties in this mod, should never actually appear
     "better_variants_enemy":{
-    
+    	"fleet_name":"Raiders", # Default: no name.
         "required_mods_id": ["better_variants"], # Default: no values. List the required mods for this bounty
         #TRIGGERS (ALL OPTIONAL)
         
@@ -218,7 +210,7 @@
         "fleet_composition_quality": 1, # Default: 1, use 2 for no Dmods.
         "fleet_transponder": false, # Default: true.
 		"fleet_no_retreat": false, #Default: false.
-        "fleet_behavior": "PASSIVE", # Default:"GUARDED". The fleet's behavior on the campaign layer. Options: ["PASSIVE", "GUARDED", "AGGRESSIVE", "ROAMING"].
+        "fleet_behavior": "ROAMING", # Default:"GUARDED". The fleet's behavior on the campaign layer. Options: ["PASSIVE", "GUARDED", "AGGRESSIVE", "ROAMING"].
     
         #LOCATION
         "location_themes": [ # Default: no preference. System themes that are valid to spawn the fleet at.
@@ -236,16 +228,6 @@
             "theme_derelict_survey_ship",
             "theme_derelict_probes",
             "theme_unsafe",
-            "theme_remnant",
-            "theme_remnant_main",
-            "theme_remnant_secondary",
-            "theme_remnant_no_fleets",
-            "theme_remnant_destroyed",
-            "theme_remnant_suppressed",
-            "theme_remnant_resurgent",
-            
-            "procgen_no_theme", #not so special bounties should add this attribute
-            "procgen_no_theme_pulsar_blackhole", #or this one
         ],
         
         "location_defaultToAnyEntity": true,
