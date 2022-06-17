@@ -3,6 +3,7 @@ package better_variants.scripts;
 import better_variants.data.FactionData;
 import better_variants.data.VariantData;
 import better_variants.bar_events.BetterVariantsBarEventCreator;
+import better_variants.bar_events.BountyCreationData;
 import better_variants.bar_events.TestEvent;
 import better_variants.data.CommonStrings;
 import better_variants.data.FleetBuildData;
@@ -43,6 +44,8 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
         VariantData.loadData();
         log.debug(CommonStrings.MOD_ID + ": loading fleet build data");
         FleetBuildData.loadData();
+        log.debug(CommonStrings.MOD_ID + ": loading bounty data");
+        BountyCreationData.loadData();
     }
 
     @Override
