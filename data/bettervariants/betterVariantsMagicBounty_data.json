@@ -1,0 +1,253 @@
+{
+    #this bounty exists solely for the purpose of acting as a template for the bounties in this mod, should never actually appear
+    "better_variants_traitor":{
+    
+        "required_mods_id": ["better_variants"], # Default: no values. List the required mods for this bounty
+        #TRIGGERS (ALL OPTIONAL)
+        
+        "trigger_player_minLevel": 100, # Default: 0. The minimum level of the player.
+
+        #BOUNTY DESCRIPTION
+        
+        "job_name": "Bounty - $firstName $lastName", # Default: "Unnamed job". Job name shown in the dialog pick list
+        "job_description": "Kill deserter", # Default: blank. The description shown upon selecting the job.
+                                                               # \n creates a line break, for example "Line one.\nLine two."
+															   # \" adds quotation marks.
+                                                               # == brackets create a highlight, for example "Text ==highlight== text."
+                                                               # ^ uppercase the following letter of a text variable, for example "^$heIsSheIsTheyAre turning angry."
+                                                               # %% allow the use of %, otherwise it will be interpreted as an escape character. 
+                                                               # $sonDaughterChild based on bounty commander gender.
+                                                               # $fatherMotherParent
+                                                               # $manWomanPerson
+                                                               # $heSheThey
+                                                               # $himHerThem
+                                                               # $hisHerTheir
+                                                               # $heIsSheIsTheyAre
+                                                               # $himslefHerselfThemselves
+                                                               # $system The star system that the bounty fleet is in.
+                                                               # $location The body that the bounty fleet has been placed near.
+                                                               # $shipName The name of the bounty flagship.
+                                                               # $faction The name of the faction (with article) of the bounty fleet.
+                                                               # $reward The amount of credits being given as a reward.
+                                                               # $name The name of the bounty commander.
+                                                               # $firstName The first name of the bounty commander.
+                                                               # $lastName The last name of the bounty commander.
+                                                               # $constellation The constellation that the bounty fleet is in.
+                                                               # $shipFleet base on either the target being a ship alone, or a fleet.
+        "job_intel_success": "Bounty success", # Default: not shown. Short conclusion text shown in the intel object after the job has been COMPLETED SUCCESSFULLY.
+        "job_intel_failure": "Bounty failed", # Default: not shown. Short conclusion text shown in the intel object after the job has been failed through FLAGSHIP RECOVERY.
+        "job_intel_expired": "Bounty expired", # Default: not shown. Short conclusion text shown in the intel object after the job has EXPIRED.
+        "job_forFaction": "pirates", # Default: no faction. Note that unless "job_reputation_reward" is set to 0, successfully completing a bounty will improve relations by 5 points.
+        "job_deadline": 360, # Default: no limit. The number of days to complete the bounty.
+        "job_credit_reward": 9000, # Default: no credit reward. Number of credits to award the player on successful completion.
+        "job_reward_scaling": 1.0, # Default: no scaling/bonus. Bonus credits based on FP. Bonus is the specified number multiplied by how many FP the bounty fleet was over their base FP.
+        "job_reputation_reward":0.03, # Default: 5 rep points. Reputation benefit with the faction posting the bounty, if any, in case of success. Set to 0 or less to disable, does not scale
+
+        "job_type":"assassination", # Default: assassination.
+                # assassination: required only to disable the flagship, may recover it.
+                # destruction: requires the complete destruction of the flagship without recovery.
+                # obliteration: requires the complete destruction or disabling of the enemy fleet, may recover.
+                # neutralisation: requires the destruction or disabling of 2/3rd of the enemy fleet, may recover.
+        "job_show_type": true, # Default: true. Make sure to explain the mission objective in the bounty description if you choose to not use the default display.
+        "job_show_captain": false, # Default: true. Whether to show the bounty fleet captain on the job board. If false, shows the flag of the giving faction.
+        "job_show_fleet": "vanilla", # Default: "vanilla".
+                # How much of the fleet to show on the bounty board.
+				# none
+                # text: "The intel assessment notes the target fleet may contain upwards of %s ships."
+                # flagship: only shows an image of the flagship
+                # flagshipText: shows an image of the flagships and a text with the number of other ships
+                # preset: only show an image of the Flagship and the preset fleet
+                # presetText: show an image of the Flagship and the preset fleet, plus a text with the number of other ships
+                # vanilla: shows the Flagship and the 9 biggest ships of the fleet, plus a text with the number of other ships
+                # all: show an image of all the ships in the fleet.
+        "job_show_distance": "vanillaDistance", # Default: "vanillaDistance".
+                # How precisely the distance to the target is shown on the bounty board.
+                # none: Do not show the distance.
+                # vague: "The target is located somewhere in the vicinity of the core worlds."
+                # distance: "It is located roughly %s LY away from your current position."
+				# vanilla: "The target is located near a giant in a system with a yellow primary star, in the Nebulon constellation." Also shows a map during the bar dialog
+                # vanillaDistance: "The target is located near a giant in a system with a yellow primary star, in the Nebulon constellation. It is located roughly %s LY away from your current position." Also shows a map during the bar dialog
+				# exact: "The target is located near X in the Y system." Also shows a map during the bar dialog
+		"job_show_arrow": true, # Default: false. Whether to show an arrow on the Intel map pointing from the start to the bounty target location. Should only be enabled when there is a good reason, to match vanilla.
+        "job_difficultyDescription": "auto",  # Default: auto description shown. "none": no description, "auto": bounty board describes how dangerous the bounty is, any other text: bounty board displays the text.
+        "job_pick_option": "Accept the job", # Default: "Accept the job". The text option that, when selected, accepts the bounty job.
+
+        "job_memKey":"$better_variants_bounty",	# Defaults to "$bountyId", memKeys always start with "$". The specified memkey will be set to false when the job is accepted, then true if it is completed.
+        
+        #TARGET EXISTING FLEET
+
+        #TARGET COMMANDER (OPTIONAL)
+        
+        "target_level": 15, # Default: 0. The level of the bounty commander
+    
+    
+        #TARGET FLEET
+        
+        "fleet_name":"Deserters", # Default: no name.
+        "fleet_faction": "pirates", # Required. The faction id from [https://jaghaimo.github.io/starsector-api/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Factions.html] or a custom faction id.
+        # MagicLib includes a utility bounty faction that is forced to be neutral to everyone but the player under the id ["ML_bounty"].
+        "fleet_flagship_variant":"buffalo2_FS", # Required. The variant ID to use for the Flagship. Can be a list of variants to choose randomly from: [variant1,variant2,variant3]
+        # Variant files that use ships or weapons from third party mods that may or may not be installed can be put in [data\config\modFiles\magicBounty_variants\shipVariantId.variant] to avoid crashing on launch if said mods are absent. The bounty will need the proper mod requirements to be generated without issue.
+        "fleet_preset_autofit": true, # Default: false. Whether the preset ships will be autofitted. When false, the preset ships do not receive D-mods or S-mods from the quality override.
+        "fleet_scaling_multiplier": 1, # Default: no scaling. Dynamic reinforcements to match that amount of player fleet DP, set to 0 to ignore.
+        "fleet_min_FP": 100, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "pirates", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 1, # Default: 1, use 2 for no Dmods.
+        "fleet_transponder": false, # Default: true.
+		"fleet_no_retreat": false, #Default: false.
+        "fleet_behavior": "PASSIVE", # Default:"GUARDED". The fleet's behavior on the campaign layer. Options: ["PASSIVE", "GUARDED", "AGGRESSIVE", "ROAMING"].
+    
+        #LOCATION
+        "location_themes": [ # Default: no preference. System themes that are valid to spawn the fleet at.
+            "theme_interesting",
+            "theme_interesting_minor",	
+            "theme_ruins",
+            "theme_ruins_main",
+            "theme_ruins_secondary",
+            "theme_derelict",
+            "theme_derelict_mothership",
+            "theme_derelict_cryosleeper",
+            "theme_derelict_survey_ship",
+            "theme_derelict_probes",
+            "theme_unsafe",
+            "theme_remnant_secondary",
+            "theme_remnant_no_fleets",
+            "theme_remnant_destroyed",
+            "theme_remnant_suppressed",
+            "theme_remnant_resurgent",
+            
+            "procgen_no_theme", #not so special bounties should add this attribute
+            "procgen_no_theme_pulsar_blackhole", #or this one
+        ],
+        
+        "location_defaultToAnyEntity": true,
+    },
+
+    #this bounty exists solely for the purpose of acting as a template for the bounties in this mod, should never actually appear
+    "better_variants_enemy":{
+    
+        "required_mods_id": ["better_variants"], # Default: no values. List the required mods for this bounty
+        #TRIGGERS (ALL OPTIONAL)
+        
+        "trigger_player_minLevel": 100, # Default: 0. The minimum level of the player.
+
+        #BOUNTY DESCRIPTION
+        
+        "job_name": "Bounty - $firstName $lastName", # Default: "Unnamed job". Job name shown in the dialog pick list
+        "job_description": "Assasinate enemy officer", # Default: blank. The description shown upon selecting the job.
+                                                               # \n creates a line break, for example "Line one.\nLine two."
+															   # \" adds quotation marks.
+                                                               # == brackets create a highlight, for example "Text ==highlight== text."
+                                                               # ^ uppercase the following letter of a text variable, for example "^$heIsSheIsTheyAre turning angry."
+                                                               # %% allow the use of %, otherwise it will be interpreted as an escape character. 
+                                                               # $sonDaughterChild based on bounty commander gender.
+                                                               # $fatherMotherParent
+                                                               # $manWomanPerson
+                                                               # $heSheThey
+                                                               # $himHerThem
+                                                               # $hisHerTheir
+                                                               # $heIsSheIsTheyAre
+                                                               # $himslefHerselfThemselves
+                                                               # $system The star system that the bounty fleet is in.
+                                                               # $location The body that the bounty fleet has been placed near.
+                                                               # $shipName The name of the bounty flagship.
+                                                               # $faction The name of the faction (with article) of the bounty fleet.
+                                                               # $reward The amount of credits being given as a reward.
+                                                               # $name The name of the bounty commander.
+                                                               # $firstName The first name of the bounty commander.
+                                                               # $lastName The last name of the bounty commander.
+                                                               # $constellation The constellation that the bounty fleet is in.
+                                                               # $shipFleet base on either the target being a ship alone, or a fleet.
+        "job_intel_success": "Bounty success", # Default: not shown. Short conclusion text shown in the intel object after the job has been COMPLETED SUCCESSFULLY.
+        "job_intel_failure": "Bounty failed", # Default: not shown. Short conclusion text shown in the intel object after the job has been failed through FLAGSHIP RECOVERY.
+        "job_intel_expired": "Bounty expired", # Default: not shown. Short conclusion text shown in the intel object after the job has EXPIRED.
+        "job_forFaction": "pirates", # Default: no faction. Note that unless "job_reputation_reward" is set to 0, successfully completing a bounty will improve relations by 5 points.
+        "job_deadline": 360, # Default: no limit. The number of days to complete the bounty.
+        "job_credit_reward": 9000, # Default: no credit reward. Number of credits to award the player on successful completion.
+        "job_reward_scaling": 1.0, # Default: no scaling/bonus. Bonus credits based on FP. Bonus is the specified number multiplied by how many FP the bounty fleet was over their base FP.
+        "job_reputation_reward":0.03, # Default: 5 rep points. Reputation benefit with the faction posting the bounty, if any, in case of success. Set to 0 or less to disable, does not scale
+
+        "job_type":"assassination", # Default: assassination.
+                # assassination: required only to disable the flagship, may recover it.
+                # destruction: requires the complete destruction of the flagship without recovery.
+                # obliteration: requires the complete destruction or disabling of the enemy fleet, may recover.
+                # neutralisation: requires the destruction or disabling of 2/3rd of the enemy fleet, may recover.
+        "job_show_type": true, # Default: true. Make sure to explain the mission objective in the bounty description if you choose to not use the default display.
+        "job_show_captain": false, # Default: true. Whether to show the bounty fleet captain on the job board. If false, shows the flag of the giving faction.
+        "job_show_fleet": "vanilla", # Default: "vanilla".
+                # How much of the fleet to show on the bounty board.
+				# none
+                # text: "The intel assessment notes the target fleet may contain upwards of %s ships."
+                # flagship: only shows an image of the flagship
+                # flagshipText: shows an image of the flagships and a text with the number of other ships
+                # preset: only show an image of the Flagship and the preset fleet
+                # presetText: show an image of the Flagship and the preset fleet, plus a text with the number of other ships
+                # vanilla: shows the Flagship and the 9 biggest ships of the fleet, plus a text with the number of other ships
+                # all: show an image of all the ships in the fleet.
+        "job_show_distance": "vanillaDistance", # Default: "vanillaDistance".
+                # How precisely the distance to the target is shown on the bounty board.
+                # none: Do not show the distance.
+                # vague: "The target is located somewhere in the vicinity of the core worlds."
+                # distance: "It is located roughly %s LY away from your current position."
+				# vanilla: "The target is located near a giant in a system with a yellow primary star, in the Nebulon constellation." Also shows a map during the bar dialog
+                # vanillaDistance: "The target is located near a giant in a system with a yellow primary star, in the Nebulon constellation. It is located roughly %s LY away from your current position." Also shows a map during the bar dialog
+				# exact: "The target is located near X in the Y system." Also shows a map during the bar dialog
+		"job_show_arrow": true, # Default: false. Whether to show an arrow on the Intel map pointing from the start to the bounty target location. Should only be enabled when there is a good reason, to match vanilla.
+        "job_difficultyDescription": "auto",  # Default: auto description shown. "none": no description, "auto": bounty board describes how dangerous the bounty is, any other text: bounty board displays the text.
+        "job_pick_option": "Accept the job", # Default: "Accept the job". The text option that, when selected, accepts the bounty job.
+
+        "job_memKey":"$better_variants_bounty",	# Defaults to "$bountyId", memKeys always start with "$". The specified memkey will be set to false when the job is accepted, then true if it is completed.
+        
+        #TARGET EXISTING FLEET
+
+        #TARGET COMMANDER (OPTIONAL)
+        
+        "target_level": 15, # Default: 0. The level of the bounty commander
+    
+    
+        #TARGET FLEET
+        
+        "fleet_faction": "pirates", # Required. The faction id from [https://jaghaimo.github.io/starsector-api/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Factions.html] or a custom faction id.
+        # MagicLib includes a utility bounty faction that is forced to be neutral to everyone but the player under the id ["ML_bounty"].
+        "fleet_flagship_variant":"buffalo2_FS", # Required. The variant ID to use for the Flagship. Can be a list of variants to choose randomly from: [variant1,variant2,variant3]
+        # Variant files that use ships or weapons from third party mods that may or may not be installed can be put in [data\config\modFiles\magicBounty_variants\shipVariantId.variant] to avoid crashing on launch if said mods are absent. The bounty will need the proper mod requirements to be generated without issue.
+        "fleet_preset_autofit": true, # Default: false. Whether the preset ships will be autofitted. When false, the preset ships do not receive D-mods or S-mods from the quality override.
+        "fleet_scaling_multiplier": 1, # Default: no scaling. Dynamic reinforcements to match that amount of player fleet DP, set to 0 to ignore.
+        "fleet_min_FP": 100, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "pirates", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 1, # Default: 1, use 2 for no Dmods.
+        "fleet_transponder": false, # Default: true.
+		"fleet_no_retreat": false, #Default: false.
+        "fleet_behavior": "PASSIVE", # Default:"GUARDED". The fleet's behavior on the campaign layer. Options: ["PASSIVE", "GUARDED", "AGGRESSIVE", "ROAMING"].
+    
+        #LOCATION
+        "location_themes": [ # Default: no preference. System themes that are valid to spawn the fleet at.
+            "theme_core_unpopulated",
+            "theme_core_populated",
+            "theme_core",
+            "theme_interesting",
+            "theme_interesting_minor",	
+            "theme_ruins",
+            "theme_ruins_main",
+            "theme_ruins_secondary",
+            "theme_derelict",
+            "theme_derelict_mothership",
+            "theme_derelict_cryosleeper",
+            "theme_derelict_survey_ship",
+            "theme_derelict_probes",
+            "theme_unsafe",
+            "theme_remnant",
+            "theme_remnant_main",
+            "theme_remnant_secondary",
+            "theme_remnant_no_fleets",
+            "theme_remnant_destroyed",
+            "theme_remnant_suppressed",
+            "theme_remnant_resurgent",
+            
+            "procgen_no_theme", #not so special bounties should add this attribute
+            "procgen_no_theme_pulsar_blackhole", #or this one
+        ],
+        
+        "location_defaultToAnyEntity": true,
+    },
+}
