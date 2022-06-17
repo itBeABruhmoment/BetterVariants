@@ -9,6 +9,7 @@ import java.util.Vector;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.lazywizard.console.Console;
 
 import data.scripts.util.MagicCampaign;
 import data.scripts.bounty.ActiveBounty;
@@ -200,9 +201,9 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     // get active bounty for the job
                     final MagicBountyData.bountyData bounty;
                     if(bountyType == TargetType.ENEMY) {
-                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getEnemyBountyData();
                     } else {
-                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getTraitorBountyData();
                     }
                     ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
                     if(active == null) {
@@ -258,9 +259,9 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     // get active bounty for the job
                     final MagicBountyData.bountyData bounty;
                     if(bountyType == TargetType.ENEMY) {
-                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getEnemyBountyData();
                     } else {
-                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getTraitorBountyData();
                     }
                     ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
                     if(active == null) {
@@ -316,9 +317,9 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     // get active bounty for the job
                     final MagicBountyData.bountyData bounty;
                     if(bountyType == TargetType.ENEMY) {
-                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getEnemyBountyData();
                     } else {
-                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getTraitorBountyData();
                     }
                     ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
                     if(active == null) {
@@ -349,9 +350,9 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
 
                     final MagicBountyData.bountyData bounty;
                     if(bountyType == TargetType.ENEMY) {
-                        bounty = MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getEnemyBountyData();
                     } else {
-                        bounty = MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY);
+                        bounty = BountyCreationData.getTraitorBountyData();
                     }
 
                     // get active bounty for the job
@@ -411,13 +412,13 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         bountyData bountyGen = null;
         PersonAPI target = null;
         if(type == TargetType.ENEMY) {
-            bountyGen = BountyUtils.createCopy(MagicBountyData.getBountyData(ENEMY_BOUNTY_DATA_KEY));
+            bountyGen = BountyUtils.createCopy(BountyCreationData.getEnemyBountyData());
             target = targetFleetTypeFaction.createRandomPerson();
             bountyGen.fleet_faction = targetFleetTypeFaction.getId();
             bountyGen.location_marketFactions = new ArrayList<>();
             bountyGen.location_marketFactions.add(targetFleetTypeFaction.getId());
         } else {
-            bountyGen = BountyUtils.createCopy(MagicBountyData.getBountyData(TRAITOR_BOUNTY_DATA_KEY));
+            bountyGen = BountyUtils.createCopy(BountyCreationData.getTraitorBountyData());
             target = giverFaction.createRandomPerson();
         }
         bountyGen.job_name = "Bounty - " + target.getName().getFirst() + " " + target.getName().getLast();
