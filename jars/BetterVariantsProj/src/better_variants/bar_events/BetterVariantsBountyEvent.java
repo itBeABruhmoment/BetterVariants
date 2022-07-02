@@ -63,6 +63,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
     static {
         log.setLevel(Level.ALL);
     }
+    
 
     private static final Random RAND = new Random();
     private static final float BOUNTY_NO_CHANGE_DURATION = 30.0f;
@@ -365,7 +366,8 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
                     }
 
                     //bountyCoordinator.configureBountyListeners();
-                    active.acceptBounty(dialog.getInteractionTarget(), (float)calculateReward(active), 5.0f, bounty.job_forFaction);
+                    log.debug("faction: " + getPerson().getFaction().getId());
+                    active.acceptBounty(dialog.getInteractionTarget(), (float)calculateReward(active), 0.03f, getPerson().getFaction().getId());
 
                     dialog.getTextPanel().addPara("You accept the bounty");
                     dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
@@ -427,6 +429,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         bountyGen.target_last_name = target.getName().getLast();
         bountyGen.target_gender = target.getGender();
         bountyGen.target_portrait = target.getPortraitSprite();
+        bountyGen.job_forFaction =giverFaction.getId();
 
         ActiveBounty active = bountyCoordinator.createActiveBounty(activeBountyKey, bountyGen);
         if(active == null) {
