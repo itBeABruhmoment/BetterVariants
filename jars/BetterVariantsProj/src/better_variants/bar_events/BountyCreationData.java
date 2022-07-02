@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 // looks like I can't trust magic bounty data to not delete bounty data. Static class for storing data for bar event
 public class BountyCreationData {
+    // Console.showMessage(better_variants.bar_events.BountyCreationData.getTraitorBountyData().toString());
     private static final Logger log = Global.getLogger(better_variants.bar_events.BountyCreationData.class);
     static {
         log.setLevel(Level.ALL);
@@ -71,6 +72,9 @@ public class BountyCreationData {
             throw new Exception(CommonStrings.MOD_ID + ": error loading better_variants_traitor");
         }
         
+        ENEMY_BOUNTY.job_reputation_reward = 0.03f;
+        TRAITOR_BOUNTY.job_reputation_reward = 0.03f;
+
         BOUNTY_DATA = null;
     }
 
