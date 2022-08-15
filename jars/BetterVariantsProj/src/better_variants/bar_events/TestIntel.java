@@ -18,7 +18,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class TestIntel extends BaseIntelPlugin {
-    private static final Logger log = Global.getLogger(better_variants.data.FleetPartition.class);
+    private static final Logger log = Global.getLogger(better_variants.bar_events.TestIntel.class);
     static {
         log.setLevel(Level.ALL);
     }

@@ -22,12 +22,15 @@ import java.security.Key;
 
 import org.lwjgl.util.vector.Vector2f;
 
-import better_variants.data.CommonStrings;
-import better_variants.data.FactionData;
-import better_variants.data.FleetBuildData;
-import better_variants.data.SettingsData;
-import better_variants.scripts.fleetedit.FleetCompEditing;
-import better_variants.scripts.fleetedit.OfficerEditing;
+import variants_lib.data.FactionData;
+import variants_lib.data.SettingsData;
+import variants_lib.scripts.fleetedit.OfficerEditing;
+import variants_lib.scripts.fleetedit.FleetBuilding;
+//import better_variants.data.FactionData;
+//import better_variants.data.FleetBuildData;
+//import better_variants.data.SettingsData;
+//import better_variants.scripts.fleetedit.FleetCompEditing;
+//import better_variants.scripts.fleetedit.OfficerEditing;
 
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.Global;
@@ -437,9 +440,9 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         }
 
         // edit fleet of active bounty
-        String fleetCompId = FleetCompEditing.editFleet(active.getFleet(), targetFleetTypeFaction.getId(), FleetCompEditing.ALWAYS_EDIT);
+        String fleetCompId = FleetBuilding.editFleet(active.getFleet(), targetFleetTypeFaction.getId(), FleetCompEditing.ALWAYS_EDIT);
         if(fleetCompId != null) {
-            active.getFleet().getMemoryWithoutUpdate().set(CommonStrings.FLEET_VARIANT_KEY, fleetCompId);
+            active.getFleet().getMemoryWithoutUpdate().set(variants_lib.data.CommonStrings.FLEET_VARIANT_KEY, fleetCompId);
         }
         if(SettingsData.OfficerEditingEnabled()) {
             OfficerEditing.editAllOfficers(active.getFleet(), fleetCompId);
