@@ -214,16 +214,16 @@
 		"enforcer_XIV_Elite2_bv":3,
 		"enforcer_XIV_Overdriven_bv":3,
 		
-		"enforcer_d_pirates_Strike_bv":3,
+		"enforcer_d_pirates_Strike_bv":5,
 		"enforcer_d_pirates_Overdriven_bv":2,
 		"enforcer_d_pirates_Overdriven2_bv":2,
-		"enforcer_d_pirates_Standard_bv":3,
+		"enforcer_d_pirates_Standard_bv":5,
 		
 		"fulgent_Assault":0,
 		"fulgent_Support":0,
 		
-		"fulgent_Overdriven_bv":5,
-		"fulgent_Strike_bv":5,
+		"fulgent_Overdriven_bv":2,
+		"fulgent_Strike_bv":8,
 		
 		"hammerhead_Balanced":0,
 		"hammerhead_Elite":0,
@@ -248,8 +248,8 @@
 		"medusa_CS":0,
 		"medusa_PD":0,
 		
-		"medusa_Attack_bv":6,
-		"medusa_Overdriven_bv":4,
+		"medusa_Attack_bv":8,
+		"medusa_Overdriven_bv":2,
 		
 		"mule_d_pirates_Smuggler":5,
 		"mule_d_pirates_Standard":5,
@@ -322,15 +322,15 @@
 		"falcon_xiv_Escort":0,
 		"falcon_p_Strike":0,
 		
-		"eagle_Standard_bv":2,
-		"eagle_Balanced_bv":2,
-		"eagle_Overdriven_bv":6,
-		"eagle_xiv_Standard_bv":3,
-		"eagle_xiv_Overdriven_bv":7,
-		"falcon_Overdriven_bv":5,
-		"falcon_CS_bv":5,
-		"falcon_xiv_Overdriven_bv":5,
-		"falcon_xiv_Support_bv":5,
+		"eagle_Standard_bv":4,
+		"eagle_Balanced_bv":4,
+		"eagle_Overdriven_bv":2,
+		"eagle_xiv_Standard_bv":8,
+		"eagle_xiv_Overdriven_bv":2,
+		"falcon_Overdriven_bv":2,
+		"falcon_CS_bv":8,
+		"falcon_xiv_Overdriven_bv":2,
+		"falcon_xiv_Support_bv":10,
 		"falcon_p_Strike2_bv":5,
 		"falcon_p_Strike3_bv":5,
 		
@@ -367,8 +367,8 @@
 		"gryphon_Standard":0,
 		"gryphon_FS":0,
 		
-		"gryphon_FS_bv":5,
-		"gryphon_Overdriven_bv":5,
+		"gryphon_FS_bv":8,
+		"gryphon_Overdriven_bv":2,
 		
 		"brilliant_Standard":0,
 		
@@ -595,8 +595,8 @@
 		"doom_Support":0,
 		
 	
-		"doom_Overdriven_bv":3,
-		"doom_Support_bv":7,
+		"doom_Overdriven_bv":2,
+		"doom_Support_bv":8,
 		"fallback":{"phaseMedium":1},
 		"fallback2":{"phaseSmall":1},
 	},
