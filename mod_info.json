@@ -13,5 +13,10 @@
             "id": "MagicLib",
             "name": "MagicLib",
         },
+        {
+            "id": "variants_lib",
+            "name": "Variants Lib",
+        },
+        
     ],
 }

@@ -58,6 +58,8 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BreadcrumbSpec
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
+import better_variants.data.CommonStrings;
+
 import static data.scripts.util.MagicTxt.getString;
 
 // bar event for "talk to the officer offering exotic bounties"
@@ -439,8 +441,12 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
             return null;
         }
 
+        MemoryAPI fleetMemory = active.getFleet().getMemoryWithoutUpdate();
+        fleetMemory.set(MemFlags.MEMORY_KEY_FLEET_TYPE, CommonStrings.EXOTIC_BOUNTY_FLEET_TYPE);
+        fleetMemory.set(variants_lib.data.CommonStrings.FLEET_EDITED_MEMKEY, true);
+
         // edit fleet of active bounty
-        String fleetCompId = FleetBuilding.editFleet(active.getFleet(), targetFleetTypeFaction.getId(), FleetCompEditing.ALWAYS_EDIT);
+        String fleetCompId = FleetBuilding.editFleet(active.getFleet());
         if(fleetCompId != null) {
             active.getFleet().getMemoryWithoutUpdate().set(variants_lib.data.CommonStrings.FLEET_VARIANT_KEY, fleetCompId);
         }
