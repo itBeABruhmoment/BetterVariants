@@ -1,0 +1,9 @@
+{
+	"specialFleetSpawnMult":1.0,
+	"enableNoAutofitFeatures":true,
+	"enableOfficerEditing":true,
+	"enableFleetEditing":true,
+	"enableDefaultPersonalitySetting":true,
+	# "universalPreModificationScripts":["variants_lib.scripts.FleetEditingScriptTest"],
+	# "universalPostModificationScripts":["variants_lib.scripts.FleetEditingScriptTest"]
+}
