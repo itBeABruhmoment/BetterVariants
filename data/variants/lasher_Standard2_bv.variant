@@ -2,7 +2,6 @@
     "displayName": "Standard2",
     "fluxCapacitors": 7,
     "fluxVents": 10,
-    "goalVariant": true,
     "hullId": "lasher",
     "hullMods": [
         "fluxdistributor",

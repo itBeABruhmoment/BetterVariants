@@ -2,7 +2,6 @@
     "displayName": "EW",
     "fluxCapacitors": 10,
     "fluxVents": 5,
-    "goalVariant": true,
     "hullId": "omen",
     "hullMods": [
         "frontemitter",

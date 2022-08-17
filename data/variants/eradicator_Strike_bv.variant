@@ -2,7 +2,6 @@
     "displayName": "Strike",
     "fluxCapacitors": 4,
     "fluxVents": 30,
-    "goalVariant": true,
     "hullId": "eradicator",
     "hullMods": [
         "missleracks",

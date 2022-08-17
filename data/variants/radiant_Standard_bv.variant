@@ -2,7 +2,6 @@
     "displayName": "Standard",
     "fluxCapacitors": 25,
     "fluxVents": 50,
-    "goalVariant": true,
     "hullId": "radiant",
     "hullMods": [
         "targetingunit",

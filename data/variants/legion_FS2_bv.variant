@@ -2,7 +2,6 @@
     "displayName": "Fire Support2",
     "fluxCapacitors": 0,
     "fluxVents": 50,
-    "goalVariant": true,
     "hullId": "legion",
     "hullMods": [
         "eccm",

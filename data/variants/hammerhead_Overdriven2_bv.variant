@@ -2,7 +2,6 @@
     "displayName": "Overdriven",
     "fluxCapacitors": 20,
     "fluxVents": 2,
-    "goalVariant": true,
     "hullId": "hammerhead",
     "hullMods": [
         "fluxcoil",

@@ -2,7 +2,6 @@
     "displayName": "Support",
     "fluxCapacitors": 7,
     "fluxVents": 5,
-    "goalVariant": true,
     "hullId": "hyperion",
     "hullMods": [
         "safetyoverrides",

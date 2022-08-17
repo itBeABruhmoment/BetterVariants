@@ -2,7 +2,6 @@
     "displayName": "Strike",
     "fluxCapacitors": 18,
     "fluxVents": 15,
-    "goalVariant": true,
     "hullId": "gryphon",
     "hullMods": ["eccm"],
     "permaMods": [],

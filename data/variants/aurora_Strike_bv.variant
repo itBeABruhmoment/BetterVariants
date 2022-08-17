@@ -2,7 +2,6 @@
     "displayName": "Strike",
     "fluxCapacitors": 21,
     "fluxVents": 30,
-    "goalVariant": true,
     "hullId": "aurora",
     "hullMods": ["missleracks"],
     "permaMods": [],

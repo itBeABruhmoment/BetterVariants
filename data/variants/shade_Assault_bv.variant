@@ -2,7 +2,6 @@
     "displayName": "Assault",
     "fluxCapacitors": 10,
     "fluxVents": 10,
-    "goalVariant": true,
     "hullId": "shade",
     "hullMods": [
         "hardened_subsystems",

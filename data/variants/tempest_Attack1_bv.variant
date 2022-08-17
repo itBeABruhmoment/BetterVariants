@@ -2,7 +2,6 @@
     "displayName": "Attack1",
     "fluxCapacitors": 10,
     "fluxVents": 10,
-    "goalVariant": true,
     "hullId": "tempest",
     "hullMods": [
         "hardened_subsystems",

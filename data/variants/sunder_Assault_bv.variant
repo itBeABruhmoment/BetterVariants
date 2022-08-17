@@ -2,7 +2,6 @@
     "displayName": "Assault",
     "fluxCapacitors": 11,
     "fluxVents": 20,
-    "goalVariant": true,
     "hullId": "sunder",
     "hullMods": [
         "fluxbreakers",

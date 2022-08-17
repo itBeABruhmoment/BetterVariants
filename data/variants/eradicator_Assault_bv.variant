@@ -2,7 +2,6 @@
     "displayName": "Assault",
     "fluxCapacitors": 8,
     "fluxVents": 20,
-    "goalVariant": true,
     "hullId": "eradicator",
     "hullMods": [
         "missleracks",

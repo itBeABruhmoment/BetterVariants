@@ -2,7 +2,6 @@
     "displayName": "Pather",
     "fluxCapacitors": 20,
     "fluxVents": 11,
-    "goalVariant": true,
     "hullId": "colossus2",
     "hullMods": [],
     "permaMods": [],

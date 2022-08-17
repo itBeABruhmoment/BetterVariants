@@ -2,7 +2,6 @@
     "displayName": "Support",
     "fluxCapacitors": 28,
     "fluxVents": 30,
-    "goalVariant": true,
     "hullId": "champion",
     "hullMods": ["targetingunit"],
     "permaMods": [],

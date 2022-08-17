@@ -2,7 +2,6 @@
     "displayName": "Sigma Miner",
     "fluxCapacitors": 0,
     "fluxVents": 0,
-    "goalVariant": true,
     "hullId": "shard_left",
     "hullMods": [
         "shield_shunt",

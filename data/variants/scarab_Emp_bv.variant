@@ -2,7 +2,6 @@
     "displayName": "EMP",
     "fluxCapacitors": 10,
     "fluxVents": 10,
-    "goalVariant": true,
     "hullId": "scarab",
     "hullMods": [
         "frontemitter",
