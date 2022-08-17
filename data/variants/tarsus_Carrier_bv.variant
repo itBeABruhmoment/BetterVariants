@@ -2,7 +2,6 @@
     "displayName": "Carrier",
     "fluxCapacitors": 0,
     "fluxVents": 2,
-    "goalVariant": true,
     "hullId": "tarsus",
     "hullMods": ["converted_hangar"],
     "permaMods": [],

@@ -2,7 +2,6 @@
     "displayName": "Strike",
     "fluxCapacitors": 0,
     "fluxVents": 15,
-    "goalVariant": true,
     "hullId": "legion",
     "hullMods": [
         "heavyarmor",

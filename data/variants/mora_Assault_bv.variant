@@ -2,7 +2,6 @@
     "displayName": "Assault",
     "fluxCapacitors": 0,
     "fluxVents": 11,
-    "goalVariant": true,
     "hullId": "mora",
     "hullMods": [
         "expanded_deck_crew",

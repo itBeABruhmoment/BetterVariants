@@ -2,7 +2,6 @@
     "displayName": "Elite",
     "fluxCapacitors": 0,
     "fluxVents": 7,
-    "goalVariant": true,
     "hullId": "brawler",
     "hullMods": [
         "hardened_subsystems",

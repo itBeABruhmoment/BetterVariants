@@ -4,7 +4,6 @@
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
-	"targetFleetTypes":["exerelinInvasionFleet","vengeanceFleet","nex_specialForces","taskForce","inspectionFleet","exerelinInvasionSupportFleet",],
 	"alwaysInclude":{"ox_Standard":2},
 	"fleetPartitions":[
 		{

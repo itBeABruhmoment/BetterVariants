@@ -2,7 +2,6 @@
     "displayName": "Overdriven",
     "fluxCapacitors": 30,
     "fluxVents": 4,
-    "goalVariant": true,
     "hullId": "eradicator_pirates",
     "hullMods": ["safetyoverrides"],
     "permaMods": [],

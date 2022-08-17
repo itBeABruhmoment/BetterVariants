@@ -2,7 +2,6 @@
     "displayName": "Attack",
     "fluxCapacitors": 18,
     "fluxVents": 20,
-    "goalVariant": true,
     "hullId": "shrike_pirates",
     "hullMods": [],
     "permaMods": [],

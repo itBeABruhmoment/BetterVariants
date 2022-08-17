@@ -2,7 +2,6 @@
     "displayName": "Strike2",
     "fluxCapacitors": 0,
     "fluxVents": 2,
-    "goalVariant": true,
     "hullId": "condor",
     "hullMods": ["expanded_deck_crew"],
     "permaMods": [],

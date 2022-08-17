@@ -2,7 +2,6 @@
     "displayName": "Attack",
     "fluxCapacitors": 14,
     "fluxVents": 30,
-    "goalVariant": true,
     "hullId": "eradicator_pirates",
     "hullMods": [
         "missleracks",

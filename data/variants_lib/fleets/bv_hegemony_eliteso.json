@@ -4,7 +4,6 @@
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
-	"targetFleetTypes":["vengeanceFleet","nex_specialForces",],
 	"alwaysInclude":{"ox_Standard":2},
 	"fleetPartitions":[
 		{

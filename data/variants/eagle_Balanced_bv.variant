@@ -2,7 +2,6 @@
     "displayName": "Balanced",
     "fluxCapacitors": 11,
     "fluxVents": 30,
-    "goalVariant": true,
     "hullId": "eagle",
     "hullMods": [
         "advancedoptics",

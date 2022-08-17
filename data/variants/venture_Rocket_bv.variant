@@ -2,7 +2,6 @@
     "displayName": "Rocket",
     "fluxCapacitors": 0,
     "fluxVents": 18,
-    "goalVariant": true,
     "hullId": "venture",
     "hullMods": [
         "targetingunit",

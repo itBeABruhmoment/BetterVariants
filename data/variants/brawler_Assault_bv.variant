@@ -2,7 +2,6 @@
     "displayName": "Assault",
     "fluxCapacitors": 5,
     "fluxVents": 10,
-    "goalVariant": true,
     "hullId": "brawler",
     "hullMods": [
         "fluxdistributor",

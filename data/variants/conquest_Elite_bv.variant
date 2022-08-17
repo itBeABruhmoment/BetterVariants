@@ -2,7 +2,6 @@
     "displayName": "Elite",
     "fluxCapacitors": 39,
     "fluxVents": 50,
-    "goalVariant": true,
     "hullId": "conquest",
     "hullMods": [
         "targetingunit",

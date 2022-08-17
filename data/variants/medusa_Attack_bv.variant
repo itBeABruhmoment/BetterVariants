@@ -2,7 +2,6 @@
     "displayName": "Attack",
     "fluxCapacitors": 16,
     "fluxVents": 20,
-    "goalVariant": true,
     "hullId": "medusa",
     "hullMods": ["stabilizedshieldemitter"],
     "permaMods": [],

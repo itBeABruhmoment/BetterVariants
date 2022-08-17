@@ -2,7 +2,6 @@
     "displayName": "Standard",
     "fluxCapacitors": 16,
     "fluxVents": 45,
-    "goalVariant": true,
     "hullId": "conquest",
     "hullMods": [
         "targetingunit",

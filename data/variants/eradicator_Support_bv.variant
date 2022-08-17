@@ -2,7 +2,6 @@
     "displayName": "Support",
     "fluxCapacitors": 0,
     "fluxVents": 28,
-    "goalVariant": true,
     "hullId": "eradicator",
     "hullMods": [
         "missleracks",

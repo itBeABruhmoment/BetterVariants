@@ -2,7 +2,6 @@
     "displayName": "Support",
     "fluxCapacitors": 20,
     "fluxVents": 19,
-    "goalVariant": true,
     "hullId": "shrike",
     "hullMods": ["frontemitter"],
     "permaMods": [],

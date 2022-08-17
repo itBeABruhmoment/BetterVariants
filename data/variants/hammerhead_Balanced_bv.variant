@@ -2,7 +2,6 @@
     "displayName": "Balanced",
     "fluxCapacitors": 11,
     "fluxVents": 20,
-    "goalVariant": true,
     "hullId": "hammerhead",
     "hullMods": [
         "missleracks",

@@ -2,7 +2,6 @@
     "displayName": "Support",
     "fluxCapacitors": 4,
     "fluxVents": 20,
-    "goalVariant": true,
     "hullId": "sunder",
     "hullMods": [
         "targetingunit",

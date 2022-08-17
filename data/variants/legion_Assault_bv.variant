@@ -2,7 +2,6 @@
     "displayName": "Assault",
     "fluxCapacitors": 5,
     "fluxVents": 50,
-    "goalVariant": true,
     "hullId": "legion",
     "hullMods": [
         "targetingunit",

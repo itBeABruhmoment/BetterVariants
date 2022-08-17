@@ -2,7 +2,6 @@
     "displayName": "Strike",
     "fluxCapacitors": 7,
     "fluxVents": 0,
-    "goalVariant": true,
     "hullId": "astral",
     "hullMods": [
         "missleracks",

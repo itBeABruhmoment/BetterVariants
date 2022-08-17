@@ -2,7 +2,6 @@
     "displayName": "Standard",
     "fluxCapacitors": 20,
     "fluxVents": 20,
-    "goalVariant": true,
     "hullId": "gryphon",
     "hullMods": ["eccm"],
     "permaMods": [],

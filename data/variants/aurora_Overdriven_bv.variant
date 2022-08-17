@@ -2,7 +2,6 @@
     "displayName": "Overdriven",
     "fluxCapacitors": 30,
     "fluxVents": 6,
-    "goalVariant": true,
     "hullId": "aurora",
     "hullMods": [
         "safetyoverrides",
