@@ -1,5 +1,5 @@
 {
-	"fleetDataId":"bv_persian_so",
+	"fleetDataId":"bv_persean_so",
 	"spawnWeight":10.0,
 	"minDP":40,
 	"maxDP":400,
@@ -9,8 +9,7 @@
 		{
 			"partitionWeight":25.00,
 			"variants":{
-				"conquest_Elite_bv":50.00,
-				"conquest_Elite2_bv":50.00,
+				"doom_Support_bv":100,
 			}
 		},
 		{
