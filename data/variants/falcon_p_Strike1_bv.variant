@@ -1,5 +1,5 @@
 {
-    "displayName": "Strike2",
+    "displayName": "Strike1",
     "fluxCapacitors": 18,
     "fluxVents": 0,
     "hullId": "falcon_p",
@@ -10,7 +10,7 @@
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "falcon_p_Strike2_bv",
+    "variantId": "falcon_p_Strike1_bv",
     "weaponGroups": [
         {
             "autofire": false,
@@ -32,8 +32,8 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "typhoon",
-                "WS 006": "typhoon"
+                "WS 005": "harpoonpod",
+                "WS 006": "harpoonpod"
             }
         },
         {
