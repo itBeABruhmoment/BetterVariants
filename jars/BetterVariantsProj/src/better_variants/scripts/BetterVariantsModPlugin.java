@@ -3,6 +3,7 @@ package better_variants.scripts;
 import better_variants.bar_events.BetterVariantsBarEventCreator;
 import better_variants.bar_events.BountyCreationData;
 import better_variants.data.CommonStrings;
+import better_variants.data.SettingsData;
 
 import java.io.IOException;
 
@@ -25,6 +26,8 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
     {
         log.debug(CommonStrings.MOD_ID + ": loading bounty data");
         BountyCreationData.loadData();
+        log.debug(CommonStrings.MOD_ID + ": loading settings");
+        SettingsData.loadSettings();
     }
 
     @Override
