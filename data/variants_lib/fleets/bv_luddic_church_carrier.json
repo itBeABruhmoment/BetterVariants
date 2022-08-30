@@ -1,9 +1,9 @@
 {
 	"fleetDataId":"bv_luddic_church_carrier",
-	"spawnWeight":100.0,
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
+	"spawnIfNoIndustry":false,
 	"fleetPartitions":[
 		{
 			"partitionWeight":28.00,

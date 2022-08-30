@@ -1,11 +1,8 @@
 {
 	"fleetDataId":"bv_persean_lowtech",
-	"spawnWeight":10,
 	"minDP":40,
 	"maxDP":400,
-	
-	"targetFleetTypes": ["%combatplus"],
-	
+	"spawnIfNoIndustry":false,
 	"fleetPartitions": [
 		{
 			"partitionWeight":35,

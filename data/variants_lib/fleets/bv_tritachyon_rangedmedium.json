@@ -1,10 +1,9 @@
 {
 	"fleetDataId":"bv_tritachyon_ranged",
-	"spawnWeight":10,
 	"minDP":70,
 	"maxDP":400,
 	"targetFleetTypes": ["%combatplus"],
-	
+	"spawnIfNoIndustry":false,
 	"fleetPartitions": [
 		{
 			"partitionWeight":40,
