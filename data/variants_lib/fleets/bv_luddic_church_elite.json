@@ -1,10 +1,10 @@
 {
 	"fleetDataId":"bv_luddic_church_elite",
-	"spawnWeight":100.0,
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
 	"alwaysInclude":{"ox_Standard":2},
+	"spawnIfNoIndustry":false,
 	"fleetPartitions":[
 		{
 			"partitionWeight":28.00,

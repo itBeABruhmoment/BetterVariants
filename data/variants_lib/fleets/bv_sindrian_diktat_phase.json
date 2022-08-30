@@ -5,6 +5,7 @@
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","crew_training"],
+	"spawnIfNoIndustry":false,
 	"fleetPartitions":[
 		{
 			"partitionWeight":45,

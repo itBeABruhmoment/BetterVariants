@@ -1,11 +1,10 @@
 {
 	"fleetDataId":"bv_hegemony_xiv",
-	"spawnWeight":100.0,
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"aggressive",
 	"additionalCommanderSkills":["support_doctrine",],
-	"targetFleetTypes":["exerelinInvasionFleet","vengeanceFleet","nex_specialForces","taskForce","inspectionFleet","exerelinInvasionSupportFleet",],
+	"spawnIfNoIndustry":false,
 	"alwaysInclude":{"ox_Standard":2},
 	"fleetPartitions":[
 		{

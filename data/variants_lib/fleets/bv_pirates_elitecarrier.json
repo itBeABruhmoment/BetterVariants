@@ -1,11 +1,9 @@
 {
 	"fleetDataId":"bv_pirates_elitecarrier",
-	"spawnWeight":100.0,
 	"minDP":40,
 	"maxDP":300,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","derelict_contingent",],
-	"targetFleetTypes":["exerelinInvasionFleet","vengeanceFleet","nex_specialForces","taskForce","inspectionFleet","exerelinInvasionSupportFleet",],
 	"alwaysInclude":{"ox_Standard":2},
 	"fleetPartitions":[
 		{

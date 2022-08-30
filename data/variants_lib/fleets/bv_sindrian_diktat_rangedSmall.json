@@ -1,10 +1,9 @@
 {
 	"fleetDataId":"bv_sindrian_diktat_rangedSmall",
-	"spawnWeight":10.0,
 	"minDP":30,
 	"maxDP":250,
 	"defaultFleetWidePersonality":"steady",
-	"targetFleetTypes":["patrolMedium","exerelinInvasionFleet","nex_specialForces","mercBountyHunter","mercPatrol","mercArmada","exerelinInvasionSupportFleet","mercPrivateer","mercScout","vengeanceFleet","taskForce","patrolSmall","inspectionFleet","patrolLarge",],
+	"spawnIfNoIndustry":false,
 	"fleetPartitions":[
 		{
 			"partitionWeight":25.00,
