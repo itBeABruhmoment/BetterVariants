@@ -5,6 +5,8 @@
 	"defaultFleetWidePersonality":"reckless",
 	"alwaysInclude":{"ox_Standard":2},
 	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.06,
+	"autoLogitsticsTankerDP":0.04,
 	"fleetPartitions":[
 		{
 			"partitionWeight":28.00,
@@ -43,22 +45,6 @@
 				"buffalo2_Fighter_Support_bv":21.74,
 				"vanguard_Attack":8.70,
 				"vanguard_Strike":13.04,
-			}
-		},
-		{
-			"partitionWeight":5.00,
-			"variants":{
-				"colossus_Standard_bv":9.08,
-				"atlas_Standard_bv":90.83,
-				"buffalo_luddic_church_Standard_bv":0.09,
-			}
-		},
-		{
-			"partitionWeight":3.00,
-			"variants":{
-				"dram_Light_bv":0.90,
-				"phaeton_Standard_bv":9.01,
-				"prometheus_Super_bv":90.09,
 			}
 		},
 	],

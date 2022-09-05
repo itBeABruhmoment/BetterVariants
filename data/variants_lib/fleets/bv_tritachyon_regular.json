@@ -4,6 +4,8 @@
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.06,
+	"autoLogitsticsTankerDP":0.04,
 	"fleetPartitions":[
 		{
 			"partitionWeight":37.74,
@@ -54,21 +56,6 @@
 				"brawler_tritachyon_Standard2_bv":6.67,
 				"shrike_Attack_bv":13.33,
 				"shrike_Support_bv":13.33,
-			}
-		},
-		{
-			"partitionWeight":2.83,
-			"variants":{
-				"colossus_Standard_bv":9.08,
-				"atlas_Standard_bv":90.83,
-				"buffalo_tritachyon_Standard_bv":0.09,
-			}
-		},
-		{
-			"partitionWeight":2.83,
-			"variants":{
-				"phaeton_Standard_bv":0.99,
-				"prometheus_Super_bv":99.01,
 			}
 		},
 	],

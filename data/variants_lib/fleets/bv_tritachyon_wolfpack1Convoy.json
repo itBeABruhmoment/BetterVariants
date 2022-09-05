@@ -1,14 +1,17 @@
 {
-	"fleetDataId":"bv_tritachyon_wolfpack1",
+	"fleetDataId":"bv_tritachyon_wolfpack1Convoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":37.74,
+			"partitionWeight":40,
 			"variants":{
 				"paragon_Elite":20.00,
 				"paragon_Escort_bv":20.00,
@@ -18,7 +21,7 @@
 			}
 		},
 		{
-			"partitionWeight":56.60,
+			"partitionWeight":43,
 			"variants":{
 				"omen_Ew_bv":8.33,
 				"tempest_Attack1_bv":11.67,

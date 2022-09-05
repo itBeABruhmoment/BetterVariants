@@ -6,6 +6,8 @@
 	"additionalCommanderSkills":["support_doctrine","crew_training",],
 	"spawnIfNoIndustry":false,
 	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.06,
+	"autoLogitsticsTankerDP":0.04,
 	"fleetPartitions":[
 		{
 			"partitionWeight":37.74,
@@ -29,21 +31,6 @@
 			"variants":{
 				"afflictor_Strike_bv":50.00,
 				"omen_Ew_bv":50.00,
-			}
-		},
-		{
-			"partitionWeight":2.83,
-			"variants":{
-				"colossus_Standard_bv":9.08,
-				"atlas_Standard_bv":90.83,
-				"buffalo_tritachyon_Standard_bv":0.09,
-			}
-		},
-		{
-			"partitionWeight":2.83,
-			"variants":{
-				"phaeton_Standard_bv":0.99,
-				"prometheus_Super_bv":99.01,
 			}
 		},
 	],

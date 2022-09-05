@@ -1,28 +1,32 @@
 {
-	"fleetDataId":"bv_independent_ranged",
+	# vlspawnfleet hegemony bv_independent_rangedConvoy 200
+	"fleetDataId":"bv_independent_rangedConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":18.18,
+			"partitionWeight":20,
 			"variants":{
 				"conquest_Elite_bv":50.00,
 				"conquest_Elite2_bv":50.00,
 			}
 		},
 		{
-			"partitionWeight":22.73,
+			"partitionWeight":15,
 			"variants":{
 				"dominator_Outdated_bv":50.00,
 				"dominator_Shield_Breaker_bv":50.00,
 			}
 		},
 		{
-			"partitionWeight":9.09,
+			"partitionWeight":10,
 			"variants":{
 				"condor_Strike1_bv":10.00,
 				"heron_Strike":50.00,
@@ -31,7 +35,7 @@
 			}
 		},
 		{
-			"partitionWeight":9.09,
+			"partitionWeight":10,
 			"variants":{
 				"falcon_Overdriven_bv":25.00,
 				"enforcer_Overdriven_bv":25.00,
@@ -42,7 +46,7 @@
 			}
 		},
 		{
-			"partitionWeight":9.09,
+			"partitionWeight":10,
 			"variants":{
 				"venture_Rocket_bv":18.18,
 				"falcon_CS_bv":36.36,
@@ -51,14 +55,14 @@
 			}
 		},
 		{
-			"partitionWeight":18.18,
+			"partitionWeight":10,
 			"variants":{
 				"sunder_Support_bv":66.67,
 				"enforcer_Elite_bv":33.33,
 			}
 		},
 		{
-			"partitionWeight":4.55,
+			"partitionWeight":5,
 			"variants":{
 				"brawler_Elite_bv":25.00,
 				"omen_Ew_bv":35.00,

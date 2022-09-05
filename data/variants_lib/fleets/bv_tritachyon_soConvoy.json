@@ -1,14 +1,17 @@
 {
-	"fleetDataId":"bv_tritachyon_so",
+	"fleetDataId":"bv_tritachyon_soConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":23.58,
+			"partitionWeight":38,
 			"variants":{
 				"paragon_Elite":20.00,
 				"paragon_Escort_bv":20.00,
@@ -18,7 +21,7 @@
 			}
 		},
 		{
-			"partitionWeight":42.45,
+			"partitionWeight":20,
 			"variants":{
 				"doom_Overdriven_bv":28.85,
 				"aurora_Overdriven_bv":28.85,
@@ -29,7 +32,7 @@
 			}
 		},
 		{
-			"partitionWeight":18.87,
+			"partitionWeight":15,
 			"variants":{
 				"harbinger_Overdriven1_bv":10.00,
 				"harbinger_Overdriven2_bv":10.00,
@@ -40,7 +43,7 @@
 			}
 		},
 		{
-			"partitionWeight":9.43,
+			"partitionWeight":10,
 			"variants":{
 				"omen_Ew_bv":27.27,
 				"tempest_Attack1_bv":18.18,

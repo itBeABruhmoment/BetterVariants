@@ -1,14 +1,17 @@
 {
-	"fleetDataId":"bv_hegemony_so",
+	"fleetDataId":"bv_hegemony_soConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":30.61,
+			"partitionWeight":30,
 			"variants":{
 				"onslaught_Brawler_bv":15.00,
 				"onslaught_Elite":15.00,
@@ -17,7 +20,7 @@
 			}
 		},
 		{
-			"partitionWeight":30.61,
+			"partitionWeight":30,
 			"variants":{
 				"eagle_Overdriven_bv":37.50,
 				"eagle_xiv_Overdriven_bv":12.50,
@@ -26,7 +29,7 @@
 			}
 		},
 		{
-			"partitionWeight":15.31,
+			"partitionWeight":15,
 			"variants":{
 				"gryphon_Overdriven_bv":60.00,
 				"mora_Assault_bv":20.00,
@@ -34,7 +37,7 @@
 			}
 		},
 		{
-			"partitionWeight":15.31,
+			"partitionWeight":15,
 			"variants":{
 				"enforcer_Overdriven_bv":17.65,
 				"enforcer_Overdriven2_bv":17.65,
@@ -44,7 +47,7 @@
 			}
 		},
 		{
-			"partitionWeight":2.04,
+			"partitionWeight":3,
 			"variants":{
 				"hound_Standard":100.00,
 			}

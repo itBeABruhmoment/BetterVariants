@@ -1,45 +1,48 @@
 {
-	"fleetDataId":"bv_persean_so",
+	"fleetDataId":"bv_persean_soConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":25.00,
+			"partitionWeight":25,
 			"variants":{
-				"doom_Support_bv":100,
+				"doom_Support_bv":100
 			}
 		},
 		{
-			"partitionWeight":37.04,
+			"partitionWeight":25,
 			"variants":{
 				"eagle_Overdriven_bv":25.00,
 				"falcon_Overdriven_bv":25.00,
 				"champion_Overdriven_bv":30.00,
 				"heron_Strike":10.00,
-				"mora_Strike_bv":10.00,
+				"mora_Strike_bv":10.00
 			}
 		},
 		{
-			"partitionWeight":25.00,
+			"partitionWeight":25,
 			"variants":{
 				"enforcer_Overdriven_bv":20.00,
 				"enforcer_Overdriven2_bv":15.00,
 				"hammerhead_Overdriven_bv":20.00,
 				"sunder_Overdriven_bv":25.00,
 				"condor_Strike1_bv":5.00,
-				"drover_Strike_bv":15.00,
+				"drover_Strike_bv":15.00
 			}
 		},
 		{
-			"partitionWeight":7.41,
+			"partitionWeight":8,
 			"variants":{
-				"omen_Ew_bv":100.00,
+				"omen_Ew_bv":100.00
 			}
-		},
-	],
+		}
+	]
 }
 

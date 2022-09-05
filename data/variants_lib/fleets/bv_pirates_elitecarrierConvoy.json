@@ -1,15 +1,17 @@
 {
-	"fleetDataId":"bv_pirates_elitecarrier",
+	"fleetDataId":"bv_pirates_elitecarrierConvoy",
 	"minDP":40,
 	"maxDP":300,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","derelict_contingent",],
 	"alwaysInclude":{"ox_Standard":2},
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":40.82,
+			"partitionWeight":35,
 			"variants":{
 				"atlas2_Standard_bv":36.84,
 				"atlas2_Standard2_bv":31.58,
@@ -17,7 +19,7 @@
 			}
 		},
 		{
-			"partitionWeight":20.41,
+			"partitionWeight":20,
 			"variants":{
 				"eradicator_pirates_Attack_bv":22.22,
 				"eradicator_pirates_Overdriven_bv":22.22,
@@ -27,7 +29,7 @@
 			}
 		},
 		{
-			"partitionWeight":15.31,
+			"partitionWeight":15,
 			"variants":{
 				"enforcer_d_pirates_Elite_bv":53.33,
 				"enforcer_d_pirates_Overdriven2_bv":9.33,
@@ -38,7 +40,7 @@
 			}
 		},
 		{
-			"partitionWeight":15.31,
+			"partitionWeight":8,
 			"variants":{
 				"colossus3_PirateStrike1_bv":40.00,
 				"colossus3_PirateStrike2_bv":30.00,
@@ -47,7 +49,7 @@
 			}
 		},
 		{
-			"partitionWeight":5.10,
+			"partitionWeight":5,
 			"variants":{
 				"hound_d_pirates_Shielded":3.00,
 				"hound_d_pirates_Standard":3.00,

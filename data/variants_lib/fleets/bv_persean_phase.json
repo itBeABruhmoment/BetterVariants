@@ -7,6 +7,7 @@
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","crew_training"],
 	"spawnIfNoIndustry":false,
+	"autoLogitsticsTankerDP":0.04,
 	"fleetPartitions":[
 		{
 			"partitionWeight":45,
@@ -59,13 +60,6 @@
 				"gemini_Strike_bv":100.00
 			}
 		},
-		{
-			"partitionWeight":2,
-			"variants":{
-				"phaeton_Standard_bv":0.99,
-				"prometheus_Super_bv":99.01
-			}
-		}
 	]
 }
 
