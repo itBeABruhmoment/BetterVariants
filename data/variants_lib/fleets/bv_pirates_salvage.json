@@ -3,6 +3,8 @@
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
+	"autoLogitsticsFreighterDP":0.06,
+	"autoLogitsticsTankerDP":0.04,
 	"fleetPartitions":[
 		{
 			"partitionWeight":33.98,
@@ -106,13 +108,6 @@
 				"vigilance_Strike":1.00
 			}
 		},
-		{
-			"partitionWeight":2.91,
-			"variants":{
-				"phaeton_Standard_bv":99.90,
-				"dram_Light_bv":0.10
-			}
-		}
 	]
 }
 

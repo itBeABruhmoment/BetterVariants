@@ -1,15 +1,18 @@
 {
 	# vlSpawnFleet sindrian_diktat bv_sindrian_diktat_missile 200
-	"fleetDataId":"bv_sindrian_diktat_missile",
+	"fleetDataId":"bv_sindrian_diktat_missileConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":30,
+			"partitionWeight":25,
 			"variants":{
 				"conquest_Standard_bv":20,
 				"conquest_Elite_bv":25,
@@ -18,7 +21,7 @@
 			}
 		},
 		{
-			"partitionWeight":30,
+			"partitionWeight":25,
 			"variants":{
 				"dominator_Outdated_bv":20,
 				"eagle_Balanced_bv":20,
@@ -43,7 +46,7 @@
 			}
 		},
 		{
-			"partitionWeight":10,
+			"partitionWeight":8,
 			"variants":{
 				"brawler_Elite_bv":20,
 				"monitor_Escort":50,

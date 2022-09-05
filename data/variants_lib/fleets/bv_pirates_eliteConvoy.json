@@ -1,15 +1,17 @@
 {
-	"fleetDataId":"bv_pirates_elite",
+	"fleetDataId":"bv_pirates_eliteConvoy",
 	"minDP":40,
 	"maxDP":300,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","derelict_contingent",],
 	"alwaysInclude":{"ox_Standard":2},
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":38.83,
+			"partitionWeight":40,
 			"variants":{
 				"atlas2_Standard_bv":36.84,
 				"atlas2_Standard2_bv":31.58,
@@ -17,7 +19,7 @@
 			}
 		},
 		{
-			"partitionWeight":24.27,
+			"partitionWeight":25,
 			"variants":{
 				"eradicator_pirates_Attack_bv":22.22,
 				"eradicator_pirates_Overdriven_bv":22.22,
@@ -27,7 +29,7 @@
 			}
 		},
 		{
-			"partitionWeight":24.27,
+			"partitionWeight":10,
 			"variants":{
 				"enforcer_d_pirates_Elite_bv":42.11,
 				"enforcer_d_pirates_Overdriven2_bv":7.37,
@@ -42,7 +44,7 @@
 			}
 		},
 		{
-			"partitionWeight":9.71,
+			"partitionWeight":8,
 			"variants":{
 				"hound_d_pirates_Shielded":3.00,
 				"hound_d_pirates_Standard":3.00,

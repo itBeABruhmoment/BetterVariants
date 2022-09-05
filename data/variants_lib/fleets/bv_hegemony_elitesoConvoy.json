@@ -1,14 +1,15 @@
 {
-	# vlspawnfleet hegemony bv_hegemony_eliteso 200
-	"fleetDataId":"bv_hegemony_eliteso",
+	# vlSpawnFleet hegemony bv_hegemony_elitesoConvoy 200
+	"fleetDataId":"bv_hegemony_elitesoConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
 	"spawnIfNoIndustry":false,
 	"setDPToAtLeast":200,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
 	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
 			"partitionWeight":25,
@@ -17,14 +18,14 @@
 			}
 		},
 		{
-			"partitionWeight":30,
+			"partitionWeight":35,
 			"variants":{
 				"eagle_xiv_Overdriven_bv":80.00,
 				"falcon_xiv_Overdriven_bv":20.00,
 			}
 		},
 		{
-			"partitionWeight":15,
+			"partitionWeight":10,
 			"variants":{
 				"enforcer_XIV_Overdriven_bv":70.00,
 				"sunder_Overdriven_bv":30.00,

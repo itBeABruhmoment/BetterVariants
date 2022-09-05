@@ -1,13 +1,17 @@
 {
-	"fleetDataId":"bv_persean_ranged",
+	"fleetDataId":"bv_persean_rangedConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":33.98,
+			"partitionWeight":30,
 			"variants":{
 				"conquest_Standard_bv":28.57,
 				"conquest_Elite_bv":28.57,
@@ -16,7 +20,7 @@
 			}
 		},
 		{
-			"partitionWeight":29.13,
+			"partitionWeight":30,
 			"variants":{
 				"champion_Support_bv":20.00,
 				"champion_Elite_bv":20.00,
@@ -31,24 +35,18 @@
 			}
 		},
 		{
-			"partitionWeight":19.42,
+			"partitionWeight":15,
 			"variants":{
 				"sunder_Support_bv":60.00,
 				"hammerhead_Support":40.00,
 			}
 		},
 		{
-			"partitionWeight":9.71,
+			"partitionWeight":8,
 			"variants":{
 				"brawler_Elite_bv":33.33,
 				"omen_Ew_bv":33.33,
 				"tempest_Attack1_bv":33.33,
-			}
-		},
-		{
-			"partitionWeight":8,
-			"variants":{
-				"gemini_Strike_bv":100.00,
 			}
 		},
 	],

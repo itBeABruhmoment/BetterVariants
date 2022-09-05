@@ -1,14 +1,17 @@
 {
-	"fleetDataId":"bv_luddic_church_carrier",
+	"fleetDataId":"bv_luddic_church_carrierConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":28.00,
+			"partitionWeight":25,
 			"variants":{
 				"legion_FS1_bv":10.00,
 				"legion_FS2_bv":10.00,
@@ -17,7 +20,7 @@
 			}
 		},
 		{
-			"partitionWeight":28.00,
+			"partitionWeight":25,
 			"variants":{
 				"eradicator_Support_bv":30.00,
 				"eradicator_Strike_bv":30.00,
@@ -27,7 +30,7 @@
 			}
 		},
 		{
-			"partitionWeight":27.00,
+			"partitionWeight":25,
 			"variants":{
 				"enforcer_Elite":40.00,
 				"enforcer_Overdriven2_bv":40.00,
@@ -35,7 +38,7 @@
 			}
 		},
 		{
-			"partitionWeight":9.00,
+			"partitionWeight":8,
 			"variants":{
 				"hound_luddic_church_Standard":13.04,
 				"lasher_luddic_church_Standard_bv":8.70,

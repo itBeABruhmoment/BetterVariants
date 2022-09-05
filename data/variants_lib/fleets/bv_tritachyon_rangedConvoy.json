@@ -1,14 +1,17 @@
 {
-	"fleetDataId":"bv_tritachyon_ranged",
+	"fleetDataId":"bv_tritachyon_rangedConvoy",
 	"minDP":70,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":49.50,
+			"partitionWeight":45,
 			"variants":{
 				"paragon_Elite":26.32,
 				"paragon_Escort_bv":26.32,
@@ -18,14 +21,14 @@
 			}
 		},
 		{
-			"partitionWeight":29.70,
+			"partitionWeight":25,
 			"variants":{
 				"eagle_Standard_bv":60.00,
 				"sunder_Support_bv":40.00,
 			}
 		},
 		{
-			"partitionWeight":14.85,
+			"partitionWeight":13,
 			"variants":{
 				"omen_Ew_bv":16.39,
 				"tempest_Attack1_bv":16.39,

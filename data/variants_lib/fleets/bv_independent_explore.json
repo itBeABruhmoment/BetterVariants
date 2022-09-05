@@ -1,4 +1,5 @@
 {
+	# vlspawnfleet independent bv_independent_explore 200
 	"fleetDataId":"bv_independent_explore",
 	"minDP":40,
 	"maxDP":400,
@@ -6,6 +7,8 @@
 	"additionalCommanderSkills":["support_doctrine",],
 	"spawnIfNoIndustry":false,
 	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.06,
+	"autoLogitsticsTankerDP":0.04,
 	"fleetPartitions":[
 		{
 			"partitionWeight":25.51,
@@ -52,22 +55,6 @@
 			"variants":{
 				"omen_Ew_bv":50.00,
 				"monitor_Escort":50.00,
-			}
-		},
-		{
-			"partitionWeight":5.10,
-			"variants":{
-				"colossus_Standard_bv":9.08,
-				"atlas_Standard_bv":90.83,
-				"buffalo_Standard_bv":0.09,
-			}
-		},
-		{
-			"partitionWeight":3.06,
-			"variants":{
-				"dram_Light_bv":0.90,
-				"phaeton_Standard_bv":9.01,
-				"prometheus_Super_bv":90.09,
 			}
 		},
 	],
