@@ -446,7 +446,7 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         fleetMemory.set(variants_lib.data.CommonStrings.FLEET_EDITED_MEMKEY, true);
 
         // edit fleet of active bounty
-        String fleetCompId = FleetBuilding.editFleet(active.getFleet());
+        String fleetCompId = FleetBuilding.editFleet(active.getFleet(), new Random());
         if(fleetCompId != null) {
             active.getFleet().getMemoryWithoutUpdate().set(variants_lib.data.CommonStrings.FLEET_VARIANT_KEY, fleetCompId);
         }
