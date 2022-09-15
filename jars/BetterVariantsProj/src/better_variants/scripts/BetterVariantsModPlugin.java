@@ -9,6 +9,7 @@ import java.io.IOException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager;
 
 import org.apache.log4j.Level;
@@ -41,6 +42,10 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
         if (!barEventManager.hasEventCreator(BetterVariantsBarEventCreator.class)) {
             barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
         }
+
+        log.debug(CommonStrings.MOD_ID + ": adding new economy manager");
+        //Global.getSector().removeScriptsOfClass(EconomyFleetRouteManager.class);
+        //Global.getSector().addScript(new BVEconomyFleetRouteManager());
         
         // BountyData.addBounty("bv_test", 999999.0f);
         // runcode com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance().addEventCreator(new better_variants.bar_events.BetterVariantsBarEventCreator());
