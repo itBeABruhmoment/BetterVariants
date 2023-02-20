@@ -1,4 +1,5 @@
 {
+	"autofit":false,
 	"fleetDataId":"bv_sindrian_diktat_so",
 	"minDP":40,
 	"maxDP":400,

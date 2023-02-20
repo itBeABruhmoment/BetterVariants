@@ -1,5 +1,6 @@
 {
 	# vlSpawnFleet hegemony bv_hegemony_elitesoConvoy 200
+	"autofit":false,
 	"fleetDataId":"bv_hegemony_elitesoConvoy",
 	"minDP":40,
 	"maxDP":400,

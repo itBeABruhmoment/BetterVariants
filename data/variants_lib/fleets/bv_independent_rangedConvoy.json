@@ -1,5 +1,6 @@
 {
 	# vlspawnfleet hegemony bv_independent_rangedConvoy 200
+	"autofit":false,
 	"fleetDataId":"bv_independent_rangedConvoy",
 	"minDP":40,
 	"maxDP":400,

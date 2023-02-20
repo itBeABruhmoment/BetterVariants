@@ -1,5 +1,6 @@
 {
 	# vlspawnfleet independent bv_independent_explore 200
+	"autofit":false,
 	"fleetDataId":"bv_independent_explore",
 	"minDP":40,
 	"maxDP":400,

@@ -1,5 +1,6 @@
 {
 	# vlSpawnfleet pirates bv_pirates_missileConvoy 200
+	"autofit":false,
 	"fleetDataId":"bv_pirates_missileConvoy",
 	"minDP":40,
 	"maxDP":350,

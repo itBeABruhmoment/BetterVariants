@@ -1,5 +1,6 @@
 {
 	# vlSpawnFleet persean bv_persean_missileConvoy 200
+	"autofit":false,
 	"fleetDataId":"bv_persean_missileConvoy",
 	"minDP":40,
 	"maxDP":400,

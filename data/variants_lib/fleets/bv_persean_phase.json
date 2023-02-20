@@ -1,6 +1,7 @@
 {
 	# vlSpawnFleet persean bv_persean_phase 200
 	# vlSpawnFleet pirates bv_independent_ranged 200
+	"autofit":false,
 	"fleetDataId":"bv_persean_phase",
 	"minDP":40,
 	"maxDP":400,
