@@ -24,13 +24,6 @@ import org.lwjgl.util.vector.Vector2f;
 
 import variants_lib.data.FactionData;
 import variants_lib.data.SettingsData;
-import variants_lib.scripts.fleetedit.OfficerEditing;
-import variants_lib.scripts.fleetedit.FleetBuilding;
-//import better_variants.data.FactionData;
-//import better_variants.data.FleetBuildData;
-//import better_variants.data.SettingsData;
-//import better_variants.scripts.fleetedit.FleetCompEditing;
-//import better_variants.scripts.fleetedit.OfficerEditing;
 
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.Global;
@@ -59,6 +52,8 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 import better_variants.data.CommonStrings;
+import variants_lib.data.VariantsLibFleetFactory;
+import variants_lib.data.VariantsLibFleetParams;
 
 import static data.scripts.util.MagicTxt.getString;
 
@@ -157,229 +152,254 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
             // Handle all possible options the player can choose
             switch ((OptionId) optionData) {
                 case INIT: {
-                    dialog.getTextPanel().addPara("You approach and the officer gives you a prefunctory nod. \"Captian,\" he says, all business.");
-                    dialog.getTextPanel().addPara("\"I have several assignments on the docket,\" he looks down, scrolling his datapad. \"What sort of job can you handle?\"");
+                    try {
+                        dialog.getTextPanel().addPara("You approach and the officer gives you a prefunctory nod. \"Captian,\" he says, all business.");
+                        dialog.getTextPanel().addPara("\"I have several assignments on the docket,\" he looks down, scrolling his datapad. \"What sort of job can you handle?\"");
 
-                    // make bounty giving person display properly
-                    dialog.getVisualPanel().showPersonInfo(getPerson());
+                        // make bounty giving person display properly
+                        dialog.getVisualPanel().showPersonInfo(getPerson());
 
 
-                    // And give them some options on what to do next
-                    dialog.getOptionPanel().addOption("A managable target", OptionId.EASY_BOUNTY);
-                    dialog.getOptionPanel().addOption("A standard target", OptionId.MEDIUM_BOUNTY);
-                    dialog.getOptionPanel().addOption("A challenging target", OptionId.HARD_BOUNTY);
-                    dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
+                        // And give them some options on what to do next
+                        dialog.getOptionPanel().addOption("A managable target", OptionId.EASY_BOUNTY);
+                        dialog.getOptionPanel().addOption("A standard target", OptionId.MEDIUM_BOUNTY);
+                        dialog.getOptionPanel().addOption("A challenging target", OptionId.HARD_BOUNTY);
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
+                    } catch (Exception e) {
+                        dialog.getTextPanel().addPara("some crash occurred: " + e.toString());
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
+                    }
+
                     break;
                 }
                 case EASY_BOUNTY: {
-                    final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
-                    MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
+                    try {
+                        final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
+                        MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
-                    // get a key for the bounty coordinator
-                    final String activeBountyKey;
-                    final TargetType bountyType;
-                    if(bountyGiverMemory.contains(EASY_BOUNTY_MEMKEY)) {
-                        BountyInfo info = (BountyInfo) bountyGiverMemory.get(EASY_BOUNTY_MEMKEY);
-                        activeBountyKey = info.activeBountyKey;
-                        bountyType = info.type;
-                    } else {
-                        activeBountyKey = generateUniqueBountyKey();
-                        bountyType = pickRandomTargetType(getPerson().getFaction());
-                        bountyGiverMemory.set(EASY_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                        // get a key for the bounty coordinator
+                        final String activeBountyKey;
+                        final TargetType bountyType;
+                        if(bountyGiverMemory.contains(EASY_BOUNTY_MEMKEY)) {
+                            BountyInfo info = (BountyInfo) bountyGiverMemory.get(EASY_BOUNTY_MEMKEY);
+                            activeBountyKey = info.activeBountyKey;
+                            bountyType = info.type;
+                        } else {
+                            activeBountyKey = generateUniqueBountyKey();
+                            bountyType = pickRandomTargetType(getPerson().getFaction());
+                            bountyGiverMemory.set(EASY_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                        }
+
+                        if(bountyType == TargetType.TRAITOR) {
+                            log.debug("traitor");
+                        } else {
+                            log.debug("enemy");
+                        }
+
+                        // store the last viewed bounty for the accept case
+                        bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, EASY_BOUNTY_MEMKEY, 1.0f);
+
+                        int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 0.7) + 10;
+                        if(bountyFleetDP < 70) {
+                            bountyFleetDP = 70;
+                        } else if(bountyFleetDP > 500) {
+                            bountyFleetDP = 500;
+                        }
+
+                        // get active bounty for the job
+                        final MagicBountyData.bountyData bounty;
+                        if(bountyType == TargetType.ENEMY) {
+                            bounty = BountyCreationData.getEnemyBountyData();
+                        } else {
+                            bounty = BountyCreationData.getTraitorBountyData();
+                        }
+                        ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
+                        if(active == null) {
+                            active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
+                        }
+
+                        // if active bounty fails to generate
+                        if(active == null) {
+                            dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
+                            break;
+                        }
+
+                        displayBountyInfo(dialog, active, bounty, bountyType);
+
+                        dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
+                        dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
+                    } catch(Exception e) {
+                        dialog.getTextPanel().addPara("some crash occurred: " + e.toString());
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
                     }
-
-                    if(bountyType == TargetType.TRAITOR) {
-                        log.debug("traitor");
-                    } else {
-                        log.debug("enemy");
-                    }
-
-                    // store the last viewed bounty for the accept case
-                    bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, EASY_BOUNTY_MEMKEY, 1.0f);
-
-                    int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 0.7) + 10;
-                    if(bountyFleetDP < 70) {
-                        bountyFleetDP = 70;
-                    } else if(bountyFleetDP > 500) {
-                        bountyFleetDP = 500;
-                    }
-
-                    // get active bounty for the job
-                    final MagicBountyData.bountyData bounty;
-                    if(bountyType == TargetType.ENEMY) {
-                        bounty = BountyCreationData.getEnemyBountyData();
-                    } else {
-                        bounty = BountyCreationData.getTraitorBountyData();
-                    }
-                    ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
-                    if(active == null) {
-                        active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
-                    }
-
-                    // if active bounty fails to generate
-                    if(active == null) {
-                        dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
-                        break;
-                    }
-
-                    displayBountyInfo(dialog, active, bounty, bountyType);
-
-                    dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
-                    dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
-                    dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
                     break;
                 }
                 case MEDIUM_BOUNTY: {
-                    final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
-                    MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
+                    try {
+                        final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
+                        MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
-                    // get a key for the bounty coordinator
-                    final String activeBountyKey;
-                    final TargetType bountyType;
-                    if(bountyGiverMemory.contains(MEDIUM_BOUNTY_MEMKEY)) {
-                        BountyInfo info = (BountyInfo) bountyGiverMemory.get(MEDIUM_BOUNTY_MEMKEY);
-                        activeBountyKey = info.activeBountyKey;
-                        bountyType = info.type;
-                    } else {
-                        activeBountyKey = generateUniqueBountyKey();
-                        bountyType = pickRandomTargetType(getPerson().getFaction());
-                        bountyGiverMemory.set(MEDIUM_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                        // get a key for the bounty coordinator
+                        final String activeBountyKey;
+                        final TargetType bountyType;
+                        if(bountyGiverMemory.contains(MEDIUM_BOUNTY_MEMKEY)) {
+                            BountyInfo info = (BountyInfo) bountyGiverMemory.get(MEDIUM_BOUNTY_MEMKEY);
+                            activeBountyKey = info.activeBountyKey;
+                            bountyType = info.type;
+                        } else {
+                            activeBountyKey = generateUniqueBountyKey();
+                            bountyType = pickRandomTargetType(getPerson().getFaction());
+                            bountyGiverMemory.set(MEDIUM_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                        }
+
+                        if(bountyType == TargetType.TRAITOR) {
+                            log.debug("traitor");
+                        } else {
+                            log.debug("enemy");
+                        }
+
+                        // store the last viewed bounty for the accept case
+                        bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, MEDIUM_BOUNTY_MEMKEY, 1.0f);
+
+                        int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.0) + 10;
+                        if(bountyFleetDP < 100) {
+                            bountyFleetDP = 100;
+                        } else if(bountyFleetDP > 500) {
+                            bountyFleetDP = 500;
+                        }
+
+                        // get active bounty for the job
+                        final MagicBountyData.bountyData bounty;
+                        if(bountyType == TargetType.ENEMY) {
+                            bounty = BountyCreationData.getEnemyBountyData();
+                        } else {
+                            bounty = BountyCreationData.getTraitorBountyData();
+                        }
+                        ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
+                        if(active == null) {
+                            active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
+                        }
+
+                        // if active bounty fails to generate
+                        if(active == null) {
+                            dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
+                            break;
+                        }
+
+                        displayBountyInfo(dialog, active, bounty, bountyType);
+
+                        dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
+                        dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
+                    } catch(Exception e) {
+                        dialog.getTextPanel().addPara("some crash occurred: " + e.toString());
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
                     }
-
-                    if(bountyType == TargetType.TRAITOR) {
-                        log.debug("traitor");
-                    } else {
-                        log.debug("enemy");
-                    }
-
-                    // store the last viewed bounty for the accept case
-                    bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, MEDIUM_BOUNTY_MEMKEY, 1.0f);
-
-                    int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.0) + 10;
-                    if(bountyFleetDP < 100) {
-                        bountyFleetDP = 100;
-                    } else if(bountyFleetDP > 500) {
-                        bountyFleetDP = 500;
-                    }
-
-                    // get active bounty for the job
-                    final MagicBountyData.bountyData bounty;
-                    if(bountyType == TargetType.ENEMY) {
-                        bounty = BountyCreationData.getEnemyBountyData();
-                    } else {
-                        bounty = BountyCreationData.getTraitorBountyData();
-                    }
-                    ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
-                    if(active == null) {
-                        active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
-                    }
-
-                    // if active bounty fails to generate
-                    if(active == null) {
-                        dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
-                        break;
-                    }
-
-                    displayBountyInfo(dialog, active, bounty, bountyType);
-
-                    dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
-                    dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
-                    dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
                     break;
                 }
                 case HARD_BOUNTY: {
-                    final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
-                    MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
+                    try {
+                        final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
+                        MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
-                    // get a key for the bounty coordinator
-                    final String activeBountyKey;
-                    final TargetType bountyType;
-                    if(bountyGiverMemory.contains(HARD_BOUNTY_MEMKEY)) {
-                        BountyInfo info = (BountyInfo) bountyGiverMemory.get(HARD_BOUNTY_MEMKEY);
-                        activeBountyKey = info.activeBountyKey;
-                        bountyType = info.type;
-                    } else {
-                        activeBountyKey = generateUniqueBountyKey();
-                        bountyType = pickRandomTargetType(getPerson().getFaction());
-                        bountyGiverMemory.set(HARD_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                        // get a key for the bounty coordinator
+                        final String activeBountyKey;
+                        final TargetType bountyType;
+                        if(bountyGiverMemory.contains(HARD_BOUNTY_MEMKEY)) {
+                            BountyInfo info = (BountyInfo) bountyGiverMemory.get(HARD_BOUNTY_MEMKEY);
+                            activeBountyKey = info.activeBountyKey;
+                            bountyType = info.type;
+                        } else {
+                            activeBountyKey = generateUniqueBountyKey();
+                            bountyType = pickRandomTargetType(getPerson().getFaction());
+                            bountyGiverMemory.set(HARD_BOUNTY_MEMKEY, new BountyInfo(bountyType, activeBountyKey), BOUNTY_NO_CHANGE_DURATION);
+                        }
+
+                        if(bountyType == TargetType.TRAITOR) {
+                            log.debug("traitor");
+                        } else {
+                            log.debug("enemy");
+                        }
+
+                        // store the last viewed bounty for the accept case
+                        bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, HARD_BOUNTY_MEMKEY, 1.0f);
+
+                        int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.3) + 10;
+                        if(bountyFleetDP < 130) {
+                            bountyFleetDP = 130;
+                        } else if(bountyFleetDP > 500) {
+                            bountyFleetDP = 500;
+                        }
+
+                        // get active bounty for the job
+                        final MagicBountyData.bountyData bounty;
+                        if(bountyType == TargetType.ENEMY) {
+                            bounty = BountyCreationData.getEnemyBountyData();
+                        } else {
+                            bounty = BountyCreationData.getTraitorBountyData();
+                        }
+                        ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
+                        if(active == null) {
+                            active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
+                        }
+
+                        // if active bounty fails to generate
+                        if(active == null) {
+                            dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
+                            break;
+                        }
+
+                        displayBountyInfo(dialog, active, bounty, bountyType);
+
+                        dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
+                        dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
+                    } catch (Exception e) {
+                        dialog.getTextPanel().addPara("some crash occurred: " + e.toString());
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
                     }
-
-                    if(bountyType == TargetType.TRAITOR) {
-                        log.debug("traitor");
-                    } else {
-                        log.debug("enemy");
-                    }
-
-                    // store the last viewed bounty for the accept case
-                    bountyGiverMemory.set(LAST_VIEWED_BOUNTY_MEMKEY, HARD_BOUNTY_MEMKEY, 1.0f);
-
-                    int bountyFleetDP = (int)(Global.getSector().getPlayerFleet().getFleetPoints() * 1.3) + 10;
-                    if(bountyFleetDP < 130) {
-                        bountyFleetDP = 130;
-                    } else if(bountyFleetDP > 500) {
-                        bountyFleetDP = 500;
-                    }
-
-                    // get active bounty for the job
-                    final MagicBountyData.bountyData bounty;
-                    if(bountyType == TargetType.ENEMY) {
-                        bounty = BountyCreationData.getEnemyBountyData();
-                    } else {
-                        bounty = BountyCreationData.getTraitorBountyData();
-                    }
-                    ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
-                    if(active == null) {
-                        active = createActiveBounty(getPerson(), activeBountyKey, bountyFleetDP, bountyType);
-                    }
-
-                    // if active bounty fails to generate
-                    if(active == null) {
-                        dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
-                        break;
-                    }
-
-                    displayBountyInfo(dialog, active, bounty, bountyType);
-
-                    dialog.getOptionPanel().addOption("Accept bounty", OptionId.ACCEPT);
-                    dialog.getOptionPanel().addOption("View other bounties", OptionId.INIT);
-                    dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
                     break;
                 }
                 case ACCEPT: {
-                    final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
-                    MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
+                    try {
+                        final MagicBountyCoordinator bountyCoordinator = MagicBountyCoordinator.getInstance();
+                        MemoryAPI bountyGiverMemory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
 
-                    String bountyToAccept = bountyGiverMemory.getString(LAST_VIEWED_BOUNTY_MEMKEY);
-                    BountyInfo bountyInfo = (BountyInfo) bountyGiverMemory.get(bountyToAccept);
-                    String activeBountyKey = bountyInfo.activeBountyKey;
-                    TargetType bountyType = bountyInfo.type;
+                        String bountyToAccept = bountyGiverMemory.getString(LAST_VIEWED_BOUNTY_MEMKEY);
+                        BountyInfo bountyInfo = (BountyInfo) bountyGiverMemory.get(bountyToAccept);
+                        String activeBountyKey = bountyInfo.activeBountyKey;
+                        TargetType bountyType = bountyInfo.type;
 
-                    final MagicBountyData.bountyData bounty;
-                    if(bountyType == TargetType.ENEMY) {
-                        bounty = BountyCreationData.getEnemyBountyData();
-                    } else {
-                        bounty = BountyCreationData.getTraitorBountyData();
+                        final MagicBountyData.bountyData bounty;
+                        if(bountyType == TargetType.ENEMY) {
+                            bounty = BountyCreationData.getEnemyBountyData();
+                        } else {
+                            bounty = BountyCreationData.getTraitorBountyData();
+                        }
+
+                        // get active bounty for the job
+                        ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
+
+                        // incase active is missing for some reason
+                        if(active == null) {
+                            dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
+                            break;
+                        }
+
+                        //bountyCoordinator.configureBountyListeners();
+                        log.debug("faction: " + getPerson().getFaction().getId());
+                        active.acceptBounty(dialog.getInteractionTarget(), (float)calculateReward(active), 0.03f, getPerson().getFaction().getId());
+
+                        dialog.getTextPanel().addPara("You accept the bounty");
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
+
+                        // remove event from bar
+                        BarEventManager.getInstance().notifyWasInteractedWith(this);
+                    } catch (Exception e) {
+                        dialog.getTextPanel().addPara("some crash occurred: " + e.toString());
+                        dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
                     }
-
-                    // get active bounty for the job
-                    ActiveBounty active = bountyCoordinator.getActiveBounty(activeBountyKey);
-
-                    // incase active is missing for some reason
-                    if(active == null) {
-                        dialog.getOptionPanel().addOption("you have found a bug", OptionId.BUG);
-                        break;
-                    }
-
-                    //bountyCoordinator.configureBountyListeners();
-                    log.debug("faction: " + getPerson().getFaction().getId());
-                    active.acceptBounty(dialog.getInteractionTarget(), (float)calculateReward(active), 0.03f, getPerson().getFaction().getId());
-
-                    dialog.getTextPanel().addPara("You accept the bounty");
-                    dialog.getOptionPanel().addOption("Leave", OptionId.LEAVE);
-                    
-                    // remove event from bar
-                    BarEventManager.getInstance().notifyWasInteractedWith(this);
-
                     break;
                 }
                 case LEAVE: {
@@ -445,13 +465,11 @@ public class BetterVariantsBountyEvent extends BaseBarEventWithPerson{
         fleetMemory.set(MemFlags.MEMORY_KEY_FLEET_TYPE, CommonStrings.EXOTIC_BOUNTY_FLEET_TYPE);
         fleetMemory.set(variants_lib.data.CommonStrings.FLEET_EDITED_MEMKEY, true);
 
-        // edit fleet of active bounty
-        String fleetCompId = FleetBuilding.editFleet(active.getFleet(), new Random());
-        if(fleetCompId != null) {
-            active.getFleet().getMemoryWithoutUpdate().set(variants_lib.data.CommonStrings.FLEET_VARIANT_KEY, fleetCompId);
-        }
-        if(SettingsData.OfficerEditingEnabled()) {
-            OfficerEditing.editAllOfficers(active.getFleet(), fleetCompId);
+        VariantsLibFleetParams params = new VariantsLibFleetParams(active.getFleet());
+        VariantsLibFleetFactory factory = VariantsLibFleetFactory.pickFleetFactory(params);
+        if(factory != null) {
+            log.info("Making " + factory.id);
+            factory.editFleet(active.getFleet(), params);
         }
 
         active.getFleet().getCommander().setName(target.getName());

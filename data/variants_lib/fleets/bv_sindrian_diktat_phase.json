@@ -1,5 +1,6 @@
 {
 	# vlSpawnFleet sindrian_diktat bv_sindrian_diktat_phase 200
+	"autofit":false,
 	"fleetDataId":"bv_sindrian_diktat_phase",
 	"minDP":40,
 	"maxDP":400,
