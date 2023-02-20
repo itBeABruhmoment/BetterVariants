@@ -3,6 +3,6 @@
 	"enableOfficerEditing":true,
 	"enableFleetEditing":true,
 	"enableDefaultPersonalitySetting":true,
-	"universalPreModificationScripts":["better_variants.scripts.BetterVariantsPostModificationScript"],
-	# "universalPostModificationScripts":["better_variants.scripts.ConvoyExpander"]
+	# "universalPreModificationScripts":["better_variants.scripts.BetterVariantsPostModificationScript"],
+	"universalPostModificationScripts":["better_variants.scripts.BetterVariantsPostModificationScript"]
 }
