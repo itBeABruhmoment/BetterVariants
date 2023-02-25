@@ -1,5 +1,6 @@
 /.git
 /jars/BetterVariantsProject/.idea/*
 /jars/BetterVariantsProject/.gradle/*
+/jars/BetterVariantsProject/gradle/*
 /jars/BetterVariantsProject/build/*
 /jars/BetterVariantsProject/local.properties
