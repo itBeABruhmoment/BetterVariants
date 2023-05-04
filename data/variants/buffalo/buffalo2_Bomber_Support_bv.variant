@@ -1,8 +1,7 @@
 {
-    "displayName": "Bomber Support",
+    "displayName": "Support1B",
     "fluxCapacitors": 0,
     "fluxVents": 0,
-    "goalVariant": true,
     "hullId": "buffalo2",
     "hullMods": [
         "militarized_subsystems",
