@@ -1,17 +1,21 @@
 {
-    "displayName": "Attack1B",
-    "fluxCapacitors": 20,
-    "fluxVents": 20,
+    "displayName": "Strike1B",
+    "fluxCapacitors": 19,
+    "fluxVents": 0,
     "hullId": "shrike",
-    "hullMods": [],
+    "hullMods": [
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "unstable_injector"
+    ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "shrike_Attack_bv",
+    "variantId": "shrike_Strike_bv",
     "weaponGroups": [
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 003": "pulselaser"}
+            "weapons": {"WS 003": "ionpulser"}
         },
         {
             "autofire": false,
@@ -23,16 +27,8 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "irpulse",
-                "WS 001": "ioncannon",
-                "WS 002": "ioncannon"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 006": "pdlaser",
-                "WS 007": "pdlaser"
+                "WS 001": "pdburst",
+                "WS 002": "irpulse"
             }
         }
     ]

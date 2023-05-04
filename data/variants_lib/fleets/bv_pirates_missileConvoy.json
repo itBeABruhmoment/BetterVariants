@@ -38,7 +38,8 @@
 				"sunder_Overdriven_bv":2.5,
 				"condor_Strike1_bv":5,
 				"condor_Attack_bv":5,
-				"shrike_p_Attack_bv":2.5,
+				"shrike_p_Support_bv":4,
+				"shrike_p_Attack_bv":4
 			}
 		},
 		{

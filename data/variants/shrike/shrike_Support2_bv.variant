@@ -1,12 +1,15 @@
 {
-    "displayName": "Support1B",
+    "displayName": "Support2B",
     "fluxCapacitors": 20,
-    "fluxVents": 19,
+    "fluxVents": 1,
     "hullId": "shrike",
-    "hullMods": ["frontemitter"],
+    "hullMods": [
+        "converted_hangar",
+        "fluxcoil"
+    ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "shrike_Support_bv",
+    "variantId": "shrike_Support2_bv",
     "weaponGroups": [
         {
             "autofire": true,
@@ -23,17 +26,9 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "irpulse",
-                "WS 001": "irpulse",
                 "WS 002": "irpulse"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 006": "mininglaser",
-                "WS 007": "mininglaser"
-            }
         }
-    ]
+    ],
+    "wings": ["thunder_wing"]
 }

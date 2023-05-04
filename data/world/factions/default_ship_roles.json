@@ -258,9 +258,13 @@
 		"shrike_Attack":0,
 		"shrike_p_Attack":0,
 		
-		"shrike_Support_bv":3,
-		"shrike_Attack_bv":7,
-		"shrike_p_Attack_bv":10,
+		"shrike_Overdriven_bv":2,
+		"shrike_Strike_bv":3,
+		"shrike_Support1_bv":1,
+		"shrike_Support2_bv":1,
+		"shrike_Support3_bv":3,
+		"shrike_p_Attack_bv":6,
+		"shrike_p_Support_bv":4,
 		
 		"sunder_Assault":0,
 		"sunder_CS":0,

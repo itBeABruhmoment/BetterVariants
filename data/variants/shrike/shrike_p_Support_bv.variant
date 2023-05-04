@@ -1,15 +1,15 @@
 {
-    "displayName": "Attack1B",
-    "fluxCapacitors": 20,
-    "fluxVents": 4,
+    "displayName": "Support1B",
+    "fluxCapacitors": 17,
+    "fluxVents": 0,
     "hullId": "shrike_pirates",
     "hullMods": [
-        "fluxcoil",
+        "converted_hangar",
         "unstable_injector"
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "shrike_p_Attack_bv",
+    "variantId": "shrike_p_Support_bv",
     "weaponGroups": [
         {
             "autofire": true,
@@ -25,11 +25,7 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS 001": "lightdualac"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 002": "pdburst"}
         }
-    ]
+    ],
+    "wings": ["broadsword_wing"]
 }
