@@ -99,7 +99,6 @@
 				"buffalo2_Bomber_Support_bv":12.00,
 				"buffalo2_Fighter_Support_bv":13.00,
 				"lasher_Standard1_bv":10.00,
-				"wolf_d_pirates_Attack_bv":1.00,
 				"cerberus_d_pirates_Standard":1.00,
 				"brawler_Assault_bv":1.00,
 				"brawler_Elite_bv":1.00,
@@ -107,7 +106,12 @@
 				"scarab_Strike_bv":1.00,
 				"tempest_Attack1_bv":1.00,
 				"omen_Ew_bv":1.00,
-				"vigilance_Strike":1.00
+				"vigilance_Strike":1.00,
+				"wolf_d_pirates_Support1_bv":5,
+				"wolf_d_pirates_Support2_bv":5,
+				"wolf_Support1_bv":1,
+				"wolf_Support2_bv":1,
+				"wolf_Support3_bv":1,
 			}
 		},
 	]

@@ -16,8 +16,9 @@
 			"partitionWeight":25,
 			"variants":{
 				"conquest_Standard_bv":20,
-				"conquest_Elite_bv":25,
-				"conquest_Elite2_bv":30,
+				"conquest_Elite_bv":15,
+				"conquest_Elite2_bv":15,
+				"conquest_Elite3_bv":30,
 				"doom_Support_bv":15,
 			}
 		},
