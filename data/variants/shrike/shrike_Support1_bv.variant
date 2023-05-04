@@ -1,0 +1,26 @@
+{
+    "displayName": "Support1B",
+    "fluxCapacitors": 20,
+    "fluxVents": 2,
+    "hullId": "shrike",
+    "hullMods": [
+        "converted_hangar",
+        "fluxcoil"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shrike_Support1_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "ionpulser"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "sabotpod"}
+        }
+    ],
+    "wings": ["longbow_wing"]
+}

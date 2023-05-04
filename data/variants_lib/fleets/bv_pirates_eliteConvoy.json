@@ -42,7 +42,8 @@
 				"colossus3_PirateStrike2_bv":5.26,
 				"condor_Strike1_bv":5.26,
 				"condor_Attack_bv":5.26,
-				"shrike_p_Attack_bv":5.26,
+				"shrike_p_Support_bv":4,
+				"shrike_p_Attack_bv":4
 			}
 		},
 		{

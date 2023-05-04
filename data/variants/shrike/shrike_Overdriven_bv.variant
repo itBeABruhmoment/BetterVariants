@@ -1,0 +1,30 @@
+{
+    "displayName": "Overdriven1B",
+    "fluxCapacitors": 17,
+    "fluxVents": 0,
+    "hullId": "shrike",
+    "hullMods": [
+        "hardened_subsystems",
+        "safetyoverrides"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shrike_Overdriven_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "heavyblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "sabotpod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "ioncannon"}
+        }
+    ]
+}

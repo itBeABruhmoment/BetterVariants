@@ -55,8 +55,12 @@
 				"tempest_Attack3_bv":13.33,
 				"brawler_tritachyon_Standard1_bv":6.67,
 				"brawler_tritachyon_Standard2_bv":6.67,
-				"shrike_Attack_bv":13.33,
-				"shrike_Support_bv":13.33,
+				"shrike_Support1_bv":3,
+				"shrike_Support2_bv":3,
+				"shrike_Support3_bv":8,
+				"shrike_Overdriven_bv":5,
+				"shrike_Strike_bv":8,
+
 			}
 		},
 	],
