@@ -57,12 +57,14 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
     @Override
     public void run(CampaignFleetAPI fleet) {
         final MemoryAPI fleetMemory = fleet.getMemoryWithoutUpdate();
-        if(!fleetMemory.contains(CommonStrings.FLEET_VARIANT_KEY)) {
+        if(fleetMemory.contains(CommonStrings.FLEET_VARIANT_KEY)) {
+            debugKey(fleetMemory, "has fleet variant key not edited");
             return;
         }
 
         Random rand = new Random(fleetMemory.getLong(MemFlags.SALVAGE_SEED));
         if(!fleetMemory.contains(CommonStrings.NO_AUTOFIT_APPLIED)) {
+            debugKey(fleetMemory, "no autofit applied");
             int averageSMods = 0;
             try {
                 DefaultFleetInflaterParams inflaterParams = (DefaultFleetInflaterParams)fleet.getInflater().getParams();
@@ -80,6 +82,8 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
             fleet.setInflated(true);
             FleetBuildingUtils.addDMods(fleet, rand, quality);
             FleetBuildingUtils.addSMods(fleet, rand, averageSMods);
+        } else {
+            debugKey(fleetMemory, "no autofit not applied");
         }
 
         final String faction = fleet.getFaction().getId();
@@ -98,5 +102,9 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
                 officerFactory.editOfficer(officer, officerFactoryParams);
             }
         }
+    }
+
+    private void debugKey(final MemoryAPI memoryAPI, final String str) {
+        memoryAPI.set("$bv_gen_test_info", str);
     }
 }
