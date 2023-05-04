@@ -1,12 +1,12 @@
 {
     "displayName": "Support1",
     "fluxCapacitors": 10,
-    "fluxVents": 10,
+    "fluxVents": 9,
     "hullId": "brawler_tritachyon",
     "hullMods": [
-        "fluxcoil",
         "hardenedshieldemitter",
-        "hardened_subsystems"
+        "fluxcoil",
+        "extendedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -22,10 +22,10 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 003": "reaper",
-                "WS 004": "reaper"
+                "WS 003": "swarmer",
+                "WS 004": "swarmer"
             }
         }
     ]
