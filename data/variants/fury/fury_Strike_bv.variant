@@ -1,6 +1,6 @@
 {
-    "displayName": "Strike1B",
-    "fluxCapacitors": 9,
+    "displayName": "Strike",
+    "fluxCapacitors": 20,
     "fluxVents": 0,
     "hullId": "fury",
     "hullMods": [
@@ -12,11 +12,11 @@
     "variantId": "fury_Strike_bv",
     "weaponGroups": [
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 003": "amblaster",
-                "WS 004": "amblaster"
+                "WS 000": "heavyblaster",
+                "WS 001": "ionpulser"
             }
         },
         {
@@ -27,12 +27,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 000": "heavyblaster"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "ionpulser"}
+            "weapons": {"WS 003": "pdburst"}
         }
     ]
 }

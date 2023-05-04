@@ -1,23 +1,20 @@
 {
-    "displayName": "Attack2B",
-    "fluxCapacitors": 14,
-    "fluxVents": 0,
+    "displayName": "Attack2",
+    "fluxCapacitors": 30,
+    "fluxVents": 11,
     "hullId": "fury",
     "hullMods": [
-        "hardened_subsystems",
-        "safetyoverrides"
+        "unstable_injector",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "fury_Attack2_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 000": "heavyblaster",
-                "WS 001": "heavyblaster"
-            }
+            "weapons": {"WS 003": "amblaster"}
         },
         {
             "autofire": false,
@@ -28,8 +25,16 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "ioncannon",
-                "WS 004": "ioncannon"
+                "WS 000": "ionpulser",
+                "WS 001": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "pdlaser",
+                "WS 008": "pdlaser"
             }
         }
     ]
