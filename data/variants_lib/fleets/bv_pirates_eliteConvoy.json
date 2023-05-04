@@ -14,9 +14,10 @@
 		{
 			"partitionWeight":40,
 			"variants":{
-				"atlas2_Standard_bv":36.84,
-				"atlas2_Standard2_bv":31.58,
-				"atlas2_Standard3_bv":31.58,
+				"atlas2_Standard_bv":25,
+				"atlas2_Standard2_bv":25,
+				"atlas2_Standard3_bv":25,
+				"atlas2_Standard4_bv":25,
 			}
 		},
 		{

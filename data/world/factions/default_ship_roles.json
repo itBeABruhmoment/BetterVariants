@@ -416,9 +416,10 @@
 		"radiant_Strike_bv":3,
 		"radiant_Assault":3,
 		
-		"atlas2_Standard_bv":3.3,
-		"atlas2_Standard2_bv":3.3,
-		"atlas2_Standard3_bv":3.3,
+		"atlas2_Standard_bv":2.5,
+		"atlas2_Standard2_bv":2.5,
+		"atlas2_Standard3_bv":2.5,
+		"atlas2_Standard4_bv": 2.5,
 		"prometheus2_Standard":10,
 		
 		"fallback":{"combatLarge":1},

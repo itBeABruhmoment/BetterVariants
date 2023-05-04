@@ -1,13 +1,11 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 0,
-    "fluxVents": 10,
+    "fluxCapacitors": 10,
+    "fluxVents": 7,
     "hullId": "brawler_tritachyon",
     "hullMods": [
-        "targetingunit",
-        "advancedoptics",
-        "hardened_subsystems",
-        "fluxdistributor"
+        "fluxcoil",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -23,10 +21,10 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 003": "harpoon",
-                "WS 004": "harpoon"
+                "WS 003": "heatseeker",
+                "WS 004": "heatseeker"
             }
         }
     ]
