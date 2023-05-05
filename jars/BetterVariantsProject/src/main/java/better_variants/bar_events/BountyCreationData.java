@@ -8,10 +8,9 @@ import java.util.Map;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import data.scripts.util.MagicTxt;
-import data.scripts.bounty.MagicBountyData.bountyData;
+import org.magiclib.util.MagicTxt;
+import org.magiclib.bounty.MagicBountyData.bountyData;
 import better_variants.data.CommonStrings;
-
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.SkillPickPreference;
 import com.fs.starfarer.api.Global;

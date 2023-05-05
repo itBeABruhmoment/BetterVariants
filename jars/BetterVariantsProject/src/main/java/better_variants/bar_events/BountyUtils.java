@@ -9,11 +9,11 @@ import java.util.Vector;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import data.scripts.util.MagicCampaign;
-import data.scripts.bounty.ActiveBounty;
-import data.scripts.bounty.MagicBountyCoordinator;
-import data.scripts.bounty.MagicBountyData;
-import data.scripts.bounty.MagicBountyData.bountyData;
+import org.magiclib.util.MagicCampaign;
+import org.magiclib.bounty.ActiveBounty;
+import org.magiclib.bounty.MagicBountyCoordinator;
+import org.magiclib.bounty.MagicBountyData;
+import org.magiclib.bounty.MagicBountyData.bountyData;
 
 import java.awt.Color;
 import org.lwjgl.util.vector.Vector2f;
