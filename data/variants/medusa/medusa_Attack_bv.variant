@@ -1,9 +1,12 @@
 {
     "displayName": "Attack1B",
-    "fluxCapacitors": 16,
-    "fluxVents": 20,
+    "fluxCapacitors": 20,
+    "fluxVents": 13,
     "hullId": "medusa",
-    "hullMods": ["stabilizedshieldemitter"],
+    "hullMods": [
+        "fluxcoil",
+        "extendedshieldemitter"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "medusa_Attack_bv",
@@ -11,29 +14,23 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 008": "lightdualac"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 008": "lightneedler",
-                "WS 009": "lightneedler"
+                "WS 006": "ionpulser",
+                "WS 007": "ionpulser"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 007": "pulselaser"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 006": "ionpulser"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 001": "pdlaser",
-                "WS 002": "pdlaser",
-                "WS 003": "pdlaser",
-                "WS 004": "pdlaser"
+                "WS 002": "pdburst",
+                "WS 003": "pdburst",
+                "WS 009": "lightdualac"
             }
         }
     ]

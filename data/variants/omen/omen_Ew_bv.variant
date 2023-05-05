@@ -1,11 +1,12 @@
 {
-    "displayName": "EW1B",
+    "displayName": "EW",
     "fluxCapacitors": 10,
-    "fluxVents": 5,
+    "fluxVents": 2,
     "hullId": "omen",
     "hullMods": [
-        "frontemitter",
-        "hardenedshieldemitter"
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "hardened_subsystems"
     ],
     "permaMods": [],
     "sMods": [],
@@ -19,12 +20,7 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 003": "atropos"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 002": "irpulse"}
+            "weapons": {"WS 003": "heatseeker"}
         }
     ]
 }
