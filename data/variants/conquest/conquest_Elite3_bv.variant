@@ -1,0 +1,57 @@
+{
+    "displayName": "Elite3B",
+    "fluxCapacitors": 42,
+    "fluxVents": 50,
+    "hullId": "conquest",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "conquest_Elite3_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "squall",
+                "WS 002": "squall"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 019": "harpoonpod",
+                "WS 020": "harpoonpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "mjolnir",
+                "WS 012": "mjolnir",
+                "WS 016": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 022": "ionbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdlaser",
+                "WS 009": "pdlaser",
+                "WS 013": "devastator",
+                "WS 014": "devastator",
+                "WS 015": "dualflak"
+            }
+        }
+    ]
+}

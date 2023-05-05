@@ -1,0 +1,34 @@
+{
+    "displayName": "Support1B",
+    "fluxCapacitors": 10,
+    "fluxVents": 3,
+    "hullId": "wolf_hegemony",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "wolf_hegemony_Support1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "ionpulser"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "heatseeker",
+                "WS 006": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "pdburst"}
+        }
+    ]
+}
