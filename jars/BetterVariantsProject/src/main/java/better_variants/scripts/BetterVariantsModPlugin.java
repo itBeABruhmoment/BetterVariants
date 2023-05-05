@@ -34,20 +34,13 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
     @Override
     public void onGameLoad(boolean newGame)
     {
-        log.debug(CommonStrings.MOD_ID + ": adding bar event manager");
-        BarEventManager barEventManager = BarEventManager.getInstance();
+        //log.debug(CommonStrings.MOD_ID + ": adding bar event manager");
+        //BarEventManager barEventManager = BarEventManager.getInstance();
 
         // If the prerequisites for the quest have been met (optional) and the game isn't already aware of the bar event,
         // add it to the BarEventManager so that it shows up in bars
-        if (!barEventManager.hasEventCreator(BetterVariantsBarEventCreator.class)) {
-            barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
-        }
-
-        log.debug(CommonStrings.MOD_ID + ": adding new economy manager");
-        //Global.getSector().removeScriptsOfClass(EconomyFleetRouteManager.class);
-        //Global.getSector().addScript(new BVEconomyFleetRouteManager());
-        
-        // BountyData.addBounty("bv_test", 999999.0f);
-        // runcode com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.getInstance().addEventCreator(new better_variants.bar_events.BetterVariantsBarEventCreator());
+        //if (!barEventManager.hasEventCreator(BetterVariantsBarEventCreator.class)) {
+        //    barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
+        //}
     }
 }
