@@ -2,9 +2,11 @@ package better_variants.scripts;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -28,25 +30,27 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
     }};
 
     private static boolean allowFleetModification(CampaignFleetAPI fleet) {
-        // don't modify fleets from unregistered factions
-        FactionData.FactionConfig factionConfig = FactionData.FACTION_DATA.get(fleet.getFaction().getId());
-        if(factionConfig == null) {
+        if(!SettingsData.fleetEditingEnabled()) {
             return false;
         }
 
-        if(!factionConfig.hasTag(CommonStrings.NO_AUTOFIT_TAG)) {
+        // don't modify fleets from unregistered factions
+        if(!FactionData.FACTION_DATA.containsKey(fleet.getFaction().getId())) {
+            log.debug("refused to modify fleet because faction is not registered");
             return false;
         }
 
         // don't modify special/important fleets
         for(String flag : DISALLOW_FLEET_MODS_FLAGS) {
             if(fleet.getMemoryWithoutUpdate().contains(flag)) {
+                log.debug("refused to modify because fleet had the flag " + flag);
                 return false;
             }
         }
 
         for(FleetMemberAPI member : fleet.getMembersWithFightersCopy()) {
             if(member.isStation()) {
+                log.debug("refused to modify because fleet had a station");
                 return false;
             }
         }
@@ -57,33 +61,18 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
     @Override
     public void run(CampaignFleetAPI fleet) {
         final MemoryAPI fleetMemory = fleet.getMemoryWithoutUpdate();
-        if(fleetMemory.contains(CommonStrings.FLEET_VARIANT_KEY)) {
-            debugKey(fleetMemory, "has fleet variant key not edited");
+        if(!allowFleetModification(fleet)) {
             return;
         }
 
-        Random rand = new Random(fleetMemory.getLong(MemFlags.SALVAGE_SEED));
-        if(!fleetMemory.contains(CommonStrings.NO_AUTOFIT_APPLIED)) {
-            debugKey(fleetMemory, "no autofit applied");
-            int averageSMods = 0;
-            try {
-                DefaultFleetInflaterParams inflaterParams = (DefaultFleetInflaterParams)fleet.getInflater().getParams();
-                averageSMods = inflaterParams.averageSMods;
-            } catch(Exception e) {
-                log.info("could not get average smods defaulting to none");
-            }
+        final long seed  = fleetMemory.getLong(MemFlags.SALVAGE_SEED);
+        final Random rand = new Random(seed);
 
-            float quality = 0.0f;
-            try {
-                quality = fleet.getInflater().getQuality();
-            } catch(Exception e) {
-                log.info("could not get quality defaulting to max");
-            }
-            fleet.setInflated(true);
-            FleetBuildingUtils.addDMods(fleet, rand, quality);
-            FleetBuildingUtils.addSMods(fleet, rand, averageSMods);
+        final BetterVariantsFleetInflater inflater = createInflater(fleet, seed);
+        if(inflater != null) {
+            fleet.setInflater(inflater);
         } else {
-            debugKey(fleetMemory, "no autofit not applied");
+            log.debug("inflater not created");
         }
 
         final String faction = fleet.getFaction().getId();
@@ -102,6 +91,42 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
                 officerFactory.editOfficer(officer, officerFactoryParams);
             }
         }
+
+        debugKey(fleetMemory, "$better_variants_inflater_added");
+    }
+
+    private static BetterVariantsFleetInflater createInflater(CampaignFleetAPI fleet, long seed) {
+        final FleetInflater unknownFleetInflater = fleet.getInflater();
+        if(unknownFleetInflater instanceof DefaultFleetInflater) {
+            DefaultFleetInflater inflater = (DefaultFleetInflater) unknownFleetInflater;
+            int averageSMods = 0;
+            try {
+                DefaultFleetInflaterParams inflaterParams = (DefaultFleetInflaterParams)inflater.getParams();
+                averageSMods = inflaterParams.averageSMods;
+            } catch(Exception e) {
+                log.info("could not get average smods defaulting to none");
+            }
+
+            float quality = inflater.getQuality();
+            fleet.setInflated(true);
+
+            DefaultFleetInflaterParams inflaterParams = null;
+            final Object tempInflaterParams = inflater.getParams();
+            if(tempInflaterParams instanceof DefaultFleetInflaterParams) {
+                inflaterParams = (DefaultFleetInflaterParams) tempInflaterParams;
+            } else {
+                inflaterParams = new DefaultFleetInflaterParams();
+                inflaterParams.factionId = fleet.getFaction().getId();
+                inflaterParams.seed = seed;
+            }
+            return new BetterVariantsFleetInflater(inflaterParams, quality, averageSMods);
+        } else if(unknownFleetInflater == null) {
+            final DefaultFleetInflaterParams inflaterParams = new DefaultFleetInflaterParams();
+            inflaterParams.factionId = fleet.getFaction().getId();
+            inflaterParams.seed = seed;
+            fleet.setInflater(new BetterVariantsFleetInflater(inflaterParams, 1.0f, 0.0f));
+        }
+        return null;
     }
 
     private void debugKey(final MemoryAPI memoryAPI, final String str) {
