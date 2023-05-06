@@ -26,7 +26,7 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
     public void onApplicationLoad() throws IOException, JSONException, Exception
     {
         log.debug(CommonStrings.MOD_ID + ": loading bounty data");
-        BountyCreationData.loadData();
+        //BountyCreationData.loadData();
         log.debug(CommonStrings.MOD_ID + ": loading settings");
         SettingsData.loadSettings();
     }
