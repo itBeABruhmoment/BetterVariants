@@ -5,7 +5,8 @@
     "hullId": "drover",
     "hullMods": [
         "expanded_deck_crew",
-        "missleracks"
+        "missleracks",
+        "eccm"
     ],
     "permaMods": [],
     "sMods": [],

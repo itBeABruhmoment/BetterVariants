@@ -1,7 +1,7 @@
 {
     "displayName": "Support1B",
     "fluxCapacitors": 10,
-    "fluxVents": 3,
+    "fluxVents": 4,
     "hullId": "wolf_hegemony",
     "hullMods": [
         "hardenedshieldemitter",

@@ -1,32 +1,29 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 0,
-    "fluxVents": 26,
+    "fluxCapacitors": 16,
+    "fluxVents": 30,
     "hullId": "brilliant",
-    "hullMods": [
-        "stabilizedshieldemitter",
-        "targetingunit"
-    ],
+    "hullMods": ["targetingunit"],
     "permaMods": [],
     "sMods": [],
     "variantId": "brilliant_Strike_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 000": "autopulse"}
+            "weapons": {"WS 000": "gigacannon"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 004": "sabotpod"}
+            "weapons": {"WS 004": "typhoon"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "heavyneedler",
-                "WS 006": "heavyneedler"
+                "WS 005": "heavyac",
+                "WS 006": "heavyac"
             }
         },
         {
@@ -38,10 +35,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "lrpdlaser",
-                "WS 003": "lrpdlaser"
+                "WS 002": "pdburst",
+                "WS 003": "pdburst"
             }
         }
-    ],
-    "wings": ["spark_wing"]
+    ]
 }

@@ -1,20 +1,29 @@
 {
     "displayName": "Raider1B",
     "fluxCapacitors": 10,
-    "fluxVents": 5,
+    "fluxVents": 1,
     "hullId": "brawler_pather",
-    "hullMods": ["hardened_subsystems"],
+    "hullMods": [
+        "hardened_subsystems",
+        "fluxcoil"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "brawler_pather_Raider_bv",
-    "weaponGroups": [{
-        "autofire": true,
-        "mode": "LINKED",
-        "weapons": {
-            "WS 001": "heavymg",
-            "WS 002": "chaingun",
-            "WS 003": "lightdualmg",
-            "WS 004": "lightdualmg"
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "chaingun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymg",
+                "WS 003": "lightdualmg",
+                "WS 004": "lightdualmg"
+            }
         }
-    }]
+    ]
 }

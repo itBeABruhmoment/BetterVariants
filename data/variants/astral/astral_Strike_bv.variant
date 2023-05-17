@@ -1,6 +1,6 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 32,
     "fluxVents": 0,
     "hullId": "astral",
     "hullMods": [
@@ -13,6 +13,14 @@
     "variantId": "astral_Strike_bv",
     "weaponGroups": [
         {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 015": "irautolance",
+                "WS 023": "irautolance"
+            }
+        },
+        {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
@@ -24,33 +32,25 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 013": "gravitonbeam",
-                "WS 015": "gravitonbeam",
-                "WS 023": "gravitonbeam",
-                "WS 024": "gravitonbeam"
+                "WS 013": "irautolance",
+                "WS 024": "irautolance"
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 006": "lrpdlaser"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 008": "lrpdlaser"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 007": "lrpdlaser"}
+            "weapons": {
+                "WS 006": "lrpdlaser",
+                "WS 007": "lrpdlaser",
+                "WS 008": "lrpdlaser"
+            }
         }
     ],
     "wings": [
+        "hoplon_wing",
+        "cobra_wing",
         "dagger_wing",
         "dagger_wing",
-        "dagger_wing",
-        "longbow_wing",
         "broadsword_wing",
         "broadsword_wing"
     ]

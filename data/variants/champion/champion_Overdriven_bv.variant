@@ -1,6 +1,6 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 30,
+    "fluxCapacitors": 26,
     "fluxVents": 0,
     "hullId": "champion",
     "hullMods": ["safetyoverrides"],
@@ -9,13 +9,9 @@
     "variantId": "champion_Overdriven_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 006": "heavymg",
-                "WS 007": "heavymg",
-                "WS 008": "plasma"
-            }
+            "weapons": {"WS 008": "plasma"}
         },
         {
             "autofire": false,
@@ -26,8 +22,17 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "pdburst",
-                "WS 005": "pdburst"
+                "WS 005": "pdburst",
+                "WS 010": "pdburst",
+                "WS 011": "pdburst"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "heavymg",
+                "WS 007": "heavymg"
             }
         }
     ]

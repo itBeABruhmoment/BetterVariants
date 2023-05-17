@@ -1,11 +1,11 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 30,
+    "fluxCapacitors": 26,
     "fluxVents": 0,
     "hullId": "eagle_xiv",
     "hullMods": [
-        "hardened_subsystems",
-        "safetyoverrides"
+        "safetyoverrides",
+        "hardened_subsystems"
     ],
     "permaMods": [],
     "sMods": [],
@@ -14,15 +14,10 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 013": "chaingun"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
             "weapons": {
                 "WS 005": "ionpulser",
                 "WS 006": "ionpulser",
-                "WS 009": "pulselaser"
+                "WS 009": "miningblaster"
             }
         },
         {
@@ -30,15 +25,16 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 007": "heavymg",
-                "WS 008": "heavymg"
+                "WS 008": "heavymg",
+                "WS 013": "heavymg"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "pdlaser",
-                "WS 004": "pdlaser"
+                "WS 003": "pdburst",
+                "WS 011": "pdburst"
             }
         }
     ]

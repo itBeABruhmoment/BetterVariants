@@ -294,9 +294,6 @@
 		"fallback":{"combatSmall":1},
 	},
 	"combatLarge":{
-		"aurora_Assault_Support":0,
-		"aurora_Escort":0,
-		"aurora_FS":0,
 		"aurora_Strike":0,
 	
 		"aurora_Assault":3,

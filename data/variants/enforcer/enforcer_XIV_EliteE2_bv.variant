@@ -1,6 +1,6 @@
 {
     "displayName": "Elite4B",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 11,
     "fluxVents": 20,
     "hullId": "enforcer_xiv",
     "hullMods": [

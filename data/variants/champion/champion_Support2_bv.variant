@@ -12,32 +12,40 @@
     "variantId": "champion_Support2_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 008": "tachyonlance"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 006": "hveldriver",
-                "WS 007": "hveldriver"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 004": "pdlaser",
-                "WS 005": "pdlaser",
-                "WS 010": "pdlaser",
-                "WS 011": "pdlaser"
-            }
+            "weapons": {"WS 008": "gigacannon"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 009": "squall"}
+            "weapons": {"WS 009": "cyclone"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "heavyac",
+                "WS 007": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "pdburst",
+                "WS 001": "pdburst"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "mininglaser",
+                "WS 003": "mininglaser",
+                "WS 004": "mininglaser",
+                "WS 005": "mininglaser"
+            }
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "displayName": "Strike2B",
-    "fluxCapacitors": 10,
-    "fluxVents": 1,
+    "fluxCapacitors": 9,
+    "fluxVents": 0,
     "hullId": "afflictor",
     "hullMods": [
         "adaptive_coils",

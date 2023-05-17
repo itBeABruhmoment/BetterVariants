@@ -10,7 +10,7 @@
     "weaponGroups": [
         {
             "autofire": false,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
                 "WS 002": "amblaster",
                 "WS 003": "amblaster"
@@ -19,7 +19,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 006": "ioncannon"}
+            "weapons": {"WS 006": "pdburst"}
         }
     ]
 }

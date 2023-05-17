@@ -1,11 +1,10 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 22,
+    "fluxCapacitors": 19,
     "fluxVents": 0,
     "hullId": "doom",
     "hullMods": [
         "safetyoverrides",
-        "adaptive_coils",
         "hardened_subsystems"
     ],
     "permaMods": [],
@@ -28,6 +27,14 @@
             "weapons": {
                 "WS 007": "ionpulser",
                 "WS 008": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "pdburst",
+                "WS 012": "pdburst"
             }
         }
     ]

@@ -1,12 +1,11 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 18,
+    "fluxCapacitors": 23,
     "fluxVents": 0,
     "hullId": "falcon_p",
     "hullMods": [
         "missleracks",
-        "converted_hangar",
-        "eccm"
+        "missile_autoloader"
     ],
     "permaMods": [],
     "sMods": [],
@@ -14,7 +13,7 @@
     "weaponGroups": [
         {
             "autofire": false,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
                 "WS 007": "sabotpod",
                 "WS 008": "sabotpod"
@@ -22,7 +21,7 @@
         },
         {
             "autofire": false,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
                 "WS 001": "atropos",
                 "WS 002": "atropos"
@@ -32,18 +31,17 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "harpoonpod",
-                "WS 006": "harpoonpod"
+                "WS 005": "phasecl",
+                "WS 006": "phasecl"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "taclaser",
-                "WS 010": "taclaser"
+                "WS 009": "pdburst",
+                "WS 010": "pdburst"
             }
         }
-    ],
-    "wings": ["talon_wing"]
+    ]
 }
