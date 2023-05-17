@@ -1,11 +1,11 @@
 {
     "displayName": "Support1B",
     "fluxCapacitors": 20,
-    "fluxVents": 2,
+    "fluxVents": 5,
     "hullId": "shrike",
     "hullMods": [
-        "converted_hangar",
-        "fluxcoil"
+        "fluxcoil",
+        "unstable_injector"
     ],
     "permaMods": [],
     "sMods": [],
@@ -14,13 +14,25 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 003": "ionpulser"}
+            "weapons": {"WS 003": "kineticblaster"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 005": "sabotpod"}
+            "weapons": {"WS 005": "phasecl"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "ioncannon"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "pdburst",
+                "WS 002": "pdburst"
+            }
         }
-    ],
-    "wings": ["longbow_wing"]
+    ]
 }

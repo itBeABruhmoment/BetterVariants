@@ -1,6 +1,6 @@
 {
     "displayName": "Strike3B",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 2,
     "fluxVents": 0,
     "hullId": "condor",
     "hullMods": ["expanded_deck_crew"],
@@ -13,7 +13,7 @@
         "weapons": {"WS 003": "pilum"}
     }],
     "wings": [
-        "longbow_wing",
+        "broadsword_wing",
         "dagger_wing"
     ]
 }

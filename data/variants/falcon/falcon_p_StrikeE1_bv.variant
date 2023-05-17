@@ -1,11 +1,12 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 13,
+    "fluxCapacitors": 9,
     "fluxVents": 0,
     "hullId": "falcon_p",
     "hullMods": [
         "missleracks",
-        "converted_hangar"
+        "converted_hangar",
+        "missile_autoloader"
     ],
     "permaMods": [],
     "sMods": [],
@@ -23,24 +24,16 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "atropos",
-                "WS 002": "atropos"
+                "WS 005": "typhoon",
+                "WS 006": "typhoon"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "annihilatorpod",
-                "WS 006": "annihilatorpod"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 009": "mininglaser",
-                "WS 010": "mininglaser"
+                "WS 001": "annihilator",
+                "WS 002": "annihilator"
             }
         }
     ],

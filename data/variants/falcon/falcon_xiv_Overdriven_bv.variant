@@ -1,6 +1,6 @@
 {
     "displayName": "Elite1B",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 9,
     "fluxVents": 30,
     "hullId": "falcon_xiv",
     "hullMods": ["targetingunit"],

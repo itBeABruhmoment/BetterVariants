@@ -1,6 +1,6 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 10,
     "fluxVents": 30,
     "hullId": "eagle_xiv",
     "hullMods": [

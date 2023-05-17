@@ -1,6 +1,6 @@
 {
     "displayName": "Elite1B",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 10,
     "fluxVents": 30,
     "hullId": "brilliant",
     "hullMods": [
@@ -42,6 +42,5 @@
                 "WS 003": "lrpdlaser"
             }
         }
-    ],
-    "wings": ["spark_wing"]
+    ]
 }

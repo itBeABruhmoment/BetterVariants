@@ -1,11 +1,12 @@
 {
     "displayName": "Strike2B",
-    "fluxCapacitors": 13,
+    "fluxCapacitors": 9,
     "fluxVents": 0,
     "hullId": "falcon_p",
     "hullMods": [
         "missleracks",
-        "converted_hangar"
+        "missile_autoloader",
+        "eccm"
     ],
     "permaMods": [],
     "sMods": [],
@@ -14,6 +15,11 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 009": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
             "weapons": {
                 "WS 007": "sabotpod",
                 "WS 008": "sabotpod"
@@ -28,21 +34,17 @@
             }
         },
         {
-            "autofire": true,
-            "mode": "LINKED",
+            "autofire": false,
+            "mode": "ALTERNATING",
             "weapons": {
-                "WS 009": "mininglaser",
-                "WS 010": "mininglaser"
+                "WS 005": "breachpod",
+                "WS 006": "breachpod"
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 005": "typhoon",
-                "WS 006": "typhoon"
-            }
+            "weapons": {"WS 010": "pdburst"}
         }
-    ],
-    "wings": ["xyphos_wing"]
+    ]
 }

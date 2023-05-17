@@ -1,11 +1,11 @@
 {
     "displayName": "Balanced1B",
-    "fluxCapacitors": 11,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 28,
     "hullId": "eagle",
     "hullMods": [
-        "advancedoptics",
-        "targetingunit"
+        "targetingunit",
+        "missile_autoloader"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,22 +15,22 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "arbalest",
-                "WS 008": "arbalest"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 001": "harpoon",
-                "WS 002": "harpoon"
+                "WS 007": "hveldriver",
+                "WS 008": "hveldriver"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 013": "heavymortar"}
+            "weapons": {
+                "WS 001": "breach",
+                "WS 002": "breach"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 013": "heavymauler"}
         },
         {
             "autofire": true,
@@ -49,17 +49,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "pdlaser",
-                "WS 004": "pdlaser"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 010": "lrpdlaser",
-                "WS 011": "lrpdlaser",
-                "WS 012": "lrpdlaser"
+                "WS 004": "pdburst",
+                "WS 010": "pdburst",
+                "WS 012": "pdburst"
             }
         }
     ]

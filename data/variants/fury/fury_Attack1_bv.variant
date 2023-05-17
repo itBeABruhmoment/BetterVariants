@@ -1,6 +1,6 @@
 {
     "displayName": "Attack1",
-    "fluxCapacitors": 16,
+    "fluxCapacitors": 24,
     "fluxVents": 0,
     "hullId": "fury",
     "hullMods": [
@@ -32,7 +32,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "pdlaser"}
+            "weapons": {"WS 004": "pdburst"}
         }
     ]
 }

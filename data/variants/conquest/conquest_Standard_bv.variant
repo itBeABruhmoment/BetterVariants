@@ -1,7 +1,7 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 16,
-    "fluxVents": 45,
+    "fluxCapacitors": 21,
+    "fluxVents": 50,
     "hullId": "conquest",
     "hullMods": [
         "targetingunit",

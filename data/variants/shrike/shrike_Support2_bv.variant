@@ -1,7 +1,7 @@
 {
     "displayName": "Support2B",
     "fluxCapacitors": 20,
-    "fluxVents": 1,
+    "fluxVents": 6,
     "hullId": "shrike",
     "hullMods": [
         "converted_hangar",

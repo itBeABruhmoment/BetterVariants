@@ -1,11 +1,12 @@
 {
     "displayName": "Strike3B",
-    "fluxCapacitors": 28,
+    "fluxCapacitors": 12,
     "fluxVents": 0,
     "hullId": "falcon_p",
     "hullMods": [
-        "converted_hangar",
-        "missleracks"
+        "missile_autoloader",
+        "missleracks",
+        "eccm"
     ],
     "permaMods": [],
     "sMods": [],
@@ -29,20 +30,19 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 005": "annihilatorpod",
-                "WS 006": "annihilatorpod"
+                "WS 005": "harpoonpod",
+                "WS 006": "harpoonpod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "taclaser",
-                "WS 010": "taclaser"
+                "WS 009": "pdburst",
+                "WS 010": "pdburst"
             }
         }
-    ],
-    "wings": ["wasp_wing"]
+    ]
 }
