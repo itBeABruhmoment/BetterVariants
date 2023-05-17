@@ -1,0 +1,69 @@
+{
+    "displayName": "Elite1B",
+    "fluxCapacitors": 27,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "executor",
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "executor_Elite_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "tachyonlance",
+                "WS 001": "tachyonlance"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 012": "squall",
+                "WS 013": "squall"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "hveldriver",
+                "WS 009": "hveldriver",
+                "WS 010": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "irautolance",
+                "WS 007": "irautolance"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "gravitonbeam",
+                "WS 006": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "dualflak",
+                "WS 005": "dualflak",
+                "WS 011": "flak",
+                "WS 016": "lrpdlaser",
+                "WS 017": "lrpdlaser"
+            }
+        }
+    ]
+}
