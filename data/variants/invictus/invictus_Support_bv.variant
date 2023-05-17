@@ -1,0 +1,55 @@
+{
+    "displayName": "Support1B",
+    "fluxCapacitors": 6,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "invictus",
+    "hullMods": [
+        "converted_hangar",
+        "armoredweapons",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "invictus_Support_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "mjolnir",
+                "WS 010": "mjolnir"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "squall",
+                "WS 007": "squall"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "mark9",
+                "WS 009": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "devastator",
+                "WS 003": "devastator",
+                "WS 008": "devastator",
+                "WS 026": "devastator"
+            }
+        }
+    ],
+    "wings": [
+        "broadsword_wing",
+        "hoplon_wing"
+    ]
+}
