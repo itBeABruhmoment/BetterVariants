@@ -1,12 +1,13 @@
 {
     "displayName": "Strike1B",
     "fluxCapacitors": 0,
-    "fluxVents": 15,
+    "fluxVents": 30,
     "hullId": "legion",
     "hullMods": [
         "heavyarmor",
         "missleracks",
-        "targetingunit"
+        "targetingunit",
+        "expanded_deck_crew"
     ],
     "permaMods": [],
     "sMods": [],

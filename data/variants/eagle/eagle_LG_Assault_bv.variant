@@ -1,31 +1,30 @@
 {
-    "displayName": "Support1B",
-    "fluxCapacitors": 20,
-    "fluxVents": 21,
-    "hullId": "falcon",
+    "displayName": "Assault1B",
+    "fluxCapacitors": 6,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "eagle_LG",
     "hullMods": [
         "targetingunit",
         "advancedoptics"
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "falcon_CS_bv",
+    "variantId": "eagle_LG_Assault_bv",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "arbalest",
-                "WS 008": "arbalest"
+                "WS 007": "heavyac",
+                "WS 008": "heavyac",
+                "WS 013": "heavyac"
             }
         },
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 001": "swarmer",
-                "WS 002": "swarmer"
-            }
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "ionbeam"}
         },
         {
             "autofire": true,
@@ -40,7 +39,8 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 004": "pdburst",
-                "WS 009": "pdburst"
+                "WS 010": "pdburst",
+                "WS 012": "pdburst"
             }
         }
     ]

@@ -1,12 +1,13 @@
 {
     "displayName": "Fire Support3B",
     "fluxCapacitors": 0,
-    "fluxVents": 50,
+    "fluxVents": 49,
     "hullId": "legion",
     "hullMods": [
         "eccm",
         "fluxdistributor",
-        "targetingunit"
+        "targetingunit",
+        "expanded_deck_crew"
     ],
     "permaMods": [],
     "sMods": [],
@@ -29,6 +30,16 @@
                 "WS 004": "pilum",
                 "WS 005": "pilum",
                 "WS 007": "pilum"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "vulcan",
+                "WS 019": "vulcan",
+                "WS 020": "vulcan",
+                "WS 021": "vulcan"
             }
         }
     ],

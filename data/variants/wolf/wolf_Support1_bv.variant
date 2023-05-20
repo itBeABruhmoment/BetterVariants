@@ -1,7 +1,7 @@
 {
     "displayName": "Support1B",
     "fluxCapacitors": 10,
-    "fluxVents": 7,
+    "fluxVents": 8,
     "goalVariant": true,
     "hullId": "wolf",
     "hullMods": [
