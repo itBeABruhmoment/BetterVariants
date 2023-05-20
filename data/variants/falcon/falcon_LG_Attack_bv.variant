@@ -1,15 +1,16 @@
 {
-    "displayName": "Support1B",
-    "fluxCapacitors": 20,
-    "fluxVents": 21,
-    "hullId": "falcon",
+    "displayName": "Attack1B",
+    "fluxCapacitors": 16,
+    "fluxVents": 22,
+    "goalVariant": true,
+    "hullId": "falcon_LG",
     "hullMods": [
         "targetingunit",
         "advancedoptics"
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "falcon_CS_bv",
+    "variantId": "falcon_LG_Attack_bv",
     "weaponGroups": [
         {
             "autofire": false,
@@ -17,14 +18,6 @@
             "weapons": {
                 "WS 007": "arbalest",
                 "WS 008": "arbalest"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 001": "swarmer",
-                "WS 002": "swarmer"
             }
         },
         {
@@ -39,8 +32,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "pdburst",
-                "WS 009": "pdburst"
+                "WS 003": "pdburst",
+                "WS 010": "pdburst"
             }
         }
     ]

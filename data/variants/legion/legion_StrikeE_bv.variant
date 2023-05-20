@@ -1,12 +1,13 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 0,
-    "fluxVents": 5,
+    "fluxCapacitors": 18,
+    "fluxVents": 20,
     "hullId": "legion",
     "hullMods": [
         "heavyarmor",
         "missleracks",
-        "targetingunit"
+        "targetingunit",
+        "expanded_deck_crew"
     ],
     "permaMods": [],
     "sMods": [],
@@ -35,8 +36,6 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 008": "vulcan",
-                "WS 009": "vulcan",
                 "WS 018": "vulcan",
                 "WS 019": "vulcan",
                 "WS 020": "vulcan",
@@ -46,8 +45,8 @@
     ],
     "wings": [
         "broadsword_wing",
+        "broadsword_wing",
         "thunder_wing",
-        "xyphos_wing",
         "xyphos_wing"
     ]
 }

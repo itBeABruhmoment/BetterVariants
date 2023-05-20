@@ -1,11 +1,13 @@
 {
     "displayName": "Attack3B",
-    "fluxCapacitors": 9,
-    "fluxVents": 10,
+    "fluxCapacitors": 10,
+    "fluxVents": 1,
     "hullId": "tempest",
     "hullMods": [
         "hardened_subsystems",
-        "fluxdistributor"
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "frontemitter"
     ],
     "permaMods": [],
     "sMods": [],

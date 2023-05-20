@@ -1,7 +1,7 @@
 {
     "displayName": "Attack1B",
     "fluxCapacitors": 20,
-    "fluxVents": 13,
+    "fluxVents": 20,
     "hullId": "medusa",
     "hullMods": [
         "fluxcoil",
