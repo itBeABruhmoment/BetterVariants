@@ -1,0 +1,45 @@
+{
+    "displayName": "Attack1B",
+    "fluxCapacitors": 20,
+    "fluxVents": 6,
+    "goalVariant": true,
+    "hullId": "venture_pather",
+    "hullMods": [
+        "missile_autoloader",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "venture_pather_Attack_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "sabotpod",
+                "WS 006": "sabotpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "reaper",
+                "WS 007": "reaper"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "arbalest",
+                "WS 003": "arbalest"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "heavyburst"}
+        }
+    ]
+}

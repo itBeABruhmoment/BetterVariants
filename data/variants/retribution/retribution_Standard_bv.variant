@@ -1,0 +1,61 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 50,
+    "fluxVents": 46,
+    "goalVariant": true,
+    "hullId": "retribution",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "fluxcoil",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "retribution_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "hellbore",
+                "WS 001": "hellbore",
+                "WS 002": "hellbore"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 007": "swarmer",
+                "WS 008": "swarmer",
+                "WS 009": "swarmer",
+                "WS 010": "swarmer",
+                "WS 020": "swarmer",
+                "WS 021": "swarmer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "arbalest",
+                "WS 004": "arbalest",
+                "WS 011": "lightac",
+                "WS 012": "lightac",
+                "WS 013": "lightac",
+                "WS 014": "lightac",
+                "WS 015": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "dualflak",
+                "WS 006": "dualflak",
+                "WS 016": "vulcan",
+                "WS 017": "vulcan"
+            }
+        }
+    ]
+}

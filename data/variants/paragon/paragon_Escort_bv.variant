@@ -1,12 +1,14 @@
 {
     "displayName": "Escort1B",
-    "fluxCapacitors": 45,
+    "fluxCapacitors": 50,
     "fluxVents": 50,
     "hullId": "paragon",
     "hullMods": [
         "fluxdistributor",
         "frontemitter",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "fluxcoil",
+        "fluxbreakers"
     ],
     "permaMods": [],
     "sMods": [],
@@ -22,7 +24,7 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
                 "WS 012": "heatseeker",
                 "WS 014": "heatseeker",
@@ -34,30 +36,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 013": "taclaser",
-                "WS 015": "taclaser",
-                "WS 016": "taclaser",
-                "WS 019": "taclaser",
-                "WS 021": "taclaser",
-                "WS 022": "taclaser"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "ionbeam",
-                "WS 006": "ionbeam",
-                "WS 011": "taclaser",
-                "WS 017": "taclaser"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 009": "phasebeam",
-                "WS 010": "phasebeam"
+                "WS 009": "irautolance",
+                "WS 010": "irautolance"
             }
         },
         {
@@ -72,8 +52,24 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 005": "ionbeam",
+                "WS 006": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 003": "guardian",
                 "WS 004": "guardian"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "mininglaser",
+                "WS 017": "mininglaser"
             }
         }
     ]
