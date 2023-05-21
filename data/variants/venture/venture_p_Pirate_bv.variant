@@ -1,0 +1,43 @@
+{
+    "displayName": "Pirate1B",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "venture_p",
+    "hullMods": [
+        "missile_autoloader",
+        "missleracks",
+        "eccm"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "venture_p_Pirate_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "squall"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "harpoon",
+                "WS 007": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hveldriver",
+                "WS 003": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "pdburst"}
+        }
+    ]
+}
