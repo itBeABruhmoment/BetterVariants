@@ -257,6 +257,8 @@
 		"manticore_Assault":3.3,
 		"manticore_pirates_Support":5,
 		"manticore_pirates_Assault":5,
+		"manticore_luddic_path_Strike_bv":10,
+		"manticore_luddic_path_Strike":0,
 		
 		"medusa_Attack":0,
 		"medusa_CS":0,
@@ -330,18 +332,27 @@
 		"eagle_Assault":0,
 		"eagle_Balanced":0,
 		"eagle_xiv_Elite":0,
-		
-		"falcon_Attack":0,
-		"falcon_CS":0,
-		"falcon_xiv_Elite":0,
-		"falcon_xiv_Escort":0,
-		"falcon_p_Strike":0,
+		"eagle_LG_Assault":0,
+		"eagle_LG_Support":0,
 		
 		"eagle_Standard_bv":4,
 		"eagle_Balanced_bv":4,
 		"eagle_Overdriven_bv":2,
 		"eagle_xiv_Standard_bv":8,
 		"eagle_xiv_Overdriven_bv":2,
+		"eagle_LG_Assault_bv":4,
+		"eagle_LG_Support_bv":4,
+		"eagle_LG_Overdriven_bv":2,
+		
+		"falcon_Attack":0,
+		"falcon_CS":0,
+		"falcon_xiv_Elite":0,
+		"falcon_xiv_Escort":0,
+		"falcon_p_Strike":0,
+		"falcon_LG_CS":5,
+		"falcon_LG_Attack":0,
+		
+		"falcon_LG_Attack_bv":5,
 		"falcon_Overdriven_bv":2,
 		"falcon_CS_bv":8,
 		"falcon_xiv_Overdriven_bv":2,
@@ -437,6 +448,14 @@
 		"atlas2_Standard3_bv":2.5,
 		"atlas2_Standard4_bv": 2.5,
 		"prometheus2_Standard":10,
+		
+		"invictus_Standard":0,
+		"invictus_Support":0,
+		"invictus_Standard_bv":5,
+		"invictus_Support_bv":5,
+		
+		"retribution_Standard":0,
+		"retribution_Standard_bv":10,
 		
 		"fallback":{"combatLarge":1},
 	},
@@ -548,6 +567,7 @@
 	"carrierMedium":{
 		"mora_Assault":0,
 		"mora_Support":0,
+		"mora_Strike":0,
 		
 	
 		"heron_Strike":5,

@@ -1,12 +1,12 @@
 {
     "displayName": "Outdated1B",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 13,
     "fluxVents": 30,
     "hullId": "dominator",
     "hullMods": [
-        "heavyarmor",
+        "targetingunit",
         "ballistic_rangefinder",
-        "targetingunit"
+        "heavyarmor"
     ],
     "permaMods": [],
     "sMods": [],
@@ -22,30 +22,26 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 014": "annihilatorpod",
-                "WS 015": "annihilatorpod",
-                "WS 016": "annihilatorpod"
+                "WS 014": "typhoon",
+                "WS 015": "typhoon",
+                "WS 016": "typhoon"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "lightac",
-                "WS 004": "lightac",
-                "WS 005": "lightac"
+                "WS 003": "railgun",
+                "WS 004": "railgun",
+                "WS 005": "railgun"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "vulcan",
-                "WS 002": "vulcan",
-                "WS 006": "vulcan",
-                "WS 007": "vulcan",
                 "WS 008": "vulcan",
                 "WS 009": "vulcan",
                 "WS 010": "flak",

@@ -1,7 +1,7 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 30,
-    "fluxVents": 6,
+    "fluxCapacitors": 25,
+    "fluxVents": 0,
     "hullId": "aurora",
     "hullMods": [
         "safetyoverrides",
@@ -14,37 +14,35 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 009": "ionpulser"}
+            "weapons": {"WS 009": "typhoon"}
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "heavyblaster",
-                "WS 008": "heavyblaster"
+                "WS 006": "breachpod",
+                "WS 010": "breach",
+                "WS 011": "breach",
+                "WS 012": "breach",
+                "WS 013": "breach"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 010": "irpulse",
-                "WS 011": "irpulse",
-                "WS 012": "irpulse",
-                "WS 013": "irpulse"
+                "WS 003": "ioncannon",
+                "WS 005": "ioncannon",
+                "WS 007": "heavyblaster",
+                "WS 008": "heavyblaster"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "ioncannon"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 001": "pdlaser",
-                "WS 002": "pdlaser"
+                "WS 001": "pdburst",
+                "WS 004": "pdburst"
             }
         }
     ]

@@ -1,13 +1,13 @@
 {
     "displayName": "Fire Support3B",
-    "fluxCapacitors": 0,
-    "fluxVents": 49,
+    "fluxCapacitors": 26,
+    "fluxVents": 50,
     "hullId": "legion",
     "hullMods": [
-        "eccm",
-        "fluxdistributor",
         "targetingunit",
-        "expanded_deck_crew"
+        "defensive_targeting_array",
+        "fluxdistributor",
+        "eccm"
     ],
     "permaMods": [],
     "sMods": [],
@@ -44,9 +44,9 @@
         }
     ],
     "wings": [
-        "broadsword_wing",
         "hoplon_wing",
-        "perdition_wing",
-        "perdition_wing"
+        "hoplon_wing",
+        "hoplon_wing",
+        "hoplon_wing"
     ]
 }

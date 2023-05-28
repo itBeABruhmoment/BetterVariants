@@ -1,21 +1,16 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 0,
     "fluxVents": 0,
     "hullId": "colossus3",
-    "hullMods": [],
+    "hullMods": ["eccm"],
     "permaMods": [],
     "sMods": [],
     "variantId": "colossus3_PirateStrike1_bv",
     "weaponGroups": [{
         "autofire": true,
         "mode": "LINKED",
-        "weapons": {
-            "WS 002": "vulcan",
-            "WS 004": "vulcan",
-            "WS 013": "vulcan",
-            "WS 014": "vulcan"
-        }
+        "weapons": {"WS 015": "vulcan"}
     }],
     "wings": [
         "dagger_wing",

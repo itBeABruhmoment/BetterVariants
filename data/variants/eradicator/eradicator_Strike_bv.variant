@@ -1,12 +1,11 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 4,
+    "fluxCapacitors": 21,
     "fluxVents": 30,
     "hullId": "eradicator",
     "hullMods": [
-        "missleracks",
-        "armoredweapons",
-        "targetingunit"
+        "targetingunit",
+        "armoredweapons"
     ],
     "permaMods": [],
     "sMods": [],
@@ -16,41 +15,35 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "heavyac",
-                "WS 006": "heavyac"
+                "WS 005": "heavymortar",
+                "WS 007": "heavymortar"
             }
         },
         {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 000": "reaper",
-                "WS 001": "reaper",
-                "WS 002": "reaper",
-                "WS 003": "reaper",
-                "WS 004": "reaper"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 009": "lightneedler"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 010": "lightag",
-                "WS 011": "lightag"
+                "WS 000": "annihilator",
+                "WS 001": "annihilator",
+                "WS 002": "annihilator",
+                "WS 003": "annihilator",
+                "WS 004": "annihilator"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "flak",
-                "WS 008": "vulcan",
-                "WS 012": "vulcan",
+                "WS 009": "railgun",
+                "WS 010": "railgun",
+                "WS 011": "railgun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "dualflak",
                 "WS 013": "vulcan",
                 "WS 014": "vulcan"
             }
