@@ -1,5 +1,5 @@
 {
-    "displayName": "Standard",
+    "displayName": "Standard1B",
     "fluxCapacitors": 50,
     "fluxVents": 46,
     "goalVariant": true,
@@ -11,7 +11,7 @@
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "retribution_Standard",
+    "variantId": "retribution_Standard_bv",
     "weaponGroups": [
         {
             "autofire": true,

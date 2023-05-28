@@ -1,15 +1,19 @@
 {
     "displayName": "Strike2B",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 3,
     "fluxVents": 0,
     "hullId": "colossus3",
-    "hullMods": [],
+    "hullMods": ["eccm"],
     "permaMods": [],
     "sMods": [],
     "variantId": "colossus3_PirateStrike2_bv",
-    "weaponGroups": [],
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS 015": "vulcan"}
+    }],
     "wings": [
-        "trident_wing",
+        "broadsword_wing",
         "trident_wing"
     ]
 }

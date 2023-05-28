@@ -1,12 +1,9 @@
 {
     "displayName": "Overdriven1B",
     "fluxCapacitors": 25,
-    "fluxVents": 0,
+    "fluxVents": 10,
     "hullId": "eradicator",
-    "hullMods": [
-        "safetyoverrides",
-        "autorepair"
-    ],
+    "hullMods": ["safetyoverrides"],
     "permaMods": [],
     "sMods": [],
     "variantId": "eradicator_Overdriven_bv",
@@ -14,7 +11,10 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 006": "chaingun"}
+            "weapons": {
+                "WS 006": "chaingun",
+                "WS 007": "chaingun"
+            }
         },
         {
             "autofire": false,
@@ -31,21 +31,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "lightdualac",
-                "WS 010": "lightdualac"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 011": "lightdualac"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
                 "WS 005": "heavymg",
-                "WS 007": "heavymg"
+                "WS 010": "lightdualac",
+                "WS 011": "lightdualac"
             }
         },
         {
@@ -53,6 +41,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 008": "vulcan",
+                "WS 009": "vulcan",
                 "WS 012": "vulcan",
                 "WS 013": "vulcan",
                 "WS 014": "vulcan"

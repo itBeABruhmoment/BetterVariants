@@ -1,13 +1,12 @@
 {
     "displayName": "Assault1B",
-    "fluxCapacitors": 0,
-    "fluxVents": 38,
+    "fluxCapacitors": 25,
+    "fluxVents": 50,
     "hullId": "legion",
     "hullMods": [
-        "missleracks",
+        "defensive_targeting_array",
         "targetingunit",
-        "expanded_deck_crew",
-        "heavyarmor"
+        "missleracks"
     ],
     "permaMods": [],
     "sMods": [],
@@ -17,19 +16,19 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "mark9",
-                "WS 001": "mark9"
+                "WS 000": "mjolnir",
+                "WS 001": "hellbore"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "typhoon",
-                "WS 003": "typhoon",
-                "WS 004": "typhoon",
-                "WS 005": "typhoon",
-                "WS 007": "typhoon"
+                "WS 002": "sabotpod",
+                "WS 003": "sabotpod",
+                "WS 004": "sabotpod",
+                "WS 005": "sabotpod",
+                "WS 007": "sabotpod"
             }
         },
         {
@@ -44,8 +43,8 @@
         }
     ],
     "wings": [
-        "broadsword_wing",
-        "broadsword_wing",
+        "xyphos_wing",
+        "hoplon_wing",
         "hoplon_wing",
         "hoplon_wing"
     ]
