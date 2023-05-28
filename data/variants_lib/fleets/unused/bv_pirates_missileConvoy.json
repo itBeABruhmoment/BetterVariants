@@ -1,15 +1,18 @@
 {
-	# vlSpawnfleet pirates bv_pirates_missile 200
+	# vlSpawnfleet pirates bv_pirates_missileConvoy 200
 	"autofit":false,
-	"fleetDataId":"bv_pirates_missile",
+	"fleetDataId":"bv_pirates_missileConvoy",
 	"minDP":40,
 	"maxDP":350,
 	"defaultFleetWidePersonality":"reckless",
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"alwaysInclude":{"ox_Standard":2},
+	"setDPToAtLeast":200,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":40,
+			"partitionWeight":35,
 			"variants":{
 				"atlas2_Standard_bv":17,
 				"atlas2_Standard2_bv":13,
@@ -26,7 +29,7 @@
 			}
 		},
 		{
-			"partitionWeight":20,
+			"partitionWeight":15,
 			"variants":{
 				"enforcer_d_pirates_Strike2_bv":35,
 				"enforcer_d_pirates_Overdriven2_bv":10,
@@ -40,7 +43,7 @@
 			}
 		},
 		{
-			"partitionWeight":4,
+			"partitionWeight":8,
 			"variants":{
 				"hound_d_pirates_Shielded":3.00,
 				"hound_d_pirates_Standard":3.00,

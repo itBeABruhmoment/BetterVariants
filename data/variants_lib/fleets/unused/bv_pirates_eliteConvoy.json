@@ -1,16 +1,18 @@
 {
 	"autofit":false,
-	"fleetDataId":"bv_pirates_elite",
+	"fleetDataId":"bv_pirates_eliteConvoy",
 	"minDP":40,
 	"maxDP":300,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","derelict_contingent",],
 	"alwaysInclude":{"ox_Standard":2},
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"setDPToAtLeast":200,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":38.83,
+			"partitionWeight":40,
 			"variants":{
 				"atlas2_Standard_bv":25,
 				"atlas2_Standard2_bv":25,
@@ -19,7 +21,7 @@
 			}
 		},
 		{
-			"partitionWeight":24.27,
+			"partitionWeight":25,
 			"variants":{
 				"eradicator_pirates_Attack_bv":22.22,
 				"eradicator_pirates_Overdriven_bv":22.22,
@@ -29,23 +31,23 @@
 			}
 		},
 		{
-			"partitionWeight":24.27,
+			"partitionWeight":10,
 			"variants":{
-				"enforcer_d_pirates_Elite_bv":42,
-				"enforcer_d_pirates_Overdriven2_bv":8,
-				"enforcer_d_pirates_Overdriven_bv":9,
-				"manticore_pirates_Support1_bv":5,
-				"sunder_Overdriven_bv":11,
-				"colossus3_PirateStrike1_bv":5,
-				"colossus3_PirateStrike2_bv":5,
-				"condor_Strike1_bv":5,
-				"condor_Attack_bv":5,
-				"shrike_p_Attack_bv":5,
-				"shrike_p_Support_bv":5
+				"enforcer_d_pirates_Elite_bv":42.11,
+				"enforcer_d_pirates_Overdriven2_bv":7.37,
+				"enforcer_d_pirates_Overdriven_bv":8.42,
+				"manticore_pirates_Support1_bv":5.26,
+				"sunder_Overdriven_bv":10.53,
+				"colossus3_PirateStrike1_bv":5.26,
+				"colossus3_PirateStrike2_bv":5.26,
+				"condor_Strike1_bv":5.26,
+				"condor_Attack_bv":5.26,
+				"shrike_p_Support_bv":4,
+				"shrike_p_Attack_bv":4
 			}
 		},
 		{
-			"partitionWeight":9.71,
+			"partitionWeight":8,
 			"variants":{
 				"hound_d_pirates_Shielded":3.00,
 				"hound_d_pirates_Standard":3.00,

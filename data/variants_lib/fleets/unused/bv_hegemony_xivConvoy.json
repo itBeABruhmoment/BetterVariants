@@ -1,0 +1,54 @@
+{
+	# vlSpawnFleet hegemony bv_hegemony_xivConvoy 200
+	"autofit":false,
+	"fleetDataId":"bv_hegemony_xivConvoy",
+	"minDP":40,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"aggressive",
+	"additionalCommanderSkills":["support_doctrine",],
+	"spawnIfNoIndustry":false,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":30,
+			"variants":{
+				"onslaught_xiv_Standard_bv":50.00,
+				"onslaught_xiv_Elite2_bv":50.00,
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"dominator_XIV_Elite_bv":13.16,
+				"dominator_XIV_Elite2_bv":13.16,
+				"dominator_XIV_Elite3_bv":13.16,
+				"dominator_XIV_Elite4_bv":13.16,
+				"eagle_xiv_Standard_bv":7.89,
+				"eagle_xiv_Overdriven_bv":18.42,
+				"mora_Assault_bv":10.53,
+				"mora_Strike_bv":10.53,
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+				"falcon_xiv_Overdriven_bv":20.00,
+				"falcon_xiv_Support_bv":20.00,
+				"enforcer_XIV_Elite3_bv":20.00,
+				"enforcer_XIV_Elite2_bv":20.00,
+				"enforcer_XIV_Overdriven_bv":20.00,
+			}
+		},
+		{
+			"partitionWeight":3,
+			"variants":{
+				"hound_Standard":100.00,
+			}
+		},
+	],
+}
+

@@ -252,13 +252,17 @@
 		"hyperion_Support_bv":3,
 		
 		"manticore_Support":0,
-		
-		"manticore_Support2_bv":3.3,
-		"manticore_Assault":3.3,
-		"manticore_pirates_Support":5,
-		"manticore_pirates_Assault":5,
-		"manticore_luddic_path_Strike_bv":10,
+		"manticore_Assault":0,
+		"manticore_pirates_Support":0,
+		"manticore_pirates_Assault":0,
 		"manticore_luddic_path_Strike":0,
+		
+		"manticore_Support1_bv":3,
+		"manticore_Support2_bv":3,
+		"manticore_Support3_bv":4,
+		"manticore_luddic_path_Strike_bv":10,
+		"manticore_pirates_Support1_bv":5,
+		"manticore_pirates_Support2_bv":5,
 		
 		"medusa_Attack":0,
 		"medusa_CS":0,

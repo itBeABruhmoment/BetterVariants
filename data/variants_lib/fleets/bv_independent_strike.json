@@ -1,0 +1,44 @@
+{
+    # vlTestBattle bv_independent_strike 300 bv_sindrian_diktat_ranged 300
+    # vlTestBattle bv_sindrian_diktat_ranged 300 bv_independent_strike 300 
+	"autofit":false,
+	"fleetDataId":"bv_independent_strike",
+	"minDP":10,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"aggressive",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.06,
+	"autoLogitsticsTankerDP":0.04,
+	"fleetPartitions":[
+		{
+			"partitionWeight":45,
+			"variants":{
+				"aurora_Overdriven_bv":40,
+                "aurora_Strike_bv":30,
+				"odyssey_Balanced_bv":30
+			}
+		},
+		{
+			"partitionWeight":35,
+			"variants":{
+                
+				"fury_Attack1_bv":15,
+				"fury_Attack2_bv":15,
+				"fury_Strike_bv":10,
+                "eagle_Overdriven_bv":40,
+                "hyperion_Assault_bv":10,
+                "hyperion_Support_bv":10
+
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+                "shrike_Strike_bv":20,
+                "shrike_Support1_bv":20,
+                "omen_Ew_bv":80
+			}
+		}
+	]
+}
+

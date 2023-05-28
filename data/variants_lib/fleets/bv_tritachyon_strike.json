@@ -1,0 +1,41 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_tritachyon_strike",
+	"minDP":10,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"aggressive",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.06,
+	"autoLogitsticsTankerDP":0.04,
+	"fleetPartitions":[
+		{
+			"partitionWeight":45,
+			"variants":{
+				"aurora_Overdriven_bv":40,
+                "aurora_Strike_bv":30,
+				"doom_Support_bv":30
+			}
+		},
+		{
+			"partitionWeight":35,
+			"variants":{
+                "harbinger_Overdriven1_bv":10,
+				"fury_Attack1_bv":20,
+				"fury_Attack2_bv":20,
+				"fury_Strike_bv":10,
+                "hyperion_Assault_bv":20,
+                "hyperion_Support_bv":20
+
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+                "shrike_Strike_bv":20,
+                "shrike_Support1_bv":20,
+                "omen_Ew_bv":80
+			}
+		}
+	]
+}
+
