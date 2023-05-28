@@ -79,7 +79,7 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
         final OfficerFactory officerFactory = new OfficerFactory();
         for(final FleetMemberAPI memberAPI : fleet.getMembersWithFightersCopy()) {
             final PersonAPI officer = memberAPI.getCaptain();
-            if(officer != null && officer.getStats().getLevel() == 0) {
+            if(officer != null && officer.getStats().getLevel() != 0) {
                 final String variant = memberAPI.getVariant().getOriginalVariant();
                 OfficerFactoryParams officerFactoryParams = new OfficerFactoryParams(
                         variant,
