@@ -1,0 +1,44 @@
+{
+    "displayName": "Overdriven1B",
+    "fluxCapacitors": 21,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "eagle_LG",
+    "hullMods": ["safetyoverrides"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "eagle_LG_Overdriven_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "ionpulser",
+                "WS 006": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "miningblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "heavymg",
+                "WS 008": "heavymg",
+                "WS 013": "heavymg"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "pdburst",
+                "WS 010": "pdburst",
+                "WS 012": "pdburst"
+            }
+        }
+    ]
+}

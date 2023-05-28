@@ -1,0 +1,45 @@
+{ 
+   "autofit":false,
+   "fleetDataId":"bv_hegemony_missile",
+   "minDP":40,
+   "maxDP":400,
+   "spawnIfNoIndustry":false,
+   "defaultFleetWidePersonality":"steady",
+   "autoLogitsticsFreighterDP":0.06,
+   "autoLogitsticsTankerDP":0.04,
+   "fleetPartitions":[
+       {
+           "partitionWeight":40,
+           "variants":{
+               "legion_Assault_bv":50,
+               "legion_FS3_bv":50
+           }
+       },
+       {
+           "partitionWeight":40,
+           "variants":{
+               "gryphon_FS_bv":70,
+               "eagle_xiv_Standard_bv":20,
+               "eagle_Standard_bv":10
+           }
+       },
+       {
+           "partitionWeight":15,
+           "variants":{
+               "manticore_Support1_bv":25,
+               "manticore_Support2_bv":25,
+               "enforcer_XIV_Elite":20,
+               "enforcer_Elite":10,
+               "enforcer_Escort":20
+           }
+       },
+       {
+           "partitionWeight":5,
+           "variants":{
+               "hound_Standard":50,
+               "wolf_hegemony_Support1_bv":50
+           }
+       },
+   ],
+}
+

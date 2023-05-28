@@ -1,15 +1,18 @@
 {
- 	"autofit":false,
-	"fleetDataId":"bv_hegemony_lowtech",
+	"autofit":false,
+	"fleetDataId":"bv_hegemony_lowtechConvoy",
 	"minDP":40,
 	"maxDP":400,
 	"spawnIfNoIndustry":false,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
 	"defaultFleetWidePersonality":"steady",
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":37.74,
+			"partitionWeight":35,
 			"variants":{
 				"onslaught_Standard_bv":16.58,
 				"onslaught_Outdated_bv":16.58,
@@ -22,7 +25,7 @@
 			}
 		},
 		{
-			"partitionWeight":37.74,
+			"partitionWeight":35,
 			"variants":{
 				"dominator_AntiCV_bv":10.53,
 				"dominator_Assault_bv":10.53,
@@ -36,7 +39,7 @@
 			}
 		},
 		{
-			"partitionWeight":16.98,
+			"partitionWeight":12,
 			"variants":{
 				"manticore_Support1_bv":24.14,
 				"manticore_Support2_bv":24.14,
@@ -49,7 +52,7 @@
 			}
 		},
 		{
-			"partitionWeight":1.89,
+			"partitionWeight":3,
 			"variants":{
 				"hound_Standard":100.00,
 			}

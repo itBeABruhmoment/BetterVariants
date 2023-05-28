@@ -1,0 +1,33 @@
+{
+    "displayName": "Attack1B",
+    "fluxCapacitors": 3,
+    "fluxVents": 0,
+    "hullId": "heron",
+    "hullMods": [
+        "eccm",
+        "expanded_deck_crew"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "heron_Attack1_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pdburst",
+                "WS 002": "pdburst"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "harpoonpod"}
+        }
+    ],
+    "wings": [
+        "broadsword_wing",
+        "longbow_wing",
+        "trident_wing"
+    ]
+}

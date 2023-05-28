@@ -1,27 +1,25 @@
 {
-    "displayName": "Support2B",
-    "fluxCapacitors": 2,
+    "displayName": "Support1B",
+    "fluxCapacitors": 6,
     "fluxVents": 20,
+    "goalVariant": true,
     "hullId": "manticore",
-    "hullMods": [
-        "missleracks",
-        "targetingunit"
-    ],
+    "hullMods": ["targetingunit"],
     "permaMods": [],
     "sMods": [],
-    "variantId": "manticore_Support2_bv",
+    "variantId": "manticore_Support1_bv",
     "weaponGroups": [
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 000": "hellbore"}
+            "weapons": {"WS 000": "mjolnir"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "harpoonpod",
-                "WS 005": "harpoonpod"
+                "WS 004": "typhoon",
+                "WS 005": "typhoon"
             }
         },
         {

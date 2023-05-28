@@ -1,0 +1,52 @@
+{
+	# vlSpawnFleet hegemony bv_hegemony_elitesoConvoy 200
+	"autofit":false,
+	"fleetDataId":"bv_hegemony_elitesoConvoy",
+	"minDP":40,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"reckless",
+	"spawnIfNoIndustry":false,
+	"setDPToAtLeast":200,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.10,
+	"autoLogitsticsTankerDP":0.05,
+	"autoLogitsticsPersonnelDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":25,
+			"variants":{
+				"legion_StrikeE_bv":100.00,
+			}
+		},
+		{
+			"partitionWeight":35,
+			"variants":{
+				"eagle_xiv_Overdriven_bv":80.00,
+				"falcon_xiv_Overdriven_bv":20.00,
+			}
+		},
+		{
+			"partitionWeight":10,
+			"variants":{
+				"enforcer_XIV_Overdriven_bv":70.00,
+				"sunder_Overdriven_bv":30.00,
+			}
+		},
+		{
+			"partitionWeight":10,
+			"variants":{
+				"mora_StrikeE_bv":25.00,
+				"condor_StrikeE1_bv":10.00,
+				"gryphon_Overdriven_bv":50.00,
+				"condor_Strike2_bv":15.00,
+			}
+		},
+		{
+			"partitionWeight":3,
+			"variants":{
+				"hound_Standard":100.00,
+			}
+		},
+	],
+}
+
