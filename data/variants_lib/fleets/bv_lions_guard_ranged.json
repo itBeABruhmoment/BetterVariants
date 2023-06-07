@@ -1,0 +1,49 @@
+{
+	# vlTestBattle bv_lions_guard_ranged 300 bv_hegemony_lowtech 300
+	"autofit":false,
+	"fleetDataId":"bv_lions_guard_ranged",
+	"minDP":200,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
+	"fleetPartitions":[
+		{
+			"partitionWeight":35,
+			"variants":{
+				"executor_Elite_bv":50,
+				"executor_Elite2_bv":50
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"falcon_LG_CS_bv":25,
+				"eagle_LG_Overdriven_bv":25,
+				"eagle_LG_Support_bv":50
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"heron_Attack1_bv":75,
+				"heron_Attack2_bv":25
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"sunder_LG_Assault_bv":100
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"brawler_Elite_bv":50,
+				"centurion_LG_Assault":50
+			}
+		}
+	]
+}
+

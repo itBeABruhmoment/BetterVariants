@@ -1,5 +1,5 @@
 {
-    "displayName": "Close Support1B",
+    "displayName": "Overdriven1B",
     "fluxCapacitors": 17,
     "fluxVents": 0,
     "goalVariant": true,
@@ -10,7 +10,7 @@
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "sunder_LG_CS_bv",
+    "variantId": "sunder_LG_Overdriven_bv",
     "weaponGroups": [
         {
             "autofire": false,

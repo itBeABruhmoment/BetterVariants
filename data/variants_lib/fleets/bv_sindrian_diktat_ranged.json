@@ -1,59 +1,49 @@
 {
+	# vlTestBattle bv_sindrian_diktat_ranged 300 bv_hegemony_lowtech 300
 	"autofit":false,
 	"fleetDataId":"bv_sindrian_diktat_ranged",
 	"minDP":200,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
 	"fleetPartitions":[
 		{
-			"partitionWeight":34.65,
+			"partitionWeight":35,
 			"variants":{
-				"conquest_Elite_bv":40.00,
-				"conquest_Elite2_bv":40.00,
-				"doom_Support_bv":20.00,
+				"executor_Elite_bv":50,
+				"executor_Elite2_bv":50
 			}
 		},
 		{
-			"partitionWeight":29.70,
+			"partitionWeight":30,
 			"variants":{
-				"dominator_Outdated_bv":20.00,
-				"eagle_Balanced_bv":20.00,
-				"fury_Strike_bv":10.00,
-				"falcon_CS_bv":20.00,
-				"heron_Strike":15.00,
-				"drover_Strike_bv":15.00,
+				"falcon_Standard_bv":25,
+				"eagle_Overdriven_bv":25,
+				"eagle_Balanced_bv":50
 			}
 		},
 		{
-			"partitionWeight":9.90,
+			"partitionWeight":15,
 			"variants":{
-				"falcon_Overdriven_bv":20.00,
-				"eagle_Overdriven_bv":30.00,
-				"enforcer_Overdriven_bv":25.00,
-				"sunder_Overdriven_bv":25.00,
+				"heron_Attack1_bv":75,
+				"heron_Attack2_bv":25
 			}
 		},
 		{
-			"partitionWeight":14.85,
+			"partitionWeight":15,
 			"variants":{
-				"sunder_Support_bv":50.00,
-				"hammerhead_Support":20.00,
-				"enforcer_Elite_bv":30.00,
+				"sunder_Support_bv":100
 			}
 		},
 		{
-			"partitionWeight":4.95,
+			"partitionWeight":5,
 			"variants":{
-				"brawler_Elite_bv":60.00,
-				"monitor_Escort":20.00,
-				"vigilance_AP":5.00,
-				"vigilance_Standard":5.00,
-				"vigilance_Strike":5.00,
+				"brawler_Elite_bv":50,
+				"centurion_Assault_bv":50
 			}
-		},
-	],
+		}
+	]
 }
 

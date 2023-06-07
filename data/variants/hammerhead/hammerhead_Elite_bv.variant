@@ -1,6 +1,6 @@
 {
     "displayName": "Elite1B",
-    "fluxCapacitors": 11,
+    "fluxCapacitors": 20,
     "fluxVents": 20,
     "hullId": "hammerhead",
     "hullMods": ["targetingunit"],
@@ -11,33 +11,27 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 001": "hveldriver"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyneedler",
-                "WS 002": "heavyneedler"
+                "WS 003": "heatseeker",
+                "WS 004": "heatseeker"
             }
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 003": "harpoon",
-                "WS 004": "harpoon"
-            }
+            "mode": "LINKED",
+            "weapons": {"WS 002": "heavymauler"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "lightag",
-                "WS 006": "lightag"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 007": "vulcan",
-                "WS 008": "vulcan"
+                "WS 005": "pdburst",
+                "WS 006": "pdburst"
             }
         }
     ]
