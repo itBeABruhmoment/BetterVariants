@@ -1,59 +1,52 @@
 {
-	# vlSpawnFleet sindrian_diktat bv_sindrian_diktat_missile 200
+	# vlTestBattle bv_sindrian_diktat_missile 300 bv_hegemony_lowtech 300
 	"autofit":false,
 	"fleetDataId":"bv_sindrian_diktat_missile",
 	"minDP":40,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
 	"fleetPartitions":[
 		{
-			"partitionWeight":30,
+			"partitionWeight":35,
 			"variants":{
-				"conquest_Standard_bv":20,
-				"conquest_Elite_bv":15,
-				"conquest_Elite2_bv":15,
-				"conquest_Elite3_bv":30,
-				"doom_Support_bv":15,
+				"executor_Elite_bv":50,
+				"executor_Elite2_bv":50
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+				"falcon_Standard_bv":25,
+				"eagle_Overdriven_bv":25,
+				"eagle_Balanced_bv":50
 			}
 		},
 		{
 			"partitionWeight":30,
 			"variants":{
-				"dominator_Outdated_bv":20,
-				"eagle_Balanced_bv":20,
-				"fury_Strike_bv":10,
-				"gryphon_FS_bv":40,
-				"falcon_CS":10,
-			}
-		},
-		{
-			"partitionWeight":15,
-			"variants":{
-				"heron_Strike":60,
-				"drover_Standard_bv":20,
-				"drover_Strike_bv":20
+				"gryphon_FS_bv":45,
+				"gryphon_Overdriven_bv":15,
+				"heron_Attack1_bv":25,
+				"heron_Attack2_bv":15
 			}
 		},
 		{
 			"partitionWeight":10,
 			"variants":{
-				"sunder_Support_bv":60.00,
-				"hammerhead_Support":40.00,
+				"sunder_Support_bv":50,
+				"hammerhead_Elite_bv":50
 			}
 		},
 		{
-			"partitionWeight":10,
+			"partitionWeight":5,
 			"variants":{
-				"brawler_Elite_bv":20,
-				"monitor_Escort":50,
-				"vigilance_AP":10,
-				"vigilance_Standard":10,
-				"vigilance_Strike":10,
+				"brawler_Elite_bv":50,
+				"centurion_LG_Assault":50
 			}
-		},
-	],
+		}
+	]
 }
 

@@ -1,5 +1,5 @@
 {
-    # vlTestBattle bv_independent_strike 300 bv_sindrian_diktat_ranged 300
+    # vlTestBattle bv_independent_strike 300 bv_hegemony_lowtech 300
     # vlTestBattle bv_sindrian_diktat_ranged 300 bv_independent_strike 300 
 	"autofit":false,
 	"fleetDataId":"bv_independent_strike",
@@ -7,11 +7,11 @@
 	"maxDP":400,
 	"defaultFleetWidePersonality":"aggressive",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
 	"fleetPartitions":[
 		{
-			"partitionWeight":45,
+			"partitionWeight":50,
 			"variants":{
 				"aurora_Overdriven_bv":40,
                 "aurora_Strike_bv":30,
@@ -32,7 +32,7 @@
 			}
 		},
 		{
-			"partitionWeight":20,
+			"partitionWeight":15,
 			"variants":{
                 "shrike_Strike_bv":20,
                 "shrike_Support1_bv":20,

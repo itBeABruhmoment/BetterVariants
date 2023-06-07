@@ -1,6 +1,6 @@
 {
-    "displayName": "Attack1B",
-    "fluxCapacitors": 12,
+    "displayName": "Close Support1B",
+    "fluxCapacitors": 1,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "falcon_LG",
@@ -10,26 +10,26 @@
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "falcon_LG_Attack_bv",
+    "variantId": "falcon_LG_CS_bv",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "arbalest",
-                "WS 008": "arbalest"
+                "WS 007": "hveldriver",
+                "WS 008": "hveldriver"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "phasebeam",
-                "WS 006": "phasebeam"
+                "WS 005": "gravitonbeam",
+                "WS 006": "ionbeam"
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 009": "lrpdlaser",

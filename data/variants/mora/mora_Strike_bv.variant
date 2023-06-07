@@ -1,12 +1,13 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 0,
     "fluxVents": 0,
     "hullId": "mora",
     "hullMods": [
         "missleracks",
         "expanded_deck_crew",
-        "eccm"
+        "eccm",
+        "nav_relay"
     ],
     "permaMods": [],
     "sMods": [],
@@ -16,8 +17,11 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "vulcan",
-                "WS 007": "vulcan"
+                "WS 005": "mininglaser",
+                "WS 007": "mininglaser",
+                "WS 008": "mininglaser",
+                "WS 011": "mininglaser",
+                "WS 012": "mininglaser"
             }
         },
         {
@@ -31,7 +35,7 @@
     ],
     "wings": [
         "broadsword_wing",
-        "longbow_wing",
-        "trident_wing"
+        "thunder_wing",
+        "hoplon_wing"
     ]
 }

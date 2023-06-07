@@ -1,9 +1,12 @@
 {
     "displayName": "Elite1B",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 0,
     "fluxVents": 20,
     "hullId": "enforcer",
-    "hullMods": ["converted_hangar"],
+    "hullMods": [
+        "converted_hangar",
+        "targetingunit"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "enforcer_Elite_bv",

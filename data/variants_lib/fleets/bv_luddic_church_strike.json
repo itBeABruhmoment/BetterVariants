@@ -1,8 +1,8 @@
 {
-    # vlspawnfleet luddic_church bv_luddic_church_standard 200
-    # vlTestBattle bv_luddic_church_standard 300 bv_hegemony_lowtech 300
+    # vlspawnfleet luddic_church bv_luddic_church_strike 200
+    # vlTestBattle bv_luddic_church_strike 300 bv_hegemony_lowtech 300
 	"autofit":false,
-	"fleetDataId":"bv_luddic_church_elite",
+	"fleetDataId":"bv_luddic_church_strike",
 	"minDP":10,
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
@@ -11,24 +11,24 @@
 	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":47.5,
+			"partitionWeight":52.5,
 			"variants":{
-				"invictus_Standard_bv":50,
-                "invictus_Support_bv":50
+				"retribution_Standard_bv":50,
+                "retribution_Standard2_bv":50
 			}
 		},
 		{
-			"partitionWeight":35,
+			"partitionWeight":25,
 			"variants":{
 				"eradicator_Support_bv":65,
-				"mora_Strike_bv":25,
+				"mora_Assault_bv":25,
 				"eradicator_Overdriven_bv":10
 			}
 		},
 		{
 			"partitionWeight":15,
 			"variants":{
-				"condor_StrikeE1_bv":15,
+				"condor_Strike2_bv":15,
                 "manticore_Support1_bv":25,
 				"manticore_Support2_bv":20,
 				"manticore_Support3_bv":20,
@@ -36,10 +36,10 @@
 			}
 		},
 		{
-			"partitionWeight":2.5,
+			"partitionWeight":7.5,
 			"variants":{
-                "hound_luddic_church_Standard":30,
-				"lasher_luddic_church_Standard_bv":70
+                "hound_luddic_church_Standard":1,
+				"lasher_luddic_church_Standard_bv":99
 			}
 		}
 	]

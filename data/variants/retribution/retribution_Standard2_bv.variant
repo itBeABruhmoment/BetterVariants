@@ -1,21 +1,21 @@
 {
-    "displayName": "Standard1B",
+    "displayName": "Standard2B",
     "fluxCapacitors": 50,
-    "fluxVents": 49,
+    "fluxVents": 37,
     "goalVariant": true,
     "hullId": "retribution",
     "hullMods": [
-        "ballistic_rangefinder",
         "hardenedshieldemitter",
+        "ballistic_rangefinder",
         "unstable_injector"
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "retribution_Standard_bv",
+    "variantId": "retribution_Standard2_bv",
     "weaponGroups": [
         {
             "autofire": true,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
                 "WS 000": "hellbore",
                 "WS 001": "hellbore",
@@ -26,12 +26,12 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "breach",
-                "WS 008": "breach",
-                "WS 009": "breach",
-                "WS 010": "breach",
-                "WS 020": "breach",
-                "WS 021": "breach"
+                "WS 007": "heatseeker",
+                "WS 008": "heatseeker",
+                "WS 009": "heatseeker",
+                "WS 010": "heatseeker",
+                "WS 020": "heatseeker",
+                "WS 021": "heatseeker"
             }
         },
         {
@@ -50,12 +50,12 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "dualflak"}
+            "weapons": {"WS 003": "dualflak"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 003": "dualflak"}
+            "weapons": {"WS 004": "dualflak"}
         }
     ]
 }
