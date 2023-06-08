@@ -1,7 +1,7 @@
 {
-	# vlTestBattle bv_persean_ranged 300 bv_hegemony_lowtech 300
+	# vlTestBattle bv_persean_ranged2 300 bv_hegemony_lowtech 300
 	"autofit":false,
-	"fleetDataId":"bv_persean_ranged",
+	"fleetDataId":"bv_persean_ranged2",
 	"minDP":40,
 	"maxDP":500,
 	"defaultFleetWidePersonality":"steady",
@@ -11,9 +11,8 @@
 		{
 			"partitionWeight":40,
 			"variants":{
-				"conquest_Elite_bv":25,
-				"conquest_Elite2_bv":25,
-				"conquest_Elite3_bv":50
+				"pegasus_Balanced_bv":50,
+				"pegasus_Strike_bv":50
 			}
 		},
 		{

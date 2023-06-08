@@ -1,9 +1,9 @@
 {
-	# vlTestBattle bv_persean_ranged 300 bv_hegemony_lowtech 300
+	# vlTestBattle bv_persean_missile2 300 bv_hegemony_lowtech 300
 	"autofit":false,
-	"fleetDataId":"bv_persean_ranged",
+	"fleetDataId":"bv_persean_missile2",
 	"minDP":40,
-	"maxDP":500,
+	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
 	"autoLogitsticsTankerDP":0.03,
@@ -11,23 +11,22 @@
 		{
 			"partitionWeight":40,
 			"variants":{
-				"conquest_Elite_bv":25,
-				"conquest_Elite2_bv":25,
-				"conquest_Elite3_bv":50
+				"pegasus_Balanced_bv":50,
+				"pegasus_Strike_bv":50
 			}
 		},
 		{
-			"partitionWeight":30,
+			"partitionWeight":25,
 			"variants":{
-				"champion_Support_bv":20,
-				"champion_Support2_bv":20,
-				"champion_Elite_bv":20,
-				"eagle_Standard_bv":30,
-				"falcon_CS":10
+				"champion_Support_bv":15,
+				"champion_Support2_bv":15,
+				"gryphon_FS_bv":55,
+				"gryphon_Overdriven_bv":10,
+				"falcon_CS":5
 			}
 		},
 		{
-			"partitionWeight":10,
+			"partitionWeight":15,
 			"variants":{
 				"heron_Attack1_bv":25,
 				"heron_Attack2_bv":25,
@@ -38,8 +37,8 @@
 		{
 			"partitionWeight":10,
 			"variants":{
-				"sunder_Support_bv":60,
-				"hammerhead_Support":40
+				"sunder_Support_bv":75,
+				"hammerhead_Support":25
 			}
 		},
 		{
@@ -47,11 +46,11 @@
 			"variants":{
 				"brawler_Elite_bv":33.33,
 				"omen_Ew_bv":33.33,
-				"monitor_Standard_bv":33.33
+				"tempest_Attack1_bv":33.33
 			}
 		},
 		{
-			"partitionWeight":8,
+			"partitionWeight":5,
 			"variants":{
 				"gemini_Strike_bv":100
 			}
