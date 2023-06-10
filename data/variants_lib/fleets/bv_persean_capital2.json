@@ -1,0 +1,42 @@
+{
+	# vlTestBattle bv_persean_capital2 300 bv_hegemony_lowtech 300
+	"autofit":false,
+	"fleetDataId":"bv_persean_capital2",
+	"minDP":100,
+	"maxDP":800,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsTankerDP":0.03,
+	"autoLogitsticsFreighterDP":0.03,
+	"fleetPartitions":[
+		{
+			"partitionWeight":85,
+			"variants":{
+				"conquest_Elite_bv":25,
+				"conquest_Elite3_bv":25,
+				"pegasus_Balanced_bv":25,
+				"pegasus_Strike_bv":25
+			}
+		},
+		{
+			"partitionWeight":5,
+			"maxDPForPartition":30,
+			"variants":{
+
+				"brawler_Elite_bv":33.33,
+				"omen_Ew_bv":33.33,
+				"monitor_Standard_bv":33.33
+			}
+		},
+		{
+			"partitionWeight":10,
+			"variants":{
+				"heron_Attack1_bv":25,
+				"heron_Attack2_bv":25,
+				"drover_Strike_bv":25,
+				"falcon_CS":10
+			}
+		}
+	]
+}
+

@@ -1,0 +1,45 @@
+{
+	# vlTestBattle bv_persean_so2 300 bv_hegemony_lowtech 300
+	"autofit":false,
+	"fleetDataId":"bv_persean_so2",
+	"minDP":40,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"reckless",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
+	"fleetPartitions":[
+		{
+			"partitionWeight":70,
+			"variants":{
+				"gryphon_Overdriven_bv":20,
+				"eagle_Overdriven_bv":30,
+				"falcon_Overdriven_bv":10,
+				"champion_Overdriven_bv":40
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"heron_Attack1_bv":25,
+				"heron_Attack2_bv":25,
+				"drover_Strike_bv":25
+			}
+		},
+		{
+			"partitionWeight":10,
+			"variants":{
+				"hammerhead_Overdriven_bv":50,
+				"sunder_Overdriven_bv":50
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"omen_Ew_bv":50,
+				"monitor_Standard_bv":50
+			}
+		}
+	]
+}
+
