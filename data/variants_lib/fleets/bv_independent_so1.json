@@ -1,4 +1,5 @@
 {
+	# vlTestBattle bv_independent_so1 300 bv_persean_ranged 300
 	"autofit":false,
 	"fleetDataId":"bv_independent_so1",
 	"minDP":40,
@@ -9,41 +10,46 @@
 	"autoLogitsticsTankerDP":0.04,
 	"fleetPartitions":[
 		{
-			"partitionWeight":25.00,
+			"partitionWeight":65,
 			"variants":{
-				"conquest_Elite_bv":50.00,
-				"conquest_Elite2_bv":50.00,
+				"eagle_Overdriven_bv":45,
+				"falcon_Overdriven_bv":10,
+				"fury_Attack1_bv":25,
+				"fury_Strike_bv":20
 			}
 		},
 		{
-			"partitionWeight":37.04,
+			"partitionWeight":20,
 			"variants":{
-				"eagle_Overdriven_bv":35.00,
-				"falcon_Overdriven_bv":25.00,
-				"fury_Attack2_bv":20.00,
-				"heron_Strike":10.00,
-				"mora_Strike_bv":10.00,
+				"mora_Assault_bv":15,
+				"mora_StrikeE_bv":15,
+				"mora_Strike_bv":15,
+				"heron_Attack1_bv":20,
+				"heron_Attack2_bv":20,
+				"drover_Standard_bv":5,
+				"condor_StrikeE1_bv":5,
+				"venture_Rocket_bv":5
 			}
 		},
 		{
-			"partitionWeight":25.00,
+			"partitionWeight":15,
 			"variants":{
-				"venture_Rocket_bv":15.00,
-				"enforcer_Overdriven2_bv":15.00,
-				"hammerhead_Overdriven_bv":10.00,
-				"sunder_Overdriven_bv":40.00,
-				"condor_Strike1_bv":5.00,
-				"drover_Strike_bv":15.00,
+				"shrike_Overdriven_bv":15,
+				"shrike_Support1_bv":20,
+				"shrike_Strike_bv":15,
+				"tempest_Attack1_bv":15,
+				"tempest_Attack2_bv":15,
+				"tempest_Attack3_bv":20
 			}
 		},
 		{
-			"partitionWeight":7.41,
+			"partitionWeight":5,
 			"variants":{
-				"omen_Ew_bv":50.00,
-				"brawler_Elite_bv":20.00,
-				"monitor_Escort":30.00,
+				"omen_Ew_bv":50,
+				"brawler_Elite_bv":20,
+				"monitor_Escort":30
 			}
-		},
-	],
+		}
+	]
 }
 
