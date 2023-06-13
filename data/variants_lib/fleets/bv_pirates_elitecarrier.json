@@ -1,56 +1,56 @@
 {
+	# vlTestBattle bv_pirates_elitecarrier 300 bv_hegemony_lowtech 300
 	"autofit":false,
 	"fleetDataId":"bv_pirates_elitecarrier",
 	"minDP":40,
-	"maxDP":300,
+	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
-	"additionalCommanderSkills":["support_doctrine","derelict_contingent",],
-	"alwaysInclude":{"ox_Standard":2},
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"additionalCommanderSkills":["support_doctrine","derelict_contingent"],
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
 	"fleetPartitions":[
 		{
-			"partitionWeight":40.82,
+			"partitionWeight":45,
 			"variants":{
 				"atlas2_Standard_bv":25,
 				"atlas2_Standard2_bv":25,
 				"atlas2_Standard3_bv":25,
-				"atlas2_Standard4_bv":25,
+				"atlas2_Standard4_bv":25
 			}
 		},
 		{
-			"partitionWeight":20.41,
+			"partitionWeight":20,
 			"variants":{
-				"eradicator_pirates_Attack_bv":22.22,
-				"eradicator_pirates_Overdriven_bv":22.22,
-				"venture_Rocket_bv":11.11,
-				"falcon_p_StrikeE1_bv":22.22,
-				"falcon_p_StrikeE2_bv":22.22,
+				"eradicator_pirates_AttackE_bv":30,
+				"eradicator_pirates_Attack_bv":30,
+				"eradicator_pirates_Overdriven_bv":10,
+				"venture_Rocket_bv":10,
+				"falcon_p_StrikeE1_bv":10,
+				"falcon_p_StrikeE2_bv":10
 			}
 		},
 		{
-			"partitionWeight":15.31,
+			"partitionWeight":15,
 			"variants":{
-				"enforcer_d_pirates_Elite_bv":53.33,
-				"enforcer_d_pirates_Overdriven2_bv":9.33,
-				"enforcer_d_pirates_Overdriven_bv":10.67,
-				"manticore_pirates_Support1_bv":6.67,
-				"sunder_Overdriven_bv":13.33,
-				"shrike_p_Support_bv":4,
-				"shrike_p_Attack_bv":4
+				"enforcer_d_pirates_Elite_bv":50,
+				"enforcer_d_pirates_Overdriven2_bv":10,
+				"enforcer_d_pirates_Overdriven_bv":10,
+				"manticore_pirates_Support1_bv":10,
+				"sunder_Overdriven_bv":10,
+				"shrike_p_Support_bv":5,
+				"shrike_p_Attack_bv":5
 			}
 		},
 		{
-			"partitionWeight":15.31,
+			"partitionWeight":15,
 			"variants":{
-				"colossus3_PirateStrike1_bv":40.00,
-				"colossus3_PirateStrike2_bv":30.00,
-				"condor_Strike1_bv":15.00,
-				"condor_Attack_bv":15.00,
+				"colossus3_PirateStrike2_bv":50,
+				"condor_Strike1_bv":25,
+				"condor_Attack_bv":25
 			}
 		},
 		{
-			"partitionWeight":5.10,
+			"partitionWeight":5,
 			"variants":{
 				"hound_d_pirates_Shielded":3.00,
 				"hound_d_pirates_Standard":3.00,
@@ -59,9 +59,9 @@
 				"vanguard_pirates_Strike":10.00,
 				"buffalo2_Bomber_Support_bv":30.00,
 				"buffalo2_Fighter_Support_bv":30.00,
-				"lasher_Standard1_bv":10.00,
+				"lasher_Standard1_bv":10.00
 			}
-		},
-	],
+		}
+	]
 }
 
