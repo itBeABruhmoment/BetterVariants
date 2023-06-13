@@ -1,0 +1,40 @@
+{
+	# vlTestBattle bv_pirates_so 300 bv_hegemony_lowtech 300
+	# vlSpawnfleet pirates bv_pirates_missile 200
+	"autofit":false,
+	"fleetDataId":"bv_pirates_so",
+	"minDP":40,
+	"maxDP":350,
+	"defaultFleetWidePersonality":"reckless",
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
+	"fleetPartitions":[
+		{
+			"partitionWeight":80,
+			"variants":{
+				"eradicator_pirates_Overdriven_bv":50,
+				"falcon_p_Strike1_bv":25,
+				"falcon_p_Strike2_bv":25
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"enforcer_d_pirates_Overdriven2_bv":30,
+				"enforcer_d_pirates_Overdriven_bv":20,
+				"manticore_pirates_Support1_bv":20,
+				"sunder_Overdriven_bv":30
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"vanguard_pirates_Attack":10,
+				"vanguard_pirates_Strike":20,
+				"lasher_Standard1_bv":30,
+				"afflictor_d_pirates_Strike_bv":40
+			}
+		}
+	]
+}
+

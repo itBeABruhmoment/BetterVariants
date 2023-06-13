@@ -2,8 +2,8 @@
 	# vlTestBattle bv_sindrian_diktat_ranged 300 bv_hegemony_lowtech 300
 	"autofit":false,
 	"fleetDataId":"bv_sindrian_diktat_ranged",
-	"minDP":200,
-	"maxDP":400,
+	"minDP":100,
+	"maxDP":500,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
 	"autoLogitsticsFreighterDP":0.03,
