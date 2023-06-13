@@ -1,0 +1,50 @@
+{
+    "displayName": "AttackE",
+    "fluxCapacitors": 20,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "eradicator_pirates",
+    "hullMods": [
+        "targetingunit",
+        "converted_hangar"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "eradicator_pirates_AttackE_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "heavymortar",
+                "WS 006": "heavymortar",
+                "WS 007": "heavymortar"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "atropos",
+                "WS 001": "atropos",
+                "WS 002": "atropos",
+                "WS 003": "atropos",
+                "WS 004": "atropos"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "railgun",
+                "WS 010": "railgun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 011": "railgun"}
+        }
+    ],
+    "wings": ["xyphos_wing"]
+}

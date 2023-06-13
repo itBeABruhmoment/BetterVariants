@@ -2,7 +2,7 @@
 	"autofit":false,
 	"fleetDataId":"bv_tritachyon_strike",
 	"minDP":10,
-	"maxDP":400,
+	"maxDP":500,
 	"defaultFleetWidePersonality":"aggressive",
 	"spawnIfNoIndustry":false,
 	"autoLogitsticsFreighterDP":0.06,

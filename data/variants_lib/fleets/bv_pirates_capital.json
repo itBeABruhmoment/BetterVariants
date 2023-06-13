@@ -1,0 +1,43 @@
+{
+    # vlTestBattle bv_pirates_capital 300 bv_persean_ranged 300
+	"autofit":false,
+	"fleetDataId":"bv_pirates_capital",
+	"minDP":40,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"cautious",
+	"autoLogitsticsFreighterDP":0.03,
+	"autoLogitsticsTankerDP":0.03,
+	"fleetPartitions":[
+		{
+			"partitionWeight":80,
+			"variants":{
+				"atlas2_Standard2_bv":50,
+				"atlas2_Standard3_bv":25,
+				"atlas2_Standard4_bv":25
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"enforcer_d_pirates_Standard_bv":40,
+				"enforcer_d_pirates_Overdriven2_bv":10,
+				"enforcer_d_pirates_Overdriven_bv":10,
+				"manticore_pirates_Support1_bv":40
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"hound_d_pirates_Shielded":1,
+				"hound_d_pirates_Standard":1,
+				"hound_d_pirates_Overdriven":1,
+				"vanguard_pirates_Attack":10,
+				"vanguard_pirates_Strike":20,
+				"buffalo2_Bomber_Support_bv":10,
+				"buffalo2_Fighter_Support_bv":20,
+				"lasher_Standard1_bv":40
+			}
+		}
+	]
+}
+
