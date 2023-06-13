@@ -1,4 +1,5 @@
 {
+	# vlTestBattle bv_pirates_missile 300 bv_hegemony_lowtech 300
 	# vlSpawnfleet pirates bv_pirates_missile 200
 	"autofit":false,
 	"fleetDataId":"bv_pirates_missile",
@@ -13,45 +14,47 @@
 			"variants":{
 				"atlas2_Standard_bv":17,
 				"atlas2_Standard2_bv":13,
-				"atlas2_Standard3_bv":70,
+				"atlas2_Standard3_bv":70
 			}
 		},
 		{
-			"partitionWeight":25,
+			"partitionWeight":35,
 			"variants":{
-				"eradicator_pirates_Attack_bv":15,
-				"eradicator_pirates_Overdriven_bv":15,
+				"eradicator_pirates_Attack_bv":10,
+				"eradicator_pirates_Overdriven_bv":10,
+				"venture_p_Pirate2_bv":5,
+				"venture_p_Pirate_bv":5,
 				"venture_Rocket_bv":10,
-				"falcon_p_Strike1_bv":60,
+				"falcon_p_Strike1_bv":30,
+				"falcon_p_StrikeE1_bv":30
 			}
 		},
 		{
-			"partitionWeight":20,
+			"partitionWeight":10,
 			"variants":{
-				"enforcer_d_pirates_Strike2_bv":35,
-				"enforcer_d_pirates_Overdriven2_bv":10,
+				"enforcer_d_pirates_Strike2_bv":30,
+				"enforcer_d_pirates_Overdriven2_bv":5,
 				"enforcer_d_pirates_Overdriven_bv":10,
 				"manticore_pirates_Support1_bv":35,
-				"sunder_Overdriven_bv":2.5,
+				"sunder_Overdriven_bv":10,
 				"condor_Strike1_bv":5,
-				"condor_Attack_bv":5,
-				"shrike_p_Support_bv":4,
-				"shrike_p_Attack_bv":4
+				"condor_Attack_bv":5
 			}
 		},
 		{
 			"partitionWeight":4,
 			"variants":{
-				"hound_d_pirates_Shielded":3.00,
-				"hound_d_pirates_Standard":3.00,
-				"hound_d_pirates_Overdriven":4.00,
-				"vanguard_pirates_Attack":20.00,
-				"vanguard_pirates_Strike":20.00,
-				"buffalo2_Bomber_Support_bv":20.00,
-				"buffalo2_Fighter_Support_bv":20.00,
-				"lasher_Standard1_bv":10.00,
+				"hound_d_pirates_Shielded":3,
+				"hound_d_pirates_Standard":3,
+				"hound_d_pirates_Overdriven":4,
+				"vanguard_pirates_Attack":10,
+				"vanguard_pirates_Strike":10,
+				"buffalo2_Bomber_Support_bv":5,
+				"buffalo2_Fighter_Support_bv":5,
+				"lasher_Standard1_bv":30,
+				"afflictor_d_pirates_Strike_bv":30
 			}
-		},
-	],
+		}
+	]
 }
 

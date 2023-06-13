@@ -1,6 +1,5 @@
 fileName,inspectionFleet,mercArmada,mercBountyHunter,mercPatrol,mercPrivateer,mercScout,patrolLarge,patrolMedium,patrolSmall,scavengerLarge,scavengerMedium,scavengerSmall,taskForce,trade,tradeLiner,smallTrader,tradeSmuggler,vengeanceFleet,exerelinInvasionFleet,exerelinInvasionSupportFleet,nex_suppressionFleet,nex_specialForces,nex_reliefFleet,exerelinResponseFleet,nex_vultureFleet,exerelinMiningFleet,bvExoticBounty
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
-bv_tritachyon_regular.json,,20,20,20,20,20,20,20,20,,,,20,,,,,10,20,10,10,10,,10,,,10
 bv_tritachyon_wolfpack1.json,,20,20,20,20,20,20,20,20,,,,5,,,,,10,5,10,10,10,,10,,,10
 bv_tritachyon_ranged.json,,10,10,10,10,10,10,10,10,,,,20,,,,,10,20,10,10,10,,10,,,10
 bv_tritachyon_so.json,,5,5,5,5,5,5,5,5,,,,5,,,,,5,5,5,5,5,,5,,,10
@@ -26,6 +25,8 @@ bv_pirates_salvage.json,,20,20,20,20,20,20,20,20,,,,10,,,,,10,10,10,10,10,,10,,,
 bv_pirates_elite.json,,5,5,5,5,5,5,5,5,,,,20,,,,,20,20,20,20,20,,20,,,10
 bv_pirates_elitecarrier.json,,5,5,5,5,5,5,5,5,,,,20,,,,,20,20,20,20,20,,20,,,10
 bv_pirates_missile.json,,10,10,10,10,10,10,10,10,,,,20,,,,,20,20,20,20,20,,20,,,10
+bv_pirates_capital.json,,10,10,10,10,10,10,10,10,,,,20,,,,,20,20,20,20,20,,20,,,10
+bv_pirates_so.json,,10,10,10,10,10,10,10,10,,,,20,,,,,20,20,20,20,20,,20,,,10
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,

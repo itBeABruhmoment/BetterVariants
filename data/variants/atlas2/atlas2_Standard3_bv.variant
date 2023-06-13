@@ -5,7 +5,7 @@
     "hullId": "atlas2",
     "hullMods": [
         "missleracks",
-        "dedicated_targeting_core"
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],

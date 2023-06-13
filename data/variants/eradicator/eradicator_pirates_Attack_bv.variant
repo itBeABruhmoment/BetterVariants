@@ -1,11 +1,11 @@
 {
     "displayName": "Attack1B",
-    "fluxCapacitors": 14,
+    "fluxCapacitors": 10,
     "fluxVents": 30,
     "hullId": "eradicator_pirates",
     "hullMods": [
-        "missleracks",
-        "targetingunit"
+        "targetingunit",
+        "ballistic_rangefinder"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,45 +15,43 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "arbalest",
-                "WS 006": "arbalest"
+                "WS 005": "heavymauler",
+                "WS 007": "heavymauler"
             }
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 000": "harpoon",
-                "WS 001": "harpoon",
-                "WS 002": "harpoon",
-                "WS 003": "harpoon",
-                "WS 004": "harpoon"
+                "WS 000": "breach",
+                "WS 001": "breach",
+                "WS 002": "breach",
+                "WS 003": "breach",
+                "WS 004": "breach"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 007": "heavymortar"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 009": "lightac",
-                "WS 010": "lightac"
+                "WS 009": "railgun",
+                "WS 010": "railgun"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 011": "lightac"}
+            "weapons": {"WS 011": "railgun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "dualflak"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 008": "vulcan",
-                "WS 012": "vulcan",
                 "WS 013": "vulcan",
                 "WS 014": "vulcan"
             }

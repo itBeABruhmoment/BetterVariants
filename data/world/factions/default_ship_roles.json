@@ -575,8 +575,13 @@
 		"mora_Strike":0,
 		
 	
-		"heron_Strike":5,
-		"heron_Attack":5,
+		"heron_Strike":0,
+		"heron_Attack":0,
+		
+		"heron_FS_bv":3,
+		"heron_Attack1_bv":3,
+		"heron_Attack2_bv":4,
+
 		"mora_Assault_bv":5,
 		"mora_Strike_bv":5,
 		"fallback":{"carrierSmall":1},
