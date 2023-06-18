@@ -398,8 +398,10 @@
 		"gryphon_Standard":0,
 		"gryphon_FS":0,
 		
-		"gryphon_FS_bv":8,
+		"gryphon_FS_bv":3,
 		"gryphon_Overdriven_bv":2,
+		"gryphon_Standard_bv":2,
+		"gryphon_Strike_bv":3,
 		
 		"brilliant_Standard":0,
 		
@@ -429,10 +431,11 @@
 		
 		"atlas2_Standard":0,
 	
-		"conquest_Standard_bv":3,
+		"conquest_Standard_bv":2,
 		"conquest_Elite_bv":2,
 		"conquest_Elite2_bv":2,
-		"conquest_Elite3_bv":3,
+		"conquest_Elite3_bv":2,
+		"conquest_DEM_bv":2,
 		"onslaught_Standard_bv":3,
 		"onslaught_Outdated_bv":3,
 		"onslaught_Brawler_bv":3,
