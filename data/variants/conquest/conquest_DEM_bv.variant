@@ -1,0 +1,58 @@
+{
+    "displayName": "DEM1B",
+    "fluxCapacitors": 48,
+    "fluxVents": 50,
+    "hullId": "conquest",
+    "hullMods": [
+        "targetingunit",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "conquest_DEM_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hydra",
+                "WS 002": "hydra"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 019": "harpoonpod",
+                "WS 020": "harpoonpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "gauss",
+                "WS 012": "gauss",
+                "WS 016": "heavymauler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 022": "ionbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "lrpdlaser",
+                "WS 005": "lrpdlaser",
+                "WS 007": "lrpdlaser",
+                "WS 009": "lrpdlaser",
+                "WS 013": "devastator",
+                "WS 014": "devastator",
+                "WS 015": "dualflak"
+            }
+        }
+    ]
+}
