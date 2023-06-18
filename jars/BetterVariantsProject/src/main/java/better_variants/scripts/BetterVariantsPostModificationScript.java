@@ -5,6 +5,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
@@ -73,16 +74,16 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
         final long seed  = fleetMemory.getLong(MemFlags.SALVAGE_SEED);
         final Random rand = new Random(seed);
 
-        final BetterVariantsFleetInflater inflater = createInflater(fleet, seed);
-        if(inflater != null) {
-            fleet.setInflater(inflater);
-        } else {
-            log.debug("inflater not created");
-        }
+        //fleet.setInflater(null);
 
         final String faction = fleet.getFaction().getId();
         final OfficerFactory officerFactory = new OfficerFactory();
         for(final FleetMemberAPI memberAPI : fleet.getMembersWithFightersCopy()) {
+            final ShipVariantAPI originalVariant = ModdedVariantsData.getVariant(memberAPI.getVariant().getOriginalVariant());
+            if(originalVariant != null) {
+                memberAPI.setVariant(originalVariant, false, true);
+            }
+
             final PersonAPI officer = memberAPI.getCaptain();
             if(Util.isOfficer(officer)) {
                 final String variant = memberAPI.getVariant().getOriginalVariant();
@@ -95,6 +96,14 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
                 officerFactoryParams.level = officer.getStats().getLevel();
                 officerFactory.editOfficer(officer, officerFactoryParams);
             }
+        }
+
+        final BetterVariantsFleetInflater inflater = createInflater(fleet, seed);
+        if(inflater != null) {
+            fleet.setInflater(inflater);
+            fleet.inflateIfNeeded();
+        } else {
+            log.debug("inflater not created");
         }
 
         debugKey(fleetMemory, "$better_variants_inflater_added");
