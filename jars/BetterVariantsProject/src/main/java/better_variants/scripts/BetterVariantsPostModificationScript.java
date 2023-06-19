@@ -35,10 +35,10 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
             return false;
         }
 
-        if(fleet.getMemoryWithoutUpdate().contains(CommonStrings.FLEET_VARIANT_KEY)) {
-            log.debug("fleet already edited");
-            return false;
-        }
+//        if(fleet.getMemoryWithoutUpdate().contains(CommonStrings.FLEET_VARIANT_KEY)) {
+//            log.debug("fleet already edited");
+//            return false;
+//        }
 
         // don't modify fleets from unregistered factions
         if(!FactionData.FACTION_DATA.containsKey(fleet.getFaction().getId())) {
