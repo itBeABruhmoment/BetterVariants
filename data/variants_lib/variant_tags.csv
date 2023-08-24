@@ -1,23 +1,23 @@
 variantID,officerInfo,smods
-afflictor_Strike_bv,"se, ce, fm",
-afflictor_d_pirates_Strike_bv,"se, ce, fm",
-apogee_Elite_bv,"fm, ms",
-apogee_Standard_bv,"fm, ms",
+afflictor_Strike_bv,"se, ce, fm",fluxcoil
+afflictor_d_pirates_Strike_bv,"se, ce, fm","fluxcoil, adaptive_coils"
+apogee_Elite_bv,"fm, ms","hardenedshieldemitter, fluxcoil, eccm"
+apogee_Standard_bv,"fm, ms","hardenedshieldemitter, fluxcoil, eccm"
 astral_Elite_bv,"se, ms",
 astral_Strike_bv,"se, ms",
-atlas2_Standard2_bv,"ms, oe, fm, gi",
-atlas2_Standard3_bv,"ms, oe, fm, gi",
-atlas2_Standard4_bv ,"ms, oe, fm, gi",
-atlas2_Standard_bv,"ms, oe, fm, gi",
+atlas2_Standard2_bv,"ms, oe, fm, gi","turretgyros, stabilizedshieldemitter, fluxcoil"
+atlas2_Standard3_bv,"ms, oe, fm, gi","turretgyros, stabilizedshieldemitter, fluxcoil"
+atlas2_Standard4_bv ,"ms, oe, fm, gi","turretgyros, stabilizedshieldemitter, fluxcoil"
+atlas2_Standard_bv,"ms, oe, fm, gi","turretgyros, stabilizedshieldemitter, fluxcoil"
 atlas_Standard_bv,,
-aurora_Overdriven_bv,"re, ce, se, fm, ms, ew",
-aurora_Strike_bv,"re, se, fm, ms",
-brawler_Assault_bv,"se, ce, fm",
-brawler_Elite_bv,"se, ce, fm",
-brawler_pather_Raider_bv,"se, ce, fm",
-brawler_tritachyon_Standard1_bv,"se, ce, fm",
-brawler_tritachyon_Standard2_bv,"se, ce, fm",
-brawler_tritachyon_Support_bv,"se, ce, fm",
+aurora_Overdriven_bv,"re, ce, se, fm, ms, ew","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
+aurora_Strike_bv,"re, se, fm, ms","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
+brawler_Assault_bv,"se, ce, fm","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
+brawler_Elite_bv,"se, ce, fm","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
+brawler_pather_Raider_bv,"se, ce, fm","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
+brawler_tritachyon_Standard1_bv,"se, ce, fm","extendedshieldemitter, fluxcoil, unstable_injector"
+brawler_tritachyon_Standard2_bv,"se, ce, fm","extendedshieldemitter, fluxcoil, unstable_injector"
+brawler_tritachyon_Support_bv,"se, ce, fm","extendedshieldemitter, fluxcoil, unstable_injector"
 brilliant_Elite_bv,,
 brilliant_Standard_bv,,
 brilliant_Strike_bv,,
@@ -28,51 +28,51 @@ buffalo_hegemony_Standard_bv,,
 buffalo_luddic_church_Standard_bv,,
 buffalo_pirates_Standard_bv,,
 buffalo_tritachyon_Standard_bv,,
-centurion_Assault_bv,"se, ce, fm",
-centurion_LG_Assault_bv,"se, ce, fm",
+centurion_Assault_bv,"se, ce, fm","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
+centurion_LG_Assault_bv,"se, ce, fm","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
 cerberus_Hardened_bv,"ce, im, dc",
 cerberus_d_pirates_Overdriven_bv,"ce, im, dc",
 cerberus_luddic_path_Attack_bv,"ce, im, dc",
-champion_Elite_bv,"se, ms",
-champion_Overdriven_bv,"re, se, ms, ce",
-champion_Support2_bv,"se, ms",
-champion_Support_bv,"se, ms",
+champion_Elite_bv,"se, ms","missleracks, hardenedshieldemitter, stabilizedshieldemitter"
+champion_Overdriven_bv,"re, se, ms, ce","hardened_subsystems, hardenedshieldemitter, stabilizedshieldemitter"
+champion_Support2_bv,"se, ms","missleracks, hardenedshieldemitter, stabilizedshieldemitter"
+champion_Support_bv,"se, ms","missleracks, hardenedshieldemitter, stabilizedshieldemitter"
 colossus2_Pather_bv,"ce, ms",
 colossus3_PirateStrike1_bv,ms,
 colossus3_PirateStrike2_bv,ms,
 colossus_Standard_bv,,
-condor_Attack_bv,ms,
-condor_Strike1_bv,ms,
-condor_Strike2_bv,ms,
-condor_StrikeE1_bv,ms,
-conquest_Elite2_bv,"ms, se",
-conquest_Elite3_bv,"ms, se",
-conquest_Elite_bv,"ms, se",
-conquest_DEM_bv,"ms, se",
-conquest_Standard_bv,"ms, se",
-dominator_AntiCV_bv,"ms, oe",
-dominator_Assault_bv,"ms, oe",
-dominator_Outdated_bv,"ms, oe",
-dominator_Shield_Breaker_bv,"ms, oe",
-dominator_StandardReaper_bv,"ms, oe",
-dominator_Standard_bv,"ms, oe",
-dominator_XIV_Elite2_bv,"ms, oe",
-dominator_XIV_Elite3_bv,"ms, oe",
-dominator_XIV_Elite4_bv,"ms, oe",
-dominator_XIV_Elite_bv,"ms, oe",
-doom_Overdriven_bv,"re, se, ce, fm",
-doom_Support_bv,"se, ce, fm",
+condor_Attack_bv,ms,"eccm, ecm, nav_relay"
+condor_Strike1_bv,ms,"eccm, ecm, nav_relay"
+condor_Strike2_bv,ms,"eccm, ecm, nav_relay"
+condor_StrikeE1_bv,ms,"eccm, ecm, nav_relay"
+conquest_Elite2_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
+conquest_Elite3_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
+conquest_Elite_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
+conquest_DEM_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
+conquest_Standard_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
+dominator_AntiCV_bv,"ms, oe",missleracks
+dominator_Assault_bv,"ms, oe",missleracks
+dominator_Outdated_bv,"ms, oe",missleracks
+dominator_Shield_Breaker_bv,"ms, oe",missleracks
+dominator_StandardReaper_bv,"ms, oe",missleracks
+dominator_Standard_bv,"ms, oe",missleracks
+dominator_XIV_Elite2_bv,"ms, oe",missleracks
+dominator_XIV_Elite3_bv,"ms, oe",missleracks
+dominator_XIV_Elite4_bv,"ms, oe",missleracks
+dominator_XIV_Elite_bv,"ms, oe",missleracks
+doom_Overdriven_bv,"re, se, ce, fm","fluxcoil, adaptive_coils"
+doom_Support_bv,"se, ce, fm","fluxcoil, adaptive_coils"
 dram_Light_bv,,
 drover_Standard_bv,ms,
 drover_Strike_bv,ms,
-eagle_Balanced_bv,"se, fm, oe",
-eagle_LG_Assault_bv,"se, fm, oe",
-eagle_LG_Overdriven_bv,"ag, ce, fm, se",
-eagle_LG_Support_bv,"se, fm, oe",
-eagle_Overdriven_bv,"re, ce, fm, se",
-eagle_Standard_bv,"se, fm, oe",
-eagle_xiv_Overdriven_bv,"re, ce, fm, se",
-eagle_xiv_Standard_bv,"se, fm, oe",
+eagle_Balanced_bv,"se, fm, oe","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
+eagle_LG_Assault_bv,"se, fm, oe","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
+eagle_LG_Overdriven_bv,"ag, ce, fm, se","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
+eagle_LG_Support_bv,"se, fm, oe","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
+eagle_Overdriven_bv,"re, ce, fm, se","magazines, stabilizedshieldemitter, hardenedshieldemitter"
+eagle_Standard_bv,"se, fm, oe","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
+eagle_xiv_Overdriven_bv,"re, ce, fm, se","magazines, stabilizedshieldemitter, hardenedshieldemitter"
+eagle_xiv_Standard_bv,"se, fm, oe","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
 enforcer_Assault_bv,"ms, im, dc",
 enforcer_Elite_bv,"ms, im, dc",
 enforcer_Overdriven2_bv,"re, ce, fm, im",
@@ -80,110 +80,110 @@ enforcer_Overdriven_bv,"re, ce, fm, im",
 enforcer_XIV_Elite2_bv,"ms, im, dc",
 enforcer_XIV_Elite3_bv,"ms, im, dc",
 enforcer_XIV_EliteE2_bv,"ms, im, dc",
-enforcer_XIV_Overdriven_bv,"re, ce, fm, im",
+enforcer_XIV_Overdriven_bv,"re, ce, fm, im",hardened_subsystems
 enforcer_d_pirates_Elite_bv,"ms, im, dc",
-enforcer_d_pirates_Overdriven2_bv,"re, ce, fm, im",
-enforcer_d_pirates_Overdriven_bv,"re, ce, fm, im",
+enforcer_d_pirates_Overdriven2_bv,"re, ce, fm, im",hardened_subsystems
+enforcer_d_pirates_Overdriven_bv,"re, ce, fm, im",hardened_subsystems
 enforcer_d_pirates_Standard_bv,"ms, im, dc",
 enforcer_d_pirates_Strike2_bv,"ms, im, dc",
 ,,
 eradicator_Assault_bv,"se, ms",
-eradicator_Overdriven_bv,"re, ce, se",
+eradicator_Overdriven_bv,"re, ce, se",hardened_subsystems
 eradicator_Strike_bv,"se, ms",
 eradicator_Support_bv,"se, ms",
 eradicator_pirates_Attack_bv,ms,
-eradicator_pirates_AttackE_bv,"ms",
-eradicator_pirates_Overdriven_bv,"re, se",
+eradicator_pirates_AttackE_bv,ms,
+eradicator_pirates_Overdriven_bv,"re, se",hardened_subsystems
 executor_Elite2_bv,"se, ms",
 executor_Elite_bv,"se, ms",
-falcon_CS_bv,"se, fm, gi",
-falcon_LG_Attack_bv,"se, fm, gi",
-falcon_LG_CS_bv,"se, fm, gi",
-falcon_Standard_bv,"se, fm, gi",
-falcon_Overdriven_bv,"re, ce, se, fm",
-falcon_p_Strike1_bv,"ms, se",
-falcon_p_Strike2_bv,"ms, se",
-falcon_p_Strike3_bv,"ms, se",
-falcon_p_StrikeE1_bv,"ms, se",
-falcon_p_StrikeE2_bv,"ms, se",
-falcon_xiv_Overdriven_bv,"ce, se, fm",
-falcon_xiv_Support_bv,"se, fm, gi",
+falcon_CS_bv,"se, fm, gi","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_LG_Attack_bv,"se, fm, gi","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_LG_CS_bv,"se, fm, gi","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_Standard_bv,"se, fm, gi","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_Overdriven_bv,"re, ce, se, fm","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
+falcon_p_Strike1_bv,"ms, se","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_p_Strike2_bv,"ms, se","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_p_Strike3_bv,"ms, se","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_p_StrikeE1_bv,"ms, se","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_p_StrikeE2_bv,"ms, se","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+falcon_xiv_Overdriven_bv,"ce, se, fm","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
+falcon_xiv_Support_bv,"se, fm, gi","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
 fulgent_Overdriven_bv,,
 fulgent_Strike_bv,,
-fury_Attack1_bv,"ag, ce, ms",
-fury_Attack2_bv,"ag, ce, ms",
-fury_Strike_bv,"ag, ce, ms",
+fury_Attack1_bv,"ag, ce, ms","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+fury_Attack2_bv,"ag, ce, ms","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+fury_Strike_bv,"ag, ce, ms","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
 gemini_Strike_bv,ms,
 gryphon_FS_bv,"se, ms",
-gryphon_Overdriven_bv,"ce, se, ms",
-gryphon_Standard_bv,"se, ms",
-gryphon_Strike_bv,"se, ms",
-hammerhead_Balanced_bv,"se, fm ",
-hammerhead_Elite_bv,"se, fm ",
-hammerhead_LG_Overdriven_bv,"se, fm ",
-hammerhead_LG_Elite_bv,"se, fm ",
-hammerhead_Overdriven2_bv,"ag, ce, se, fm",
-hammerhead_Overdriven_bv,"ag, ce, se, fm",
-harbinger_Overdriven1_bv,"re, ce, se",
-harbinger_Overdriven2_bv,"re, ce, se",
+gryphon_Overdriven_bv,"ce, se, ms",hardened_subsystems
+gryphon_Standard_bv,"se, ms","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+gryphon_Strike_bv,"se, ms","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+hammerhead_Balanced_bv,"se, fm ","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+hammerhead_Elite_bv,"se, fm ","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+hammerhead_LG_Overdriven_bv,"se, fm ","fluxcoil, hardened_subsystems, hardenedshieldemitter"
+hammerhead_LG_Elite_bv,"se, fm ","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+hammerhead_Overdriven2_bv,"ag, ce, se, fm","fluxcoil, hardened_subsystems, hardenedshieldemitter"
+hammerhead_Overdriven_bv,"ag, ce, se, fm","fluxcoil, hardened_subsystems, hardenedshieldemitter"
+harbinger_Overdriven1_bv,"re, ce, se","fluxcoil, magazines"
+harbinger_Overdriven2_bv,"re, ce, se",fluxcoil
 heron_Attack1_bv,"ms, se",
 heron_Attack2_bv,"ms, se",
 heron_FS_bv,"ms, se",
-hyperion_Assault_bv,"re, se, ce, fm",
-hyperion_Support_bv,"re, se, ce, fm",
-invictus_Standard_bv,"re, se, pa, im, dc",
-invictus_Support_bv,"re, se, pa, im, dc",
-lasher_Standard1_bv,"se, ce, fm",
-lasher_Standard2_bv,"se, ce, fm",
-lasher_luddic_church_Standard_bv,"se, ce, fm",
-lasher_luddic_path_Raider_bv,"se, ce, fm",
-legion_Assault_bv,"ag, ms, oe",
-legion_FS1_bv,"ag, ms, oe",
-legion_FS2_bv,"ag, ms, oe",
-legion_FS3_bv,"ag, ms, oe",
-legion_StrikeE_bv,"ag, ms, oe",
-legion_Strike_bv,"ag, ms, oe",
-manticore_Support1_bv,"ms, oe",
-manticore_Support2_bv,"ms, oe",
-manticore_Support3_bv,"ms, oe",
-manticore_luddic_path_Strike_bv,"ce, fm",
-manticore_pirates_Support1_bv,"ms, oe",
-manticore_pirates_Support2_bv,"ms, oe",
-medusa_Attack_bv,"ag, se, fm",
-medusa_Overdriven_bv,"re, ce, se, fm",
+hyperion_Assault_bv,"re, se, ce, fm","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+hyperion_Support_bv,"re, se, ce, fm","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+invictus_Standard_bv,"re, se, pa, im, dc","turretgyros, missleracks, auxiliarythrusters"
+invictus_Support_bv,"re, se, pa, im, dc","turretgyros, missleracks, auxiliarythrusters"
+lasher_Standard1_bv,"se, ce, fm","fluxcoil, hardenedshieldemitter, unstable_injector"
+lasher_Standard2_bv,"se, ce, fm","fluxcoil, hardenedshieldemitter, unstable_injector"
+lasher_luddic_church_Standard_bv,"se, ce, fm","fluxcoil, hardenedshieldemitter, unstable_injector"
+lasher_luddic_path_Raider_bv,"se, ce, fm","fluxcoil, hardenedshieldemitter, unstable_injector"
+legion_Assault_bv,"ag, ms, oe",turretgyros
+legion_FS1_bv,"ag, ms, oe",turretgyros
+legion_FS2_bv,"ag, ms, oe",turretgyros
+legion_FS3_bv,"ag, ms, oe",turretgyros
+legion_StrikeE_bv,"ag, ms, oe",turretgyros
+legion_Strike_bv,"ag, ms, oe",turretgyros
+manticore_Support1_bv,"ms, oe",missleracks
+manticore_Support2_bv,"ms, oe",missleracks
+manticore_Support3_bv,"ms, oe",missleracks
+manticore_luddic_path_Strike_bv,"ce, fm",missleracks
+manticore_pirates_Support1_bv,"ms, oe",missleracks
+manticore_pirates_Support2_bv,"ms, oe",missleracks
+medusa_Attack_bv,"ag, se, fm","stabilizedshieldemitter, hardenedshieldemitter, unstable_injector"
+medusa_Overdriven_bv,"re, ce, se, fm","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
 monitor_Standard_bv,"ce, fm ",
-mora_Assault_bv,ms,
-mora_StrikeE_bv,ms,
-mora_Strike_bv,ms,
-odyssey_Balanced_bv,"ag, ms, fm",
+mora_Assault_bv,ms,eccm
+mora_StrikeE_bv,ms,eccm
+mora_Strike_bv,ms,eccm
+odyssey_Balanced_bv,"ag, ms, fm","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
 omen_Ew_bv,"ce, fm",
-onslaught_Brawler_bv,"ms, oe",
-onslaught_Outdated_bv,"ms, oe",
-onslaught_Standard_bv,"ms, oe",
-onslaught_xiv_Elite2_bv,"ms, oe",
-onslaught_xiv_Standard_bv,"ms, oe",
-paragon_Escort_bv,"fm, oe",
-pegasus_Balanced_bv,ms,
-pegasus_Strike_bv,ms,
+onslaught_Brawler_bv,"ms, oe",turretgyros
+onslaught_Outdated_bv,"ms, oe",turretgyros
+onslaught_Standard_bv,"ms, oe",turretgyros
+onslaught_xiv_Elite2_bv,"ms, oe",turretgyros
+onslaught_xiv_Standard_bv,"ms, oe",turretgyros
+paragon_Escort_bv,"fm, oe",turretgyros
+pegasus_Balanced_bv,ms,turretgyros
+pegasus_Strike_bv,ms,turretgyros
 phaeton_Standard_bv,,
-prometheus2_Standard_bv,ms,
+prometheus2_Standard_bv,ms,turretgyros
 prometheus_Super_bv,,
 radiant_Standard_bv,,
 radiant_Strike_bv,,
-retribution_Standard_bv,"ag, fm, oe, hs, ms",
-retribution_Standard2_bv,"ag, fm, oe, hs",
-scarab_Emp_bv,"se, ce, fm",
-scarab_Strike_bv,"se, ce, fm",
-shade_Assault_bv,"se, ce, fm",
-shade_d_pirates_Assault_bv,"se, ce, fm",
+retribution_Standard_bv,"ag, fm, oe, hs, ms",turretgyros
+retribution_Standard2_bv,"ag, fm, oe, hs",turretgyros
+scarab_Emp_bv,"se, ce, fm",hardened_subsystems
+scarab_Strike_bv,"se, ce, fm",hardened_subsystems
+shade_Assault_bv,"se, ce, fm",hardened_subsystems
+shade_d_pirates_Assault_bv,"se, ce, fm",hardened_subsystems
 ,,
-shrike_Overdriven_bv,"ag, se, ce, fm, ms",
-shrike_Strike_bv,"ag, se, ce, fm, ms",
-shrike_Support1_bv,"ag, se, ce, fm, ms",
-shrike_Support2_bv,"ag, se, ce, fm, ms",
-shrike_Support3_bv,"ag, se, ce, fm, ms",
-shrike_p_Attack_bv,"ag, se, ce, fm, ms",
-shrike_p_Support_bv,"ag, se, ce, fm, ms",
+shrike_Overdriven_bv,"ag, se, ce, fm, ms","fluxcoil, hardenedshieldemitter, stabilizedshieldemitter"
+shrike_Strike_bv,"ag, se, ce, fm, ms","fluxcoil, hardenedshieldemitter, stabilizedshieldemitter"
+shrike_Support1_bv,"ag, se, ce, fm, ms","extendedshieldemitter, hardenedshieldemitter"
+shrike_Support2_bv,"ag, se, ce, fm, ms","extendedshieldemitter, hardenedshieldemitter"
+shrike_Support3_bv,"ag, se, ce, fm, ms","extendedshieldemitter, hardenedshieldemitter"
+shrike_p_Attack_bv,"ag, se, ce, fm, ms","extendedshieldemitter, hardenedshieldemitter"
+shrike_p_Support_bv,"ag, se, ce, fm, ms","extendedshieldemitter, hardenedshieldemitter"
 sunder_Assault_bv,"se, ce, fm, ew",
 sunder_LG_Assault_bv,"se, ce, fm, ew",
 sunder_LG_CS2_bv ,"se, ce, fm, ew",
@@ -192,19 +192,19 @@ sunder_Overdriven_bv,"se, ce, fm, ew",
 sunder_Support_bv,"se, ce, fm, ew",
 tarsus_Carrier_bv,,
 tarsus_Standard_bv,,
-tempest_Attack1_bv,"ce, fm, ew",
-tempest_Attack2_bv,"ce, fm, ew",
-tempest_Attack3_bv,"ce, fm, ew",
+tempest_Attack1_bv,"ce, fm, ew","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+tempest_Attack2_bv,"ce, fm, ew","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
+tempest_Attack3_bv,"ce, fm, ew","fluxcoil, stabilizedshieldemitter, hardenedshieldemitter"
 venture_Rocket_bv,ms,
 venture_p_Pirate2_bv,ms,
 venture_p_Pirate_bv,ms,
 venture_pather_Attack_bv,"ce, ms",
-wolf_Support1_bv,"se, ce, fm",
-wolf_Support2_bv,"se, ce, fm",
-wolf_Support3_bv,"se, ce, fm",
-wolf_d_pirates_Support1_bv,"se, ce, fm",
-wolf_d_pirates_Support2_bv,"se, ce, fm",
-wolf_hegemony_Support1_bv,"se, ce, fm",
+wolf_Support1_bv,"se, ce, fm",extendedshieldemitter
+wolf_Support2_bv,"se, ce, fm",extendedshieldemitter
+wolf_Support3_bv,"se, ce, fm",extendedshieldemitter
+wolf_d_pirates_Support1_bv,"se, ce, fm",extendedshieldemitter
+wolf_d_pirates_Support2_bv,"se, ce, fm",extendedshieldemitter
+wolf_hegemony_Support1_bv,"se, ce, fm",extendedshieldemitter
 ,,
 ,,
 ,,
