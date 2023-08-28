@@ -1,0 +1,3 @@
+bar event id,tags,freq,prob,min dur,max dur,min timeout,max timeout,min accepted timeout,max accepted timeout,plugin
+betterVariantsTestBounty,,10,10,30,40,15,20,60,90,better_variants.bar_events.TestBounty
+betterVariantsBounty,,100,100,30,40,15,20,60,90,better_variants.bar_events.BetterVariantsBounty

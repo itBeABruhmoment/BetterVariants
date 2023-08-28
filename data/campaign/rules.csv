@@ -1,0 +1,61 @@
+id,trigger,conditions,script,text,options,notes
+betterVariantsTestBountyBlurb,betterVariantsTestBounty_blurb,,,"""I've been assigned to an important mission - tracking down and, ah, 'making arrangements' with a disgraced executive from the Second AI war. There could be something in it for you, if you spare me the need to go up the hierarchy and request an internal-affairs fleet.""",,
+betterVariantsTestBountyOption,betterVariantsTestBounty_option,,,,betterVariantsTestBounty_start:Ask about making arrangements with the disgraced executive,
+betterVariantsTestBountyBlurbBar,betterVariantsTestBounty_blurbBar,,,"A Tri-Tachyon executive sits alone at a table, quietly drinking wine and looking displeased about whatever's on their Tri-Pad.",,
+betterVariantsTestBountyOptionBar,betterVariantsTestBounty_optionBar,,,,betterVariantsTestBounty_startBar:See what the wine-drinking executive is annoyed about,
+betterVariantsTestBountyOfferTextContact,DialogOptionSelected,$option == betterVariantsTestBounty_start,$missionId = betterVariantsTestBounty,test1,"contact_accept:Accept
+contact_decline:Decline",
+betterVariantsTestBountyOfferTextBar,DialogOptionSelected,$option == betterVariantsTestBounty_startBar,$missionId = betterVariantsTestBounty,test2,betterVariantsTestBounty_startBar2:Continue,
+betterVariantsTestBountyOfferTextBar2,DialogOptionSelected,$option == betterVariantsTestBounty_startBar2,,test3,"contact_acceptBar:Accept
+contact_declineBarNoContinue:Decline",
+,,,,,,
+# betterVariantsTestBountyFoundClueShip,ShowSalvageEntityDetails,"$intaff_clue score:100
+$customType == wreck
+Call $intaff_ref updateData","$global.intaff_foundclue = true
+Call $global.intaff_ref updateStage
+Call $global.intaff_ref unsetClues",test4,,
+# betterVariantsTestBountyFoundClueCache,ShowSalvageEntityDetails,"$intaff_clue score:100
+$customType == supply_cache
+Call $intaff_ref updateData","$global.intaff_foundclue = true
+Call $global.intaff_ref updateStage
+Call $global.intaff_ref unsetClues",test5,,
+,,,,,,
+# intaff_fleetOpen,OpenCommLink,$entity.intaff_execfleet score:100,$entity.ignorePlayerCommRequests = true,test6,cutCommLink:Cut the comm link,
+,,,,,,
+# better variants bounty,,,,,,
+betterVariantsBountyBlurb,betterVariantsBounty_blurb,,,"""Some new targets have come up on the docket,"" $heOrShe says with a sigh. ""If you took a contract to handle one of these bounties, it might just get the brass off my case.""",,
+betterVariantsBountyOfferOption,betterVariantsBounty_option,,,,betterVariantsBounty_start:Ask about what's available on the bounty docket,
+betterVariantsBountyBlurbBar,betterVariantsBounty_blurbBar,,,A military officer is holding court at one of the nicer tables; you watch a merc captain approach for a perfunctory exchange of words and mutual tap of datapads. They appear to be acting as some kind of system patrol liaison contracting out bounties.,,
+betterVariantsBountyOfferOptionBar,betterVariantsBounty_optionBar,,,,betterVariantsBounty_startBar:Talk to the $betterVariantsBounty_manOrWoman from the military offering exotic bounties,
+betterVariantsBountyOfferTextContact,DialogOptionSelected,$option == betterVariantsBounty_start,"$missionId = betterVariantsBounty
+$option = betterVariantsBounty_showOptions 0
+FireBest DialogOptionSelected","""We've got a few options here."" $Post $personLastName pulls up a shared display with a table of intel reports. ""We've got operation time coming up on a HK flotilla that'll handle whatever you don't, so it's really your pick of the bunch. What sort of job do you think you can handle?""",,
+betterVariantsBountyOfferTextBar,DialogOptionSelected,$option == betterVariantsBounty_startBar,"$missionId = betterVariantsBounty
+$option = betterVariantsBounty_showOptionsBar 0
+FireBest DialogOptionSelected","You approach and the $rank $personLastName gives you a perfunctory nod. ""Captain,"" $heOrShe says, all business.
+
+""I have several assignments on the docket,"" $heOrShe looks down, scrolling $hisOrHer datapad. A coffee, black, certainly no sugar, is cooling on the table beside $hisOrHer hand. ""What sort of job can you handle?""",,
+betterVariantsBountyLowSel,DialogOptionSelected,$option == betterVariantsBounty_low,"$betterVariantsBounty_difficulty = LOW 0
+FireBest MCBShowBounty",,,
+betterVariantsBountyNormalSel,DialogOptionSelected,$option == betterVariantsBounty_normal,"$betterVariantsBounty_difficulty = NORMAL 0
+FireBest MCBShowBounty",,,
+betterVariantsBountyHighSel,DialogOptionSelected,$option == betterVariantsBounty_high,"$betterVariantsBounty_difficulty = HIGH 0
+FireBest MCBShowBounty",,,
+MCBShowBounty,MCBShowBounty,,Call $betterVariantsBounty_ref showBountyDetail,,betterVariantsBounty_showIntel:Continue,
+MCBShowBountyShowShips,DialogOptionSelected,$option == betterVariantsBounty_showIntel,Call $betterVariantsBounty_ref showBountyAssessment,,"contact_accept:Accept
+contact_decline:Decline
+betterVariantsBounty_showOptions:Ask about one of the other targets",
+MCBShowBountyBar,MCBShowBounty,$betterVariantsBounty_barEvent,Call $betterVariantsBounty_ref showBountyDetail,,betterVariantsBounty_showIntelBar:Continue,
+MCBShowBountyShowShipsBar,DialogOptionSelected,$option == betterVariantsBounty_showIntelBar,Call $betterVariantsBounty_ref showBountyAssessment,,"contact_acceptBar:Accept
+contact_declineBarNoContinue:Decline
+betterVariantsBounty_showOptionsBar:Ask about one of the other targets",
+betterVariantsBountyGoBackSel,DialogOptionSelected,$option == betterVariantsBounty_showOptions,"# removes map
+ShowPersonVisual",,"betterVariantsBounty_low:""I'd prefer a more manageable target.""
+betterVariantsBounty_normal:""Whatever you've got works for me.""
+betterVariantsBounty_high:""I can handle a more challenging target.""
+contact_decline:""Maybe another time."" (decline)",
+betterVariantsBountyGoBackBarSel,DialogOptionSelected,$option == betterVariantsBounty_showOptionsBar,"# removes map
+ShowPersonVisual",,"betterVariantsBounty_low:""I'd prefer a more manageable target.""
+betterVariantsBounty_normal:""Whatever you've got works for me.""
+betterVariantsBounty_high:""I can handle a more challenging target.""
+contact_declineBarNoContinue:""Maybe another time."" (decline)",
