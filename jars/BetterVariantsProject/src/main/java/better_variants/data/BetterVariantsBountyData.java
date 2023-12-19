@@ -1,23 +1,24 @@
 package better_variants.data;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import variants_lib.data.JsonUtils;
-import variants_lib.data.Util;
 
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 public class BetterVariantsBountyData {
     private static final Logger log = Global.getLogger(BetterVariantsBountyData.class);
     static {
         log.setLevel(Level.ALL);
     }
-    private HashMap<String, BetterVariantsBounty> bounties = new HashMap<>();
+    private HashMap<String, BetterVariantsBountyDataMember> bounties = new HashMap<>();
     private static BetterVariantsBountyData instance = new BetterVariantsBountyData();
     private BetterVariantsBountyData() {}
 
@@ -44,26 +45,73 @@ public class BetterVariantsBountyData {
             final float weight = JsonUtils.getFloat(row, CommonStrings.WEIGHT_COLUMN_NAME, 10.0f);
             final int minFP = JsonUtils.getInt(CommonStrings.MIN_FP_COLUMN_NAME, 10, row);
             final int maxFP = JsonUtils.getInt(CommonStrings.MAX_FP_COLUMN_NAME, 100, row);
-            bounties.put(fleetId, new BetterVariantsBounty(fleetId, weight, minFP, maxFP));
+
+            final String faction = JsonUtils.getString(CommonStrings.FLEET_ID_COLUMN_NAME, "", row);
+            if(fleetId.equals("")) {
+                throw new Exception(String.format("the %s of row %d of %s is blank or could not be read",
+                        CommonStrings.FACTION_COLUMN_NAME, i, CommonStrings.BOUNTY_FLEETS_PATH));
+            }
+
+            bounties.put(fleetId, new BetterVariantsBountyDataMember(fleetId, weight, minFP, maxFP, faction));
         }
-        log.info("finished loading " + CommonStrings.BOUNTY_FLEETS_PATH);
+
+        log.info(String.format("%s: finished loading %s", CommonStrings.MOD_ID, CommonStrings.BOUNTY_FLEETS_PATH));
+        log.info(String.format("%s: \n %s", CommonStrings.MOD_ID, toString()));
     }
 
-    public HashMap<String, BetterVariantsBounty> getBounties() {
+    public HashMap<String, BetterVariantsBountyDataMember> getBounties() {
         return bounties;
     }
 
-    public static class BetterVariantsBounty {
+    @Nullable
+    public BetterVariantsBountyDataMember pickBounty(final ArrayList<String> factions, long seed) {
+        // get valid bounties, sum weights
+        float totalWeightSum = 0.0f;
+        final ArrayList<BetterVariantsBountyDataMember> validBounties = new ArrayList<>(50);
+        for(final BetterVariantsBountyDataMember bounty : bounties.values()) {
+            if(factions.contains(bounty.faction)) {
+                validBounties.add(bounty);
+                totalWeightSum += bounty.weight;
+            }
+        }
+
+        // choose one
+        float runningWeightSum = 0.0f;
+        final float random = new Random(seed).nextFloat();
+        for(final BetterVariantsBountyDataMember bounty : validBounties) {
+            runningWeightSum += bounty.weight;
+            if(runningWeightSum / totalWeightSum < random) {
+                return bounty;
+            }
+        }
+
+        if(validBounties.isEmpty()) {
+            return null;
+        } else {
+            return validBounties.get(validBounties.size() - 1);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "BetterVariantsBountyData{" +
+                "bounties=" + bounties +
+                '}';
+    }
+
+    public static class BetterVariantsBountyDataMember {
         private String fleetId = "";
         private float weight = 1.0f;
         private int minFleetPoints = 10;
         private int maxFleetPoints = 100;
+        private String faction = Factions.INDEPENDENT;
 
-        public BetterVariantsBounty(String fleetId, float weight, int minFleetPoints, int maxFleetPoints) {
+        public BetterVariantsBountyDataMember(String fleetId, float weight, int minFleetPoints, int maxFleetPoints, String faction) {
             this.fleetId = fleetId;
             this.weight = weight;
             this.minFleetPoints = minFleetPoints;
             this.maxFleetPoints = maxFleetPoints;
+            this.faction = faction;
         }
 
         public String getFleetId() {
@@ -80,6 +128,19 @@ public class BetterVariantsBountyData {
 
         public int getMaxFleetPoints() {
             return maxFleetPoints;
+        }
+
+        public String getFaction() { return faction; }
+
+
+        @Override
+        public String toString() {
+            return "BetterVariantsBounty{" +
+                    "fleetId='" + fleetId + '\'' +
+                    ", weight=" + weight +
+                    ", minFleetPoints=" + minFleetPoints +
+                    ", maxFleetPoints=" + maxFleetPoints +
+                    '}';
         }
     }
 }

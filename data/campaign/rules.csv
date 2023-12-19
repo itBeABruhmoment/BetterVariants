@@ -36,17 +36,17 @@ FireBest DialogOptionSelected","You approach and the $rank $personLastName gives
 
 ""I have several assignments on the docket,"" $heOrShe looks down, scrolling $hisOrHer datapad. A coffee, black, certainly no sugar, is cooling on the table beside $hisOrHer hand. ""What sort of job can you handle?""",,
 betterVariantsBountyLowSel,DialogOptionSelected,$option == betterVariantsBounty_low,"$betterVariantsBounty_difficulty = LOW 0
-FireBest MCBShowBounty",,,
+FireBest betterVariantsBountyShowBounty",,,
 betterVariantsBountyNormalSel,DialogOptionSelected,$option == betterVariantsBounty_normal,"$betterVariantsBounty_difficulty = NORMAL 0
-FireBest MCBShowBounty",,,
+FireBest betterVariantsBountyShowBounty",,,
 betterVariantsBountyHighSel,DialogOptionSelected,$option == betterVariantsBounty_high,"$betterVariantsBounty_difficulty = HIGH 0
-FireBest MCBShowBounty",,,
-MCBShowBounty,MCBShowBounty,,Call $betterVariantsBounty_ref showBountyDetail,,betterVariantsBounty_showIntel:Continue,
-MCBShowBountyShowShips,DialogOptionSelected,$option == betterVariantsBounty_showIntel,Call $betterVariantsBounty_ref showBountyAssessment,,"contact_accept:Accept
+FireBest betterVariantsBountyShowBounty",,,
+betterVariantsBountyShowBounty,betterVariantsBountyShowBounty,,Call $betterVariantsBounty_ref showBountyDetail,,betterVariantsBounty_showIntel:Continue,
+betterVariantsBountyShowBountyShowShips,DialogOptionSelected,$option == betterVariantsBounty_showIntel,Call $betterVariantsBounty_ref showBountyAssessment,,"contact_accept:Accept
 contact_decline:Decline
 betterVariantsBounty_showOptions:Ask about one of the other targets",
-MCBShowBountyBar,MCBShowBounty,$betterVariantsBounty_barEvent,Call $betterVariantsBounty_ref showBountyDetail,,betterVariantsBounty_showIntelBar:Continue,
-MCBShowBountyShowShipsBar,DialogOptionSelected,$option == betterVariantsBounty_showIntelBar,Call $betterVariantsBounty_ref showBountyAssessment,,"contact_acceptBar:Accept
+betterVariantsBountyShowBountyBar,betterVariantsBountyShowBounty,$betterVariantsBounty_barEvent,Call $betterVariantsBounty_ref showBountyDetail,,betterVariantsBounty_showIntelBar:Continue,
+betterVariantsBountyShowBountyShowShipsBar,DialogOptionSelected,$option == betterVariantsBounty_showIntelBar,Call $betterVariantsBounty_ref showBountyAssessment,,"contact_acceptBar:Accept
 contact_declineBarNoContinue:Decline
 betterVariantsBounty_showOptionsBar:Ask about one of the other targets",
 betterVariantsBountyGoBackSel,DialogOptionSelected,$option == betterVariantsBounty_showOptions,"# removes map
@@ -59,3 +59,6 @@ ShowPersonVisual",,"betterVariantsBounty_low:""I'd prefer a more manageable targ
 betterVariantsBounty_normal:""Whatever you've got works for me.""
 betterVariantsBounty_high:""I can handle a more challenging target.""
 contact_declineBarNoContinue:""Maybe another time."" (decline)",
+BetterVariantsDeserterBountyCreator,BetterVariantsDeserterBountyCreatorOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""I'd take this one on myself if I had a warfleet to command,"" $heOrShe makes an expression like $heOrShe bit into something sour, ""$bcb_targetName is a betrayer, a deserter from $thePersonFaction. An example has to be made. We know $bcb_targetHeOrShe is hiding out in the $bcb_systemName, which is $bcb_dist light-years from here.""
+
+""There's a reward of $bcb_reward credits and it'd need to be done within $bcb_days days. Are you up for it?""",,
