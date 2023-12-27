@@ -49,7 +49,7 @@ public class BetterVariantsBountyData {
             final int maxFP = JsonUtils.getInt(CommonStrings.MAX_FP_COLUMN_NAME, 100, row);
             final int minDifficulty = JsonUtils.getInt(CommonStrings.MIN_DIFFICULTY_COLUMN_NAME, 1, row);
 
-            final String faction = JsonUtils.getString(CommonStrings.FLEET_ID_COLUMN_NAME, "", row);
+            final String faction = JsonUtils.getString(CommonStrings.FACTION_COLUMN_NAME, "", row);
             if(fleetId.equals("")) {
                 throw new Exception(String.format("the %s of row %d of %s is blank or could not be read",
                         CommonStrings.FACTION_COLUMN_NAME, i, CommonStrings.BOUNTY_FLEETS_PATH));
@@ -76,15 +76,19 @@ public class BetterVariantsBountyData {
 
     @Nullable
     public BetterVariantsBountyDataMember pickBounty(final ArrayList<String> factions, final int difficulty, final long seed) {
+        log.info(String.format("%s: %s", CommonStrings.MOD_ID, factions));
         // get valid bounties, sum weights
         float totalWeightSum = 0.0f;
-        final ArrayList<BetterVariantsBountyDataMember> validBounties = new ArrayList<>(50);
+        final ArrayList<BetterVariantsBountyDataMember> validBounties = new ArrayList<>(32);
         for(final BetterVariantsBountyDataMember bounty : bounties.values()) {
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, bounty));
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, factions.contains(bounty.getFaction())));
             if(factions.contains(bounty.getFaction()) && difficulty <= bounty.getMinDifficulty()) {
                 validBounties.add(bounty);
                 totalWeightSum += bounty.getWeight();
             }
         }
+        log.info(String.format("%s: %s", CommonStrings.MOD_ID, validBounties));
 
         // choose one
         float runningWeightSum = 0.0f;
@@ -97,10 +101,21 @@ public class BetterVariantsBountyData {
         }
 
         if(validBounties.isEmpty()) {
+            log.info(String.format("%s: no bounties found", CommonStrings.MOD_ID));
             return null;
         } else {
+            log.info(String.format("%s: to last", CommonStrings.MOD_ID));
             return validBounties.get(validBounties.size() - 1);
         }
+    }
+
+    public boolean contains(final ArrayList<String> arr, final String find) {
+        for(final String s : arr) {
+            if(s.equals(find)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

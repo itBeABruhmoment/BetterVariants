@@ -1,39 +1,39 @@
-fleet                        ,weight ,minFleetPoints ,maxFleetPoints ,faction
-bv_tritachyon_wolfpack1      ,    10 ,           100 ,           500 ,tritachyon
-bv_tritachyon_ranged         ,    10 ,           100 ,           500 ,tritachyon
-bv_tritachyon_so             ,    10 ,           100 ,           500 ,tritachyon
-bv_tritachyon_elite_wolfpack ,    10 ,           100 ,           500 ,tritachyon
-bv_tritachyon_phase          ,    10 ,           100 ,           500 ,tritachyon
-bv_tritachyon_strike         ,    10 ,           100 ,           500 ,tritachyon
-bv_hegemony_lowtech          ,    10 ,           100 ,           500 ,hegemony
-bv_hegemony_xiv              ,    10 ,           100 ,           500 ,hegemony
-bv_hegemony_so               ,    10 ,           100 ,           500 ,hegemony
-bv_hegemony_eliteso          ,    10 ,           100 ,           500 ,hegemony
-bv_hegemony_missile          ,    10 ,           100 ,           500 ,hegemony
-bv_pirates_salvage           ,    10 ,           100 ,           500 ,pirates
-bv_pirates_elite             ,    10 ,           100 ,           500 ,pirates
-bv_pirates_elitecarrier      ,    10 ,           100 ,           500 ,pirates
-bv_pirates_missile           ,    10 ,           100 ,           500 ,pirates
-bv_pirates_capital           ,    10 ,           100 ,           500 ,pirates
-bv_pirates_so                ,    10 ,           100 ,           500 ,pirates
-bv_persean_ranged            ,    10 ,           100 ,           500 ,persean
-bv_persean_ranged2           ,    10 ,           100 ,           500 ,persean
-bv_persean_missile           ,    10 ,           100 ,           500 ,persean
-bv_persean_missile2          ,    10 ,           100 ,           500 ,persean
-bv_persean_so                ,    10 ,           100 ,           500 ,persean
-bv_persean_so2               ,    10 ,           100 ,           500 ,persean
-bv_persean_capital           ,    10 ,           100 ,           500 ,persean
-bv_persean_capital2          ,    10 ,           100 ,           500 ,persean
-bv_sindrian_diktat_ranged    ,    10 ,           100 ,           500 ,sindrian_diktat
-bv_sindrian_diktat_so        ,    10 ,           100 ,           500 ,sindrian_diktat
-bv_sindrian_diktat_missile   ,    10 ,           100 ,           500 ,sindrian_diktat
-bv_lions_guard_ranged        ,    10 ,           100 ,           500 ,sindrian_diktat
-bv_lions_guard_so            ,    10 ,           100 ,           500 ,sindrian_diktat
-bv_luddic_church_carrier     ,    10 ,           100 ,           500 ,luddic_church
-bv_luddic_church_elite       ,    10 ,           100 ,           500 ,luddic_church
-bv_luddic_church_standard    ,    10 ,           100 ,           500 ,luddic_church
-bv_luddic_church_strike      ,    10 ,           100 ,           500 ,luddic_church
-bv_independent_explore       ,    10 ,           100 ,           500 ,independent
-bv_independent_so1           ,    10 ,           100 ,           500 ,independent
-bv_independent_ranged        ,    10 ,           100 ,           500 ,independent
-bv_independent_strike        ,    10 ,           100 ,           500 ,independent
+fleet,weight,minFleetPoints,maxFleetPoints,faction,minDifficulty
+bv_tritachyon_wolfpack1,10,100,500,tritachyon,1
+bv_tritachyon_ranged,10,100,500,tritachyon,1
+bv_tritachyon_so,10,100,500,tritachyon,1
+bv_tritachyon_elite_wolfpack,10,100,500,tritachyon,1
+bv_tritachyon_phase,10,100,500,tritachyon,1
+bv_tritachyon_strike,10,100,500,tritachyon,1
+bv_hegemony_lowtech,10,100,500,hegemony,1
+bv_hegemony_xiv,10,100,500,hegemony,1
+bv_hegemony_so,10,100,500,hegemony,1
+bv_hegemony_eliteso,10,100,500,hegemony,1
+bv_hegemony_missile,10,100,500,hegemony,1
+bv_pirates_salvage,10,100,500,pirates,1
+bv_pirates_elite,10,100,500,pirates,1
+bv_pirates_elitecarrier,10,100,500,pirates,1
+bv_pirates_missile,10,100,500,pirates,1
+bv_pirates_capital,10,100,500,pirates,1
+bv_pirates_so,10,100,500,pirates,1
+bv_persean_ranged,10,100,500,persean,1
+bv_persean_ranged2,10,100,500,persean,1
+bv_persean_missile,10,100,500,persean,1
+bv_persean_missile2,10,100,500,persean,1
+bv_persean_so,10,100,500,persean,1
+bv_persean_so2,10,100,500,persean,1
+bv_persean_capital,10,100,500,persean,1
+bv_persean_capital2,10,100,500,persean,1
+bv_sindrian_diktat_ranged,10,100,500,sindrian_diktat,1
+bv_sindrian_diktat_so,10,100,500,sindrian_diktat,1
+bv_sindrian_diktat_missile,10,100,500,sindrian_diktat,1
+bv_lions_guard_ranged,10,100,500,sindrian_diktat,1
+bv_lions_guard_so,10,100,500,sindrian_diktat,1
+bv_luddic_church_carrier,10,100,500,luddic_church,1
+bv_luddic_church_elite,10,100,500,luddic_church,1
+bv_luddic_church_standard,10,100,500,luddic_church,1
+bv_luddic_church_strike,10,100,500,luddic_church,1
+bv_independent_explore,10,100,500,independent,1
+bv_independent_so1,10,100,500,independent,1
+bv_independent_ranged,10,100,500,independent,1
+bv_independent_strike,10,100,500,independent,1
