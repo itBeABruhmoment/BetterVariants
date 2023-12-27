@@ -1,34 +1,13 @@
 package better_variants.bar_events;
 
-import better_variants.data.BetterVariantsBountyData;
-import better_variants.data.BetterVariantsBountyDataMember;
-import better_variants.data.CommonStrings;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.HasMemory;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.fleet.FleetMemberType;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.Ranks;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import com.fs.starfarer.api.impl.campaign.ids.Voices;
-import com.fs.starfarer.api.impl.campaign.missions.cb.CBDeserter;
-import com.fs.starfarer.api.impl.campaign.missions.cb.CBStats;
 import com.fs.starfarer.api.impl.campaign.missions.cb.CustomBountyCreator;
 import com.fs.starfarer.api.impl.campaign.missions.cb.MilitaryCustomBounty;
-import com.fs.starfarer.api.impl.campaign.missions.hub.*;
-import com.fs.starfarer.api.ui.TooltipMakerAPI;
-import com.fs.starfarer.api.util.Misc;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.lwjgl.util.vector.Vector2f;
-import variants_lib.data.FleetBuildData;
-import variants_lib.data.VariantsLibFleetFactory;
-import variants_lib.data.VariantsLibFleetParams;
-
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -41,6 +20,7 @@ import java.util.Random;
  * Set protected low normal and high bounty data fields
  *  Create the needed bounty creator classes
  *  Lets start with deserter
+ *  maybe use $salvageSeed to gen bounties to make bounties consistent
  */
 public class BetterVariantsBounty extends MilitaryCustomBounty {
     private static final Logger log = Global.getLogger(better_variants.bar_events.BetterVariantsBounty.class);

@@ -4,6 +4,7 @@ import better_variants.data.BetterVariantsBountyData;
 import better_variants.data.BetterVariantsBountyDataMember;
 import better_variants.data.CommonStrings;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -28,7 +29,6 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
         log.setLevel(Level.ALL);
     }
 
-    @Override
     public CustomBountyCreator.CustomBountyData createBounty(
             MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage
     ) {
@@ -118,14 +118,32 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
         }
 
         // stuff I added
+
+        // create seed based on month and salvage seed
+        long seed = 0;
+        try {
+            seed += createdAt.getPrimaryEntity().getMemoryWithoutUpdate().getLong("$salvageSeed");
+            final CampaignClockAPI clock = Global.getSector().getClock();
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
+            seed += clock.getCycle();
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
+            seed += ((long) clock.getMonth()) << 32;
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
+        } catch (Exception e) {
+            log.info(String.format("%s: error when creating salvage seed \n %s", CommonStrings.MOD_ID, e));
+        }
+
+
+        // pick bounty
         final ArrayList<String> factions = new ArrayList<>();
         factions.add(mission.getPerson().getFaction().getId());
-        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, 1, 0);
+        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, 1, seed);
         if(bounty == null) {
             log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID, factions.toString(), 1));
             return null;
         }
 
+        // create fleet
         final VariantsLibFleetFactory factory = FleetBuildData.FLEET_DATA.get(bounty.getFleetId());
         if(factory == null) {
             log.error(String.format("%s: no fleet factory with id \"%s\" could be found", CommonStrings.MOD_ID, bounty.getFleetId()));
@@ -136,6 +154,7 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
         final VariantsLibFleetParams params = new VariantsLibFleetParams();
         params.faction = Factions.PIRATES;
         params.fleetPoints = 200;
+        params.seed = seed;
         factory.editFleet(data.fleet);
 
         setRepChangesBasedOnDifficulty(data, difficulty);
