@@ -1,6 +1,8 @@
 package better_variants.bar_events;
 
+import better_variants.data.CommonStrings;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.HasMemory;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -30,6 +32,12 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
 
     public static final ArrayList<CustomBountyCreator> CREATORS = new ArrayList<CustomBountyCreator>() {{add(new BetterVariantsDeserterBountyCreator());}};
 
+    protected long seed = 0;
+
+    public long getSeed() {
+        return seed;
+    }
+
     @Override
     public List<CustomBountyCreator> getCreators() {
         log.info("BetterVariantsBountyCreate creator #############################");
@@ -38,6 +46,18 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
 
     @Override
     protected boolean create(MarketAPI createdAt, boolean barEvent) {
+        try {
+            seed += createdAt.getPrimaryEntity().getMemoryWithoutUpdate().getLong("$salvageSeed");
+            final CampaignClockAPI clock = Global.getSector().getClock();
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
+            seed += clock.getCycle();
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
+            seed += ((long) clock.getMonth()) << 32;
+            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
+        } catch (Exception e) {
+            log.info(String.format("%s: error when creating salvage seed \n %s", CommonStrings.MOD_ID, e));
+        }
+
         if ("pirates".equals(createdAt.getFaction().getId())) {
             return false;
         }

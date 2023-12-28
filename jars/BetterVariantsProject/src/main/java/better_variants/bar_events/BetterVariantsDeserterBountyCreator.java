@@ -119,27 +119,20 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
 
         // stuff I added
 
-        // create seed based on month and salvage seed
+        // get seed
         long seed = 0;
         try {
-            seed += createdAt.getPrimaryEntity().getMemoryWithoutUpdate().getLong("$salvageSeed");
-            final CampaignClockAPI clock = Global.getSector().getClock();
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
-            seed += clock.getCycle();
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
-            seed += ((long) clock.getMonth()) << 32;
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
+            seed = ((BetterVariantsBounty) mission).getSeed();
         } catch (Exception e) {
-            log.info(String.format("%s: error when creating salvage seed \n %s", CommonStrings.MOD_ID, e));
+            log.info(String.format("%s: error when getting salvage seed \n %s", CommonStrings.MOD_ID, e));
         }
-
 
         // pick bounty
         final ArrayList<String> factions = new ArrayList<>();
         factions.add(mission.getPerson().getFaction().getId());
         final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, 1, seed);
         if(bounty == null) {
-            log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID, factions.toString(), 1));
+            log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID, factions, 1));
             return null;
         }
 
