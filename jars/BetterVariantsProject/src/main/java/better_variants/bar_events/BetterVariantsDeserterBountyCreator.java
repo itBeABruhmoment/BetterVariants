@@ -15,9 +15,11 @@ import com.fs.starfarer.api.impl.campaign.missions.cb.CustomBountyCreator;
 import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AICores;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import variants_lib.data.FleetBuildData;
+import variants_lib.data.SettingsData;
 import variants_lib.data.VariantsLibFleetFactory;
 import variants_lib.data.VariantsLibFleetParams;
 
@@ -146,9 +148,30 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
 
         final VariantsLibFleetParams params = new VariantsLibFleetParams();
         params.faction = Factions.PIRATES;
-        params.fleetPoints = 200;
         params.seed = seed;
-        factory.editFleet(data.fleet);
+        if(difficulty <= 1) {
+            // about 200 with fleet size 30
+            params.fleetPoints = Math.round(SettingsData.getMaxShipsInAIFleet() * 6.7f);
+            params.quality = 0.9f;
+            params.numOfficers = SettingsData.getMaxOfficersInAIFleet() / 3;
+            params.averageOfficerLevel = 4;
+        } else if(difficulty == 2) {
+            // about 350 with fleet size 30
+            params.fleetPoints = Math.round(SettingsData.getMaxShipsInAIFleet() * 11.7f);
+            params.quality = 1.0f;
+            params.numOfficers = 2 * SettingsData.getMaxOfficersInAIFleet() / 3;
+            params.averageOfficerLevel = 5;
+        } else {
+            // about 500 with fleet size 30
+            params.fleetPoints = Math.round(SettingsData.getMaxShipsInAIFleet() * 16.7f);
+            params.quality = 1.0f;
+            params.numOfficers = SettingsData.getMaxOfficersInAIFleet();
+            params.averageOfficerLevel = 6;
+        }
+
+        factory.editFleet(data.fleet, params);
+        data.fleet.getMemoryWithoutUpdate().set(CommonStrings.DO_NOT_MODIFY_FLEET, true);
+        data.fleet.setInflated(true);
 
         setRepChangesBasedOnDifficulty(data, difficulty);
         data.baseReward = CBStats.getBaseBounty(difficulty, CBStats.DESERTER_MULT, (BaseHubMission)mission);
