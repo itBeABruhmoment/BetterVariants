@@ -1,0 +1,18 @@
+{
+    "usingFactory":"better_variants.fleets.AIFleetFactory",
+	"autofit":false,
+	"fleetDataId":"bv_remnant_bounty1",
+	"minDP":120,
+	"maxDP":500,
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsTankerDP":0.03,
+	"fleetPartitions":[
+		{
+			"partitionWeight":90,
+			"variants":{
+				"nova_Bounty1_bv":50
+			}
+		}
+	]
+}
+

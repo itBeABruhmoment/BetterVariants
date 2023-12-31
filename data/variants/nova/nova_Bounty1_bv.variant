@@ -1,0 +1,47 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 55,
+        "fluxVents": 30,
+        "goalVariant": false,
+        "hullId": "nova",
+        "hullMods": [
+                "targetingunit",
+                "fluxcoil",
+                "hardenedshieldemitter"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "extendedshieldemitter",
+                "turretgyros",
+                "missleracks"
+        ],
+        "variantId": "nova_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 000": "autopulse",
+                                "WS 001": "autopulse",
+                                "WS 002": "pulselaser",
+                                "WS 003": "pulselaser",
+                                "WS 004": "pulselaser",
+                                "WS 005": "ionpulser",
+                                "WS 010": "mininglaser",
+                                "WS 011": "mininglaser",
+                                "WS 012": "mininglaser",
+                                "WS 013": "mininglaser"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 006": "breachpod",
+                                "WS 007": "breachpod",
+                                "WS 008": "breachpod",
+                                "WS 009": "sabotpod"
+                        }
+                }
+        ]
+}
