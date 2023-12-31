@@ -1,0 +1,24 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 15,
+        "fluxVents": 10,
+        "goalVariant": false,
+        "hullId": "tempest",
+        "hullMods": [
+                "hardened_subsystems",
+                "hardenedshieldemitter",
+                "unstable_injector"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "fluxcoil",
+                "extendedshieldemitter"
+        ],
+        "variantId": "tempest_Bounty1_bv",
+        "weaponGroups": [{
+                "autofire": true,
+                "mode": "LINKED",
+                "weapons": {"WS 001": "pulselaser"}
+        }]
+}

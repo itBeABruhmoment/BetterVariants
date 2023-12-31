@@ -8,15 +8,17 @@
 	"autoLogitsticsTankerDP":0.03,
 	"fleetPartitions":[
 		{
-			"partitionWeight":90,
+			"partitionWeight":92.5,
 			"variants":{
 				"conquest_Bounty1_bv":100
 			}
 		},
         {
-            "partitionWeight":10,
+            "partitionWeight":7.5,
             "variants":{
-                "omen_Ew_bv":100
+                "omen_Bounty1_bv":70,
+				"tempest_Bounty1_bv":15,
+				"tempest_Bounty2_bv":15
             }
         }
 	]

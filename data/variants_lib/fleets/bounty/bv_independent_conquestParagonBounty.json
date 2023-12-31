@@ -15,9 +15,11 @@
 			}
 		},
         {
-            "partitionWeight":10,
+            "partitionWeight":5,
             "variants":{
-                "omen_Ew_bv":100
+                "omen_Bounty1_bv":70,
+				"tempest_Bounty1_bv":15,
+				"tempest_Bounty2_bv":15
             }
         }
 	]
