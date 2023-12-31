@@ -1,0 +1,50 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 55,
+        "fluxVents": 55,
+        "goalVariant": false,
+        "hullId": "conquest",
+        "hullMods": [
+                "missleracks",
+                "hardenedshieldemitter"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "turretgyros",
+                "targetingunit"
+        ],
+        "variantId": "conquest_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "hydra",
+                                "WS 002": "squall"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 019": "breachpod",
+                                "WS 020": "breachpod"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 005": "pdburst",
+                                "WS 011": "gauss",
+                                "WS 012": "gauss",
+                                "WS 013": "devastator",
+                                "WS 014": "mark9",
+                                "WS 015": "heavymauler",
+                                "WS 016": "heavymauler",
+                                "WS 022": "ionbeam"
+                        }
+                }
+        ]
+}

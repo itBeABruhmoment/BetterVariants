@@ -1,0 +1,24 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_persean_conquestBounty",
+	"minDP":120,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsTankerDP":0.03,
+	"fleetPartitions":[
+		{
+			"partitionWeight":90,
+			"variants":{
+				"conquest_Bounty1_bv":100
+			}
+		},
+        {
+            "partitionWeight":10,
+            "variants":{
+                "omen_Ew_bv":100
+            }
+        }
+	]
+}
+

@@ -50,6 +50,8 @@ conquest_Elite3_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshiel
 conquest_Elite_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
 conquest_DEM_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
 conquest_Standard_bv,"ms, se","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
+conquest_Bounty1_bv,"ms, se, gi",
+conquest_Bounty2_bv,"ms, se, gi",
 dominator_AntiCV_bv,"ms, oe",missleracks
 dominator_Assault_bv,"ms, oe",missleracks
 dominator_Outdated_bv,"ms, oe",missleracks
@@ -163,6 +165,7 @@ onslaught_Standard_bv,"ms, oe",turretgyros
 onslaught_xiv_Elite2_bv,"ms, oe",turretgyros
 onslaught_xiv_Standard_bv,"ms, oe",turretgyros
 paragon_Escort_bv,"fm, oe",turretgyros
+paragon_Bounty1_bv,"fm, gi",
 pegasus_Balanced_bv,ms,turretgyros
 pegasus_Strike_bv,ms,turretgyros
 phaeton_Standard_bv,,
