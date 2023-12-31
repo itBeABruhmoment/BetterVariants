@@ -45,6 +45,8 @@ condor_Attack_bv
 condor_Strike1_bv
 condor_Strike2_bv
 condor_StrikeE1_bv
+conquest_Bounty1_bv
+conquest_Bounty2_bv
 conquest_DEM_bv
 conquest_Elite2_bv
 conquest_Elite3_bv
@@ -162,6 +164,7 @@ onslaught_Outdated_bv
 onslaught_Standard_bv
 onslaught_xiv_Elite2_bv
 onslaught_xiv_Standard_bv
+paragon_Bounty1_bv
 paragon_Escort_bv
 pegasus_Balanced_bv
 pegasus_Strike_bv
@@ -204,4 +207,3 @@ wolf_Support2_bv
 wolf_Support3_bv
 wolf_d_pirates_Support1_bv
 wolf_d_pirates_Support2_bv
-wolf_hegemony_Support1_bv
