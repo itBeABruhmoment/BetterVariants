@@ -31,25 +31,33 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
     }};
 
     private static boolean allowFleetModification(CampaignFleetAPI fleet) {
+        final MemoryAPI fleetMem = fleet.getMemoryWithoutUpdate();
+
         if(!SettingsData.fleetEditingEnabled()) {
             return false;
         }
 
-//        if(fleet.getMemoryWithoutUpdate().contains(CommonStrings.FLEET_VARIANT_KEY)) {
-//            log.debug("fleet already edited");
-//            return false;
-//        }
+        if(fleetMem.contains(better_variants.data.CommonStrings.DO_NOT_MODIFY_FLEET)) {
+            log.info("do not edit flag set");
+            return false;
+        }
+
+        if(fleetMem.contains(CommonStrings.VARIANTS_LIB_LISTENER_APPLIED)
+                && fleetMem.getLong(CommonStrings.VARIANTS_LIB_LISTENER_APPLIED) > 0) {
+            log.info("fleet already edited");
+            return false;
+        }
 
         // don't modify fleets from unregistered factions
         if(!FactionData.FACTION_DATA.containsKey(fleet.getFaction().getId())) {
-            log.debug("refused to modify fleet because faction is not registered");
+            log.info("refused to modify fleet because faction is not registered");
             return false;
         }
 
         // don't modify special/important fleets
         for(String flag : DISALLOW_FLEET_MODS_FLAGS) {
-            if(fleet.getMemoryWithoutUpdate().contains(flag)) {
-                log.debug("refused to modify because fleet had the flag " + flag);
+            if(fleetMem.contains(flag)) {
+                log.info("refused to modify because fleet had the flag " + flag);
                 return false;
             }
         }
@@ -103,7 +111,7 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
             fleet.setInflater(inflater);
             fleet.inflateIfNeeded();
         } else {
-            log.debug("inflater not created");
+            log.info("inflater not created");
         }
 
         debugKey(fleetMemory, "$better_variants_inflater_added");

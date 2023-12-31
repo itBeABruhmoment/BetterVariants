@@ -46,4 +46,6 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
         //    barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
         //}
     }
+
+
 }
