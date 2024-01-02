@@ -1,0 +1,27 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 15,
+        "fluxVents": 4,
+        "goalVariant": false,
+        "hullId": "glimmer",
+        "hullMods": [
+                "hardened_subsystems",
+                "hardenedshieldemitter",
+                "unstable_injector"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "frontemitter",
+                "fluxcoil"
+        ],
+        "variantId": "glimmer_Bounty1_bv",
+        "weaponGroups": [{
+                "autofire": true,
+                "mode": "LINKED",
+                "weapons": {
+                        "WS 001": "pulselaser",
+                        "WS 003": "ioncannon"
+                }
+        }]
+}

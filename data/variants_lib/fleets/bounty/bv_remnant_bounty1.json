@@ -4,15 +4,33 @@
 	"fleetDataId":"bv_remnant_bounty1",
 	"minDP":120,
 	"maxDP":500,
-	"spawnIfNoIndustry":false,
-	"autoLogitsticsTankerDP":0.03,
+	"spawnIfNoIndustry":true,
 	"fleetPartitions":[
+        {
+			"partitionWeight":42.5,
+			"variants":{
+				"radiant_Bounty1_bv":50
+			}
+		},
 		{
-			"partitionWeight":90,
+			"partitionWeight":40,
 			"variants":{
 				"nova_Bounty1_bv":50
 			}
-		}
+		},
+        {
+			"partitionWeight":10,
+			"variants":{
+				"fulgent_Bounty1_bv":100
+			}
+		},
+        {
+            "partitionWeight":7.5,
+            "variants":{
+                "glimmer_Bounty1_bv":50,
+                "glimmer_Bounty2_bv":50
+            }
+        }
 	]
 }
 

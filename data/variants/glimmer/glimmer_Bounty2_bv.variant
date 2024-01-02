@@ -1,0 +1,34 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 14,
+        "fluxVents": 0,
+        "goalVariant": false,
+        "hullId": "glimmer",
+        "hullMods": [
+                "hardened_subsystems",
+                "hardenedshieldemitter",
+                "unstable_injector"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "frontemitter",
+                "fluxcoil"
+        ],
+        "variantId": "glimmer_Bounty2_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 004": "heatseeker",
+                                "WS 005": "heatseeker"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 001": "ionpulser"}
+                }
+        ]
+}

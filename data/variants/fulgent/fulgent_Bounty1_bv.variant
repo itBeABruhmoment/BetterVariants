@@ -1,0 +1,42 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 25,
+        "fluxVents": 2,
+        "goalVariant": false,
+        "hullId": "fulgent",
+        "hullMods": [
+                "unstable_injector",
+                "hardenedshieldemitter",
+                "missleracks"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "fluxcoil",
+                "extendedshieldemitter"
+        ],
+        "variantId": "fulgent_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 001": "ionpulser"}
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 003": "phasecl",
+                                "WS 004": "phasecl"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 009": "breach",
+                                "WS 010": "breach"
+                        }
+                }
+        ]
+}
