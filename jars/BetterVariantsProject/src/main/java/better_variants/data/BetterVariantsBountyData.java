@@ -83,7 +83,7 @@ public class BetterVariantsBountyData {
         for(final BetterVariantsBountyDataMember bounty : bounties.values()) {
             log.info(String.format("%s: %s", CommonStrings.MOD_ID, bounty));
             log.info(String.format("%s: %s", CommonStrings.MOD_ID, factions.contains(bounty.getFaction())));
-            if(factions.contains(bounty.getFaction()) && difficulty <= bounty.getMinDifficulty()) {
+            if(factions.contains(bounty.getFaction()) && bounty.getMinDifficulty() <= difficulty) {
                 validBounties.add(bounty);
                 totalWeightSum += bounty.getWeight();
             }

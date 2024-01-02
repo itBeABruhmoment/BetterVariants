@@ -132,9 +132,9 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
         // pick bounty
         final ArrayList<String> factions = new ArrayList<>();
         factions.add(mission.getPerson().getFaction().getId());
-        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, 1, seed);
+        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, difficulty, seed);
         if(bounty == null) {
-            log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID, factions, 1));
+            log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID, factions, difficulty));
             return null;
         }
 
@@ -149,25 +149,10 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
         final VariantsLibFleetParams params = new VariantsLibFleetParams();
         params.faction = Factions.PIRATES;
         params.seed = seed;
-        if(difficulty <= 1) {
-            // about 200 with fleet size 30
-            params.fleetPoints = Math.round(SettingsData.getMaxShipsInAIFleet() * 6.7f);
-            params.quality = 0.9f;
-            params.numOfficers = SettingsData.getMaxOfficersInAIFleet() / 3;
-            params.averageOfficerLevel = 4;
-        } else if(difficulty == 2) {
-            // about 350 with fleet size 30
-            params.fleetPoints = Math.round(SettingsData.getMaxShipsInAIFleet() * 11.7f);
-            params.quality = 1.0f;
-            params.numOfficers = 2 * SettingsData.getMaxOfficersInAIFleet() / 3;
-            params.averageOfficerLevel = 5;
-        } else {
-            // about 500 with fleet size 30
-            params.fleetPoints = Math.round(SettingsData.getMaxShipsInAIFleet() * 16.7f);
-            params.quality = 1.0f;
-            params.numOfficers = SettingsData.getMaxOfficersInAIFleet();
-            params.averageOfficerLevel = 6;
-        }
+        params.fleetPoints = BountyUtil.fpByDifficulty(difficulty);
+        params.quality = BountyUtil.qualityByDifficulty(difficulty);
+        params.averageOfficerLevel = BountyUtil.avgOfficerLevelByDifficulty(difficulty);
+        params.numOfficers = BountyUtil.maxOfficersByDifficulty(difficulty);
 
         factory.editFleet(data.fleet, params);
         data.fleet.getMemoryWithoutUpdate().set(CommonStrings.DO_NOT_MODIFY_FLEET, true);
@@ -176,5 +161,10 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
         setRepChangesBasedOnDifficulty(data, difficulty);
         data.baseReward = CBStats.getBaseBounty(difficulty, CBStats.DESERTER_MULT, (BaseHubMission)mission);
         return data;
+    }
+
+    @Override
+    public float getFrequency(HubMissionWithBarEvent mission, int difficulty) {
+        return 10.f;
     }
 }

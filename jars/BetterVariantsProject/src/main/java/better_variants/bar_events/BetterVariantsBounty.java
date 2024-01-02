@@ -30,7 +30,9 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         log.setLevel(Level.ALL);
     }
 
-    public static final ArrayList<CustomBountyCreator> CREATORS = new ArrayList<CustomBountyCreator>() {{add(new BetterVariantsDeserterBountyCreator());}};
+    public static final ArrayList<CustomBountyCreator> CREATORS = new ArrayList<CustomBountyCreator>() {{
+        add(new BetterVariantsPatrolBountyCreator()); add(new BetterVariantsDeserterBountyCreator());
+    }};
 
     protected long seed = 0;
 
@@ -94,7 +96,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
 
         if (this.creatorLow != null) {
             log.info("creator not null");
-            this.dataLow = this.creatorLow.createBounty(createdAt, this, 1, Stage.BOUNTY);
+            this.dataLow = this.creatorLow.createBounty(createdAt, this, dLow, Stage.BOUNTY);
         } else {
             log.info("creator null"); // creator appears to be null in current iteration
         }
@@ -107,7 +109,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         int dNormal = pickDifficulty(DifficultyChoice.NORMAL);
         this.creatorNormal = pickCreator(dNormal, DifficultyChoice.NORMAL);
         if (this.creatorNormal != null) {
-            this.dataNormal = this.creatorNormal.createBounty(createdAt, this, 2, Stage.BOUNTY);
+            this.dataNormal = this.creatorNormal.createBounty(createdAt, this, dNormal, Stage.BOUNTY);
         }
         if (this.dataNormal == null || this.dataNormal.fleet == null) {
             log.info(String.format("BetterVariantsBountyCreate r4 %s", dataNormal));
@@ -118,7 +120,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         this.creatorHigh = pickCreator(dHigh, DifficultyChoice.HIGH);
         if (this.creatorHigh != null) {
             log.info(String.format("BetterVariantsBountyCreate r5 %s", dataHigh));
-            this.dataHigh = this.creatorHigh.createBounty(createdAt, this, 3, Stage.BOUNTY);
+            this.dataHigh = this.creatorHigh.createBounty(createdAt, this, dHigh, Stage.BOUNTY);
         }
 
         if (this.dataHigh == null || this.dataHigh.fleet == null) {
