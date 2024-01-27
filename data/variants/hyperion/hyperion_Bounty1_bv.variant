@@ -1,31 +1,34 @@
 {
         "displayName": "Bounty1",
         "fluxCapacitors": 15,
-        "fluxVents": 6,
+        "fluxVents": 5,
         "goalVariant": false,
-        "hullId": "tempest",
+        "hullId": "hyperion",
         "hullMods": [
-                "hardenedshieldemitter",
                 "hardened_subsystems",
+                "extendedshieldemitter",
                 "unstable_injector"
         ],
         "permaMods": [],
         "sMods": [
+                "stabilizedshieldemitter",
                 "fluxcoil",
-                "extendedshieldemitter",
-                "missile_autoloader"
+                "hardenedshieldemitter"
         ],
-        "variantId": "tempest_Bounty1_bv",
+        "variantId": "hyperion_Bounty1_bv",
         "weaponGroups": [
                 {
-                        "autofire": true,
+                        "autofire": false,
                         "mode": "LINKED",
-                        "weapons": {"WS 001": "ionpulser"}
+                        "weapons": {
+                                "WS 001": "pulselaser",
+                                "WS 003": "heavymg"
+                        }
                 },
                 {
                         "autofire": false,
                         "mode": "LINKED",
-                        "weapons": {"WS 003": "breach"}
+                        "weapons": {"WS 002": "ionpulser"}
                 }
         ]
 }

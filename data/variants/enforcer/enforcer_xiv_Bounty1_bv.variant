@@ -1,0 +1,41 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 25,
+        "fluxVents": 19,
+        "goalVariant": false,
+        "hullId": "enforcer_xiv",
+        "hullMods": ["missleracks"],
+        "permaMods": [],
+        "sMods": [
+                "fluxcoil",
+                "fluxdistributor",
+                "targetingunit"
+        ],
+        "variantId": "enforcer_xiv_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 002": "hveldriver",
+                                "WS 003": "flak",
+                                "WS 004": "hveldriver"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 006": "breach",
+                                "WS 007": "breach",
+                                "WS 008": "breach",
+                                "WS 009": "breach"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 001": "hveldriver"}
+                }
+        ]
+}

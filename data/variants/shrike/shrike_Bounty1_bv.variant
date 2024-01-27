@@ -1,0 +1,40 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 25,
+        "fluxVents": 4,
+        "goalVariant": false,
+        "hullId": "shrike",
+        "hullMods": [
+                "unstable_injector",
+                "missleracks"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "hardenedshieldemitter",
+                "fluxcoil",
+                "extendedshieldemitter"
+        ],
+        "variantId": "shrike_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 003": "ionpulser"}
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 005": "phasecl"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 000": "irpulse"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 001": "pdburst"}
+                }
+        ]
+}

@@ -1,0 +1,55 @@
+{
+        "displayName": "Bounty2",
+        "fluxCapacitors": 30,
+        "fluxVents": 35,
+        "goalVariant": false,
+        "hullId": "dominator",
+        "hullMods": [
+                "fluxdistributor",
+                "stabilizedshieldemitter",
+                "hardenedshieldemitter"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "targetingunit",
+                "missleracks",
+                "ballistic_rangefinder"
+        ],
+        "variantId": "dominator_xiv_Bounty2_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "ALTERNATING",
+                        "weapons": {
+                                "WS 012": "hellbore",
+                                "WS 013": "hellbore"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 014": "harpoonpod",
+                                "WS 015": "harpoonpod",
+                                "WS 016": "harpoonpod"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 003": "railgun",
+                                "WS 004": "railgun",
+                                "WS 005": "railgun"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 010": "flak",
+                                "WS 011": "flak"
+                        }
+                }
+        ]
+}

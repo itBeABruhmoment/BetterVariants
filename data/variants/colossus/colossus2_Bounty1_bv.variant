@@ -1,0 +1,34 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 34,
+        "fluxVents": 0,
+        "goalVariant": false,
+        "hullId": "colossus2",
+        "hullMods": [],
+        "permaMods": [],
+        "sMods": [
+                "missleracks",
+                "fluxcoil",
+                "hardenedshieldemitter"
+        ],
+        "variantId": "colossus2_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 011": "lightmortar",
+                                "WS 012": "lightmortar",
+                                "WS 013": "lightmortar",
+                                "WS 014": "lightdualac",
+                                "WS 015": "lightdualac",
+                                "WS 016": "lightdualac"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 017": "hammerrack"}
+                }
+        ]
+}

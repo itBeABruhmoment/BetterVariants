@@ -1,0 +1,41 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 25,
+        "fluxVents": 8,
+        "goalVariant": false,
+        "hullId": "hammerhead",
+        "hullMods": [
+                "missile_autoloader",
+                "missleracks"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "fluxcoil",
+                "hardenedshieldemitter",
+                "targetingunit"
+        ],
+        "variantId": "hammerhead_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "hveldriver",
+                                "WS 002": "hveldriver"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 003": "breach",
+                                "WS 004": "breach"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 006": "pdburst"}
+                }
+        ]
+}

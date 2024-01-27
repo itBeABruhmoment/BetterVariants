@@ -1,0 +1,45 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 35,
+        "fluxVents": 1,
+        "goalVariant": false,
+        "hullId": "aurora",
+        "hullMods": [
+                "safetyoverrides",
+                "missleracks"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "hardened_subsystems",
+                "hardenedshieldemitter",
+                "fluxcoil"
+        ],
+        "variantId": "aurora_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 006": "harpoonpod",
+                                "WS 010": "breach",
+                                "WS 011": "breach",
+                                "WS 012": "breach",
+                                "WS 013": "breach"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 009": "phasecl"}
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 004": "ioncannon",
+                                "WS 007": "heavyblaster",
+                                "WS 008": "heavyblaster"
+                        }
+                }
+        ]
+}

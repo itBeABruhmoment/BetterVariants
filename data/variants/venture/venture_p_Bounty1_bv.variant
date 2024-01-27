@@ -1,0 +1,37 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 35,
+        "fluxVents": 11,
+        "goalVariant": false,
+        "hullId": "venture_p",
+        "hullMods": ["hardenedshieldemitter"],
+        "permaMods": [],
+        "sMods": [
+                "targetingunit",
+                "missleracks",
+                "missile_autoloader"
+        ],
+        "variantId": "venture_p_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 009": "squall"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "hveldriver",
+                                "WS 002": "mininglaser",
+                                "WS 003": "hveldriver",
+                                "WS 007": "breach"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 004": "harpoon"}
+                }
+        ]
+}

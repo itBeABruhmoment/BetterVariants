@@ -1,0 +1,44 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 35,
+        "fluxVents": 3,
+        "goalVariant": false,
+        "hullId": "gryphon",
+        "hullMods": [
+                "targetingunit",
+                "fluxbreakers",
+                "extendedshieldemitter"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "eccm",
+                "turretgyros"
+        ],
+        "variantId": "gryphon_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "squall",
+                                "WS 008": "harpoonpod",
+                                "WS 009": "harpoonpod",
+                                "WS 010": "breach",
+                                "WS 011": "breach",
+                                "WS 012": "breach"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 002": "heavymauler",
+                                "WS 003": "mininglaser",
+                                "WS 004": "mininglaser",
+                                "WS 005": "mininglaser",
+                                "WS 006": "mininglaser",
+                                "WS 007": "mininglaser"
+                        }
+                }
+        ]
+}

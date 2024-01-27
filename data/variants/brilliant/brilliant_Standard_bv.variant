@@ -1,23 +1,16 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 13,
+    "fluxCapacitors": 18,
     "fluxVents": 30,
     "hullId": "brilliant",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "targetingunit",
+        "stabilizedshieldemitter"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "brilliant_Standard_bv",
     "weaponGroups": [
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 000": "tachyonlance"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 004": "typhoon"}
-        },
         {
             "autofire": false,
             "mode": "LINKED",
@@ -27,17 +20,19 @@
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 001": "gravitonbeam"}
+            "weapons": {"WS 004": "harpoonpod"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 002": "pdburst",
-                "WS 003": "pdburst"
-            }
+            "weapons": {"WS 000": "hil"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "ionbeam"}
         }
     ]
 }

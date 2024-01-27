@@ -1,0 +1,40 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 55,
+        "fluxVents": 38,
+        "goalVariant": false,
+        "hullId": "nova",
+        "hullMods": [
+                "targetingunit",
+                "advancedoptics",
+                "stabilizedshieldemitter"
+        ],
+        "permaMods": [],
+        "sMods": [],
+        "variantId": "nova_Support1B_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 000": "hil",
+                                "WS 001": "tachyonlance",
+                                "WS 002": "gravitonbeam",
+                                "WS 003": "gravitonbeam",
+                                "WS 004": "gravitonbeam",
+                                "WS 005": "gravitonbeam",
+                                "WS 010": "mininglaser"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 006": "harpoonpod",
+                                "WS 007": "harpoonpod",
+                                "WS 008": "harpoonpod",
+                                "WS 009": "harpoonpod"
+                        }
+                }
+        ]
+}

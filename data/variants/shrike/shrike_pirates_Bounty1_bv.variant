@@ -1,31 +1,35 @@
 {
         "displayName": "Bounty1",
-        "fluxCapacitors": 15,
-        "fluxVents": 6,
+        "fluxCapacitors": 25,
+        "fluxVents": 2,
         "goalVariant": false,
-        "hullId": "tempest",
+        "hullId": "shrike_pirates",
         "hullMods": [
                 "hardenedshieldemitter",
-                "hardened_subsystems",
                 "unstable_injector"
         ],
         "permaMods": [],
         "sMods": [
                 "fluxcoil",
                 "extendedshieldemitter",
-                "missile_autoloader"
+                "missleracks"
         ],
-        "variantId": "tempest_Bounty1_bv",
+        "variantId": "shrike_pirates_Bounty1_bv",
         "weaponGroups": [
                 {
                         "autofire": true,
                         "mode": "LINKED",
-                        "weapons": {"WS 001": "ionpulser"}
+                        "weapons": {"WS 003": "ionpulser"}
                 },
                 {
                         "autofire": false,
                         "mode": "LINKED",
-                        "weapons": {"WS 003": "breach"}
+                        "weapons": {"WS 005": "phasecl"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 001": "lightdualac"}
                 }
         ]
 }

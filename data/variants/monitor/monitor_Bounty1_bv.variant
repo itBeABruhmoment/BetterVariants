@@ -1,0 +1,23 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 15,
+        "fluxVents": 15,
+        "goalVariant": false,
+        "hullId": "monitor",
+        "hullMods": [],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "fluxdistributor",
+                "hardened_subsystems"
+        ],
+        "variantId": "monitor_Bounty1_bv",
+        "weaponGroups": [{
+                "autofire": true,
+                "mode": "LINKED",
+                "weapons": {
+                        "WS 001": "flak",
+                        "WS 002": "flak"
+                }
+        }]
+}

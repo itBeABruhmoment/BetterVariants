@@ -1,0 +1,50 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 35,
+        "fluxVents": 35,
+        "goalVariant": false,
+        "hullId": "eradicator_pirates",
+        "hullMods": ["missleracks"],
+        "permaMods": [],
+        "sMods": [
+                "fluxcoil",
+                "hardenedshieldemitter",
+                "targetingunit"
+        ],
+        "variantId": "eradicator_pirates_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 005": "hveldriver",
+                                "WS 006": "hveldriver",
+                                "WS 007": "heavymauler"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 000": "atropos",
+                                "WS 001": "atropos",
+                                "WS 002": "atropos",
+                                "WS 003": "atropos",
+                                "WS 004": "atropos"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 008": "mininglaser",
+                                "WS 009": "mininglaser",
+                                "WS 010": "mininglaser",
+                                "WS 011": "mininglaser",
+                                "WS 012": "mininglaser",
+                                "WS 013": "mininglaser",
+                                "WS 014": "mininglaser"
+                        }
+                }
+        ]
+}

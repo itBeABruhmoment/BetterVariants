@@ -1,0 +1,39 @@
+{
+        "displayName": "Bounty2",
+        "fluxCapacitors": 25,
+        "fluxVents": 17,
+        "goalVariant": false,
+        "hullId": "enforcer",
+        "hullMods": [
+                "missleracks",
+                "targetingunit"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "fluxdistributor",
+                "converted_hangar",
+                "fluxcoil"
+        ],
+        "variantId": "enforcer_Bounty2_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 002": "hveldriver",
+                                "WS 003": "flak",
+                                "WS 004": "hveldriver"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 006": "breach",
+                                "WS 007": "breach",
+                                "WS 008": "breach",
+                                "WS 009": "breach"
+                        }
+                }
+        ]
+}

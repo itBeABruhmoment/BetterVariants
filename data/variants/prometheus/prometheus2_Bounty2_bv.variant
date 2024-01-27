@@ -1,0 +1,50 @@
+{
+        "displayName": "Bounty2",
+        "fluxCapacitors": 46,
+        "fluxVents": 55,
+        "goalVariant": false,
+        "hullId": "prometheus2",
+        "hullMods": ["expanded_deck_crew"],
+        "permaMods": [],
+        "sMods": [
+                "targetingunit",
+                "hardenedshieldemitter",
+                "turretgyros"
+        ],
+        "variantId": "prometheus2_Bounty2_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 031": "mark9"}
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 019": "cyclone"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 032": "hephag"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 002": "lightdualac",
+                                "WS 003": "lightdualac",
+                                "WS 013": "lightdualac",
+                                "WS 014": "lightdualac"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 004": "flak",
+                                "WS 005": "flak"
+                        }
+                }
+        ]
+}

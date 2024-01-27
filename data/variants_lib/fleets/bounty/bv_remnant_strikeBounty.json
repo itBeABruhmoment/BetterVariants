@@ -1,0 +1,40 @@
+{
+    "usingFactory":"better_variants.fleets.AIFleetFactory",
+	"autofit":false,
+	"fleetDataId":"bv_remnant_strikeBounty",
+	"minDP":120,
+	"maxDP":500,
+	"spawnIfNoIndustry":true,
+	"fleetPartitions":[
+		{
+			"partitionWeight":52.5,
+			"variants":{
+				"radiant_Standard_bv":20,
+				"radiant_Strike_bv":20,
+				"nova_Strike_bv":60
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"brilliant_Standard_bv":50,
+				"apex_Overdriven_bv":50
+			}
+		},
+        {
+			"partitionWeight":10,
+			"variants":{
+				"fulgent_Strike_bv":50,
+				"fulgent_Overdriven_bv":50
+			}
+		},
+        {
+            "partitionWeight":7.5,
+            "variants":{
+                "glimmer_Standard1_bv":50,
+                "glimmer_Standard2_bv":50
+            }
+        }
+	]
+}
+

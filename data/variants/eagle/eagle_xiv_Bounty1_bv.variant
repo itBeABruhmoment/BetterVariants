@@ -1,0 +1,55 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 26,
+        "fluxVents": 30,
+        "goalVariant": false,
+        "hullId": "eagle_xiv",
+        "hullMods": ["missile_autoloader"],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "targetingunit",
+                "hardenedshieldemitter"
+        ],
+        "variantId": "eagle_xiv_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 007": "hveldriver",
+                                "WS 008": "hveldriver"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "breach",
+                                "WS 002": "breach"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 013": "heavymauler"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 005": "irautolance",
+                                "WS 006": "irautolance",
+                                "WS 009": "ionbeam"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 004": "pdburst",
+                                "WS 011": "pdburst"
+                        }
+                }
+        ]
+}

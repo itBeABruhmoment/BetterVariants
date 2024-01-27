@@ -1,0 +1,29 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 25,
+        "fluxVents": 19,
+        "goalVariant": false,
+        "hullId": "medusa",
+        "hullMods": [
+                "frontemitter",
+                "hardenedshieldemitter",
+                "unstable_injector"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "fluxcoil",
+                "extendedshieldemitter"
+        ],
+        "variantId": "medusa_Bounty1_bv",
+        "weaponGroups": [{
+                "autofire": false,
+                "mode": "LINKED",
+                "weapons": {
+                        "WS 006": "pulselaser",
+                        "WS 007": "ionpulser",
+                        "WS 008": "lightdualac",
+                        "WS 009": "lightdualac"
+                }
+        }]
+}

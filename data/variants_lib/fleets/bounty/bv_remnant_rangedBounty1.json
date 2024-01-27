@@ -1,35 +1,34 @@
 {
     "usingFactory":"better_variants.fleets.AIFleetFactory",
 	"autofit":false,
-	"fleetDataId":"bv_remnant_bounty1",
+	"fleetDataId":"bv_remnant_rangedBounty1",
 	"minDP":120,
 	"maxDP":500,
 	"spawnIfNoIndustry":true,
 	"fleetPartitions":[
-        {
-			"partitionWeight":42.5,
+		{
+			"partitionWeight":52.5,
 			"variants":{
-				"radiant_Bounty1_bv":50,
-				"radiant_Bounty2_bv":50
+				"nova_Support1B_bv":50
 			}
 		},
 		{
-			"partitionWeight":40,
+			"partitionWeight":30,
 			"variants":{
-				"nova_Bounty1_bv":50
+				"brilliant_Standard_bv":50
 			}
 		},
         {
 			"partitionWeight":10,
 			"variants":{
-				"fulgent_Bounty1_bv":100
+				"fulgent_Overdriven_bv":100
 			}
 		},
         {
             "partitionWeight":7.5,
             "variants":{
-                "glimmer_Bounty1_bv":50,
-                "glimmer_Bounty2_bv":50
+                "glimmer_Standard1_bv":50,
+                "glimmer_Standard2_bv":50
             }
         }
 	]

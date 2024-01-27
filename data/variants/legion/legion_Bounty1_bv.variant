@@ -1,0 +1,40 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 51,
+        "fluxVents": 55,
+        "goalVariant": false,
+        "hullId": "legion",
+        "hullMods": [
+                "expanded_deck_crew",
+                "fluxdistributor",
+                "hardenedshieldemitter"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "turretgyros",
+                "missleracks",
+                "targetingunit"
+        ],
+        "variantId": "legion_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 000": "gauss",
+                                "WS 001": "gauss"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 002": "harpoonpod",
+                                "WS 003": "harpoonpod",
+                                "WS 004": "harpoonpod",
+                                "WS 005": "harpoonpod",
+                                "WS 007": "harpoonpod"
+                        }
+                }
+        ]
+}

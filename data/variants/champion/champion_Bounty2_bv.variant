@@ -1,0 +1,38 @@
+{
+        "displayName": "Bounty2",
+        "fluxCapacitors": 24,
+        "fluxVents": 0,
+        "goalVariant": false,
+        "hullId": "champion",
+        "hullMods": [
+                "safetyoverrides",
+                "missleracks"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "hardenedshieldemitter",
+                "fluxcoil",
+                "extendedshieldemitter"
+        ],
+        "variantId": "champion_Bounty2_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 008": "plasma"}
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 009": "cyclone"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 006": "heavymg",
+                                "WS 007": "heavymg"
+                        }
+                }
+        ]
+}

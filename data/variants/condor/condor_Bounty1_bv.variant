@@ -1,0 +1,30 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 7,
+        "fluxVents": 0,
+        "goalVariant": false,
+        "hullId": "condor",
+        "hullMods": [],
+        "permaMods": [],
+        "sMods": [
+                "expanded_deck_crew",
+                "missleracks",
+                "eccm"
+        ],
+        "variantId": "condor_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "mininglaser",
+                                "WS 002": "mininglaser"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 003": "harpoonpod"}
+                }
+        ]
+}

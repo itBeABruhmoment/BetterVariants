@@ -1,0 +1,36 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 35,
+        "fluxVents": 22,
+        "goalVariant": false,
+        "hullId": "falcon_xiv",
+        "hullMods": ["missile_autoloader"],
+        "permaMods": [],
+        "sMods": [
+                "hardenedshieldemitter",
+                "targetingunit",
+                "stabilizedshieldemitter"
+        ],
+        "variantId": "falcon_xiv_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 007": "hveldriver",
+                                "WS 008": "hveldriver"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "breach",
+                                "WS 002": "breach",
+                                "WS 004": "mininglaser",
+                                "WS 005": "ionbeam",
+                                "WS 006": "irautolance"
+                        }
+                }
+        ]
+}

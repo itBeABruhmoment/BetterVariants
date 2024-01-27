@@ -1,0 +1,46 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 30,
+        "fluxVents": 17,
+        "goalVariant": false,
+        "hullId": "venture_pather",
+        "hullMods": [],
+        "permaMods": [],
+        "sMods": [
+                "targetingunit",
+                "missleracks",
+                "hardenedshieldemitter"
+        ],
+        "variantId": "venture_pather_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 005": "phasecl",
+                                "WS 006": "phasecl"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 004": "atropos",
+                                "WS 007": "atropos"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {"WS 002": "ionbeam"}
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "hveldriver",
+                                "WS 003": "hveldriver"
+                        }
+                }
+        ]
+}

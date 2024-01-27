@@ -1,0 +1,56 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 30,
+        "fluxVents": 35,
+        "goalVariant": false,
+        "hullId": "dominator_xiv",
+        "hullMods": [
+                "targetingunit",
+                "hardenedshieldemitter",
+                "reinforcedhull"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "stabilizedshieldemitter",
+                "fluxdistributor",
+                "missleracks"
+        ],
+        "variantId": "dominator_xiv_Bounty1_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 012": "gauss",
+                                "WS 013": "gauss"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 014": "harpoonpod",
+                                "WS 015": "harpoonpod",
+                                "WS 016": "harpoonpod"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 001": "mininglaser",
+                                "WS 007": "mininglaser",
+                                "WS 008": "mininglaser",
+                                "WS 009": "mininglaser"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 010": "flak",
+                                "WS 011": "flak"
+                        }
+                }
+        ]
+}

@@ -1,0 +1,53 @@
+{
+        "displayName": "Bounty1",
+        "fluxCapacitors": 33,
+        "fluxVents": 0,
+        "goalVariant": false,
+        "hullId": "eradicator",
+        "hullMods": [
+                "safetyoverrides",
+                "unstable_injector"
+        ],
+        "permaMods": [],
+        "sMods": [
+                "missleracks",
+                "fluxcoil",
+                "hardenedshieldemitter"
+        ],
+        "variantId": "eradicator_Bounty2_bv",
+        "weaponGroups": [
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {"WS 004": "breach"}
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 000": "atropos",
+                                "WS 001": "atropos",
+                                "WS 002": "atropos",
+                                "WS 003": "atropos"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 005": "shredder",
+                                "WS 006": "chaingun"
+                        }
+                },
+                {
+                        "autofire": true,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 007": "heavymg",
+                                "WS 009": "lightdualac",
+                                "WS 010": "lightdualac",
+                                "WS 011": "lightdualac"
+                        }
+                }
+        ]
+}
