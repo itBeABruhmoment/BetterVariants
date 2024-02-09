@@ -6,6 +6,7 @@ import better_variants.data.CommonStrings;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -129,12 +130,20 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
             log.info(String.format("%s: error when getting salvage seed \n %s", CommonStrings.MOD_ID, e));
         }
 
+        // Get list of allied factions and self
+        final String giverFactionId = mission.getPerson().getFaction().getId();
+        final ArrayList<String> eligibleFactionsToUseFleetsOf = BountyUtil.getFactionsWithRelation(giverFactionId,
+                RepLevel.WELCOMING, RepLevel.COOPERATIVE);
+        if(BountyUtil.isFactionWithBounties(giverFactionId)) {
+            eligibleFactionsToUseFleetsOf.add(giverFactionId);
+        }
+
         // pick bounty
-        final ArrayList<String> factions = new ArrayList<>();
-        factions.add(mission.getPerson().getFaction().getId());
-        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, difficulty, seed);
+        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(
+                eligibleFactionsToUseFleetsOf, difficulty, seed);
         if(bounty == null) {
-            log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID, factions, difficulty));
+            log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID,
+                    eligibleFactionsToUseFleetsOf, difficulty));
             return null;
         }
 

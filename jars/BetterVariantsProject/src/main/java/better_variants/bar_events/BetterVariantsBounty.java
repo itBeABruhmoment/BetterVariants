@@ -23,15 +23,19 @@ import java.util.Random;
  *  Create the needed bounty creator classes
  *  Lets start with deserter
  *  maybe use $salvageSeed to gen bounties to make bounties consistent
+ *  runcode better_variants.bar_events.BetterVariantsBounty.idx = 2;
  */
 public class BetterVariantsBounty extends MilitaryCustomBounty {
+    public static int idx = 0;
+
     private static final Logger log = Global.getLogger(better_variants.bar_events.BetterVariantsBounty.class);
     static {
         log.setLevel(Level.ALL);
     }
 
     public static final ArrayList<CustomBountyCreator> CREATORS = new ArrayList<CustomBountyCreator>() {{
-        add(new BetterVariantsPatrolBountyCreator()); add(new BetterVariantsDeserterBountyCreator());
+        add(new BetterVariantsDeserterBountyCreator()); add(new BetterVariantsPatrolBountyCreator());
+        add(new BetterVariantsRemnantBountyCreator());
     }};
 
     protected long seed = 0;
@@ -135,6 +139,6 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
     @Override
     protected CustomBountyCreator pickCreator(int difficulty, DifficultyChoice choice) {
         log.info(CREATORS);
-        return CREATORS.get(0);
+        return CREATORS.get(idx);
     }
 }

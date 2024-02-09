@@ -9,7 +9,6 @@ import java.util.Vector;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.lazywizard.console.Console;
 
 import java.awt.Color;
 import java.security.Key;

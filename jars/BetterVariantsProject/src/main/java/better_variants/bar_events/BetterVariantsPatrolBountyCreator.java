@@ -32,7 +32,7 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol {
         log.setLevel(Level.ALL);
     }
 
-    final ArrayList<String> TARGET_FACTIONS = new ArrayList<String>() {{
+    final static ArrayList<String> TARGET_FACTIONS = new ArrayList<String>() {{
         add(Factions.HEGEMONY); add(Factions.LUDDIC_CHURCH); add(Factions.DIKTAT); add(Factions.LUDDIC_PATH);
         add(Factions.PERSEAN); add(Factions.INDEPENDENT); add(Factions.TRITACHYON);
     }};
@@ -43,17 +43,12 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol {
 
         // stuff I added start
 
-        // find enemy vanilla factions as targets that aren't pirates
-        final ArrayList<String> filteredTargetFactions = new ArrayList<>(10);
-        for(final String faction : TARGET_FACTIONS) {
-            final RepLevel rel = Global.getSector().getFaction(faction).getRelationshipLevel(createdAt.getFactionId());
-            if(!faction.equals(createdAt.getFactionId()) && rel.isAtBest(RepLevel.INHOSPITABLE)) {
-                filteredTargetFactions.add(faction);
-            }
-        }
-        final String[] targetFactionsArr = new String[filteredTargetFactions.size()];
-        for(int i = 0; i < filteredTargetFactions.size(); i++) {
-            targetFactionsArr[i] = filteredTargetFactions.get(i);
+        // find target factions for bounties
+        final ArrayList<String> targetFactions = BountyUtil.getFactionsWithRelation(createdAt.getFactionId(),
+                RepLevel.VENGEFUL, RepLevel.INHOSPITABLE);
+        final String[] targetFactionsArr = new String[targetFactions.size()];
+        for(int i = 0; i < targetFactions.size(); i++) {
+            targetFactionsArr[i] = targetFactions.get(i);
         }
 
         // stuff I added end
