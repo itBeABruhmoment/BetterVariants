@@ -1,21 +1,23 @@
 {
     "displayName": "Elite1B",
-    "fluxCapacitors": 26,
+    "fluxCapacitors": 37,
     "fluxVents": 50,
     "hullId": "onslaught_xiv",
     "hullMods": [
+        "hardenedshieldemitter",
+        "adaptiveshields",
+        "stabilizedshieldemitter",
+        "missleracks",
         "targetingunit",
         "fluxdistributor",
-        "missleracks",
-        "armoredweapons",
-        "heavyarmor"
+        "magazines"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "onslaught_xiv_Elite2_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
                 "WS 016": "tpc",
@@ -25,39 +27,31 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 019": "gauss"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 021": "typhoon",
-                "WS 022": "typhoon",
-                "WS 023": "typhoon",
-                "WS 024": "typhoon"
+                "WS 018": "mjolnir",
+                "WS 020": "mjolnir"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyac",
-                "WS 003": "heavyac",
-                "WS 012": "heavymortar",
-                "WS 013": "heavymortar",
-                "WS 019": "multineedler"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 002": "vulcan",
-                "WS 004": "vulcan",
-                "WS 005": "vulcan",
-                "WS 006": "vulcan",
-                "WS 007": "dualflak",
-                "WS 008": "vulcan",
-                "WS 009": "vulcan",
-                "WS 014": "flak",
-                "WS 015": "flak",
-                "WS 018": "devastator",
-                "WS 020": "devastator"
+                "WS 001": "hveldriver",
+                "WS 003": "hveldriver",
+                "WS 007": "hveldriver",
+                "WS 010": "lightac",
+                "WS 011": "lightac",
+                "WS 012": "flak",
+                "WS 013": "flak",
+                "WS 021": "breachpod",
+                "WS 022": "breachpod",
+                "WS 023": "breachpod",
+                "WS 024": "breachpod"
             }
         }
     ]

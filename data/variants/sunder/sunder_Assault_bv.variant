@@ -1,11 +1,13 @@
 {
     "displayName": "Assault1B",
-    "fluxCapacitors": 11,
-    "fluxVents": 20,
+    "fluxCapacitors": 20,
+    "fluxVents": 8,
     "hullId": "sunder",
     "hullMods": [
-        "fluxbreakers",
-        "targetingunit"
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "targetingunit",
+        "escort_package"
     ],
     "permaMods": [],
     "sMods": [],
@@ -17,30 +19,14 @@
             "weapons": {"WS 003": "autopulse"}
         },
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 001": "sabot",
-                "WS 005": "sabot"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 004": "ionbeam"}
-        },
-        {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 006": "lightneedler",
-                "WS 007": "lightneedler"
+                "WS 002": "ionbeam",
+                "WS 006": "lightac",
+                "WS 007": "lightac",
+                "WS 008": "vulcan"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 008": "vulcan"}
         }
     ]
 }

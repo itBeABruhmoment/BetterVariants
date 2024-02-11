@@ -1,7 +1,7 @@
 {
     "displayName": "Support2B",
     "fluxCapacitors": 10,
-    "fluxVents": 0,
+    "fluxVents": 4,
     "hullId": "wolf_d_pirates",
     "hullMods": [
         "fluxcoil",

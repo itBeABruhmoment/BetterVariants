@@ -56,7 +56,6 @@ dominator_AntiCV_bv
 dominator_Assault_bv
 dominator_Outdated_bv
 dominator_Shield_Breaker_bv
-dominator_StandardReaper_bv
 dominator_Standard_bv
 dominator_XIV_Elite2_bv
 dominator_XIV_Elite3_bv
@@ -75,20 +74,11 @@ eagle_Overdriven_bv
 eagle_Standard_bv
 eagle_xiv_Overdriven_bv
 eagle_xiv_Standard_bv
-enforcer_Assault_bv
 enforcer_Elite_bv
-enforcer_Overdriven2_bv
 enforcer_Overdriven_bv
-enforcer_XIV_Elite2_bv
-enforcer_XIV_Elite3_bv
-enforcer_XIV_EliteE2_bv
 enforcer_XIV_Overdriven_bv
 enforcer_d_pirates_Elite_bv
-enforcer_d_pirates_Overdriven2_bv
 enforcer_d_pirates_Overdriven_bv
-enforcer_d_pirates_Standard_bv
-enforcer_d_pirates_Strike2_bv
-enforcer_d_pirates_Strike_bv copy
 eradicator_Assault_bv
 eradicator_Overdriven_bv
 eradicator_Strike_bv

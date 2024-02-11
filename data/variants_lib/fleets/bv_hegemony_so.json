@@ -37,11 +37,10 @@
 		{
 			"partitionWeight":15.31,
 			"variants":{
-				"enforcer_Overdriven_bv":17.65,
-				"enforcer_Overdriven2_bv":17.65,
-				"enforcer_XIV_Overdriven_bv":11.76,
-				"hammerhead_Overdriven_bv":23.53,
-				"sunder_Overdriven_bv":29.41,
+				"enforcer_Overdriven_bv":25,
+				"enforcer_xiv_Overdriven_bv":25,
+				"hammerhead_Overdriven_bv":25,
+				"sunder_Overdriven_bv":25,
 			}
 		},
 		{

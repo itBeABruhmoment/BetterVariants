@@ -5,8 +5,8 @@
    "maxDP":400,
    "spawnIfNoIndustry":false,
    "defaultFleetWidePersonality":"steady",
-   "autoLogitsticsFreighterDP":0.06,
-   "autoLogitsticsTankerDP":0.04,
+   "autoLogitsticsFreighterDP":0.02,
+   "autoLogitsticsTankerDP":0.02,
    "fleetPartitions":[
        {
            "partitionWeight":40,
@@ -26,11 +26,8 @@
        {
            "partitionWeight":15,
            "variants":{
-               "manticore_Support1_bv":25,
-               "manticore_Support2_bv":25,
-               "enforcer_XIV_Elite":20,
-               "enforcer_Elite":10,
-               "enforcer_Escort":20
+               "manticore_Support1_bv":50,
+               "manticore_Support2_bv":50,
            }
        },
        {

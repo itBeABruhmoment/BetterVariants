@@ -1,17 +1,16 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 18,
-    "fluxVents": 0,
-    "hullId": "enforcer_d_pirates",
+    "fluxCapacitors": 20,
+    "fluxVents": 3,
+    "hullId": "enforcer_xiv",
     "hullMods": [
-        "safetyoverrides",
         "hardened_subsystems",
-        "fluxcoil",
-        "hardenedshieldemitter"
+        "hardenedshieldemitter",
+        "safetyoverrides"
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "enforcer_d_pirates_Overdriven_bv",
+    "variantId": "enforcer_xiv_Overdriven_bv",
     "weaponGroups": [
         {
             "autofire": true,
@@ -26,10 +25,10 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 006": "atropos_single",
-                "WS 007": "atropos_single",
-                "WS 008": "atropos_single",
-                "WS 009": "atropos_single"
+                "WS 006": "atropos",
+                "WS 007": "atropos",
+                "WS 008": "atropos",
+                "WS 009": "atropos"
             }
         }
     ]

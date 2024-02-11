@@ -1,15 +1,18 @@
 {
-        "displayName": "Bounty1",
+        "displayName": "Custom",
         "fluxCapacitors": 25,
         "fluxVents": 14,
         "goalVariant": false,
         "hullId": "enforcer",
-        "hullMods": ["missleracks"],
+        "hullMods": [
+                "targetingunit",
+                "missleracks"
+        ],
         "permaMods": [],
         "sMods": [
-                "targetingunit",
-                "fluxdistributor",
-                "fluxcoil"
+                "hardenedshieldemitter",
+                "fluxcoil",
+                "escort_package"
         ],
         "variantId": "enforcer_Bounty1_bv",
         "weaponGroups": [
@@ -18,7 +21,7 @@
                         "mode": "LINKED",
                         "weapons": {
                                 "WS 002": "hveldriver",
-                                "WS 003": "flak",
+                                "WS 003": "hveldriver",
                                 "WS 004": "hveldriver"
                         }
                 },
@@ -26,16 +29,11 @@
                         "autofire": false,
                         "mode": "LINKED",
                         "weapons": {
-                                "WS 006": "breach",
-                                "WS 007": "breach",
-                                "WS 008": "breach",
-                                "WS 009": "breach"
+                                "WS 006": "atropos",
+                                "WS 007": "atropos",
+                                "WS 008": "atropos",
+                                "WS 009": "atropos"
                         }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 001": "hveldriver"}
                 }
         ]
 }

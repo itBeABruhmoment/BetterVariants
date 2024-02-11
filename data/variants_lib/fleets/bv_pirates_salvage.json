@@ -61,10 +61,7 @@
 		{
 			"partitionWeight":19.42,
 			"variants":{
-				"enforcer_d_pirates_Standard_bv":5.29,
-				"enforcer_d_pirates_Overdriven2_bv":5.29,
 				"enforcer_d_pirates_Overdriven_bv":5.29,
-				"enforcer_d_pirates_Strike_bv":5.29,
 				"manticore_pirates_Support1_bv":5.29,
 				"manticore_pirates_Support2_bv":5.29,
 				"sunder_Assault_bv":5.29,
@@ -80,9 +77,6 @@
 				"hammerhead_Elite_bv":0.53,
 				"hammerhead_Overdriven_bv":0.53,
 				"medusa_Attack_bv":0.53,
-				"enforcer_Assault_bv":0.53,
-				"enforcer_XIV_Elite3_bv":0.53,
-				"enforcer_CS":0.53,
 				"drover_Strike_bv":0.53,
 				"drover_Standard_bv":0.53
 			}

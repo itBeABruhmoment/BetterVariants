@@ -7,43 +7,35 @@
 	"additionalCommanderSkills":["support_doctrine",],
 	"spawnIfNoIndustry":false,
 	"alwaysInclude":{"ox_Standard":2},
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":32.41,
+			"partitionWeight":50,
 			"variants":{
-				"onslaught_xiv_Standard_bv":50.00,
-				"onslaught_xiv_Elite2_bv":50.00,
+				"onslaught_xiv_Standard_bv":50,
+				"onslaught_xiv_Elite2_bv":50
 			}
 		},
 		{
-			"partitionWeight":37.04,
+			"partitionWeight":35,
 			"variants":{
-				"dominator_XIV_Elite_bv":13.16,
-				"dominator_XIV_Elite2_bv":13.16,
-				"dominator_XIV_Elite3_bv":13.16,
-				"dominator_XIV_Elite4_bv":13.16,
-				"eagle_xiv_Standard_bv":7.89,
-				"eagle_xiv_Overdriven_bv":18.42,
-				"mora_Assault_bv":10.53,
-				"mora_Strike_bv":10.53,
+				"dominator_XIV_Elite_bv":20,
+				"dominator_XIV_Elite3_bv":20,
+				"eagle_xiv_Standard_bv":60
 			}
 		},
 		{
-			"partitionWeight":23.15,
+			"partitionWeight":23,
 			"variants":{
-				"falcon_xiv_Overdriven_bv":20.00,
-				"falcon_xiv_Support_bv":20.00,
-				"enforcer_XIV_Elite3_bv":20.00,
-				"enforcer_XIV_Elite2_bv":20.00,
-				"enforcer_XIV_Overdriven_bv":20.00,
+				"falcon_xiv_Support_bv":50,
+				"enforcer_xiv_Elite_bv":50
 			}
 		},
 		{
-			"partitionWeight":1.85,
+			"partitionWeight":2,
 			"variants":{
-				"hound_Standard":100.00,
+				"hound_Standard":100
 			}
 		},
 	],

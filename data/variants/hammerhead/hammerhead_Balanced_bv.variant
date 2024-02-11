@@ -1,10 +1,12 @@
 {
     "displayName": "Balanced1B",
-    "fluxCapacitors": 11,
-    "fluxVents": 20,
+    "fluxCapacitors": 20,
+    "fluxVents": 7,
     "hullId": "hammerhead",
     "hullMods": [
-        "missleracks",
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "escort_package",
         "targetingunit"
     ],
     "permaMods": [],
@@ -15,32 +17,26 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavymortar",
-                "WS 002": "heavymortar"
+                "WS 001": "hveldriver",
+                "WS 002": "heavymauler"
             }
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 003": "harpoon",
-                "WS 004": "harpoon"
+                "WS 003": "heatseeker",
+                "WS 004": "heatseeker"
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "railgun",
-                "WS 006": "railgun"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 007": "vulcan",
-                "WS 008": "vulcan"
+                "WS 005": "mininglaser",
+                "WS 006": "mininglaser",
+                "WS 007": "mininglaser",
+                "WS 008": "mininglaser"
             }
         }
     ]

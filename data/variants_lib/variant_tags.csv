@@ -56,7 +56,6 @@ dominator_AntiCV_bv,"ms, oe",missleracks
 dominator_Assault_bv,"ms, oe",missleracks
 dominator_Outdated_bv,"ms, oe",missleracks
 dominator_Shield_Breaker_bv,"ms, oe",missleracks
-dominator_StandardReaper_bv,"ms, oe",missleracks
 dominator_Standard_bv,"ms, oe",missleracks
 dominator_XIV_Elite2_bv,"ms, oe",missleracks
 dominator_XIV_Elite3_bv,"ms, oe",missleracks
@@ -75,19 +74,11 @@ eagle_Overdriven_bv,"re, ce, fm, se","magazines, stabilizedshieldemitter, harden
 eagle_Standard_bv,"se, fm, oe","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
 eagle_xiv_Overdriven_bv,"re, ce, fm, se","magazines, stabilizedshieldemitter, hardenedshieldemitter"
 eagle_xiv_Standard_bv,"se, fm, oe","stabilizedshieldemitter, hardenedshieldemitter, extendedshieldemitter"
-enforcer_Assault_bv,"ms, im, dc",
 enforcer_Elite_bv,"ms, im, dc",
-enforcer_Overdriven2_bv,"re, ce, fm, im",
 enforcer_Overdriven_bv,"re, ce, fm, im",
-enforcer_XIV_Elite2_bv,"ms, im, dc",
-enforcer_XIV_Elite3_bv,"ms, im, dc",
-enforcer_XIV_EliteE2_bv,"ms, im, dc",
-enforcer_XIV_Overdriven_bv,"re, ce, fm, im",hardened_subsystems
+enforcer_xiv_Overdriven_bv,"re, ce, fm, im",hardened_subsystems
 enforcer_d_pirates_Elite_bv,"ms, im, dc",
-enforcer_d_pirates_Overdriven2_bv,"re, ce, fm, im",hardened_subsystems
 enforcer_d_pirates_Overdriven_bv,"re, ce, fm, im",hardened_subsystems
-enforcer_d_pirates_Standard_bv,"ms, im, dc",
-enforcer_d_pirates_Strike2_bv,"ms, im, dc",
 ,,
 eradicator_Assault_bv,"se, ms",
 eradicator_Overdriven_bv,"re, ce, se",hardened_subsystems
@@ -328,7 +319,7 @@ enforcer_Fighter_Support,"ms, im, dc",
 enforcer_Outdated,"ms, im, dc",
 enforcer_Overdriven,"ms, im, dc",
 enforcer_Tutorial,"ms, im, dc",
-enforcer_XIV_Elite,"ms, im, dc",
+enforcer_xiv_Elite,"ms, im, dc",
 enforcer_d_Strike,"ms, im, dc",
 enforcer_d_pirates_Strike,"ms, im, dc",
 eradicator_Assault,"se, ms",

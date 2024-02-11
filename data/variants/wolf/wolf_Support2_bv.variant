@@ -1,13 +1,14 @@
 {
     "displayName": "Support2B",
     "fluxCapacitors": 10,
-    "fluxVents": 5,
+    "fluxVents": 4,
     "goalVariant": true,
     "hullId": "wolf",
     "hullMods": [
         "hardenedshieldemitter",
         "fluxcoil",
-        "hardened_subsystems"
+        "hardened_subsystems",
+        "unstable_injector"
     ],
     "permaMods": [],
     "sMods": [],

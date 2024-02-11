@@ -1,18 +1,18 @@
 {
-    "displayName": "Elite3B",
-    "fluxCapacitors": 21,
+    "displayName": "Escort1B",
+    "fluxCapacitors": 3,
     "fluxVents": 30,
-    "hullId": "dominator_xiv",
+    "hullId": "dominator",
     "hullMods": [
-        "targetingunit",
         "escort_package",
+        "targetingunit",
         "fluxdistributor",
         "stabilizedshieldemitter",
         "missleracks"
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "dominator_XIV_Elite3_bv",
+    "variantId": "dominator_Escort_bv",
     "weaponGroups": [
         {
             "autofire": false,
@@ -34,7 +34,10 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 010": "flak"}
+            "weapons": {
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
         }
     ]
 }

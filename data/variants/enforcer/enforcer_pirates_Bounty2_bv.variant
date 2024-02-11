@@ -1,39 +1,46 @@
 {
-        "displayName": "Bounty2",
-        "fluxCapacitors": 25,
-        "fluxVents": 17,
-        "goalVariant": false,
-        "hullId": "enforcer_d_pirates",
-        "hullMods": [
-                "missleracks",
-                "targetingunit"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "fluxdistributor",
-                "fluxcoil",
-                "converted_hangar"
-        ],
-        "variantId": "enforcer_pirates_Bounty2_bv",
-        "weaponGroups": [
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 002": "hveldriver",
-                                "WS 003": "flak",
-                                "WS 004": "hveldriver"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 006": "breach",
-                                "WS 007": "breach",
-                                "WS 008": "breach",
-                                "WS 009": "breach"
-                        }
-                }
-        ]
+    "displayName": "Custom",
+    "fluxCapacitors": 25,
+    "fluxVents": 15,
+    "hullId": "enforcer_d_pirates",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "converted_hangar",
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "escort_package"
+    ],
+    "permaMods": [
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "escort_package"
+    ],
+    "sMods": [
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "escort_package"
+    ],
+    "variantId": "enforcer_pirates_Bounty2_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "hveldriver",
+                "WS 004": "hveldriver"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "atropos",
+                "WS 007": "atropos",
+                "WS 008": "atropos",
+                "WS 009": "atropos"
+            }
+        }
+    ],
+    "wings": ["talon_wing"]
 }

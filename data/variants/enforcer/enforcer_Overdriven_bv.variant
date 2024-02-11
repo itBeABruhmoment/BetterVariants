@@ -1,11 +1,13 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 20,
-    "fluxVents": 6,
+    "fluxCapacitors": 18,
+    "fluxVents": 0,
     "hullId": "enforcer",
     "hullMods": [
         "safetyoverrides",
-        "hardened_subsystems"
+        "hardened_subsystems",
+        "hardenedshieldemitter",
+        "fluxcoil"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,21 +17,19 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "shredder",
-                "WS 005": "shredder"
+                "WS 002": "heavymg",
+                "WS 003": "chaingun",
+                "WS 004": "heavymg"
             }
         },
         {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 003": "chaingun"}
-        },
-        {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "heavymg",
-                "WS 004": "heavymg"
+                "WS 006": "atropos_single",
+                "WS 007": "atropos_single",
+                "WS 008": "atropos_single",
+                "WS 009": "atropos_single"
             }
         }
     ]

@@ -1,11 +1,13 @@
 {
     "displayName": "Attack1B",
     "fluxCapacitors": 20,
-    "fluxVents": 20,
+    "fluxVents": 15,
     "hullId": "medusa",
     "hullMods": [
         "fluxcoil",
-        "extendedshieldemitter"
+        "hardenedshieldemitter",
+        "targetingunit",
+        "escort_package"
     ],
     "permaMods": [],
     "sMods": [],
@@ -14,24 +16,18 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 008": "lightdualac"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 006": "ionpulser",
-                "WS 007": "ionpulser"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 002": "pdburst",
-                "WS 003": "pdburst",
+                "WS 002": "mininglaser",
+                "WS 003": "mininglaser",
+                "WS 006": "pulselaser",
+                "WS 008": "lightdualac",
                 "WS 009": "lightdualac"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "phasebeam"}
         }
     ]
 }

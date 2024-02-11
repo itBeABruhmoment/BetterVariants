@@ -19,10 +19,8 @@
 		{
 			"partitionWeight":15,
 			"variants":{
-				"enforcer_d_pirates_Standard_bv":40,
-				"enforcer_d_pirates_Overdriven2_bv":10,
-				"enforcer_d_pirates_Overdriven_bv":10,
-				"manticore_pirates_Support1_bv":40
+				"enforcer_d_pirates_Overdriven_bv":50,
+				"manticore_pirates_Support1_bv":50
 			}
 		},
 		{

@@ -1,14 +1,15 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 24,
+    "fluxCapacitors": 45,
     "fluxVents": 50,
     "hullId": "onslaught",
     "hullMods": [
-        "missleracks",
         "targetingunit",
-        "ballistic_rangefinder",
+        "hardenedshieldemitter",
+        "missleracks",
         "fluxdistributor",
-        "heavyarmor"
+        "adaptiveshields",
+        "stabilizedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -23,55 +24,31 @@
             }
         },
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 021": "annihilatorpod",
-                "WS 022": "annihilatorpod",
-                "WS 023": "annihilatorpod",
-                "WS 024": "annihilatorpod"
-            }
-        },
-        {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 019": "hellbore"}
+            "weapons": {"WS 019": "gauss"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "lightac",
-                "WS 004": "lightac",
-                "WS 014": "arbalest",
-                "WS 015": "arbalest"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "arbalest",
-                "WS 003": "arbalest",
-                "WS 007": "arbalest",
-                "WS 008": "lightac",
-                "WS 009": "lightac"
+                "WS 001": "hveldriver",
+                "WS 003": "hveldriver",
+                "WS 007": "hveldriver",
+                "WS 012": "flak",
+                "WS 013": "flak",
+                "WS 021": "breachpod",
+                "WS 022": "breachpod",
+                "WS 023": "breachpod",
+                "WS 024": "breachpod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 018": "devastator",
-                "WS 020": "devastator"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 012": "dualflak",
-                "WS 013": "dualflak"
+                "WS 018": "mjolnir",
+                "WS 020": "mjolnir"
             }
         }
     ]

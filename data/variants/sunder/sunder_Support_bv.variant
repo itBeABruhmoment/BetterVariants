@@ -1,12 +1,13 @@
 {
     "displayName": "Support1B",
-    "fluxCapacitors": 4,
-    "fluxVents": 20,
+    "fluxCapacitors": 20,
+    "fluxVents": 5,
     "hullId": "sunder",
     "hullMods": [
         "targetingunit",
-        "advancedoptics",
-        "stabilizedshieldemitter"
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "escort_package"
     ],
     "permaMods": [],
     "sMods": [],
@@ -18,25 +19,13 @@
             "weapons": {"WS 003": "tachyonlance"}
         },
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 001": "heatseeker",
-                "WS 005": "heatseeker"
-            }
-        },
-        {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 002": "gravitonbeam",
-                "WS 004": "gravitonbeam"
+                "WS 004": "gravitonbeam",
+                "WS 008": "vulcan"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 008": "vulcan"}
         }
     ]
 }

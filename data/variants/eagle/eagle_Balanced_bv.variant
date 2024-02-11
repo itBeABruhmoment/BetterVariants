@@ -1,11 +1,12 @@
 {
     "displayName": "Balanced1B",
-    "fluxCapacitors": 0,
-    "fluxVents": 28,
+    "fluxCapacitors": 15,
+    "fluxVents": 9,
     "hullId": "eagle",
     "hullMods": [
         "targetingunit",
-        "missile_autoloader"
+        "missile_autoloader",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -16,7 +17,9 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 007": "hveldriver",
-                "WS 008": "hveldriver"
+                "WS 008": "hveldriver",
+                "WS 009": "ionbeam",
+                "WS 013": "hveldriver"
             }
         },
         {
@@ -24,34 +27,17 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "breach",
-                "WS 002": "breach"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 013": "heavymauler"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 009": "ionbeam"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "gravitonbeam",
-                "WS 006": "gravitonbeam"
+                "WS 002": "breach",
+                "WS 010": "lrpdlaser",
+                "WS 012": "lrpdlaser"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "pdburst",
-                "WS 010": "pdburst",
-                "WS 012": "pdburst"
+                "WS 005": "irautolance",
+                "WS 006": "irautolance"
             }
         }
     ]
