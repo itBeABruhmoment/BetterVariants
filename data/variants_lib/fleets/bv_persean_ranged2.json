@@ -9,7 +9,7 @@
 	"autoLogitsticsTankerDP":0.03,
 	"fleetPartitions":[
 		{
-			"partitionWeight":40,
+			"partitionWeight":50,
 			"variants":{
 				"pegasus_Balanced_bv":50,
 				"pegasus_Strike_bv":50
@@ -18,26 +18,19 @@
 		{
 			"partitionWeight":30,
 			"variants":{
-				"champion_Support_bv":20,
-				"champion_Support2_bv":20,
-				"champion_Elite_bv":20,
-				"eagle_Standard_bv":30,
-				"falcon_CS":10
+				"champion_Support_bv":30,
+				"champion_Support2_bv":30,
+				"champion_Elite_bv":30,
+				"heron_Attack1_bv":5,
+				"heron_Attack2_bv":5
 			}
 		},
 		{
-			"partitionWeight":10,
+			"partitionWeight":12.5,
 			"variants":{
-				"heron_Attack1_bv":25,
-				"heron_Attack2_bv":25,
-				"drover_Strike_bv":25
-			}
-		},
-		{
-			"partitionWeight":10,
-			"variants":{
-				"sunder_Support_bv":60,
-				"hammerhead_Support":40
+				"sunder_Support_bv":50,
+				"hammerhead_Balanced_bv":25,
+				"hammerhead_Elite_bv":25
 			}
 		},
 		{
@@ -49,7 +42,7 @@
 			}
 		},
 		{
-			"partitionWeight":8,
+			"partitionWeight":2.5,
 			"variants":{
 				"gemini_Strike_bv":100
 			}

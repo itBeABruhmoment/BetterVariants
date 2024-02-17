@@ -5,24 +5,25 @@
 	"fleetDataId":"bv_luddic_church_strike",
 	"minDP":10,
 	"maxDP":400,
-	"defaultFleetWidePersonality":"steady",
+	"defaultFleetWidePersonality":"aggressive",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
 	"autoLogitsticsTankerDP":0.02,
+	"alwaysInclude":{"invictus_Support_bv":1},
 	"fleetPartitions":[
 		{
-			"partitionWeight":52.5,
+			"partitionWeight":60,
 			"variants":{
 				"retribution_Standard_bv":50,
                 "retribution_Standard2_bv":50
 			}
 		},
 		{
-			"partitionWeight":25,
+			"partitionWeight":20,
 			"variants":{
-				"eradicator_Support_bv":65,
-				"mora_Assault_bv":25,
-				"eradicator_Overdriven_bv":10
+				"eradicator_Support_bv":40,
+				"eradicator_Assault_bv":40,
+				"mora_Assault_bv":25
 			}
 		},
 		{
@@ -30,13 +31,13 @@
 			"variants":{
 				"condor_Strike2_bv":15,
                 "manticore_Support1_bv":25,
-				"manticore_Support2_bv":20,
-				"manticore_Support3_bv":20,
-				"venture_Rocket_bv":20
+				"manticore_Support2_bv":25,
+				"manticore_Support3_bv":25,
+				"venture_Rocket_bv":10
 			}
 		},
 		{
-			"partitionWeight":7.5,
+			"partitionWeight":5,
 			"variants":{
                 "hound_luddic_church_Standard":1,
 				"lasher_luddic_church_Standard_bv":99

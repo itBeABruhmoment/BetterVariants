@@ -7,33 +7,30 @@
 	"maxDP":400,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
 	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":47.5,
+			"partitionWeight":60,
 			"variants":{
 				"invictus_Standard_bv":50,
                 "invictus_Support_bv":50
 			}
 		},
 		{
-			"partitionWeight":35,
+			"partitionWeight":32.5,
 			"variants":{
-				"dominator_Outdated_bv":20,
-				"eradicator_Support_bv":45,
-				"mora_Assault_bv":25,
-				"eradicator_Overdriven_bv":10
+				"eradicator_Support_bv":40,
+				"eradicator_Assault_bv":40,
+				"eradicator_Overdriven_bv":20
 			}
 		},
 		{
 			"partitionWeight":15,
 			"variants":{
-				"condor_Strike2_bv":15,
-                "manticore_Support1_bv":25,
-				"manticore_Support2_bv":20,
-				"manticore_Support3_bv":20,
-				"venture_Rocket_bv":20
+                "manticore_Support1_bv":33,
+				"manticore_Support2_bv":33,
+				"manticore_Support3_bv":33
 			}
 		},
 		{

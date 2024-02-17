@@ -29,8 +29,9 @@
 		{
 			"partitionWeight":10,
 			"variants":{
-				"hammerhead_Overdriven_bv":50,
-				"sunder_Overdriven_bv":50
+				"sunder_Support_bv":50,
+				"hammerhead_Balanced_bv":25,
+				"hammerhead_Elite_bv":25
 			}
 		},
 		{

@@ -2,43 +2,36 @@
 	"autofit":false,
 	"fleetDataId":"bv_persean_missile",
 	"minDP":40,
-	"maxDP":400,
+	"maxDP":600,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsTankerDP":0.03,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":35,
+			"partitionWeight":57.5,
 			"variants":{
-				"conquest_Elite_bv":15,
-				"conquest_Elite2_bv":15,
-				"conquest_Elite3_bv":30,
-				"doom_Support_bv":15
+				"conquest_Elite_bv":34,
+				"conquest_Elite2_bv":33,
+				"conquest_Elite3_bv":33
 			}
 		},
 		{
-			"partitionWeight":30,
+			"partitionWeight":20,
 			"variants":{
 				"champion_Support_bv":20,
 				"champion_Support2_bv":20,
-				"gryphon_FS_bv":45,
+				"gryphon_FS_bv":40,
 				"gryphon_Overdriven_bv":10,
-				"falcon_CS":5
+				"heron_Attack1_bv":5,
+				"heron_Attack2_bv":5
 			}
 		},
 		{
 			"partitionWeight":15,
 			"variants":{
-				"heron_Attack1_bv":25,
-				"heron_Attack2_bv":25,
-				"drover_Strike_bv":25
-			}
-		},
-		{
-			"partitionWeight":10,
-			"variants":{
-				"sunder_Support_bv":75,
-				"hammerhead_Support":25
+				"sunder_Support_bv":50,
+				"hammerhead_Balanced_bv":25,
+				"hammerhead_Elite_bv":25
 			}
 		},
 		{
@@ -50,7 +43,7 @@
 			}
 		},
 		{
-			"partitionWeight":5,
+			"partitionWeight":2.5,
 			"variants":{
 				"gemini_Strike_bv":100
 			}

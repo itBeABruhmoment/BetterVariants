@@ -19,22 +19,21 @@
 			}
 		},
 		{
-			"partitionWeight":5,
-			"maxDPForPartition":30,
-			"variants":{
-
-				"brawler_Elite_bv":33.33,
-				"omen_Ew_bv":33.33,
-				"monitor_Standard_bv":33.33
-			}
-		},
-		{
 			"partitionWeight":10,
 			"variants":{
 				"heron_Attack1_bv":25,
 				"heron_Attack2_bv":25,
 				"drover_Strike_bv":25,
 				"falcon_CS":10
+			}
+		},
+		{
+			"partitionWeight":5,
+			"maxDPForPartition":30,
+			"variants":{
+
+				"brawler_Elite_bv":50,
+				"monitor_Standard_bv":50
 			}
 		}
 	]

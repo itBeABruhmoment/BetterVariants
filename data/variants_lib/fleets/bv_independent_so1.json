@@ -3,51 +3,40 @@
 	"autofit":false,
 	"fleetDataId":"bv_independent_so1",
 	"minDP":40,
-	"maxDP":400,
+	"maxDP":500,
 	"defaultFleetWidePersonality":"reckless",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":65,
+			"partitionWeight":60,
 			"variants":{
-				"eagle_Overdriven_bv":45,
-				"falcon_Overdriven_bv":10,
-				"fury_Attack1_bv":25,
-				"fury_Strike_bv":20
-			}
-		},
-		{
-			"partitionWeight":20,
-			"variants":{
-				"mora_Assault_bv":15,
-				"mora_StrikeE_bv":15,
-				"mora_Strike_bv":15,
-				"heron_Attack1_bv":20,
-				"heron_Attack2_bv":20,
-				"drover_Standard_bv":5,
-				"condor_StrikeE1_bv":5,
-				"venture_Rocket_bv":5
+				"aurora_Overdriven_bv":35,
+				"eagle_Overdriven_bv":35
 			}
 		},
 		{
 			"partitionWeight":15,
 			"variants":{
-				"shrike_Overdriven_bv":15,
-				"shrike_Support1_bv":20,
-				"shrike_Strike_bv":15,
-				"tempest_Attack1_bv":15,
-				"tempest_Attack2_bv":15,
-				"tempest_Attack3_bv":20
+				"hyperion_Assault_bv":25,
+				"hyperion_Support_bv":25,
+				"falcon_Overdriven_bv":25,
+				"fury_Attack1_bv":12.5,
+				"fury_Strike_bv":12.5
+			}		
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"heron_FS_bv":100
 			}
 		},
 		{
-			"partitionWeight":5,
+			"partitionWeight":10,
 			"variants":{
 				"omen_Ew_bv":50,
-				"brawler_Elite_bv":20,
-				"monitor_Escort":30
+				"brawler_Elite_bv":20
 			}
 		}
 	]

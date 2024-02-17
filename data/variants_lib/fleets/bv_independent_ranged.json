@@ -2,70 +2,54 @@
 	"autofit":false,
 	"fleetDataId":"bv_independent_ranged",
 	"minDP":40,
-	"maxDP":400,
+	"maxDP":500,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":18.18,
+			"partitionWeight":40,
 			"variants":{
 				"conquest_Elite_bv":50.00,
-				"conquest_Elite2_bv":50.00,
+				"conquest_Elite2_bv":50.00
 			}
 		},
 		{
-			"partitionWeight":22.73,
+			"partitionWeight":30,
 			"variants":{
-				"dominator_Outdated_bv":50.00,
-				"dominator_Shield_Breaker_bv":50.00,
+				"aurora_Strike_bv":10,
+				"aurora_Overdriven_bv":10,
+				"falcon_Standard_bv":15,
+				"eagle_Balanced_bv":65
 			}
 		},
 		{
-			"partitionWeight":9.09,
+			"partitionWeight":10,
 			"variants":{
-				"condor_Strike1_bv":10.00,
-				"heron_Strike":50.00,
-				"mora_Assault_bv":20.00,
-				"mora_Strike_bv":20.00,
+				"condor_Strike1_bv":10,
+				"heron_Strike":50,
+				"mora_Assault_bv":20,
+				"mora_Strike_bv":20
 			}
 		},
 		{
-			"partitionWeight":9.09,
+			"partitionWeight":15,
 			"variants":{
-				"falcon_Overdriven_bv":25.00,
-				"enforcer_Overdriven_bv":25.00,
-				"sunder_Overdriven_bv":25.00,
-				"tempest_Attack1_bv":10.00,
-				"tempest_Attack2_bv":10.00,
-				"tempest_Attack3_bv":5.00,
+				"hammerhead_Balanced_bv":25,
+				"hammerhead_Elite_bv":25,
+				"sunder_Support_bv":25,
+				"enforcer_Elite_bv":25
 			}
 		},
 		{
-			"partitionWeight":9.09,
-			"variants":{
-				"venture_Rocket_bv":18.18,
-				"falcon_CS_bv":36.36,
-				"apogee_Elite_bv":22.73,
-				"apogee_Standard_bv":22.73,
-			}
-		},
-		{
-			"partitionWeight":18.18,
-			"variants":{
-				"sunder_Support_bv":66.67,
-				"enforcer_Elite_bv":33.33,
-			}
-		},
-		{
-			"partitionWeight":4.55,
+			"partitionWeight":5,
 			"variants":{
 				"brawler_Elite_bv":25.00,
 				"omen_Ew_bv":35.00,
-				"monitor_Escort":40.00,
+				"monitor_Escort":40.00
 			}
-		},
-	],
+		}
+	]
 }
 

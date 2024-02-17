@@ -7,36 +7,38 @@
 	"maxDP":400,
 	"defaultFleetWidePersonality":"aggressive",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.03,
-	"autoLogitsticsTankerDP":0.03,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":50,
+			"partitionWeight":40,
 			"variants":{
-				"aurora_Overdriven_bv":40,
-                "aurora_Strike_bv":30,
 				"odyssey_Balanced_bv":30
 			}
 		},
 		{
-			"partitionWeight":35,
+			"partitionWeight":40,
 			"variants":{
-                
+				"aurora_Overdriven_bv":25,
+                "aurora_Strike_bv":60,
+				"eagle_Overdriven_bv":15
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
 				"fury_Attack1_bv":15,
 				"fury_Attack2_bv":15,
 				"fury_Strike_bv":10,
-                "eagle_Overdriven_bv":40,
                 "hyperion_Assault_bv":10,
                 "hyperion_Support_bv":10
 
 			}
 		},
 		{
-			"partitionWeight":15,
+			"partitionWeight":5,
 			"variants":{
-                "shrike_Strike_bv":20,
-                "shrike_Support1_bv":20,
-                "omen_Ew_bv":80
+                "omen_Ew_bv":100
 			}
 		}
 	]

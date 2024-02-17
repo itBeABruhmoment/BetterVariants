@@ -2,7 +2,7 @@
 	"autofit":false,
 	"fleetDataId":"bv_hegemony_xiv",
 	"minDP":40,
-	"maxDP":400,
+	"maxDP":500,
 	"defaultFleetWidePersonality":"aggressive",
 	"additionalCommanderSkills":["support_doctrine",],
 	"spawnIfNoIndustry":false,

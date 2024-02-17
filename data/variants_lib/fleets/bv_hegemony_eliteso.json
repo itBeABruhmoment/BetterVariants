@@ -2,8 +2,8 @@
 	# vlspawnfleet hegemony bv_hegemony_eliteso 200
 	"autofit":false,
 	"fleetDataId":"bv_hegemony_eliteso",
-	"minDP":40,
-	"maxDP":400,
+	"minDP":150,
+	"maxDP":500,
 	"defaultFleetWidePersonality":"reckless",
 	"spawnIfNoIndustry":false,
 	"setDPToAtLeast":200,
