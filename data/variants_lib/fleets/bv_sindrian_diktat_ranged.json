@@ -10,14 +10,14 @@
 	"autoLogitsticsTankerDP":0.03,
 	"fleetPartitions":[
 		{
-			"partitionWeight":35,
+			"partitionWeight":60,
 			"variants":{
 				"executor_Elite_bv":50,
 				"executor_Elite2_bv":50
 			}
 		},
 		{
-			"partitionWeight":30,
+			"partitionWeight":20,
 			"variants":{
 				"falcon_Standard_bv":25,
 				"eagle_Overdriven_bv":25,
@@ -27,14 +27,9 @@
 		{
 			"partitionWeight":15,
 			"variants":{
-				"heron_Attack1_bv":75,
-				"heron_Attack2_bv":25
-			}
-		},
-		{
-			"partitionWeight":15,
-			"variants":{
-				"sunder_Support_bv":100
+				"sunder_Support_bv":50,
+				"hammerhead_Balanced_bv":25,
+				"hammerhead_Elite_bv":25
 			}
 		},
 		{

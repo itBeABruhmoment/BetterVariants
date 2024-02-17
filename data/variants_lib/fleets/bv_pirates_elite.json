@@ -6,8 +6,8 @@
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","derelict_contingent",],
 	"alwaysInclude":{"ox_Standard":2},
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
 			"partitionWeight":38.83,
@@ -55,7 +55,7 @@
 				"buffalo2_Fighter_Support_bv":20.00,
 				"lasher_Standard1_bv":10.00,
 			}
-		},
-	],
+		}
+	]
 }
 

@@ -4,23 +4,24 @@
 	"fleetDataId":"bv_pirates_capital",
 	"minDP":40,
 	"maxDP":400,
-	"defaultFleetWidePersonality":"cautious",
-	"autoLogitsticsFreighterDP":0.03,
-	"autoLogitsticsTankerDP":0.03,
+	"defaultFleetWidePersonality":"steady",
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
 			"partitionWeight":80,
 			"variants":{
-				"atlas2_Standard2_bv":50,
-				"atlas2_Standard3_bv":25,
-				"atlas2_Standard4_bv":25
+				"atlas2_Standard2_bv":40,
+				"atlas2_Standard3_bv":40,
+				"atlas2_Standard4_bv":20
 			}
 		},
 		{
 			"partitionWeight":15,
 			"variants":{
-				"enforcer_d_pirates_Overdriven_bv":50,
-				"manticore_pirates_Support1_bv":50
+				"manticore_pirates_Support1_bv":25,
+				"manticore_pirates_Support2_bv":25,
+				"enforcer_d_pirates_Elite_bv":50
 			}
 		},
 		{

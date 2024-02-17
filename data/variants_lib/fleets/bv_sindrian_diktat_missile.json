@@ -19,9 +19,9 @@
 		{
 			"partitionWeight":20,
 			"variants":{
-				"falcon_Standard_bv":25,
-				"eagle_Overdriven_bv":25,
-				"eagle_Balanced_bv":50
+				"falcon_Standard_bv":20,
+				"eagle_Overdriven_bv":20,
+				"eagle_Balanced_bv":60
 			}
 		},
 		{
@@ -37,7 +37,8 @@
 			"partitionWeight":10,
 			"variants":{
 				"sunder_Support_bv":50,
-				"hammerhead_Elite_bv":50
+				"hammerhead_Balanced_bv":25,
+				"hammerhead_Elite_bv":25
 			}
 		},
 		{

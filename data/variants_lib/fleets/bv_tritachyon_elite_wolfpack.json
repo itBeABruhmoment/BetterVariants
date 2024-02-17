@@ -2,38 +2,38 @@
 	"autofit":false,
 	"fleetDataId":"bv_tritachyon_elite_wolfpack",
 	"minDP":40,
-	"maxDP":400,
+	"maxDP":500,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","crew_training",],
 	"spawnIfNoIndustry":false,
 	"alwaysInclude":{"ox_Standard":2},
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":37.74,
+			"partitionWeight":60,
 			"variants":{
 				"paragon_Elite":30.00,
 				"paragon_Escort_bv":30.00,
 				"astral_Strike_bv":10.00,
 				"astral_Elite_bv":10.00,
-				"doom_Support_bv":20.00,
+				"doom_Support_bv":20.00
 			}
 		},
 		{
-			"partitionWeight":47.17,
+			"partitionWeight":30,
 			"variants":{
 				"hyperion_Assault_bv":50.00,
-				"hyperion_Support_bv":50.00,
+				"hyperion_Support_bv":50.00
 			}
 		},
 		{
-			"partitionWeight":9.43,
+			"partitionWeight":10,
 			"variants":{
 				"afflictor_Strike_bv":50.00,
-				"omen_Ew_bv":50.00,
+				"omen_Ew_bv":50.00
 			}
-		},
-	],
+		}
+	]
 }
 

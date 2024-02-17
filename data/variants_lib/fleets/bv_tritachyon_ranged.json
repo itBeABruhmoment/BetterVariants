@@ -5,28 +5,28 @@
 	"maxDP":500,
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":50,
+			"partitionWeight":55,
 			"variants":{
-				"paragon_Elite":26.32,
-				"paragon_Escort_bv":26.32,
-				"astral_Strike_bv":15.79,
-				"astral_Elite_bv":15.79,
-				"doom_Support_bv":15.79
+				"paragon_Elite":30,
+				"paragon_Escort_bv":30,
+				"astral_Strike_bv":15,
+				"astral_Elite_bv":15,
+				"doom_Support_bv":10
 			}
 		},
 		{
 			"partitionWeight":35,
 			"variants":{
-				"eagle_Standard_bv":60.00,
+				"eagle_Balanced_bv":60.00,
 				"sunder_Support_bv":40.00
 			}
 		},
 		{
-			"partitionWeight":15,
+			"partitionWeight":10,
 			"variants":{
 				"omen_Ew_bv":16.39,
 				"tempest_Attack1_bv":16.39,

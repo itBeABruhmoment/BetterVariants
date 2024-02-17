@@ -6,8 +6,8 @@
 	"minDP":40,
 	"maxDP":350,
 	"defaultFleetWidePersonality":"reckless",
-	"autoLogitsticsFreighterDP":0.03,
-	"autoLogitsticsTankerDP":0.03,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
 			"partitionWeight":80,

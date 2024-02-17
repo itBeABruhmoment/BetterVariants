@@ -2,53 +2,50 @@
 	"autofit":false,
 	"fleetDataId":"bv_tritachyon_so",
 	"minDP":40,
-	"maxDP":400,
-	"defaultFleetWidePersonality":"reckless",
+	"maxDP":500,
+	"defaultFleetWidePersonality":"aggressive",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":23.58,
+			"partitionWeight":40,
 			"variants":{
-				"paragon_Elite":20.00,
-				"paragon_Escort_bv":20.00,
-				"astral_Strike_bv":20.00,
-				"astral_Elite_bv":20.00,
-				"doom_Support_bv":20.00,
+				"odyssey_Balanced_bv":20,
+				"paragon_Elite":30,
+				"paragon_Escort_bv":20,
+				"doom_Support_bv":20
 			}
 		},
 		{
-			"partitionWeight":42.45,
+			"partitionWeight":40,
 			"variants":{
-				"doom_Overdriven_bv":28.85,
-				"aurora_Overdriven_bv":28.85,
-				"eagle_Overdriven_bv":19.23,
-				"fury_Attack1_bv":7.69,
-				"fury_Attack2_bv":7.69,
-				"fury_Strike_bv":7.69,
+				"doom_Overdriven_bv":10,
+				"aurora_Overdriven_bv":65,
+				"eagle_Overdriven_bv":10,
+				"fury_Attack1_bv":5,
+				"fury_Attack2_bv":5,
+				"fury_Strike_bv":5
 			}
 		},
 		{
-			"partitionWeight":18.87,
+			"partitionWeight":15,
 			"variants":{
-				"harbinger_Overdriven1_bv":10.00,
-				"harbinger_Overdriven2_bv":10.00,
-				"sunder_Assault_bv":20.00,
-				"sunder_Overdriven_bv":20.00,
-				"medusa_Overdriven_bv":20.00,
-				"hyperion_Assault_bv":20.00,
+				"harbinger_Overdriven1_bv":10,
+				"harbinger_Overdriven2_bv":10,
+				"medusa_Attack_bv":40,
+				"hyperion_Assault_bv":40
 			}
 		},
 		{
-			"partitionWeight":9.43,
+			"partitionWeight":5,
 			"variants":{
-				"omen_Ew_bv":27.27,
-				"tempest_Attack1_bv":18.18,
-				"tempest_Attack2_bv":18.18,
-				"tempest_Attack3_bv":18.18,
-				"brawler_tritachyon_Standard1_bv":9.09,
-				"brawler_tritachyon_Standard2_bv":9.09,
+				"omen_Ew_bv":40,
+				"tempest_Attack1_bv":15,
+				"tempest_Attack2_bv":15,
+				"tempest_Attack3_bv":10,
+				"brawler_tritachyon_Standard1_bv":10,
+				"brawler_tritachyon_Standard2_bv":10
 			}
 		},
 	],

@@ -6,8 +6,8 @@
 	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
 	"additionalCommanderSkills":["support_doctrine","derelict_contingent"],
-	"autoLogitsticsFreighterDP":0.03,
-	"autoLogitsticsTankerDP":0.03,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
 			"partitionWeight":45,

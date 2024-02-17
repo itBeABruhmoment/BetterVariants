@@ -5,8 +5,8 @@
 	"maxDP":500,
 	"defaultFleetWidePersonality":"aggressive",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
 			"partitionWeight":45,
