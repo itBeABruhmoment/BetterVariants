@@ -4,4 +4,5 @@
 /jars/BetterVariantsProject/gradle/*
 /jars/BetterVariantsProject/build/*
 /jars/BetterVariantsProject/local.properties
+/dev_scripts/*.csv
 TODO.txt
