@@ -1,9 +1,12 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxCapacitors": 20,
+    "fluxVents": 2,
     "hullId": "gemini",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "escort_package",
+        "targetingunit"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "gemini_Strike_bv",
@@ -19,7 +22,7 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 003": "salamanderpod"}
+            "weapons": {"WS 003": "breachpod"}
         }
     ],
     "wings": ["hoplon_wing"]

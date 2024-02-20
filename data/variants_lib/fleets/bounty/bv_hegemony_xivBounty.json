@@ -1,0 +1,45 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_hegemony_xivBounty",
+	"minDP":40,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"aggressive",
+	"additionalCommanderSkills":["support_doctrine",],
+	"spawnIfNoIndustry":false,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":50,
+			"variants":{
+				"onslaught_xiv_Bounty1_bv":50,
+				"onslaught_xiv_Bounty2_bv":50
+			}
+		},
+		{
+			"partitionWeight":35,
+			"variants":{
+				"dominator_xiv_Bounty1_bv":15,
+				"dominator_xiv_Bounty2_bv":15,
+				"eagle_xiv_Bounty1_bv":60,
+				"eagle_xiv_Bounty2_bv":10
+			}
+		},
+		{
+			"partitionWeight":23,
+			"variants":{
+				"falcon_xiv_Bounty1_bv":50,
+				"enforcer_Bounty1_bv":25,
+				"enforcer_Bounty2_bv":25
+			}
+		},
+		{
+			"partitionWeight":2,
+			"variants":{
+				"hound_Standard":100
+			}
+		}
+	]
+}
+

@@ -1,12 +1,12 @@
 {
     "displayName": "Elite1B",
-    "fluxCapacitors": 37,
-    "fluxVents": 0,
+    "fluxCapacitors": 50,
+    "fluxVents": 5,
     "hullId": "astral",
     "hullMods": [
         "expanded_deck_crew",
-        "missleracks",
-        "eccm"
+        "hardenedshieldemitter",
+        "missleracks"
     ],
     "permaMods": [],
     "sMods": [],
@@ -16,33 +16,27 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 015": "irautolance",
-                "WS 023": "irautolance"
+                "WS 014": "gravitonbeam",
+                "WS 015": "gravitonbeam",
+                "WS 023": "ionbeam"
             }
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 011": "squall",
-                "WS 012": "squall"
-            }
-        },
-        {
-            "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 006": "pdburst",
-                "WS 007": "pdburst"
+                "WS 007": "mininglaser",
+                "WS 011": "cyclone",
+                "WS 012": "cyclone"
             }
         }
     ],
     "wings": [
-        "broadsword_wing",
-        "trident_wing",
-        "hoplon_wing",
-        "hoplon_wing",
-        "broadsword_wing",
-        "trident_wing"
+        "claw_wing",
+        "gladius_wing",
+        "gladius_wing",
+        "flash_wing",
+        "claw_wing",
+        "warthog_wing"
     ]
 }

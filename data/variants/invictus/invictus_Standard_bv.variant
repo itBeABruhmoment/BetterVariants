@@ -1,13 +1,14 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 0,
-    "fluxVents": 46,
+    "fluxCapacitors": 1,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "invictus",
     "hullMods": [
-        "armoredweapons",
         "fluxbreakers",
-        "missleracks"
+        "missleracks",
+        "converted_hangar",
+        "fluxdistributor"
     ],
     "permaMods": [],
     "sMods": [],
@@ -25,7 +26,7 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
                 "WS 004": "hurricane",
                 "WS 007": "hurricane"
@@ -34,12 +35,16 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 000": "devastator",
-                "WS 003": "devastator",
-                "WS 008": "devastator",
-                "WS 026": "devastator"
-            }
+            "weapons": {"WS 000": "flak"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 026": "flak"}
         }
+    ],
+    "wings": [
+        "talon_wing",
+        "talon_wing"
     ]
 }

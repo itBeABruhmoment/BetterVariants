@@ -1,10 +1,14 @@
 {
     "displayName": "Assault1B",
     "fluxCapacitors": 10,
-    "fluxVents": 10,
+    "fluxVents": 7,
     "goalVariant": true,
     "hullId": "centurion_LG",
-    "hullMods": ["fluxcoil"],
+    "hullMods": [
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "unstable_injector"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "centurion_LG_Assault_bv",
@@ -21,11 +25,6 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {"WS 003": "swarmer"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 004": "irpulse"}
         }
     ]
 }

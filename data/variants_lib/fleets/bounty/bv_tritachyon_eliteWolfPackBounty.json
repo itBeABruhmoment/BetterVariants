@@ -1,0 +1,37 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_tritachyon_eliteWolfPackBounty",
+	"minDP":40,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"reckless",
+	"additionalCommanderSkills":["support_doctrine","crew_training",],
+	"spawnIfNoIndustry":false,
+	"alwaysInclude":{"ox_Standard":2},
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":60,
+			"variants":{
+				"paragon_Bounty1_bv":70,
+				"astral_Bounty1_bv":10,
+				"astral_Bounty2_bv":10,
+				"doom_Bounty1_bv":10
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"hyperion_Bounty1_bv":50.00
+			}
+		},
+		{
+			"partitionWeight":10,
+			"variants":{
+				"afflictor_Bounty1_bv":50.00,
+				"omen_Bounty1_bv":50.00
+			}
+		}
+	]
+}
+

@@ -1,12 +1,13 @@
 {
     "displayName": "Standard1B",
     "fluxCapacitors": 0,
-    "fluxVents": 27,
+    "fluxVents": 20,
     "hullId": "apogee",
     "hullMods": [
         "targetingunit",
         "missleracks",
-        "advancedoptics"
+        "advancedoptics",
+        "stabilizedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],

@@ -1,0 +1,31 @@
+{
+        "displayName": "Custom",
+        "fluxCapacitors": 35,
+        "fluxVents": 13,
+        "goalVariant": false,
+        "hullId": "doom",
+        "hullMods": ["adaptive_coils"],
+        "permaMods": [],
+        "sMods": [
+                "hardened_subsystems",
+                "targetingunit",
+                "fluxcoil"
+        ],
+        "variantId": "doom_Bounty1_bv",
+        "weaponGroups": [{
+                "autofire": true,
+                "mode": "LINKED",
+                "weapons": {
+                        "WS 001": "pilum",
+                        "WS 002": "pilum",
+                        "WS 003": "lightneedler",
+                        "WS 004": "lightneedler",
+                        "WS 005": "lightneedler",
+                        "WS 006": "lightneedler",
+                        "WS 007": "ionbeam",
+                        "WS 008": "ionbeam",
+                        "WS 011": "pdburst",
+                        "WS 012": "pdburst"
+                }
+        }]
+}

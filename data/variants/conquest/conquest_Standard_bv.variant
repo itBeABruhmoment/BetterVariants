@@ -1,12 +1,11 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 21,
+    "fluxCapacitors": 24,
     "fluxVents": 50,
     "hullId": "conquest",
     "hullMods": [
+        "hardenedshieldemitter",
         "targetingunit",
-        "frontemitter",
-        "extendedshieldemitter",
         "missleracks"
     ],
     "permaMods": [],
@@ -15,55 +14,34 @@
     "weaponGroups": [
         {
             "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {"WS 002": "squall"}
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hurricane",
+                "WS 002": "squall"
+            }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "hurricane",
-                "WS 019": "harpoonpod",
-                "WS 020": "harpoonpod"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 011": "mark9",
-                "WS 012": "hephag"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 015": "hveldriver",
-                "WS 016": "hveldriver"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 022": "ionbeam"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 013": "devastator",
-                "WS 014": "devastator"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
                 "WS 003": "lrpdlaser",
                 "WS 005": "lrpdlaser",
                 "WS 007": "lrpdlaser",
-                "WS 009": "lrpdlaser"
+                "WS 011": "mjolnir",
+                "WS 012": "mjolnir",
+                "WS 019": "breachpod",
+                "WS 020": "breachpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "devastator",
+                "WS 014": "mark9",
+                "WS 015": "hveldriver",
+                "WS 016": "hveldriver",
+                "WS 022": "ionbeam"
             }
         }
     ]

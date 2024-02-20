@@ -1,0 +1,34 @@
+{
+    # vlTestBattle bv_pirates_capitalBounty 300 bv_persean_ranged 300
+	"autofit":false,
+	"fleetDataId":"bv_pirates_capitalBounty",
+	"minDP":40,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"steady",
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":80,
+			"variants":{
+				"atlas2_Bounty1_bv":60,
+				"atlas2_Bounty2_bv":40
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"manticore_pirates_Bounty1_bv":75,
+				"enforcer_pirates_Bounty1_bv":25
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"afflictor_d_pirates_Bounty1_bv":60,
+				"lasher_Bounty1_bv":40
+			}
+		}
+	]
+}
+

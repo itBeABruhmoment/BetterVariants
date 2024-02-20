@@ -1,21 +1,17 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 25,
+    "fluxCapacitors": 19,
     "fluxVents": 0,
     "hullId": "aurora",
     "hullMods": [
         "safetyoverrides",
-        "hardened_subsystems"
+        "hardened_subsystems",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "aurora_Overdriven_bv",
     "weaponGroups": [
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 009": "typhoon"}
-        },
         {
             "autofire": false,
             "mode": "LINKED",
@@ -32,17 +28,11 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "ioncannon",
-                "WS 005": "ioncannon",
+                "WS 004": "ioncannon",
+                "WS 005": "mininglaser",
                 "WS 007": "heavyblaster",
-                "WS 008": "heavyblaster"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "pdburst",
-                "WS 004": "pdburst"
+                "WS 008": "heavyblaster",
+                "WS 009": "phasecl"
             }
         }
     ]

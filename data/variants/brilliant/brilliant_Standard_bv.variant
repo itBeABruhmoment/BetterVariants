@@ -1,11 +1,12 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 18,
+    "fluxCapacitors": 2,
     "fluxVents": 30,
     "hullId": "brilliant",
     "hullMods": [
         "targetingunit",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -27,12 +28,11 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 000": "hil"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "ionbeam"}
+            "weapons": {
+                "WS 000": "hil",
+                "WS 001": "ionbeam",
+                "WS 002": "mininglaser"
+            }
         }
     ]
 }

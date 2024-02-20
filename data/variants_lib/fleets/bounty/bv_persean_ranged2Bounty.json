@@ -1,0 +1,48 @@
+{
+	# vlTestBattle bv_persean_ranged 300 bv_hegemony_lowtech 300
+	"autofit":false,
+	"fleetDataId":"bv_persean_ranged2Bounty",
+	"minDP":40,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":50,
+			"variants":{
+				"pegasus_Bounty1_bv":100
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"champion_Bounty1_bv":30,
+				"champion_Bounty2_bv":10,
+				"gryphon_Bounty1_bv":40,
+				"heron_Bounty1_bv":20
+			}
+		},
+		{
+			"partitionWeight":12.5,
+			"variants":{
+				"sunder_Bounty1_bv":50,
+				"hammerhead_Bounty1_bv":50
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"omen_Bounty1_bv":50,
+				"monitor_Bounty1_bv":50
+			}
+		},
+		{
+			"partitionWeight":2.5,
+			"variants":{
+				"gemini_Strike_bv":100
+			}
+		}
+	]
+}
+

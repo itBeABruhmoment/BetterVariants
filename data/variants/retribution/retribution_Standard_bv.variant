@@ -1,27 +1,19 @@
 {
     "displayName": "Standard1B",
     "fluxCapacitors": 50,
-    "fluxVents": 49,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "retribution",
     "hullMods": [
-        "ballistic_rangefinder",
         "hardenedshieldemitter",
-        "unstable_injector"
+        "unstable_injector",
+        "fluxcoil",
+        "fluxdistributor"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "retribution_Standard_bv",
     "weaponGroups": [
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 000": "hellbore",
-                "WS 001": "hellbore",
-                "WS 002": "hellbore"
-            }
-        },
         {
             "autofire": false,
             "mode": "LINKED",
@@ -35,27 +27,18 @@
             }
         },
         {
-            "autofire": true,
-            "mode": "LINKED",
+            "autofire": false,
+            "mode": "ALTERNATING",
             "weapons": {
-                "WS 005": "arbalest",
-                "WS 006": "arbalest",
-                "WS 011": "lightac",
-                "WS 012": "lightac",
+                "WS 000": "devastator",
+                "WS 001": "devastator",
+                "WS 002": "mjolnir",
+                "WS 003": "arbalest",
+                "WS 004": "arbalest",
                 "WS 013": "lightac",
                 "WS 014": "lightac",
                 "WS 015": "lightac"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 004": "dualflak"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 003": "dualflak"}
         }
     ]
 }

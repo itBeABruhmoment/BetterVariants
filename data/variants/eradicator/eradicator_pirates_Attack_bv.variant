@@ -1,11 +1,12 @@
 {
     "displayName": "Attack1B",
-    "fluxCapacitors": 10,
-    "fluxVents": 30,
+    "fluxCapacitors": 30,
+    "fluxVents": 16,
     "hullId": "eradicator_pirates",
     "hullMods": [
         "targetingunit",
-        "ballistic_rangefinder"
+        "missleracks",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,8 +16,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "heavymauler",
-                "WS 007": "heavymauler"
+                "WS 005": "hveldriver",
+                "WS 006": "hveldriver",
+                "WS 007": "hveldriver"
             }
         },
         {
@@ -28,32 +30,6 @@
                 "WS 002": "breach",
                 "WS 003": "breach",
                 "WS 004": "breach"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 009": "railgun",
-                "WS 010": "railgun"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 011": "railgun"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 006": "dualflak"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 013": "vulcan",
-                "WS 014": "vulcan"
             }
         }
     ]

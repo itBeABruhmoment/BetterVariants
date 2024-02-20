@@ -1,27 +1,20 @@
 {
-    "displayName": "Attack",
-    "fluxCapacitors": 20,
-    "fluxVents": 8,
+    "displayName": "Attack2B",
+    "fluxCapacitors": 25,
+    "fluxVents": 0,
     "hullId": "heron",
-    "hullMods": ["expanded_deck_crew"],
+    "hullMods": [
+        "targetingunit",
+        "expanded_deck_crew"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "heron_FS_bv",
-    "weaponGroups": [
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "pdburst",
-                "WS 002": "pdburst"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 005": "hveldriver"}
-        }
-    ],
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS 005": "hveldriver"}
+    }],
     "wings": [
         "warthog_wing",
         "thunder_wing",

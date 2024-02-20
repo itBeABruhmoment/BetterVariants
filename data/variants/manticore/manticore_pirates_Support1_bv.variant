@@ -1,11 +1,12 @@
 {
     "displayName": "Support1B",
-    "fluxCapacitors": 2,
-    "fluxVents": 20,
+    "fluxCapacitors": 19,
+    "fluxVents": 0,
     "hullId": "manticore_pirates",
     "hullMods": [
         "targetingunit",
-        "missleracks"
+        "missleracks",
+        "escort_package"
     ],
     "permaMods": [],
     "sMods": [],
@@ -29,7 +30,6 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "lightac",
-                "WS 002": "lightac",
                 "WS 003": "lightac"
             }
         }

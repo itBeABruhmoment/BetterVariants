@@ -1,0 +1,40 @@
+{
+    # vlspawnfleet luddic_church bv_luddic_church_standard 200
+    # vlTestBattle bv_luddic_church_standard 300 bv_hegemony_lowtech 300
+	"autofit":false,
+	"fleetDataId":"bv_luddic_church_standardBounty",
+	"minDP":10,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":60,
+			"variants":{
+				"invictus_Bounty1_bv":100
+			}
+		},
+		{
+			"partitionWeight":32.5,
+			"variants":{
+				"eradicator_Bounty1_bv":80,
+				"mora_Bounty1_bv":20
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+                "manticore_Bounty1_bv":100
+			}
+		},
+		{
+			"partitionWeight":2.5,
+			"variants":{
+                "lasher_Bounty1_bv":100
+			}
+		}
+	]
+}
+

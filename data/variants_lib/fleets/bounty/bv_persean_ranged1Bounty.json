@@ -1,0 +1,47 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_persean_ranged1Bounty",
+	"minDP":40,
+	"maxDP":600,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":50,
+			"variants":{
+				"conquest_Bounty1_bv":50,
+				"conquest_Bounty2_bv":50
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"champion_Bounty1_bv":40,
+				"champion_Bounty2_bv":40,
+				"heron_Bounty1_bv":20
+			}
+		},
+		{
+			"partitionWeight":12.5,
+			"variants":{
+				"sunder_Bounty1_bv":50,
+				"hammerhead_Bounty1_bv":50
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"omen_Bounty1_bv":50,
+				"monitor_Bounty1_bv":50
+			}
+		},
+		{
+			"partitionWeight":2.5,
+			"variants":{
+				"gemini_Strike_bv":100
+			}
+		}
+	]
+}
+

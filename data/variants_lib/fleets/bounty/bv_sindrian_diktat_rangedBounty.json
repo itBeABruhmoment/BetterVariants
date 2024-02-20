@@ -1,0 +1,43 @@
+{
+	# vlTestBattle bv_sindrian_diktat_rangedBounty 300 bv_hegemony_lowtech 300
+	"autofit":false,
+	"fleetDataId":"bv_sindrian_diktat_rangedBounty",
+	"minDP":100,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":60,
+			"variants":{
+				"executor_Bounty1_bv":50,
+				"executor_Bounty2_bv":50
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+				"falcon_Bounty1_bv":25,
+				"eagle_Bounty2_bv":25,
+				"eagle_Bounty1_bv":50
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"sunder_Bounty1_bv":50,
+				"hammerhead_Bounty1_bv":50
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"brawler_Bounty1_bv":50,
+				"centurion_Bounty1_bv":50
+			}
+		}
+	]
+}
+

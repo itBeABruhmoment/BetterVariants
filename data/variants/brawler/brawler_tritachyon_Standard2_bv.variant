@@ -1,12 +1,13 @@
 {
     "displayName": "Standard1B",
     "fluxCapacitors": 10,
-    "fluxVents": 6,
+    "fluxVents": 7,
     "hullId": "brawler_tritachyon",
     "hullMods": [
         "hardenedshieldemitter",
         "fluxcoil",
-        "advancedoptics"
+        "unstable_injector",
+        "stabilizedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],

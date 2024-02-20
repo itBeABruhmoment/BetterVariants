@@ -1,24 +1,29 @@
 {
     "displayName": "Attack1B",
-    "fluxCapacitors": 10,
-    "fluxVents": 2,
+    "fluxCapacitors": 9,
+    "fluxVents": 0,
     "hullId": "tempest",
     "hullMods": [
-        "fluxdistributor",
+        "fluxcoil",
         "hardenedshieldemitter",
-        "frontemitter",
-        "hardened_subsystems"
+        "hardened_subsystems",
+        "unstable_injector",
+        "missile_autoloader"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "tempest_Attack1_bv",
-    "weaponGroups": [{
-        "autofire": true,
-        "mode": "LINKED",
-        "weapons": {
-            "WS 001": "ionpulser",
-            "WS 002": "miningblaster"
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "ionpulser"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "swarmer"}
         }
-    }],
+    ],
     "wings": []
 }

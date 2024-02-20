@@ -1,12 +1,9 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 25,
     "fluxVents": 0,
     "hullId": "gryphon",
-    "hullMods": [
-        "eccm",
-        "safetyoverrides"
-    ],
+    "hullMods": ["safetyoverrides"],
     "permaMods": [],
     "sMods": [],
     "variantId": "gryphon_Overdriven_bv",
@@ -14,11 +11,15 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 001": "cyclone"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
             "weapons": {
-                "WS 001": "cyclone",
-                "WS 010": "annihilator",
-                "WS 011": "annihilator",
-                "WS 012": "annihilator"
+                "WS 010": "harpoon",
+                "WS 011": "harpoon",
+                "WS 012": "harpoon"
             }
         },
         {
@@ -32,11 +33,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 002": "dualflak",
-                "WS 006": "vulcan",
-                "WS 007": "vulcan"
-            }
+            "weapons": {"WS 002": "dualflak"}
         }
     ]
 }

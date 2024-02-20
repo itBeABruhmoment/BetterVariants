@@ -1,57 +1,41 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 32,
+    "fluxCapacitors": 38,
     "fluxVents": 0,
     "hullId": "astral",
     "hullMods": [
         "missleracks",
         "expanded_deck_crew",
-        "eccm"
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "astral_Strike_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 015": "irautolance",
-                "WS 023": "irautolance"
+                "WS 014": "gravitonbeam",
+                "WS 015": "ionbeam",
+                "WS 023": "ionbeam"
             }
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 011": "squall",
-                "WS 012": "squall"
-            }
-        },
-        {
-            "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 013": "irautolance",
-                "WS 024": "irautolance"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 006": "lrpdlaser",
-                "WS 007": "lrpdlaser",
-                "WS 008": "lrpdlaser"
+                "WS 011": "hurricane",
+                "WS 012": "hurricane"
             }
         }
     ],
     "wings": [
         "hoplon_wing",
         "cobra_wing",
-        "dagger_wing",
-        "dagger_wing",
-        "broadsword_wing",
-        "broadsword_wing"
+        "cobra_wing",
+        "cobra_wing",
+        "gladius_wing",
+        "gladius_wing"
     ]
 }

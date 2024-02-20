@@ -12,7 +12,7 @@
         "sMods": [
                 "fluxcoil",
                 "hardenedshieldemitter",
-                "targetingunit"
+                "escort_package"
         ],
         "variantId": "hammerhead_Bounty1_bv",
         "weaponGroups": [

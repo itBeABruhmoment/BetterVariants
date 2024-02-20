@@ -1,30 +1,36 @@
 {
-        "displayName": "Custom",
-        "fluxCapacitors": 15,
-        "fluxVents": 1,
-        "goalVariant": false,
-        "hullId": "omen",
-        "hullMods": [
-                "hardenedshieldemitter",
-                "unstable_injector"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "stabilizedshieldemitter",
-                "hardened_subsystems",
-                "fluxcoil"
-        ],
-        "variantId": "omen_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 001": "amblaster"}
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 003": "heatseeker"}
-                }
-        ]
+    "displayName": "Custom",
+    "fluxCapacitors": 15,
+    "fluxVents": 3,
+    "hullId": "omen",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "unstable_injector",
+        "stabilizedshieldemitter",
+        "hardened_subsystems",
+        "fluxcoil"
+    ],
+    "permaMods": [
+        "stabilizedshieldemitter",
+        "hardened_subsystems",
+        "fluxcoil"
+    ],
+    "sMods": [
+        "stabilizedshieldemitter",
+        "hardened_subsystems",
+        "fluxcoil"
+    ],
+    "variantId": "omen_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "heatseeker"}
+        }
+    ]
 }

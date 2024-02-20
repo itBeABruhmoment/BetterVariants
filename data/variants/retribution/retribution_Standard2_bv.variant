@@ -1,7 +1,7 @@
 {
     "displayName": "Standard2B",
     "fluxCapacitors": 50,
-    "fluxVents": 37,
+    "fluxVents": 45,
     "goalVariant": true,
     "hullId": "retribution",
     "hullMods": [
@@ -14,30 +14,21 @@
     "variantId": "retribution_Standard2_bv",
     "weaponGroups": [
         {
-            "autofire": true,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 000": "hellbore",
-                "WS 001": "hellbore",
-                "WS 002": "hellbore"
-            }
-        },
-        {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
                 "WS 007": "heatseeker",
                 "WS 008": "heatseeker",
-                "WS 009": "heatseeker",
-                "WS 010": "heatseeker",
-                "WS 020": "heatseeker",
-                "WS 021": "heatseeker"
+                "WS 009": "heatseeker"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 002": "hephag",
+                "WS 003": "arbalest",
+                "WS 004": "arbalest",
                 "WS 005": "arbalest",
                 "WS 006": "arbalest",
                 "WS 011": "lightac",
@@ -48,14 +39,23 @@
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 003": "dualflak"}
+            "weapons": {
+                "WS 010": "breach",
+                "WS 020": "breach",
+                "WS 021": "breach"
+            }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 004": "dualflak"}
+            "weapons": {"WS 001": "devastator"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "devastator"}
         }
     ]
 }

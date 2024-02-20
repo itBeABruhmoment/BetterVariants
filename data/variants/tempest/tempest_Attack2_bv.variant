@@ -1,21 +1,23 @@
 {
     "displayName": "Attack2B",
     "fluxCapacitors": 10,
-    "fluxVents": 9,
+    "fluxVents": 1,
     "hullId": "tempest",
     "hullMods": [
-        "hardened_subsystems",
-        "fluxcoil"
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "unstable_injector",
+        "hardened_subsystems"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "tempest_Attack2_bv",
     "weaponGroups": [{
-        "autofire": false,
-        "mode": "LINKED",
+        "autofire": true,
+        "mode": "ALTERNATING",
         "weapons": {
-            "WS 001": "ionpulser",
-            "WS 002": "ionpulser"
+            "WS 001": "phasebeam",
+            "WS 002": "phasebeam"
         }
     }],
     "wings": []

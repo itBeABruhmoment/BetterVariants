@@ -1,10 +1,14 @@
 {
     "displayName": "Support2B",
-    "fluxCapacitors": 6,
-    "fluxVents": 20,
+    "fluxCapacitors": 0,
+    "fluxVents": 18,
     "goalVariant": true,
     "hullId": "manticore_pirates",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "escort_package"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "manticore_pirates_Support2_bv",
@@ -12,23 +16,14 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 000": "mjolnir"}
+            "weapons": {"WS 000": "gauss"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "typhoon",
-                "WS 005": "typhoon"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "lightac",
-                "WS 002": "lightac",
-                "WS 003": "lightac"
+                "WS 004": "harpoonpod",
+                "WS 005": "harpoonpod"
             }
         }
     ]

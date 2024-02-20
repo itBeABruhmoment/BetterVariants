@@ -1,13 +1,14 @@
 {
     "displayName": "Escort1B",
-    "fluxCapacitors": 50,
+    "fluxCapacitors": 48,
     "fluxVents": 50,
     "hullId": "paragon",
     "hullMods": [
+        "hardenedshieldemitter",
         "fluxdistributor",
-        "frontemitter",
+        "missile_autoloader",
         "stabilizedshieldemitter",
-        "fluxcoil",
+        "auxiliarythrusters",
         "fluxbreakers"
     ],
     "permaMods": [],
@@ -18,58 +19,26 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "plasma",
-                "WS 002": "plasma"
+                "WS 001": "autopulse",
+                "WS 002": "autopulse",
+                "WS 005": "irautolance",
+                "WS 006": "irautolance",
+                "WS 007": "hveldriver",
+                "WS 008": "hveldriver",
+                "WS 012": "breach",
+                "WS 014": "breach",
+                "WS 017": "lrpdlaser",
+                "WS 018": "breach",
+                "WS 020": "breach"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 012": "heatseeker",
-                "WS 014": "heatseeker",
-                "WS 018": "heatseeker",
-                "WS 020": "heatseeker"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 009": "irautolance",
-                "WS 010": "irautolance"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 007": "heavyneedler",
-                "WS 008": "heavyneedler"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "ionbeam",
-                "WS 006": "ionbeam"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 003": "guardian",
-                "WS 004": "guardian"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 011": "mininglaser",
-                "WS 017": "mininglaser"
+                "WS 003": "hil",
+                "WS 004": "tachyonlance",
+                "WS 011": "lrpdlaser"
             }
         }
     ]

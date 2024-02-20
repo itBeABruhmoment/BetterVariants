@@ -9,7 +9,7 @@
         "sMods": [
                 "fluxcoil",
                 "fluxdistributor",
-                "targetingunit"
+                "hardenedshieldemitter"
         ],
         "variantId": "hammerhead_lg_Bounty1_bv",
         "weaponGroups": [

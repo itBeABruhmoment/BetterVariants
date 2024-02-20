@@ -1,30 +1,24 @@
 {
     "displayName": "Support1B",
     "fluxCapacitors": 10,
-    "fluxVents": 10,
+    "fluxVents": 6,
     "hullId": "hyperion",
     "hullMods": [
         "hardened_subsystems",
-        "fluxcoil"
+        "hardenedshieldemitter",
+        "unstable_injector",
+        "stabilizedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "hyperion_Support_bv",
-    "weaponGroups": [
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "miningblaster"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 002": "ionpulser"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 003": "heavyneedler"}
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "pulselaser",
+            "WS 002": "ionpulser",
+            "WS 003": "heavymg"
         }
-    ]
+    }]
 }

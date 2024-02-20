@@ -1,9 +1,12 @@
 {
     "displayName": "Overdriven1B",
     "fluxCapacitors": 30,
-    "fluxVents": 4,
+    "fluxVents": 5,
     "hullId": "eradicator_pirates",
-    "hullMods": ["safetyoverrides"],
+    "hullMods": [
+        "safetyoverrides",
+        "hardenedshieldemitter"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "eradicator_pirates_Overdriven_bv",
@@ -11,48 +14,23 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 007": "chaingun"}
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
             "weapons": {
-                "WS 000": "hammer",
-                "WS 001": "hammer",
-                "WS 002": "hammer",
-                "WS 003": "hammer",
-                "WS 004": "hammer"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
+                "WS 005": "heavymg",
+                "WS 006": "heavymg",
+                "WS 007": "chaingun",
                 "WS 009": "lightdualac",
                 "WS 010": "lightdualac"
             }
         },
         {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 011": "lightdualac"}
-        },
-        {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "heavymg",
-                "WS 006": "heavymg"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 008": "vulcan",
-                "WS 012": "vulcan",
-                "WS 013": "vulcan",
-                "WS 014": "vulcan"
+                "WS 000": "atropos",
+                "WS 001": "atropos",
+                "WS 002": "atropos",
+                "WS 003": "atropos",
+                "WS 004": "atropos"
             }
         }
     ]

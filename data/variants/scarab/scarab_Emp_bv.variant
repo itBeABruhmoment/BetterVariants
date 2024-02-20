@@ -1,24 +1,37 @@
 {
     "displayName": "EMP1B",
     "fluxCapacitors": 10,
-    "fluxVents": 10,
+    "fluxVents": 5,
     "hullId": "scarab",
     "hullMods": [
-        "frontemitter",
-        "fluxdistributor"
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "hardened_subsystems"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "scarab_Emp_bv",
-    "weaponGroups": [{
-        "autofire": true,
-        "mode": "LINKED",
-        "weapons": {
-            "WS 001": "ioncannon",
-            "WS 002": "ioncannon",
-            "WS 003": "ioncannon",
-            "WS 005": "irpulse",
-            "WS 010": "irpulse"
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heatseeker",
+                "WS 003": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "irpulse",
+                "WS 010": "ioncannon"
+            }
         }
-    }]
+    ]
 }

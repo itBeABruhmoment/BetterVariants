@@ -1,0 +1,33 @@
+{
+        "displayName": "Bounty2",
+        "fluxCapacitors": 40,
+        "fluxVents": 55,
+        "goalVariant": false,
+        "hullId": "atlas2",
+        "hullMods": ["hardenedshieldemitter"],
+        "permaMods": [],
+        "sMods": [
+                "targetingunit",
+                "missleracks",
+                "fluxcoil"
+        ],
+        "variantId": "atlas2_Bounty2_bv",
+        "weaponGroups": [
+                {
+                        "autofire": true,
+                        "mode": "ALTERNATING",
+                        "weapons": {
+                                "WS 008": "gauss",
+                                "WS 009": "gauss"
+                        }
+                },
+                {
+                        "autofire": false,
+                        "mode": "LINKED",
+                        "weapons": {
+                                "WS 012": "hurricane",
+                                "WS 013": "hurricane"
+                        }
+                }
+        ]
+}

@@ -1,11 +1,12 @@
 {
     "displayName": "Elite1B",
-    "fluxCapacitors": 38,
+    "fluxCapacitors": 19,
     "fluxVents": 50,
     "hullId": "conquest",
     "hullMods": [
         "targetingunit",
-        "missleracks"
+        "missleracks",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -31,29 +32,28 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 013": "devastator",
+                "WS 014": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 011": "gauss",
                 "WS 012": "gauss"
             }
         },
         {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 016": "heavymauler",
-                "WS 022": "ionbeam"
-            }
-        },
-        {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "lrpdlaser",
                 "WS 005": "lrpdlaser",
                 "WS 007": "lrpdlaser",
-                "WS 009": "lrpdlaser",
-                "WS 013": "devastator",
-                "WS 014": "devastator",
-                "WS 015": "dualflak"
+                "WS 015": "heavymauler",
+                "WS 016": "heavymauler",
+                "WS 022": "ionbeam"
             }
         }
     ]

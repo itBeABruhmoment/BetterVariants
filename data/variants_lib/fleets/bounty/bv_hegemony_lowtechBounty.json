@@ -1,0 +1,47 @@
+{
+ 	"autofit":false,
+	"fleetDataId":"bv_hegemony_lowtechBounty",
+	"minDP":40,
+	"maxDP":500,
+	"spawnIfNoIndustry":false,
+	"defaultFleetWidePersonality":"steady",
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":50,
+			"variants":{
+				"onslaught_Bounty1_bv":20,
+				"onslaught_Bounty2_bv":20,
+				"onslaught_xiv_Bounty1_bv":15,
+				"onslaught_xiv_Bounty2_bv":15,
+				"legion_Bounty1_bv":30
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"dominator_Bounty1_bv":20,
+				"dominator_Bounty2_bv":20,
+				"dominator_xiv_Bounty1_bv":15,
+				"dominator_xiv_Bounty2_bv":15,
+				"mora_Bounty1_bv":30
+			}
+		},
+		{
+			"partitionWeight":28,
+			"variants":{
+				"manticore_Bounty1_bv":30,
+				"enforcer_Bounty1_bv":40,
+				"enforcer_xiv_Bounty1_bv":30
+			}
+		},
+		{
+			"partitionWeight":2,
+			"variants":{
+				"hound_Standard":100.00
+			}
+		}
+	]
+}
+

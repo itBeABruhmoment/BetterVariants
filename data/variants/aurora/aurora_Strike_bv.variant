@@ -1,56 +1,44 @@
 {
     "displayName": "Strike2B",
-    "fluxCapacitors": 21,
-    "fluxVents": 30,
+    "fluxCapacitors": 30,
+    "fluxVents": 1,
     "hullId": "aurora",
-    "hullMods": ["missleracks"],
+    "hullMods": [
+        "missleracks",
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "aurora_Strike_bv",
     "weaponGroups": [
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 003": "amblaster",
-                "WS 004": "amblaster",
-                "WS 005": "amblaster"
+                "WS 001": "mininglaser",
+                "WS 003": "ioncannon",
+                "WS 004": "ioncannon",
+                "WS 005": "ioncannon",
+                "WS 007": "kineticblaster",
+                "WS 008": "pulselaser",
+                "WS 009": "phasecl"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 006": "sabotpod",
-                "WS 009": "sabotpod"
-            }
+            "weapons": {"WS 006": "sabotpod"}
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 010": "harpoon",
-                "WS 011": "harpoon",
-                "WS 012": "harpoon",
-                "WS 013": "harpoon"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 008": "heavyblaster"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 007": "ionpulser"}
-        },
-        {
-            "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "pdlaser",
-                "WS 002": "pdlaser"
+                "WS 010": "swarmer",
+                "WS 011": "swarmer",
+                "WS 012": "swarmer",
+                "WS 013": "swarmer"
             }
         }
     ]

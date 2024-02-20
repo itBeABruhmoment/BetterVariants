@@ -1,10 +1,14 @@
 {
     "displayName": "Support3B",
-    "fluxCapacitors": 6,
-    "fluxVents": 20,
+    "fluxCapacitors": 10,
+    "fluxVents": 0,
     "goalVariant": true,
     "hullId": "manticore",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+        "escort_package"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "manticore_Support3_bv",
@@ -12,23 +16,17 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 000": "mjolnir"}
+            "weapons": {
+                "WS 000": "multineedler",
+                "WS 002": "lightag"
+            }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "breachpod",
-                "WS 005": "breachpod"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "lightac",
-                "WS 002": "lightac",
-                "WS 003": "lightac"
+                "WS 004": "harpoonpod",
+                "WS 005": "harpoonpod"
             }
         }
     ]

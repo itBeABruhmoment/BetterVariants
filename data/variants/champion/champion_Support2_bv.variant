@@ -1,51 +1,33 @@
 {
     "displayName": "Support2B",
-    "fluxCapacitors": 13,
+    "fluxCapacitors": 20,
     "fluxVents": 30,
     "hullId": "champion",
     "hullMods": [
-        "targetingunit",
-        "missleracks"
+        "missleracks",
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "champion_Support2_bv",
     "weaponGroups": [
         {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 008": "gigacannon"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 009": "cyclone"}
-        },
-        {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 006": "heavyac",
-                "WS 007": "heavyac"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 000": "pdburst",
-                "WS 001": "pdburst"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 002": "mininglaser",
-                "WS 003": "mininglaser",
                 "WS 004": "mininglaser",
-                "WS 005": "mininglaser"
+                "WS 005": "mininglaser",
+                "WS 006": "hveldriver",
+                "WS 007": "hveldriver",
+                "WS 008": "tachyonlance",
+                "WS 010": "mininglaser",
+                "WS 011": "mininglaser"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "hurricane"}
         }
     ]
 }
