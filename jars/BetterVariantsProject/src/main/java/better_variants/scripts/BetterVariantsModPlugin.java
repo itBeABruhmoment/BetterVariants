@@ -1,7 +1,5 @@
 package better_variants.scripts;
 
-import better_variants.bar_events.BetterVariantsBarEventCreator;
-import better_variants.bar_events.BountyCreationData;
 import better_variants.data.BetterVariantsBountyData;
 import better_variants.data.CommonStrings;
 import better_variants.data.SettingsData;
@@ -10,8 +8,6 @@ import java.io.IOException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
-import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;

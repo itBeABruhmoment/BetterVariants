@@ -32,7 +32,6 @@ dependencies {
     compileOnly files(consoleCommandsDir + '/jars/lw_Console.jar')
     compileOnly files(lazyLibDir + '/jars/LazyLib.jar')
     compileOnly files(lazyLibDir + '/jars/LazyLib-Kotlin.jar')
-    compileOnly files(magicLibDir + '/jars/MagicLib.jar')
     compileOnly files(variantsLibDir + '/jars/VariantsLib.jar')
 }
 
