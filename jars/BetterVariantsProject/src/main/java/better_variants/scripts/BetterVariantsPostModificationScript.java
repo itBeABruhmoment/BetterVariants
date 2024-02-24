@@ -42,8 +42,13 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
             return false;
         }
 
+        if(fleetMem.contains(CommonStrings.FLEET_VARIANT_KEY)) {
+            log.info("already a variants lib generated fleet");
+            return false;
+        }
+
         if(fleetMem.contains(CommonStrings.VARIANTS_LIB_LISTENER_APPLIED)
-                && fleetMem.getLong(CommonStrings.VARIANTS_LIB_LISTENER_APPLIED) > 0) {
+                && fleetMem.getLong(CommonStrings.VARIANTS_LIB_LISTENER_APPLIED) > 1) {
             log.info("fleet already edited");
             return false;
         }
@@ -74,6 +79,7 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
 
     @Override
     public void run(CampaignFleetAPI fleet) {
+        log.debug("run1: " + fleet.getCommander().getPersonalityAPI().getId());
         final MemoryAPI fleetMemory = fleet.getMemoryWithoutUpdate();
         if(!allowFleetModification(fleet)) {
             return;
@@ -87,7 +93,7 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
         final String faction = fleet.getFaction().getId();
         final OfficerFactory officerFactory = new OfficerFactory();
         for(final FleetMemberAPI memberAPI : fleet.getMembersWithFightersCopy()) {
-            final ShipVariantAPI originalVariant = ModdedVariantsData.getVariant(memberAPI.getVariant().getOriginalVariant());
+            final ShipVariantAPI originalVariant = ModdedVariantsData.getVariant(memberAPI.getVariant().getHullVariantId());
             if(originalVariant != null) {
                 memberAPI.setVariant(originalVariant, false, true);
             }
@@ -95,12 +101,20 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
             final PersonAPI officer = memberAPI.getCaptain();
             if(Util.isOfficer(officer)) {
                 final String variant = memberAPI.getVariant().getOriginalVariant();
-                OfficerFactoryParams officerFactoryParams = new OfficerFactoryParams(
+                final OfficerFactoryParams officerFactoryParams = new OfficerFactoryParams(
                         variant,
                         faction,
                         rand,
                         5
                 );
+
+                if(originalVariant != null) {
+                    VariantData.VariantDataMember variantData = VariantData.VARIANT_DATA.get(originalVariant.getHullVariantId());
+                    if(variantData != null) {
+                        officerFactoryParams.skillsToAdd.addAll(variantData.getSkills());
+                    }
+
+                }
                 officerFactoryParams.level = officer.getStats().getLevel();
                 officerFactory.editOfficer(officer, officerFactoryParams);
             }
@@ -114,6 +128,7 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
             log.info("inflater not created");
         }
 
+        log.debug("run2: " + fleet.getCommander().getPersonalityAPI().getId());
         debugKey(fleetMemory, "$better_variants_inflater_added");
     }
 
