@@ -1,4 +1,5 @@
 {
+	# vlspawnfleet tritachyon bv_tritachyon_eliteWolfPackBounty 300
 	"autofit":false,
 	"fleetDataId":"bv_tritachyon_eliteWolfPackBounty",
 	"minDP":40,

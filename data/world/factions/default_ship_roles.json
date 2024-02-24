@@ -210,20 +210,22 @@
 		
 		"buffalo2_Bomber_Support_bv":5,
 		"buffalo2_Fighter_Support_bv":5,
-		
+
 		"enforcer_Assault":0,
-		"enforcer_Overdriven":0,
-		"enforcer_XIV_Elite":0,
-		"enforcer_d_pirates_Strike":0,
-		
 		"enforcer_Balanced":0,
 		"enforcer_CS":0,
 		"enforcer_Escort":0,
 		"enforcer_Outdated":0,
 		"enforcer_Elite":0,
-		"enforcer_Overdriven_bv":0.71,
-		"enforcer_xiv_Overdriven_bv":3,
-		
+		"enforcer_Overdriven":0,
+		"enforcer_XIV_Elite":0,
+		"enforcer_d_pirates_Strike":0,
+
+		"enforcer_Elite_bv":8,
+		"enforcer_Overdriven_bv":2,
+		"enforcer_xiv_Elite_bv":8,
+		"enforcer_xiv_Overdriven_bv":2,
+		"enforcer_d_pirates_Elite_bv":8,
 		"enforcer_d_pirates_Overdriven_bv":2,
 		
 		"fulgent_Assault":0,
@@ -231,15 +233,19 @@
 		
 		"fulgent_Overdriven_bv":2,
 		"fulgent_Strike_bv":8,
-		
+
+		"hammerhead_LG_Balanced":0,
+		"hammerhead_LG_Elite":0,
 		"hammerhead_Balanced":0,
 		"hammerhead_Elite":0,
 		"hammerhead_Overdriven":0,
+		"hammerhead_Support":0,
+		"hammerhead_DEM":0,
 		
-		"hammerhead_Balanced_bv":3,
-		"hammerhead_Elite_bv":3,
-		"hammerhead_Overdriven_bv":2,
-		"hammerhead_Support":2,
+		"hammerhead_Balanced_bv":5,
+		"hammerhead_Elite_bv":5,
+		"hammerhead_LG_Elite_bv":8,
+		"hammerhead_LG_Overdriven_bv":2,
 		
 		"hyperion_Assault_bv":3,
 		"hyperion_Support_bv":3,
@@ -282,10 +288,13 @@
 		"sunder_Assault":0,
 		"sunder_CS":0,
 		"sunder_Overdriven":0,
+		"sunder_LG_Assault":0,
+		"sunder_LG_CS":0,
 		
-		"sunder_Assault_bv":4,
-		"sunder_Support_bv":4,
+		"sunder_Support_bv":8,
 		"sunder_Overdriven_bv":2,
+		"sunder_LG_Assault_bv":8,
+		"sunder_LG_Overdriven_bv":2,
 		
 		"facet_Attack":5,
 		"facet_Attack2":5,
@@ -293,12 +302,13 @@
 		"fallback":{"combatSmall":1},
 	},
 	"combatLarge":{
+		"aurora_Assault":0,
+		"aurora_Attack":0,
 		"aurora_Strike":0,
-	
-		"aurora_Assault":3,
-		"aurora_Overdriven_bv":3,
-		"aurora_Balanced":2,
-		"aurora_Strike_bv":2,
+		"aurora_Support":0,
+
+		"aurora_Overdriven_bv":5,
+		"aurora_Strike_bv":5,
 		
 		"apogee_Balanced":0,
 		
@@ -316,15 +326,11 @@
 		"dominator_Outdated":0,
 		"dominator_XIV_Elite":0,
 		
-		"dominator_AntiCV_bv":2,
-		"dominator_Assault_bv":2,
-		"dominator_Shield_Breaker_bv":2,
-		"dominator_Outdated_bv":2,
-		"dominator_Standard_bv":2,
-		"dominator_XIV_Elite_bv":2.5,
-		"dominator_XIV_Elite2_bv":2.5,
-		"dominator_XIV_Elite3_bv":2.5,
-		"dominator_XIV_Elite4_bv":2.5,
+		"dominator_Standard_bv":6,
+		"dominator_Escort_bv":4,
+		"dominator_XIV_Elite_bv":6,
+		"dominator_XIV_Elite2_bv":2,
+		"dominator_XIV_Elite3_bv":2,
 		
 		"eagle_Assault":0,
 		"eagle_Balanced":0,
@@ -411,34 +417,47 @@
 		"fallback":{"combatMedium":1},
 	},
 	"combatCapital":{
+		"pegasus_Strike":0,
+		"pegasus_Balanced":0,
+		"executor_Standard":0,
+		"executor_Elite":0,
 		"conquest_Standard":0,
 		"conquest_Elite":0,
 		"onslaught_Standard":0,
 		"onslaught_Outdated":0,
+		"onslaught_Elite":0,
 		"onslaught_xiv_Elite":0,
+		"paragon_Elite":0,
 		"paragon_Escort":0,
 		"paragon_Raider":0,
-		"paragon_Elite":0,
+		"odyssey_Balanced":0,
+		"retribution_Standard":0,
+		"invictus_Standard":0,
+		"invictus_Support":0,
 		
 		"radiant_Standard":0,
 		"radiant_Strike":0,
 		
+		"nova_Standard":5,
+		"nova_Attack":5,
+		
 		"atlas2_Standard":0,
-	
+		"prometheus2_Standard":10,
+
 		"conquest_Standard_bv":2,
 		"conquest_Elite_bv":2,
 		"conquest_Elite2_bv":2,
 		"conquest_Elite3_bv":2,
 		"conquest_DEM_bv":2,
-		"onslaught_Standard_bv":3,
-		"onslaught_Outdated_bv":3,
-		"onslaught_Brawler_bv":3,
-		"onslaught_Elite":1,
-		"onslaught_xiv_Elite2_bv":1,
-		"onslaught_xiv_Standard_bv":1,
+
+	
+		"onslaught_Standard_bv":5,
+		"onslaught_Outdated_bv":5,
+		"onslaught_xiv_Elite2_bv":5,
+		"onslaught_xiv_Standard_bv":5,
 		"paragon_Elite_bv":5,
 		"paragon_Escort_bv":5,
-		"odyssey_Balanced":10,
+		"odyssey_Balanced_bv":10,
 		
 		"guardian_Standard":10,
 		"radiant_Standard_bv":4,
@@ -449,14 +468,10 @@
 		"atlas2_Standard2_bv":2.5,
 		"atlas2_Standard3_bv":2.5,
 		"atlas2_Standard4_bv": 2.5,
-		"prometheus2_Standard":10,
-		
-		"invictus_Standard":0,
-		"invictus_Support":0,
+
 		"invictus_Standard_bv":5,
 		"invictus_Support_bv":5,
 		
-		"retribution_Standard":0,
 		"retribution_Standard_bv":10,
 		
 		"fallback":{"combatLarge":1},
