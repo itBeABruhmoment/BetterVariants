@@ -79,7 +79,6 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
 
     @Override
     public void run(CampaignFleetAPI fleet) {
-        log.debug("run1: " + fleet.getCommander().getPersonalityAPI().getId());
         final MemoryAPI fleetMemory = fleet.getMemoryWithoutUpdate();
         if(!allowFleetModification(fleet)) {
             return;
@@ -128,7 +127,6 @@ public class BetterVariantsPostModificationScript implements FleetEditingScript 
             log.info("inflater not created");
         }
 
-        log.debug("run2: " + fleet.getCommander().getPersonalityAPI().getId());
         debugKey(fleetMemory, "$better_variants_inflater_added");
     }
 
