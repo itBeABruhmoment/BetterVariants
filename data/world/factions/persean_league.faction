@@ -36,15 +36,14 @@
 
 		"hammerhead_DEM":0,
 
-		"hammerhead_Balanced_bv":3,
-		"hammerhead_Elite_bv":3,
-		"hammerhead_Overdriven_bv":2,
-		"hammerhead_Support":2,
+		"hammerhead_Balanced_bv":4,
+		"hammerhead_Elite_bv":4,
+		"hammerhead_Overdriven_bv":2
 
 		"sunder_Support":0,
 
-		"sunder_Assault_bv":4,
-		"sunder_Support_bv":4,
+		"sunder_Assault_bv":1,
+		"sunder_Support_bv":7,
 		"sunder_Overdriven_bv":2,
 
 		"drover_Support":0,
