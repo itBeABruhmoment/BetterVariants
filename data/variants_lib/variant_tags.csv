@@ -8,6 +8,8 @@ apex_Bounty2_bv,,
 apex_Overdriven_bv,,
 apogee_Elite_bv,"fm, ms, gi, ta, oe, hs, im, dc","hardenedshieldemitter, fluxcoil, eccm"
 apogee_Standard_bv,"fm, ms, gi, ta, oe, hs, im, dc","hardenedshieldemitter, fluxcoil, eccm"
+astral_Bounty1_bv,"se, ms, fm, gi, ta, oe, hs, im",
+astral_Bounty2_bv,"se, ms, fm, gi, ta, oe, hs, im",
 astral_Elite_bv,"se, ms, fm, gi, ta, oe, hs, im",
 astral_Strike_bv,"se, ms, fm, gi, ta, oe, hs, im",
 atlas2_Bounty1_bv,"fm, ms, se, gi, bm, ta, oe",
@@ -21,6 +23,7 @@ aurora_Bounty1_bv,"re, ce, se, fm, ms, ew, hs, im",
 aurora_Overdriven_bv,"re, ce, se, fm, ms, ew, hs, im","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
 aurora_Strike_bv,"re, ce, se, fm, ms, ew, hs, im","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
 brawler_Assault_bv,"se, ce, fm, ta, hs, bm, im, dc","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
+brawler_Bounty1_bv,"se, ce, fm, ta, hs, bm, im, dc",
 brawler_Elite_bv,"se, ce, fm, ta, hs, bm, im, dc","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
 brawler_pather_Bounty1_bv,"se, ce, fm, ta, hs, bm, im, dc",
 brawler_pather_Raider_bv,"se, ce, fm, ta, hs, bm, im, dc","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
@@ -84,6 +87,7 @@ dominator_XIV_Elite4_bv,"fm, gi, bm, ms, im, dc, pa",missleracks
 dominator_XIV_Elite_bv,"fm, gi, bm, ms, im, dc, pa",missleracks
 dominator_xiv_Bounty1_bv,"fm, gi, bm, ms, im, dc, pa",
 dominator_xiv_Bounty2_bv,"fm, gi, bm, ms, im, dc, pa",
+doom_Bounty1_bv,"se, ce, fm, im, dc, pa",
 doom_Overdriven_bv,"se, ce, fm, im, dc, pa","fluxcoil, adaptive_coils"
 doom_Support_bv,"se, ce, fm, im, dc, pa","fluxcoil, adaptive_coils"
 dram_Light_bv,,
@@ -128,6 +132,8 @@ eradicator_pirates_Attack_bv,"ms, fm, gi, bm, ta, im, hs",
 eradicator_pirates_Bounty1_bv,"se, fm, gi, bm, ta, im, hs",
 eradicator_pirates_Bounty2_bv,"se, fm, gi, bm, ta, im, hs",
 eradicator_pirates_Overdriven_bv,"re, ce, fm, ms, ta, hs, im, pa",hardened_subsystems
+executor_Bounty1_bv,"se, ms, fm, gi, ta, hs, oe, im",
+executor_Bounty2_bv,"se, ms, fm, gi, ta, hs, oe, im",
 executor_Elite2_bv,"se, ms, fm, gi, ta, hs, oe, im",
 executor_Elite_bv,"se, ms, fm, gi, ta, hs, oe, im",
 falcon_Bounty1_bv,"se, fm, gi, ta, oe, hs, im",
@@ -225,15 +231,15 @@ nova_Support1B_bv,,
 odyssey_Balanced_bv,"ag, ms, fm, ta, hs, gi, im, oe","turretgyros, stabilizedshieldemitter, hardenedshieldemitter"
 omen_Bounty1_bv,"ce, se, fm, hs, ta, ew, im",
 omen_Ew_bv,"ce, se, fm, hs, ta, ew, im",
-onslaught_Bounty1_bv,"ms, ta, gi, hs, im, bm, oe",
-onslaught_Bounty2_bv,"ms, ta, gi, hs, im, bm, oe",
-onslaught_Brawler_bv,"ms, ta, gi, hs, im, bm, oe",turretgyros
-onslaught_Outdated_bv,"ms, ta, gi, hs, im, bm, oe",turretgyros
-onslaught_Standard_bv,"ms, ta, gi, hs, im, bm, oe",turretgyros
-onslaught_xiv_Bounty1_bv,"ms, ta, gi, hs, im, bm, oe",
-onslaught_xiv_Bounty2_bv,"ms, ta, gi, hs, im, bm, oe",
-onslaught_xiv_Elite2_bv,"ms, ta, gi, hs, im, bm, oe",turretgyros
-onslaught_xiv_Standard_bv,"ms, ta, gi, hs, im, bm, oe",turretgyros
+onslaught_Bounty1_bv,"fm, ms, ta, gi, hs, im, bm, oe",
+onslaught_Bounty2_bv,"fm, ms, ta, gi, hs, im, bm, oe",
+onslaught_Brawler_bv,"fm, ms, ta, gi, hs, im, bm, oe",turretgyros
+onslaught_Outdated_bv,"fm, ms, ta, gi, hs, im, bm, oe",turretgyros
+onslaught_Standard_bv,"fm, ms, ta, gi, hs, im, bm, oe",turretgyros
+onslaught_xiv_Bounty1_bv,"fm, ms, ta, gi, hs, im, bm, oe",
+onslaught_xiv_Bounty2_bv,"fm, ms, ta, gi, hs, im, bm, oe",
+onslaught_xiv_Elite2_bv,"fm, ms, ta, gi, hs, im, bm, oe",turretgyros
+onslaught_xiv_Standard_bv,"fm, ms, ta, gi, hs, im, bm, oe",turretgyros
 paragon_Bounty1_bv,"fm, ta, gi, im, oe, hs, dc",
 paragon_Elite_bv,"fm, ta, gi, im, oe, hs, dc",
 paragon_Escort_bv,"fm, ta, gi, im, oe, hs, dc",turretgyros
