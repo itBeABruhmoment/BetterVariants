@@ -22,12 +22,15 @@ import variants_lib.data.VariantsLibFleetParams;
 
 import java.util.ArrayList;
 
-public class BetterVariantsRemnantBountyCreator extends CBRemnant {
+public class BetterVariantsRemnantBountyCreator extends CBRemnant implements BountyCreator{
     private static final Logger log = Global.getLogger(better_variants.bar_events.BetterVariantsRemnantBountyCreator.class);
     static {
         log.setLevel(Level.ALL);
     }
 
+    protected long seed = 0;
+
+    @Override
     public CustomBountyCreator.CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage) {
         CustomBountyCreator.CustomBountyData data = new CustomBountyCreator.CustomBountyData();
         data.difficulty = difficulty;
@@ -106,7 +109,7 @@ public class BetterVariantsRemnantBountyCreator extends CBRemnant {
         // get seed
         long seed = 0;
         try {
-            seed = ((BetterVariantsBounty) mission).getSeed();
+            seed = BountyUtil.createSeedForBounty(createdAt, difficulty);
         } catch (Exception e) {
             log.info(String.format("%s: error when getting salvage seed \n %s", CommonStrings.MOD_ID, e));
         }
@@ -144,6 +147,12 @@ public class BetterVariantsRemnantBountyCreator extends CBRemnant {
         data.baseReward = CBStats.getBaseBounty(difficulty, CBStats.REMNANT_MULT, (BaseHubMission)mission);
 
         return data;
+    }
+
+    @Override
+    public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage, int makeDifferent) {
+        this.seed = BountyUtil.createSeedForBounty(createdAt, makeDifferent);
+        return this.createBounty(createdAt, mission, difficulty, bountyStage);
     }
 
     @Override

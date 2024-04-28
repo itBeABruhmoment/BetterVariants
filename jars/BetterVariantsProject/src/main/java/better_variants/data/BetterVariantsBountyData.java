@@ -93,9 +93,11 @@ public class BetterVariantsBountyData {
         // choose one
         float runningWeightSum = 0.0f;
         final float random = new Random(seed).nextFloat();
+        log.info("random " + random + " seed " + seed);
         for(final BetterVariantsBountyDataMember bounty : validBounties) {
             runningWeightSum += bounty.getWeight();
-            if(runningWeightSum / totalWeightSum < random) {
+            log.info(runningWeightSum / totalWeightSum);
+            if(runningWeightSum / totalWeightSum > random) {
                 return bounty;
             }
         }

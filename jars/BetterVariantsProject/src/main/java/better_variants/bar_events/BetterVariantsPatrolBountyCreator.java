@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.function.Predicate;
 
-public class BetterVariantsPatrolBountyCreator extends CBPatrol {
+public class BetterVariantsPatrolBountyCreator extends CBPatrol implements BountyCreator {
     private static final Logger log = Global.getLogger(better_variants.bar_events.BetterVariantsPatrolBountyCreator.class);
     static {
         log.setLevel(Level.ALL);
@@ -36,6 +36,8 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol {
         add(Factions.HEGEMONY); add(Factions.LUDDIC_CHURCH); add(Factions.DIKTAT); add(Factions.LUDDIC_PATH);
         add(Factions.PERSEAN); add(Factions.INDEPENDENT); add(Factions.TRITACHYON);
     }};
+
+    protected long seed = 0;
 
     public CustomBountyCreator.CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage) {
         CustomBountyCreator.CustomBountyData data = new CustomBountyCreator.CustomBountyData();
@@ -136,14 +138,6 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol {
 
         // stuff I added
 
-        // get seed
-        long seed = 0;
-        try {
-            seed = ((BetterVariantsBounty) mission).getSeed();
-        } catch (Exception e) {
-            log.info(String.format("%s: error when getting salvage seed \n %s", CommonStrings.MOD_ID, e));
-        }
-
         // pick bounty
         final ArrayList<String> factions = new ArrayList<>();
         factions.add(target.getFactionId());
@@ -179,4 +173,9 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol {
         return data;
     }
 
+    @Override
+    public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage, int makeDifferent) {
+        this.seed = BountyUtil.createSeedForBounty(createdAt, makeDifferent);
+        return this.createBounty(createdAt, mission, difficulty, bountyStage);
+    }
 }

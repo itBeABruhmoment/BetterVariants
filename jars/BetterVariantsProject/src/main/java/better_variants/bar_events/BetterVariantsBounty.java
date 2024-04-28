@@ -37,41 +37,13 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
     }
 
     public static final ArrayList<CustomBountyCreator> CREATORS = new ArrayList<CustomBountyCreator>() {{
-        add(new BetterVariantsDeserterBountyCreator()); add(new BetterVariantsPatrolBountyCreator());
+        add(new BetterVariantsDeserterBountyCreator());
+        add(new BetterVariantsPatrolBountyCreator());
         add(new BetterVariantsRemnantBountyCreator());
     }};
 
-    protected long seed = 0;
-
-    public long getSeed() {
-        return seed;
-    }
-
-    // create a seed based on in game time and market
-    protected long createSeedForBounty(MarketAPI createdAt) {
-        // build byte buffer
-        final CampaignClockAPI clock = Global.getSector().getClock();
-        final ByteBuffer bytesForSeed = ByteBuffer.allocate(8 + 4 + 4);
-        bytesForSeed.putLong(createdAt.getPrimaryEntity().getMemoryWithoutUpdate().getLong("$salvageSeed"));
-        bytesForSeed.putInt(clock.getCycle());
-        bytesForSeed.putInt(clock.getMonth());
-
-        // hash to get a singular long
-        final byte[] bytesForSeedArr = bytesForSeed.array();
-        final long fnv1Init = 0xcbf29ce484222325L;
-        final long fnv1Prime = 1099511628211L;
-        long hash = fnv1Init;
-        for(int i = 0; i < bytesForSeedArr.length; i++) {
-            hash ^= (bytesForSeedArr[i] & 0xff);
-            hash *= fnv1Prime;
-        }
-
-        return hash;
-    }
-
     @Override
     public List<CustomBountyCreator> getCreators() {
-        log.info("BetterVariantsBountyCreate creator #############################");
         return CREATORS;
     }
 
@@ -84,13 +56,6 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         log.info("BetterVariantsBountyCreate ########################################################################");
         if (barEvent) {
             createBarGiver(createdAt);
-        }
-
-        try {
-            seed = createSeedForBounty(createdAt);
-            log.info("seed: " + seed);
-        } catch (Exception e) {
-            log.info(String.format("%s: error when creating salvage seed \n %s", CommonStrings.MOD_ID, e));
         }
 
         PersonAPI person = getPerson();
@@ -120,7 +85,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
 
         if (this.creatorLow != null) {
             log.info("creator not null");
-            this.dataLow = this.creatorLow.createBounty(createdAt, this, dLow, Stage.BOUNTY);
+            this.dataLow = ((BountyCreator) this.creatorLow).createBounty(createdAt, this, dLow, Stage.BOUNTY, 0);
         } else {
             log.info("creator null"); // creator appears to be null in current iteration
         }
@@ -133,7 +98,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         int dNormal = pickDifficulty(DifficultyChoice.NORMAL);
         this.creatorNormal = pickCreator(dNormal, DifficultyChoice.NORMAL);
         if (this.creatorNormal != null) {
-            this.dataNormal = this.creatorNormal.createBounty(createdAt, this, dNormal, Stage.BOUNTY);
+            this.dataNormal = ((BountyCreator) this.creatorNormal).createBounty(createdAt, this, dNormal, Stage.BOUNTY, 1);
         }
         if (this.dataNormal == null || this.dataNormal.fleet == null) {
             log.info(String.format("BetterVariantsBountyCreate r4 %s", dataNormal));
@@ -144,7 +109,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         this.creatorHigh = pickCreator(dHigh, DifficultyChoice.HIGH);
         if (this.creatorHigh != null) {
             log.info(String.format("BetterVariantsBountyCreate r5 %s", dataHigh));
-            this.dataHigh = this.creatorHigh.createBounty(createdAt, this, dHigh, Stage.BOUNTY);
+            this.dataHigh = ((BountyCreator) this.creatorHigh).createBounty(createdAt, this, dHigh, Stage.BOUNTY, 2);
         }
 
         if (this.dataHigh == null || this.dataHigh.fleet == null) {
@@ -152,6 +117,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
             return false;
         }
 
+        log.info("high " + dHigh + " med " + dNormal + " low " + dLow);
         log.info("BetterVariantsBountyCreate return true");
         return true;
     }

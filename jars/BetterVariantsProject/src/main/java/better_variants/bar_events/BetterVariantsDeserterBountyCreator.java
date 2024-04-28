@@ -26,12 +26,15 @@ import variants_lib.data.VariantsLibFleetParams;
 
 import java.util.ArrayList;
 
-public class BetterVariantsDeserterBountyCreator extends CBDeserter {
+public class BetterVariantsDeserterBountyCreator extends CBDeserter implements BountyCreator{
     private static final Logger log = Global.getLogger(better_variants.bar_events.BetterVariantsDeserterBountyCreator.class);
     static {
         log.setLevel(Level.ALL);
     }
 
+    protected long seed = 0;
+
+    @Override
     public CustomBountyCreator.CustomBountyData createBounty(
             MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage
     ) {
@@ -123,12 +126,13 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
         // stuff I added
 
         // get seed
-        long seed = 0;
-        try {
-            seed = ((BetterVariantsBounty) mission).getSeed();
-        } catch (Exception e) {
-            log.info(String.format("%s: error when getting salvage seed \n %s", CommonStrings.MOD_ID, e));
-        }
+//        long seed = 0;
+//        try {
+//            seed = ((BetterVariantsBounty) mission).createSeedForBounty(createdAt, difficulty);
+//        } catch (Exception e) {
+//            log.info(String.format("%s: error when getting salvage seed \n %s", CommonStrings.MOD_ID, e));
+//        }
+//        log.info("seed" + seed);
 
         // Get list of allied factions and self
         final String giverFactionId = mission.getPerson().getFaction().getId();
@@ -175,5 +179,11 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter {
     @Override
     public float getFrequency(HubMissionWithBarEvent mission, int difficulty) {
         return 10.f;
+    }
+
+    @Override
+    public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage, int makeDifferent) {
+        this.seed = BountyUtil.createSeedForBounty(createdAt, makeDifferent);
+        return this.createBounty(createdAt, mission, difficulty, bountyStage);
     }
 }
