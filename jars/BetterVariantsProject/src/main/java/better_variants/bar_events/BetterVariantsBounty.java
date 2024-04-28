@@ -10,6 +10,9 @@ import com.fs.starfarer.api.impl.campaign.missions.cb.CustomBountyCreator;
 import com.fs.starfarer.api.impl.campaign.missions.cb.MilitaryCustomBounty;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+
+import java.nio.ByteBuffer;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -44,6 +47,28 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         return seed;
     }
 
+    // create a seed based on in game time and market
+    protected long createSeedForBounty(MarketAPI createdAt) {
+        // build byte buffer
+        final CampaignClockAPI clock = Global.getSector().getClock();
+        final ByteBuffer bytesForSeed = ByteBuffer.allocate(8 + 4 + 4);
+        bytesForSeed.putLong(createdAt.getPrimaryEntity().getMemoryWithoutUpdate().getLong("$salvageSeed"));
+        bytesForSeed.putInt(clock.getCycle());
+        bytesForSeed.putInt(clock.getMonth());
+
+        // hash to get a singular long
+        final byte[] bytesForSeedArr = bytesForSeed.array();
+        final long fnv1Init = 0xcbf29ce484222325L;
+        final long fnv1Prime = 1099511628211L;
+        long hash = fnv1Init;
+        for(int i = 0; i < bytesForSeedArr.length; i++) {
+            hash ^= (bytesForSeedArr[i] & 0xff);
+            hash *= fnv1Prime;
+        }
+
+        return hash;
+    }
+
     @Override
     public List<CustomBountyCreator> getCreators() {
         log.info("BetterVariantsBountyCreate creator #############################");
@@ -52,18 +77,6 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
 
     @Override
     protected boolean create(MarketAPI createdAt, boolean barEvent) {
-        try {
-            seed += createdAt.getPrimaryEntity().getMemoryWithoutUpdate().getLong("$salvageSeed");
-            final CampaignClockAPI clock = Global.getSector().getClock();
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
-            seed += clock.getCycle();
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
-            seed += ((long) clock.getMonth()) << 32;
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, seed));
-        } catch (Exception e) {
-            log.info(String.format("%s: error when creating salvage seed \n %s", CommonStrings.MOD_ID, e));
-        }
-
         if ("pirates".equals(createdAt.getFaction().getId())) {
             return false;
         }
@@ -71,6 +84,13 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         log.info("BetterVariantsBountyCreate ########################################################################");
         if (barEvent) {
             createBarGiver(createdAt);
+        }
+
+        try {
+            seed = createSeedForBounty(createdAt);
+            log.info("seed: " + seed);
+        } catch (Exception e) {
+            log.info(String.format("%s: error when creating salvage seed \n %s", CommonStrings.MOD_ID, e));
         }
 
         PersonAPI person = getPerson();
