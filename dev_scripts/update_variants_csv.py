@@ -32,7 +32,8 @@ for id in variant_ids:
 bv_variants = bv_variants.sort_index()
 not_bv_variants = not_bv_variants.sort_index()
 
-bv_variants = bv_variants.append(not_bv_variants)
+bv_variants = pd.concat([bv_variants, not_bv_variants])
+print(bv_variants)
 
 bv_variants.to_csv('out.csv')
 print(bv_variants)
