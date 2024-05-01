@@ -1,33 +1,43 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 38,
-        "fluxVents": 55,
-        "goalVariant": false,
-        "hullId": "prometheus2",
-        "hullMods": [
-                "hardenedshieldemitter",
-                "missleracks"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "turretgyros",
-                "fluxdistributor",
-                "targetingunit"
-        ],
-        "variantId": "prometheus2_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 031": "gauss",
-                                "WS 032": "gauss"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 019": "cyclone"}
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 38,
+    "fluxVents": 55,
+    "hullId": "prometheus2",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "missleracks",
+        "turretgyros",
+        "fluxdistributor",
+        "targetingunit"
+    ],
+    "permaMods": [
+        "turretgyros",
+        "fluxdistributor",
+        "targetingunit"
+    ],
+    "sMods": [
+        "turretgyros",
+        "fluxdistributor",
+        "targetingunit"
+    ],
+    "variantId": "prometheus2_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 031": "gauss",
+                "WS 032": "gauss"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "cyclone"}
+        }
+    ],
+    "wings": [
+        "claw_wing",
+        "claw_wing"
+    ]
 }

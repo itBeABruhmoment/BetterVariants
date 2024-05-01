@@ -1,47 +1,60 @@
 {
-        "displayName": "Custom",
-        "fluxCapacitors": 37,
-        "fluxVents": 55,
-        "goalVariant": false,
-        "hullId": "invictus",
-        "hullMods": ["converted_hangar"],
-        "permaMods": [],
-        "sMods": [
-                "reinforcedhull",
-                "fluxbreakers",
-                "fluxdistributor"
-        ],
-        "variantId": "invictus_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 001": "mjolnir",
-                                "WS 002": "mark9",
-                                "WS 009": "mark9",
-                                "WS 010": "mjolnir"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "ALTERNATING",
-                        "weapons": {
-                                "WS 004": "locust",
-                                "WS 007": "locust"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 000": "devastator",
-                                "WS 003": "mark9",
-                                "WS 005": "mark9",
-                                "WS 006": "devastator",
-                                "WS 008": "mark9",
-                                "WS 026": "devastator"
-                        }
-                }
-        ]
+    "displayName": "Custom",
+    "fluxCapacitors": 0,
+    "fluxVents": 49,
+    "hullId": "invictus",
+    "hullMods": [
+        "reinforcedhull",
+        "fluxbreakers",
+        "fluxdistributor",
+        "missleracks",
+        "armoredweapons",
+        "blast_doors",
+        "converted_hangar"
+    ],
+    "permaMods": [
+        "reinforcedhull",
+        "fluxbreakers",
+        "fluxdistributor"
+    ],
+    "sMods": [
+        "reinforcedhull",
+        "fluxbreakers",
+        "fluxdistributor"
+    ],
+    "variantId": "invictus_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "gauss",
+                "WS 002": "hellbore",
+                "WS 009": "hellbore",
+                "WS 010": "gauss"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "hurricane",
+                "WS 007": "hurricane"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 026": "devastator"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "devastator"}
+        }
+    ],
+    "wings": [
+        "talon_wing",
+        "talon_wing"
+    ]
 }

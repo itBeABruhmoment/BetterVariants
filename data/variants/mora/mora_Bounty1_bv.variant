@@ -1,48 +1,61 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 30,
-        "fluxVents": 6,
-        "goalVariant": false,
-        "hullId": "mora",
-        "hullMods": ["targetingunit"],
-        "permaMods": [],
-        "sMods": [
-                "missleracks",
-                "expanded_deck_crew",
-                "heavyarmor"
-        ],
-        "variantId": "mora_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 002": "lightac"}
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 003": "harpoonpod",
-                                "WS 004": "harpoonpod"
-                        }
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 005": "lightac",
-                                "WS 007": "lightac",
-                                "WS 012": "lightac",
-                                "WS 013": "lightac"
-                        }
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 008": "vulcan",
-                                "WS 011": "vulcan"
-                        }
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 30,
+    "fluxVents": 6,
+    "hullId": "mora",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "expanded_deck_crew",
+        "heavyarmor"
+    ],
+    "permaMods": [
+        "missleracks",
+        "expanded_deck_crew",
+        "heavyarmor"
+    ],
+    "sMods": [
+        "missleracks",
+        "expanded_deck_crew",
+        "heavyarmor"
+    ],
+    "variantId": "mora_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "lightac"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "harpoonpod",
+                "WS 004": "harpoonpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightac",
+                "WS 007": "lightac",
+                "WS 012": "lightac",
+                "WS 013": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "vulcan",
+                "WS 011": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "gladius_wing",
+        "warthog_wing",
+        "claw_wing"
+    ]
 }

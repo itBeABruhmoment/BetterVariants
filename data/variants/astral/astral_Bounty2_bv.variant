@@ -1,38 +1,52 @@
 {
-        "displayName": "Custom",
-        "fluxCapacitors": 55,
-        "fluxVents": 1,
-        "goalVariant": false,
-        "hullId": "astral",
-        "hullMods": [
-                "hardenedshieldemitter",
-                "missleracks",
-                "eccm"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "targetingunit",
-                "stabilizedshieldemitter",
-                "expanded_deck_crew"
-        ],
-        "variantId": "astral_Bounty2_bv",
-        "weaponGroups": [
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 014": "gravitonbeam",
-                                "WS 015": "ionbeam",
-                                "WS 023": "ionbeam"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 011": "hurricane",
-                                "WS 012": "hurricane"
-                        }
-                }
-        ]
+    "displayName": "Custom",
+    "fluxCapacitors": 55,
+    "fluxVents": 1,
+    "hullId": "astral",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "missleracks",
+        "eccm",
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "expanded_deck_crew"
+    ],
+    "permaMods": [
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "expanded_deck_crew"
+    ],
+    "sMods": [
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "expanded_deck_crew"
+    ],
+    "variantId": "astral_Bounty2_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "gravitonbeam",
+                "WS 015": "ionbeam",
+                "WS 023": "ionbeam"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "hurricane",
+                "WS 012": "hurricane"
+            }
+        }
+    ],
+    "wings": [
+        "warthog_wing",
+        "claw_wing",
+        "broadsword_wing",
+        "broadsword_wing",
+        "warthog_wing",
+        "claw_wing"
+    ]
 }

@@ -1,44 +1,47 @@
 {
-        "displayName": "Custom",
-        "fluxCapacitors": 35,
-        "fluxVents": 3,
-        "goalVariant": false,
-        "hullId": "gryphon",
-        "hullMods": [
-                "targetingunit",
-                "fluxbreakers",
-                "extendedshieldemitter"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "eccm",
-                "turretgyros"
-        ],
-        "variantId": "gryphon_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 001": "squall",
-                                "WS 008": "harpoonpod",
-                                "WS 009": "harpoonpod",
-                                "WS 010": "breach",
-                                "WS 011": "breach",
-                                "WS 012": "breach"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 002": "heavymauler",
-                                "WS 003": "mininglaser",
-                                "WS 004": "mininglaser",
-                                "WS 005": "mininglaser",
-                                "WS 006": "mininglaser",
-                                "WS 007": "mininglaser"
-                        }
-                }
-        ]
+    "displayName": "Custom",
+    "fluxCapacitors": 30,
+    "fluxVents": 7,
+    "hullId": "gryphon",
+    "hullMods": [
+        "eccm",
+        "turretgyros",
+        "targetingunit",
+        "adaptiveshields",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [
+        "eccm",
+        "turretgyros"
+    ],
+    "sMods": [
+        "eccm",
+        "turretgyros"
+    ],
+    "variantId": "gryphon_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "harpoon",
+                "WS 011": "harpoon",
+                "WS 012": "harpoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "squall",
+                "WS 008": "harpoonpod",
+                "WS 009": "harpoonpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "hveldriver"}
+        }
+    ]
 }

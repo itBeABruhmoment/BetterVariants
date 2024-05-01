@@ -1,35 +1,47 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 22,
-        "fluxVents": 0,
-        "goalVariant": false,
-        "hullId": "drover",
-        "hullMods": ["targetingunit"],
-        "permaMods": [],
-        "sMods": [
-                "missleracks",
-                "expanded_deck_crew",
-                "eccm"
-        ],
-        "variantId": "drover_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 002": "harpoon",
-                                "WS 003": "harpoon",
-                                "WS 004": "harpoon",
-                                "WS 005": "harpoon"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 000": "lightac",
-                                "WS 001": "lightac"
-                        }
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 22,
+    "fluxVents": 3,
+    "hullId": "drover",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "expanded_deck_crew",
+        "eccm"
+    ],
+    "permaMods": [
+        "missleracks",
+        "expanded_deck_crew",
+        "eccm"
+    ],
+    "sMods": [
+        "missleracks",
+        "expanded_deck_crew",
+        "eccm"
+    ],
+    "variantId": "drover_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "harpoon",
+                "WS 003": "harpoon",
+                "WS 004": "harpoon",
+                "WS 005": "harpoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "lightac",
+                "WS 001": "lightac"
+            }
+        }
+    ],
+    "wings": [
+        "broadsword_wing",
+        "cobra_wing"
+    ]
 }

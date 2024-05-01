@@ -1,7 +1,7 @@
 {
     "displayName": "Strike1B",
     "fluxCapacitors": 20,
-    "fluxVents": 0,
+    "fluxVents": 5,
     "hullId": "shrike",
     "hullMods": [
         "fluxcoil",
@@ -27,8 +27,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "irpulse",
-                "WS 001": "pdburst",
-                "WS 002": "irpulse"
+                "WS 001": "pdburst"
             }
         }
     ]

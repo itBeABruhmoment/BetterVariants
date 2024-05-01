@@ -1,11 +1,12 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 21,
-    "fluxVents": 30,
+    "fluxCapacitors": 30,
+    "fluxVents": 8,
     "hullId": "eradicator",
     "hullMods": [
-        "targetingunit",
-        "armoredweapons"
+        "missleracks",
+        "hardenedshieldemitter",
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,38 +16,26 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "heavymortar",
-                "WS 007": "heavymortar"
+                "WS 005": "hveldriver",
+                "WS 006": "hveldriver",
+                "WS 007": "heavymauler"
             }
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 000": "annihilator",
-                "WS 001": "annihilator",
-                "WS 002": "annihilator",
-                "WS 003": "annihilator",
-                "WS 004": "annihilator"
+                "WS 000": "harpoon",
+                "WS 001": "harpoon",
+                "WS 002": "harpoon",
+                "WS 003": "harpoon",
+                "WS 004": "harpoon"
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 009": "railgun",
-                "WS 010": "railgun",
-                "WS 011": "railgun"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 006": "dualflak",
-                "WS 013": "vulcan",
-                "WS 014": "vulcan"
-            }
+            "weapons": {"WS 009": "vulcan"}
         }
     ]
 }

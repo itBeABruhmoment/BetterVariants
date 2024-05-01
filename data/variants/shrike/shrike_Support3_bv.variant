@@ -1,11 +1,12 @@
 {
     "displayName": "Support3B",
     "fluxCapacitors": 20,
-    "fluxVents": 0,
+    "fluxVents": 5,
     "hullId": "shrike",
     "hullMods": [
-        "converted_hangar",
-        "fluxcoil"
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "unstable_injector"
     ],
     "permaMods": [],
     "sMods": [],
@@ -14,21 +15,16 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 003": "ionpulser"}
+            "weapons": {
+                "WS 000": "ioncannon",
+                "WS 001": "pdburst",
+                "WS 003": "pulselaser"
+            }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 005": "phasecl"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 000": "pdburst",
-                "WS 002": "pdburst"
-            }
+            "weapons": {"WS 005": "typhoon"}
         }
-    ],
-    "wings": ["sarissa_wing"]
+    ]
 }

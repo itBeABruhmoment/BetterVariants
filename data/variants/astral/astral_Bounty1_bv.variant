@@ -1,38 +1,52 @@
 {
-        "displayName": "Custom",
-        "fluxCapacitors": 48,
-        "fluxVents": 0,
-        "goalVariant": false,
-        "hullId": "astral",
-        "hullMods": [
-                "missleracks",
-                "eccm",
-                "hardenedshieldemitter"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "stabilizedshieldemitter",
-                "targetingunit",
-                "expanded_deck_crew"
-        ],
-        "variantId": "astral_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 011": "hurricane",
-                                "WS 012": "squall"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 014": "gravitonbeam",
-                                "WS 015": "ionbeam",
-                                "WS 023": "ionbeam"
-                        }
-                }
-        ]
+    "displayName": "Custom",
+    "fluxCapacitors": 48,
+    "fluxVents": 0,
+    "hullId": "astral",
+    "hullMods": [
+        "missleracks",
+        "eccm",
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter",
+        "targetingunit",
+        "expanded_deck_crew"
+    ],
+    "permaMods": [
+        "stabilizedshieldemitter",
+        "targetingunit",
+        "expanded_deck_crew"
+    ],
+    "sMods": [
+        "stabilizedshieldemitter",
+        "targetingunit",
+        "expanded_deck_crew"
+    ],
+    "variantId": "astral_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "hurricane",
+                "WS 012": "squall"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "gravitonbeam",
+                "WS 015": "ionbeam",
+                "WS 023": "ionbeam"
+            }
+        }
+    ],
+    "wings": [
+        "cobra_wing",
+        "cobra_wing",
+        "gladius_wing",
+        "gladius_wing",
+        "hoplon_wing",
+        "cobra_wing"
+    ]
 }

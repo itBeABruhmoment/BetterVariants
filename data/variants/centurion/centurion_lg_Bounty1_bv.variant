@@ -1,30 +1,39 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 15,
-        "fluxVents": 9,
-        "goalVariant": false,
-        "hullId": "centurion_LG",
-        "hullMods": ["unstable_injector"],
-        "permaMods": [],
-        "sMods": [
-                "missile_autoloader",
-                "hardenedshieldemitter",
-                "fluxcoil"
-        ],
-        "variantId": "centurion_lg_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "ALTERNATING",
-                        "weapons": {
-                                "WS 001": "amblaster",
-                                "WS 002": "amblaster"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 003": "swarmer"}
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 15,
+    "fluxVents": 8,
+    "hullId": "centurion_LG",
+    "hullMods": [
+        "unstable_injector",
+        "missile_autoloader",
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "magazines"
+    ],
+    "permaMods": [
+        "missile_autoloader",
+        "hardenedshieldemitter",
+        "fluxcoil"
+    ],
+    "sMods": [
+        "missile_autoloader",
+        "hardenedshieldemitter",
+        "fluxcoil"
+    ],
+    "variantId": "centurion_lg_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "amblaster",
+                "WS 002": "amblaster"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "swarmer"}
+        }
+    ]
 }

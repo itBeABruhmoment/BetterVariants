@@ -1,7 +1,7 @@
 {
     "displayName": "Elite1B",
     "fluxCapacitors": 50,
-    "fluxVents": 5,
+    "fluxVents": 1,
     "hullId": "astral",
     "hullMods": [
         "expanded_deck_crew",
@@ -33,8 +33,8 @@
     ],
     "wings": [
         "claw_wing",
-        "gladius_wing",
-        "gladius_wing",
+        "broadsword_wing",
+        "broadsword_wing",
         "flash_wing",
         "claw_wing",
         "warthog_wing"

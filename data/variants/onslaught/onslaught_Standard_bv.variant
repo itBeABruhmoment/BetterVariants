@@ -19,29 +19,29 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 016": "tpc",
-                "WS 017": "tpc"
+                "WS 001": "hveldriver",
+                "WS 007": "hveldriver",
+                "WS 012": "flak",
+                "WS 016": "tpc"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "hveldriver",
+                "WS 013": "flak",
+                "WS 017": "tpc",
+                "WS 021": "breachpod",
+                "WS 022": "breachpod",
+                "WS 023": "breachpod",
+                "WS 024": "breachpod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS 019": "gauss"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "hveldriver",
-                "WS 003": "hveldriver",
-                "WS 007": "hveldriver",
-                "WS 012": "flak",
-                "WS 013": "flak",
-                "WS 021": "breachpod",
-                "WS 022": "breachpod",
-                "WS 023": "breachpod",
-                "WS 024": "breachpod"
-            }
         },
         {
             "autofire": true,

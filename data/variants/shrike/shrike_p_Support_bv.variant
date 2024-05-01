@@ -1,10 +1,11 @@
 {
     "displayName": "Support1B",
-    "fluxCapacitors": 20,
-    "fluxVents": 1,
+    "fluxCapacitors": 19,
+    "fluxVents": 0,
     "hullId": "shrike_pirates",
     "hullMods": [
-        "converted_hangar",
+        "fluxcoil",
+        "hardenedshieldemitter",
         "unstable_injector"
     ],
     "permaMods": [],
@@ -19,13 +20,12 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 005": "sabotpod"}
+            "weapons": {"WS 005": "phasecl"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS 001": "lightdualac"}
         }
-    ],
-    "wings": ["broadsword_wing"]
+    ]
 }

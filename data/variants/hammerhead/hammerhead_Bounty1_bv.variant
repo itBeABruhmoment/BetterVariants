@@ -1,41 +1,47 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 25,
-        "fluxVents": 8,
-        "goalVariant": false,
-        "hullId": "hammerhead",
-        "hullMods": [
-                "missile_autoloader",
-                "missleracks"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "fluxcoil",
-                "hardenedshieldemitter",
-                "escort_package"
-        ],
-        "variantId": "hammerhead_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 001": "hveldriver",
-                                "WS 002": "hveldriver"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 003": "breach",
-                                "WS 004": "breach"
-                        }
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {"WS 006": "pdburst"}
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 25,
+    "fluxVents": 12,
+    "hullId": "hammerhead",
+    "hullMods": [
+        "missleracks",
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "escort_package",
+        "targetingunit"
+    ],
+    "permaMods": [
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "escort_package"
+    ],
+    "sMods": [
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "escort_package"
+    ],
+    "variantId": "hammerhead_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hveldriver",
+                "WS 002": "hveldriver"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "breach",
+                "WS 004": "breach"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "pdburst"}
+        }
+    ]
 }
