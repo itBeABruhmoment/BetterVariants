@@ -23,6 +23,7 @@ import variants_lib.data.VariantsLibFleetFactory;
 import variants_lib.data.VariantsLibFleetParams;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.function.Predicate;
 
@@ -52,6 +53,7 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol implements Bount
         for(int i = 0; i < targetFactions.size(); i++) {
             targetFactionsArr[i] = targetFactions.get(i);
         }
+        log.info(String.format("%s: %s", CommonStrings.MOD_ID, Arrays.toString(targetFactionsArr)));
 
         // stuff I added end
 
@@ -59,14 +61,17 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol implements Bount
         mission.requireMarketNotHidden();
         mission.requireMarketHasSpaceport();
         mission.requireMarketNotInHyperspace();
-        mission.requireMarketFactionCustom(ReqMode.NOT_ANY, new String[] { "decentralized" });
+//        mission.requireMarketFactionCustom(ReqMode.NOT_ANY, new String[] { "decentralized" });
         // mission.requireMarketFactionNot(new String[] { "pirates" });
         mission.requireMarketFaction(targetFactionsArr);
         mission.requireMarketFactionNotPlayer();
         mission.requireMarketLocationNot(new LocationAPI[] { createdAt.getContainingLocation() });
         MarketAPI target = mission.pickMarket();
 
-        if (target == null || target.getStarSystem() == null) return null;
+        if (target == null || target.getStarSystem() == null) {
+            log.info(String.format("%s: could not find location to spawn patrol", CommonStrings.MOD_ID));
+            return null;
+        }
 
         StarSystemAPI system = target.getStarSystem();
         data.system = system;
@@ -177,5 +182,10 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol implements Bount
     public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage, int makeDifferent) {
         this.seed = BountyUtil.createSeedForBounty(createdAt, makeDifferent);
         return this.createBounty(createdAt, mission, difficulty, bountyStage);
+    }
+
+    @Override
+    public float getWeight(int difficulty) {
+        return 10.0f;
     }
 }

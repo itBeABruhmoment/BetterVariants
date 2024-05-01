@@ -186,4 +186,9 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter implements B
         this.seed = BountyUtil.createSeedForBounty(createdAt, makeDifferent);
         return this.createBounty(createdAt, mission, difficulty, bountyStage);
     }
+
+    @Override
+    public float getWeight(int difficulty) {
+        return 10.0f;
+    }
 }

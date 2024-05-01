@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.rules.HasMemory;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.missions.cb.CustomBountyCreator;
 import com.fs.starfarer.api.impl.campaign.missions.cb.MilitaryCustomBounty;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -38,9 +39,11 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
 
     public static final ArrayList<CustomBountyCreator> CREATORS = new ArrayList<CustomBountyCreator>() {{
         add(new BetterVariantsDeserterBountyCreator());
-        add(new BetterVariantsPatrolBountyCreator());
+//        add(new BetterVariantsPatrolBountyCreator());
         add(new BetterVariantsRemnantBountyCreator());
     }};
+
+    protected Random rand = new Random();
 
     @Override
     public List<CustomBountyCreator> getCreators() {
@@ -70,6 +73,8 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
             return false;
         }
 
+        rand = new Random(BountyUtil.createSeedForBounty(createdAt, 0));
+
         setStartingStage(Stage.BOUNTY);
         setSuccessStage(Stage.COMPLETED);
         setFailureStage(Stage.FAILED);
@@ -91,7 +96,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         }
         if (this.dataLow == null || this.dataLow.fleet == null) {
             // the issue
-            log.info(String.format("BetterVariantsBountyCreate r3 %s", dataLow));
+            log.info(String.format("BetterVariantsBountyCreate r3 %s %s", dataLow, dataLow));
             return false;
         }
 
@@ -101,14 +106,14 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
             this.dataNormal = ((BountyCreator) this.creatorNormal).createBounty(createdAt, this, dNormal, Stage.BOUNTY, 1);
         }
         if (this.dataNormal == null || this.dataNormal.fleet == null) {
-            log.info(String.format("BetterVariantsBountyCreate r4 %s", dataNormal));
+            log.info(String.format("BetterVariantsBountyCreate r4 %s %s", dataNormal, creatorNormal));
             return false;
         }
 
         int dHigh = pickDifficulty(DifficultyChoice.HIGH);
         this.creatorHigh = pickCreator(dHigh, DifficultyChoice.HIGH);
         if (this.creatorHigh != null) {
-            log.info(String.format("BetterVariantsBountyCreate r5 %s", dataHigh));
+            log.info(String.format("BetterVariantsBountyCreate r5 %s %s", dataHigh, creatorHigh));
             this.dataHigh = ((BountyCreator) this.creatorHigh).createBounty(createdAt, this, dHigh, Stage.BOUNTY, 2);
         }
 
@@ -125,6 +130,11 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
     @Override
     protected CustomBountyCreator pickCreator(int difficulty, DifficultyChoice choice) {
         log.info(CREATORS);
-        return CREATORS.get(idx);
+        final WeightedRandomPicker<CustomBountyCreator> pickCreator = new WeightedRandomPicker<>();
+        pickCreator.setRandom(rand);
+        for(final CustomBountyCreator creator : CREATORS) {
+            pickCreator.add(creator, ((BountyCreator)creator).getWeight(difficulty));
+        }
+        return pickCreator.pick();
     }
 }
