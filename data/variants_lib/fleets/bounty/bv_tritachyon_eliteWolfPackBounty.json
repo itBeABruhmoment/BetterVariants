@@ -5,7 +5,10 @@
 	"minDP":40,
 	"maxDP":500,
 	"defaultFleetWidePersonality":"reckless",
-	"additionalCommanderSkills":["support_doctrine","crew_training",],
+	"additionalCommanderSkills":["tactical_drills", "coordinated_maneuvers", 
+		"wolfpack_tactics", "crew_training", "carrier_group", 
+		"support_doctrine", "electronic_warfare", "flux_regulation"
+	],
 	"spawnIfNoIndustry":false,
 	"alwaysInclude":{"ox_Standard":2},
 	"autoLogitsticsFreighterDP":0.02,

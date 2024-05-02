@@ -5,6 +5,10 @@
 	"minDP":120,
 	"maxDP":500,
 	"spawnIfNoIndustry":true,
+	"additionalCommanderSkills":["tactical_drills", "coordinated_maneuvers", 
+		"wolfpack_tactics", "crew_training", "carrier_group", 
+		"support_doctrine", "electronic_warfare", "flux_regulation"
+	],
 	"fleetPartitions":[
 		{
 			"partitionWeight":52.5,

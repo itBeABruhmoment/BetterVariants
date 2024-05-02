@@ -1,0 +1,36 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_tritachyon_rangedBounty",
+	"minDP":70,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":55,
+			"variants":{
+				"paragon_Bounty1_bv":60,
+				"astral_Bounty1_bv":30,
+				"doom_Bounty1_bv":10
+			}
+		},
+		{
+			"partitionWeight":35,
+			"variants":{
+				"eagle_Bounty1_bv":60.00,
+				"sunder_Bounty1_bv":40.00
+			}
+		},
+		{
+			"partitionWeight":10,
+			"variants":{
+				"omen_Bounty1_bv":34,
+				"tempest_Bounty1_bv":33,
+				"afflictor_Bounty1_bv":33
+			}
+		}
+	]
+}
+

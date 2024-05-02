@@ -1,0 +1,40 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_tritachyon_strikeBounty",
+	"minDP":10,
+	"maxDP":500,
+	"defaultFleetWidePersonality":"aggressive",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"additionalCommanderSkills":["tactical_drills", "coordinated_maneuvers", 
+		"wolfpack_tactics", "crew_training", "carrier_group", 
+		"support_doctrine", "electronic_warfare", "flux_regulation"
+	],
+	"fleetPartitions":[
+		{
+			"partitionWeight":45,
+			"variants":{
+				"aurora_Bounty1_bv":70,
+				"doom_Bounty1_bv":30
+			}
+		},
+		{
+			"partitionWeight":35,
+			"variants":{
+				"fury_Bounty1_bv":60,
+                "hyperion_Bounty1_bv":40
+
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+                "shrike_Bounty1_bv":20,
+                "afflictor_Bounty1_bv":20,
+                "omen_Bounty1_bv":80
+			}
+		}
+	]
+}
+

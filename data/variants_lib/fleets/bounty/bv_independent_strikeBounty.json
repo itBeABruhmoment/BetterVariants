@@ -1,0 +1,42 @@
+{
+    # vlTestBattle bv_independent_strikeBounty 300 bv_hegemony_xivBounty 300 
+    # vlTestBattle bv_sindrian_diktat_ranged 300 bv_independent_strike 300 
+	"autofit":false,
+	"fleetDataId":"bv_independent_strikeBounty",
+	"minDP":10,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"aggressive",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":40,
+			"variants":{
+				"odyssey_Bounty1_bv":100
+			}
+		},
+		{
+			"partitionWeight":40,
+			"variants":{
+				"aurora_Bounty1_bv":75,
+                "eagle_Bounty2_bv":25
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"hammerhead_Bounty1_bv":10,
+                "hyperion_Bounty1_bv":10
+
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+                "omen_Ew_bv":100
+			}
+		}
+	]
+}
+

@@ -1,5 +1,5 @@
 {
-	# vlTestBattle bv_persean_ranged 300 bv_hegemony_lowtech 300
+	# vlTestBattle bv_persean_ranged2Bounty 300 bv_hegemony_xivBounty 300
 	"autofit":false,
 	"fleetDataId":"bv_persean_ranged2Bounty",
 	"minDP":40,
@@ -7,6 +7,10 @@
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
 	"autoLogitsticsTankerDP":0.02,
+	"additionalCommanderSkills":["tactical_drills", "coordinated_maneuvers", 
+		"wolfpack_tactics", "crew_training", "carrier_group", 
+		"support_doctrine", "electronic_warfare", "flux_regulation"
+	],
 	"fleetPartitions":[
 		{
 			"partitionWeight":50,

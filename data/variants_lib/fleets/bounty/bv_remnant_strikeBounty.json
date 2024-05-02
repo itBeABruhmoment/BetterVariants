@@ -4,6 +4,10 @@
 	"fleetDataId":"bv_remnant_strikeBounty",
 	"minDP":120,
 	"maxDP":500,
+	"additionalCommanderSkills":["tactical_drills", "coordinated_maneuvers", 
+		"wolfpack_tactics", "crew_training", "carrier_group", 
+		"support_doctrine", "electronic_warfare", "flux_regulation"
+	],
 	"spawnIfNoIndustry":true,
 	"fleetPartitions":[
 		{

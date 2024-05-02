@@ -1,0 +1,39 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_luddic_path_standardBounty",
+	"minDP":10,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"aggressive",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":50,
+			"variants":{
+				"prometheus2_Standard_bv":100
+			}
+		},
+		{
+			"partitionWeight":32.5,
+			"variants":{
+				"eradicator_Overdriven_bv":80,
+				"eradicator_Support_bv":20
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+                "manticore_luddic_path_Strike_bv":100
+			}
+		},
+		{
+			"partitionWeight":12.5,
+			"variants":{
+                "lasher_luddic_path_Raider_bv":50,
+                "brawler_pather_Raider_bv":50
+			}
+		}
+	]
+}
+

@@ -9,6 +9,10 @@
 	"spawnIfNoIndustry":false,
 	"autoLogitsticsFreighterDP":0.02,
 	"autoLogitsticsTankerDP":0.02,
+	"additionalCommanderSkills":["tactical_drills", "coordinated_maneuvers", 
+		"wolfpack_tactics", "crew_training", "carrier_group", 
+		"support_doctrine", "electronic_warfare", "flux_regulation"
+	],
 	"fleetPartitions":[
 		{
 			"partitionWeight":60,

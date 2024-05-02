@@ -6,6 +6,10 @@
 	"defaultFleetWidePersonality":"steady",
 	"spawnIfNoIndustry":false,
 	"autoLogitsticsTankerDP":0.03,
+	"additionalCommanderSkills":["tactical_drills", "coordinated_maneuvers", 
+		"wolfpack_tactics", "crew_training", "carrier_group", 
+		"support_doctrine", "electronic_warfare", "flux_regulation"
+	],
 	"fleetPartitions":[
 		{
 			"partitionWeight":92.5,
