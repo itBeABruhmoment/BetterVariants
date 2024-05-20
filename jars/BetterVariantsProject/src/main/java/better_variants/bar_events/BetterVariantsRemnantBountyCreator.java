@@ -145,7 +145,7 @@ public class BetterVariantsRemnantBountyCreator extends CBRemnant implements Bou
         data.fleet.setInflated(true);
 
         setRepChangesBasedOnDifficulty(data, difficulty);
-        data.baseReward = CBStats.getBaseBounty(difficulty, CBStats.REMNANT_MULT, (BaseHubMission)mission);
+        data.baseReward = Math.round(CBStats.getBaseBounty(difficulty, CBStats.REMNANT_MULT, (BaseHubMission)mission) * bounty.getRewardMultiplier());
 
         return data;
     }

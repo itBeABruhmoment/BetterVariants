@@ -174,7 +174,7 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol implements Bount
         data.fleet.setInflated(true);
 
         setRepChangesBasedOnDifficulty(data, difficulty);
-        data.baseReward = CBStats.getBaseBounty(difficulty, CBStats.PATROL_MULT, (BaseHubMission)mission);
+        data.baseReward = Math.round(CBStats.getBaseBounty(difficulty, CBStats.PATROL_MULT, (BaseHubMission)mission) * bounty.getRewardMultiplier());
 
         return data;
     }
