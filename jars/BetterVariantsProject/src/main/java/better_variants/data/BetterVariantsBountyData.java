@@ -48,6 +48,7 @@ public class BetterVariantsBountyData {
             final int minFP = JsonUtils.getInt(CommonStrings.MIN_FP_COLUMN_NAME, 10, row);
             final int maxFP = JsonUtils.getInt(CommonStrings.MAX_FP_COLUMN_NAME, 100, row);
             final int minDifficulty = JsonUtils.getInt(CommonStrings.MIN_DIFFICULTY_COLUMN_NAME, 1, row);
+            final float rewardMultiplier = JsonUtils.getFloat(row, CommonStrings.REWARD_MULT_COLUMN_NAME, 1.0f);
 
             final String faction = JsonUtils.getString(CommonStrings.FACTION_COLUMN_NAME, "", row);
             if(fleetId.equals("")) {
@@ -55,7 +56,7 @@ public class BetterVariantsBountyData {
                         CommonStrings.FACTION_COLUMN_NAME, i, CommonStrings.BOUNTY_FLEETS_PATH));
             }
 
-            bounties.put(fleetId, new BetterVariantsBountyDataMember(fleetId, weight, minFP, maxFP, faction, minDifficulty));
+            bounties.put(fleetId, new BetterVariantsBountyDataMember(fleetId, weight, minFP, maxFP, faction, minDifficulty, rewardMultiplier));
         }
 
         for(final BetterVariantsBountyDataMember bounty : bounties.values()) {
@@ -75,15 +76,16 @@ public class BetterVariantsBountyData {
 
 
     @Nullable
-    public BetterVariantsBountyDataMember pickBounty(final ArrayList<String> factions, final int difficulty, final long seed) {
+    public BetterVariantsBountyDataMember pickBounty(final ArrayList<String> factions, final int difficulty, final long seed, final int targetFp) {
         log.info(String.format("%s: %s", CommonStrings.MOD_ID, factions));
         // get valid bounties, sum weights
         float totalWeightSum = 0.0f;
         final ArrayList<BetterVariantsBountyDataMember> validBounties = new ArrayList<>(32);
         for(final BetterVariantsBountyDataMember bounty : bounties.values()) {
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, bounty));
-            log.info(String.format("%s: %s", CommonStrings.MOD_ID, factions.contains(bounty.getFaction())));
-            if(factions.contains(bounty.getFaction()) && bounty.getMinDifficulty() <= difficulty) {
+//            log.info(String.format("%s: %s", CommonStrings.MOD_ID, bounty));
+//            log.info(String.format("%s: %s", CommonStrings.MOD_ID, factions.contains(bounty.getFaction())));
+            if(factions.contains(bounty.getFaction()) && bounty.getMinDifficulty() <= difficulty
+                    && bounty.getMinFleetPoints() <= targetFp && targetFp <= bounty.getMaxFleetPoints()) {
                 validBounties.add(bounty);
                 totalWeightSum += bounty.getWeight();
             }

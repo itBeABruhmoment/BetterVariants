@@ -9,9 +9,10 @@ public class BetterVariantsBountyDataMember {
     private int maxFleetPoints = 100;
     private int minDifficulty = 1;
     private String faction = Factions.INDEPENDENT;
+    private float rewardMultiplier = 1;
 
     public BetterVariantsBountyDataMember(String fleetId, float weight, int minFleetPoints, int maxFleetPoints,
-                                          String faction, int minDifficulty
+                                          String faction, int minDifficulty, float rewardMultiplier
     ) {
         this.fleetId = fleetId;
         this.weight = weight;
@@ -19,6 +20,7 @@ public class BetterVariantsBountyDataMember {
         this.maxFleetPoints = maxFleetPoints;
         this.faction = faction;
         this.minDifficulty = minDifficulty;
+        this.rewardMultiplier = rewardMultiplier;
     }
 
     public String getFleetId() {
@@ -38,7 +40,10 @@ public class BetterVariantsBountyDataMember {
     }
 
     public String getFaction() { return faction; }
+
     public int getMinDifficulty() { return minDifficulty; }
+
+    public float getRewardMultiplier() { return rewardMultiplier; }
 
     @Override
     public String toString() {

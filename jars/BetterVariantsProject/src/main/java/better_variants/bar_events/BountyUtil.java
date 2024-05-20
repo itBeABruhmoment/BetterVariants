@@ -60,10 +60,10 @@ public class BountyUtil {
         // build byte buffer
         final CampaignClockAPI clock = Global.getSector().getClock();
         final ByteBuffer bytesForSeed = ByteBuffer.allocate(8 + 4 * 3);
+        bytesForSeed.putInt(changeSeed);
         bytesForSeed.putLong(createdAt.getPrimaryEntity().getMemoryWithoutUpdate().getLong("$salvageSeed"));
         bytesForSeed.putInt(clock.getCycle());
         bytesForSeed.putInt(clock.getMonth());
-        bytesForSeed.putInt(changeSeed);
 
         // hash to get a singular long
         final byte[] bytesForSeedArr = bytesForSeed.array();

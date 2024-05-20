@@ -143,8 +143,9 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter implements B
         }
 
         // pick bounty
+        final int targetFp = BountyUtil.fpByDifficulty(difficulty);
         final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(
-                eligibleFactionsToUseFleetsOf, difficulty, seed);
+                eligibleFactionsToUseFleetsOf, difficulty, seed, targetFp);
         if(bounty == null) {
             log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID,
                     eligibleFactionsToUseFleetsOf, difficulty));
@@ -162,7 +163,7 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter implements B
         final VariantsLibFleetParams params = new VariantsLibFleetParams();
         params.faction = Factions.PIRATES;
         params.seed = seed;
-        params.fleetPoints = BountyUtil.fpByDifficulty(difficulty);
+        params.fleetPoints = targetFp;
         params.quality = BountyUtil.qualityByDifficulty(difficulty);
         params.averageOfficerLevel = BountyUtil.avgOfficerLevelByDifficulty(difficulty);
         params.numOfficers = BountyUtil.maxOfficersByDifficulty(difficulty);

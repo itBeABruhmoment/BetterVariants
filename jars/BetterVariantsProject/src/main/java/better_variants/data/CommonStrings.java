@@ -15,6 +15,7 @@ public class CommonStrings {
     public static final String MAX_FP_COLUMN_NAME = "maxFleetPoints";
     public static final String FACTION_COLUMN_NAME = "faction";
     public static final String MIN_DIFFICULTY_COLUMN_NAME = "minDifficulty";
+    public static final String REWARD_MULT_COLUMN_NAME = "rewardMult";
 
 
     private CommonStrings() {}

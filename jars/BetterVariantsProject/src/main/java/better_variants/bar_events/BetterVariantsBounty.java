@@ -43,6 +43,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         add(new BetterVariantsRemnantBountyCreator());
     }};
 
+    // reset in create()
     protected Random rand = new Random();
 
     @Override
@@ -89,7 +90,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         this.creatorLow = pickCreator(dLow, DifficultyChoice.LOW);
 
         if (this.creatorLow != null) {
-            log.info("creator not null");
+            log.info("creator low not null " + this.creatorLow.toString());
             this.dataLow = ((BountyCreator) this.creatorLow).createBounty(createdAt, this, dLow, Stage.BOUNTY, 0);
         } else {
             log.info("creator null"); // creator appears to be null in current iteration
@@ -103,6 +104,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         int dNormal = pickDifficulty(DifficultyChoice.NORMAL);
         this.creatorNormal = pickCreator(dNormal, DifficultyChoice.NORMAL);
         if (this.creatorNormal != null) {
+            log.info("creator normal not null " + this.creatorNormal.toString());
             this.dataNormal = ((BountyCreator) this.creatorNormal).createBounty(createdAt, this, dNormal, Stage.BOUNTY, 1);
         }
         if (this.dataNormal == null || this.dataNormal.fleet == null) {
@@ -113,6 +115,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
         int dHigh = pickDifficulty(DifficultyChoice.HIGH);
         this.creatorHigh = pickCreator(dHigh, DifficultyChoice.HIGH);
         if (this.creatorHigh != null) {
+            log.info("creator high not null " + this.creatorNormal.toString());
             log.info(String.format("BetterVariantsBountyCreate r5 %s %s", dataHigh, creatorHigh));
             this.dataHigh = ((BountyCreator) this.creatorHigh).createBounty(createdAt, this, dHigh, Stage.BOUNTY, 2);
         }

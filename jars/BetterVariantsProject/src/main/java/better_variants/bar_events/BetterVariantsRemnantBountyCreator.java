@@ -115,9 +115,10 @@ public class BetterVariantsRemnantBountyCreator extends CBRemnant implements Bou
         }
 
         // pick bounty
+        final int targetFp = BountyUtil.fpByDifficulty(difficulty);
         final ArrayList<String> factions = new ArrayList<>();
         factions.add(Factions.REMNANTS);
-        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, difficulty, seed);
+        final BetterVariantsBountyDataMember bounty = BetterVariantsBountyData.getInstance().pickBounty(factions, difficulty, seed, targetFp);
         if(bounty == null) {
             log.info(String.format("%s: no bounty for \"%s\" with difficulty %d could be found", CommonStrings.MOD_ID, factions, difficulty));
             return null;
@@ -134,7 +135,7 @@ public class BetterVariantsRemnantBountyCreator extends CBRemnant implements Bou
         final VariantsLibFleetParams params = new VariantsLibFleetParams();
         params.faction = Factions.REMNANTS;
         params.seed = seed;
-        params.fleetPoints = BountyUtil.fpByDifficulty(difficulty);
+        params.fleetPoints = targetFp;
         params.quality = BountyUtil.qualityByDifficulty(difficulty);
         params.averageOfficerLevel = BountyUtil.avgOfficerLevelByDifficulty(difficulty);
         params.numOfficers = BountyUtil.maxOfficersByDifficulty(difficulty);
