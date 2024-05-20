@@ -160,7 +160,7 @@ public class BetterVariantsRemnantBountyCreator extends CBRemnant implements Bou
         if(difficulty < 10) {
             return 0.0f;
         }
-        return 10.0f;
+        return 2.5f;
     }
 
     @Override

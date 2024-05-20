@@ -186,6 +186,6 @@ public class BetterVariantsPatrolBountyCreator extends CBPatrol implements Bount
 
     @Override
     public float getWeight(int difficulty) {
-        return 10.0f;
+        return 5.0f;
     }
 }

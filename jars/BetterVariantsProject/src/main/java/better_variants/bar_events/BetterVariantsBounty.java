@@ -39,7 +39,7 @@ public class BetterVariantsBounty extends MilitaryCustomBounty {
 
     public static final ArrayList<CustomBountyCreator> CREATORS = new ArrayList<CustomBountyCreator>() {{
         add(new BetterVariantsDeserterBountyCreator());
-//        add(new BetterVariantsPatrolBountyCreator());
+        add(new BetterVariantsPatrolBountyCreator());
         add(new BetterVariantsRemnantBountyCreator());
     }};
 
