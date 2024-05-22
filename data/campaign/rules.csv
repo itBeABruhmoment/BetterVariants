@@ -64,11 +64,11 @@ BetterVariantsDeserterBountyCreator,BetterVariantsDeserterBountyCreatorOfferDesc
 ""There's a reward of $bcb_reward credits and it'd need to be done within $bcb_days days. Are you up for it?""",,
 
 BetterVariantsPatrolBountyCreator,BetterVariantsPatrolBountyCreatorOfferDesc,,"SetTextHighlightColors $bcb_patrolFactionColor h h h
-Highlight $bcb_patrolFaction $bcb_dist $bcb_reward $bcb_days","""Just look at this do-gooder."" $HeOrShe pulls up a standard ID holo of a military officer in uniform. ""Too upright and honest to know when it's time to compromise a bit to make things easier on everyone. Get paid, look the other way, doesn't hurt anyone who doesn't deserve it, right?"" $personName shakes $hisOrHer head at stubborn law-abiders.
+Highlight $bcb_patrolFaction $bcb_dist $bcb_reward $bcb_days","""The bottom line is we need this patrol gone"" $HeOrShe pulls up a standard ID holo of a military officer in uniform.
 
 ""$bcb_TargetHeOrShe's commanding a $bcb_patrolFaction patrol fleet operating out of $bcb_targetMarketName in the $bcb_systemName, $bcb_dist light-years away. You'll find $bcb_targetHimOrHer patrolling either near there, a nearby jump-point, or one of their orbital strategic assets like a comm relay and the like.""
 
-$HeOrShe dismisses the ID holo with a contemptuous flick. ""Take $bcb_targetHimOrHer out. You'll get $bcb_reward credits. I'll give you $bcb_days days to complete the job. Think you can handle that?""",,
+$HeOrShe dismisses the ID holo. ""Take $bcb_targetHimOrHer out. You'll get $bcb_reward credits. I'll give you $bcb_days days to complete the job. Think you can handle that?""",,
 
 BetterVariantsRemnantBountyCreator,BetterVariantsRemnantBountyCreatorOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""This one requires some discretion."" You note the glow of REDACTED blocks peppered across the briefing as $personName scrolls through details. ""A fleet of Remnant drone warships was spotted in the $bcb_systemName, only $bcb_dist light-years from here.""
 
