@@ -173,7 +173,7 @@ public class BetterVariantsDeserterBountyCreator extends CBDeserter implements B
         data.fleet.setInflated(true);
 
         setRepChangesBasedOnDifficulty(data, difficulty);
-        data.baseReward = Math.round(CBStats.getBaseBounty(difficulty, CBStats.DESERTER_MULT, (BaseHubMission)mission) * bounty.getRewardMultiplier());
+        data.baseReward = Math.round(CBStats.getBaseBounty(difficulty, CBStats.DESERTER_MULT, (BaseHubMission)mission) * bounty.getRewardMultiplier() * 2);
         return data;
     }
 
