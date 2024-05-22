@@ -62,3 +62,16 @@ contact_declineBarNoContinue:""Maybe another time."" (decline)",
 BetterVariantsDeserterBountyCreator,BetterVariantsDeserterBountyCreatorOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""I'd take this one on myself if I had a warfleet to command,"" $heOrShe makes an expression like $heOrShe bit into something sour, ""$bcb_targetName is a betrayer, a deserter from $thePersonFaction. An example has to be made. We know $bcb_targetHeOrShe is hiding out in the $bcb_systemName, which is $bcb_dist light-years from here.""
 
 ""There's a reward of $bcb_reward credits and it'd need to be done within $bcb_days days. Are you up for it?""",,
+
+BetterVariantsPatrolBountyCreator,BetterVariantsPatrolBountyCreatorOfferDesc,,"SetTextHighlightColors $bcb_patrolFactionColor h h h
+Highlight $bcb_patrolFaction $bcb_dist $bcb_reward $bcb_days","""Just look at this do-gooder."" $HeOrShe pulls up a standard ID holo of a military officer in uniform. ""Too upright and honest to know when it's time to compromise a bit to make things easier on everyone. Get paid, look the other way, doesn't hurt anyone who doesn't deserve it, right?"" $personName shakes $hisOrHer head at stubborn law-abiders.
+
+""$bcb_TargetHeOrShe's commanding a $bcb_patrolFaction patrol fleet operating out of $bcb_targetMarketName in the $bcb_systemName, $bcb_dist light-years away. You'll find $bcb_targetHimOrHer patrolling either near there, a nearby jump-point, or one of their orbital strategic assets like a comm relay and the like.""
+
+$HeOrShe dismisses the ID holo with a contemptuous flick. ""Take $bcb_targetHimOrHer out. You'll get $bcb_reward credits. I'll give you $bcb_days days to complete the job. Think you can handle that?""",,
+
+BetterVariantsRemnantBountyCreator,BetterVariantsRemnantBountyCreatorOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""This one requires some discretion."" You note the glow of REDACTED blocks peppered across the briefing as $personName scrolls through details. ""A fleet of Remnant drone warships was spotted in the $bcb_systemName, only $bcb_dist light-years from here.""
+
+""These things are left over from one of the AI Wars - some pencilneck decided they weren't worth the cost of cleaning up. But this fleet is more active than usual so there's been some concern from up the chain of command."" $HeOrShe skewers you with a look, ""Way up.""
+
+""Whatever they're up to, some important people will sleep better if it's stopped. The reward is $bcb_reward credits - higher than normal, both for the hazard and for your discretion. Command wants this done within $bcb_days days.""",,
