@@ -158,7 +158,7 @@ public class BetterVariantsRemnantBountyCreator extends CBRemnant implements Bou
 
     @Override
     public float getWeight(int difficulty) {
-        if(difficulty < 10) {
+        if(difficulty < 4) {
             return 0.0f;
         }
         return 2.5f;

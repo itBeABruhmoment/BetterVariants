@@ -32,7 +32,7 @@ public class BountyUtil {
     }
 
     public static float qualityByDifficulty(int difficulty) {
-        float quality = 0.5f + 0.1f * difficulty;
+        float quality = 0.6f + 0.1f * difficulty;
         if(quality > 1.0f) {
             quality = 1.0f;
         }
