@@ -3,7 +3,7 @@
     "name": "Better Variants",
     "author": "itBeABruhmoment",
     "utility": "false",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "Make variants better",
     "gameVersion": "0.97a",
     "jars":["jars/BetterVariants.jar"],
@@ -11,8 +11,7 @@
     "dependencies": [
         {
             "id": "variants_lib",
-            "name": "Variants Lib",
-        },
-        
-    ],
+            "name": "Variants Lib"
+        }
+    ]
 }
