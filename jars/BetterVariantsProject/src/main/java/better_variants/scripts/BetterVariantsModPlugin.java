@@ -8,7 +8,6 @@ import java.io.IOException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
@@ -42,6 +41,4 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
         //    barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
         //}
     }
-
-
 }

@@ -18,6 +18,7 @@ ext {
     lazyLibDir = localProps.getProperty('lazyLibDir')
     magicLibDir = localProps.getProperty('magicLibDir')
     variantsLibDir = localProps.getProperty('variantsLibDir')
+    lunaLibDir = localProps.getProperty('lunaLibDir')
 }
 
 dependencies {
@@ -33,6 +34,7 @@ dependencies {
     compileOnly files(lazyLibDir + '/jars/LazyLib.jar')
     compileOnly files(lazyLibDir + '/jars/LazyLib-Kotlin.jar')
     compileOnly files(variantsLibDir + '/jars/VariantsLib.jar')
+    compileOnly files(lunaLibDir + '/jars/LunaLib.jar')
 }
 
 jar {
