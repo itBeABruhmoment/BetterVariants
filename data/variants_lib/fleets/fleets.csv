@@ -69,9 +69,9 @@ bounty/bv_independent_conquestParagonBounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
 bounty/bv_independent_strikeBounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
 bounty/bv_independent_rangedBounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
 bounty/bv_persean_conquestBounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
-bounty/bv_remnant_bounty1.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
-bounty/bv_remnant_rangedBounty1.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
-bounty/bv_remnant_strikeBounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
+bounty/bv_remnant_bounty1.json,,20,20,20,20,20,20,20,20,,,,10,,,,,10,10,10,10,10,,10,,,10
+bounty/bv_remnant_rangedBounty1.json,,20,20,20,20,20,20,20,20,,,,10,,,,,10,10,10,10,10,,10,,,10
+bounty/bv_remnant_strikeBounty.json,,20,20,20,20,20,20,20,20,,,,10,,,,,10,10,10,10,10,,10,,,10
 bounty/bv_persean_ranged1Bounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
 bounty/bv_persean_ranged2Bounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,
 bounty/bv_hegemony_xivBounty.json,,,,,,,,,,,,,,,,,,,,,,,,,,,

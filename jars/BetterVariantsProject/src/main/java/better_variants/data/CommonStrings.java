@@ -16,7 +16,8 @@ public class CommonStrings {
     public static final String FACTION_COLUMN_NAME = "faction";
     public static final String MIN_DIFFICULTY_COLUMN_NAME = "minDifficulty";
     public static final String REWARD_MULT_COLUMN_NAME = "rewardMult";
-
+    public static final String HARD_REMNANTS_SETTING = "harderRemnants";
+    public static final String LUNA_HARD_REMNANTS_SETTING = "better_variants_harderRemnants";
 
     private CommonStrings() {}
 }

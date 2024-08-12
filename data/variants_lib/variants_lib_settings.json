@@ -3,6 +3,6 @@
 	"enableOfficerEditing":true,
 	"enableFleetEditing":true,
 	"enableDefaultPersonalitySetting":true,
-	# "universalPreModificationScripts":["better_variants.scripts.BetterVariantsPostModificationScript"],
-	"universalPostModificationScripts":["better_variants.scripts.BetterVariantsPostModificationScript"]
+	"postVariantsLibApplicationLoadScript":["better_variants.scripts.ApplySettings"],
+	# "universalPreModificationScripts":["better_variants.scripts.BetterVariantsPostModificationScript"]
 }

@@ -5,6 +5,7 @@ import better_variants.data.CommonStrings;
 import better_variants.data.SettingsData;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
@@ -21,12 +22,9 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
     @Override
     public void onApplicationLoad() throws IOException, JSONException, Exception
     {
-        log.info(CommonStrings.MOD_ID + ": loading bounty data");
-        //BountyCreationData.loadData();
-        log.info(CommonStrings.MOD_ID + ": loading settings");
-        SettingsData.loadSettings();
         log.info(CommonStrings.MOD_ID + ":loading bounties");
         BetterVariantsBountyData.getInstance().loadData();
+        // settings are loaded in ApplySettings which runs after VariantsLibModPlugin.onApplicationLoad()
     }
 
     @Override
@@ -41,4 +39,6 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
         //    barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
         //}
     }
+
+
 }

@@ -1,0 +1,2 @@
+fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
+better_variants_harderRemnants,Harder Remnants,Boolean,false,,"Turns off autofit for Remnant fleets, gives their officers more relevant skills, and gives them special themed fleets",,,
