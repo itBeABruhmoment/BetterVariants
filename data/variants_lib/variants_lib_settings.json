@@ -1,8 +1,3 @@
 {
-	"enableNoAutofitFeatures":true,
-	"enableOfficerEditing":true,
-	"enableFleetEditing":true,
-	"enableDefaultPersonalitySetting":true,
-	"postVariantsLibApplicationLoadScript":["better_variants.scripts.ApplySettings"],
-	# "universalPreModificationScripts":["better_variants.scripts.BetterVariantsPostModificationScript"]
+	"postVariantsLibApplicationLoadScript":["better_variants.scripts.ApplySettings"]
 }
