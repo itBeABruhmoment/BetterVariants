@@ -92,5 +92,12 @@ public class SettingsData {
         return harderRemnants;
     }
 
+    @Override
+    public String toString() {
+        return "SettingsData{" +
+                "harderRemnants=" + harderRemnants +
+                '}';
+    }
+
     private SettingsData(){}
 }

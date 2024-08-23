@@ -26,19 +26,4 @@ public class BetterVariantsModPlugin extends BaseModPlugin {
         BetterVariantsBountyData.getInstance().loadData();
         // settings are loaded in ApplySettings which runs after VariantsLibModPlugin.onApplicationLoad()
     }
-
-    @Override
-    public void onGameLoad(boolean newGame)
-    {
-        //log.debug(CommonStrings.MOD_ID + ": adding bar event manager");
-        //BarEventManager barEventManager = BarEventManager.getInstance();
-
-        // If the prerequisites for the quest have been met (optional) and the game isn't already aware of the bar event,
-        // add it to the BarEventManager so that it shows up in bars
-        //if (!barEventManager.hasEventCreator(BetterVariantsBarEventCreator.class)) {
-        //    barEventManager.addEventCreator(new BetterVariantsBarEventCreator());
-        //}
-    }
-
-
 }
