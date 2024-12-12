@@ -1,10 +1,9 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 18,
-    "fluxVents": 20,
+    "fluxCapacitors": 50,
+    "fluxVents": 24,
     "hullId": "legion",
     "hullMods": [
-        "heavyarmor",
         "missleracks",
         "targetingunit",
         "expanded_deck_crew"
@@ -17,8 +16,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "hellbore",
-                "WS 001": "hellbore"
+                "WS 000": "hephag",
+                "WS 001": "hellbore",
+                "WS 018": "vulcan"
             }
         },
         {
@@ -35,12 +35,17 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 018": "vulcan",
-                "WS 019": "vulcan",
-                "WS 020": "vulcan",
-                "WS 021": "vulcan"
-            }
+            "weapons": {"WS 019": "vulcan"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 020": "vulcan"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 021": "vulcan"}
         }
     ],
     "wings": [

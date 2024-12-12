@@ -19,8 +19,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "heavyac",
-                "WS 002": "lightac",
-                "WS 005": "lightac",
+                "WS 002": "lightneedler",
                 "WS 007": "heavyac",
                 "WS 009": "lightneedler",
                 "WS 012": "flak",
@@ -32,8 +31,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "heavyac",
-                "WS 004": "lightac",
-                "WS 006": "lightac",
+                "WS 004": "lightneedler",
                 "WS 008": "lightneedler",
                 "WS 013": "flak",
                 "WS 017": "tpc"

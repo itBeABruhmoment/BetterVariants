@@ -1,6 +1,6 @@
 {
     "displayName": "Combat1B",
-    "fluxCapacitors": 28,
+    "fluxCapacitors": 24,
     "fluxVents": 50,
     "hullId": "atlas2",
     "hullMods": [
@@ -22,12 +22,22 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 008": "mark9",
-                "WS 009": "hellbore",
-                "WS 010": "vulcan",
-                "WS 011": "vulcan"
-            }
+            "weapons": {"WS 008": "mark9"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "hephag"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 010": "vulcan"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 011": "vulcan"}
         }
     ]
 }

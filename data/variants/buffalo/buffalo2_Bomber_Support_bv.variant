@@ -1,12 +1,12 @@
 {
     "displayName": "Support1B",
-    "fluxCapacitors": 12,
-    "fluxVents": 0,
+    "fluxCapacitors": 0,
+    "fluxVents": 7,
     "hullId": "buffalo2",
     "hullMods": [
         "missleracks",
-        "eccm",
-        "frontshield"
+        "escort_package",
+        "reinforcedhull"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,21 +15,27 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 008": "pilum"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
             "weapons": {
-                "WS 004": "heatseeker",
-                "WS 005": "heatseeker",
-                "WS 006": "heatseeker"
+                "WS 004": "harpoon",
+                "WS 005": "harpoon",
+                "WS 006": "harpoon",
+                "WS 008": "harpoonpod"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 001": "pdburst"}
+            "weapons": {"WS 002": "vulcan"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "taclaser"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "taclaser"}
         }
     ]
 }

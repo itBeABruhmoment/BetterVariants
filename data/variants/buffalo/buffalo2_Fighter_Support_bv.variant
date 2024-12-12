@@ -1,12 +1,12 @@
 {
     "displayName": "Support2B",
-    "fluxCapacitors": 2,
-    "fluxVents": 0,
+    "fluxCapacitors": 0,
+    "fluxVents": 7,
     "hullId": "buffalo2",
     "hullMods": [
-        "converted_hangar",
-        "frontshield",
-        "militarized_subsystems"
+        "escort_package",
+        "missleracks",
+        "reinforcedhull"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,22 +15,29 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 008": "pilum"}
+            "weapons": {
+                "WS 002": "vulcan",
+                "WS 008": "breachpod"
+            }
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 004": "heatseeker",
-                "WS 005": "heatseeker",
-                "WS 006": "heatseeker"
+                "WS 004": "harpoon",
+                "WS 005": "harpoon",
+                "WS 006": "harpoon"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 003": "vulcan"}
+            "weapons": {"WS 007": "taclaser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "taclaser"}
         }
-    ],
-    "wings": ["broadsword_wing"]
+    ]
 }
