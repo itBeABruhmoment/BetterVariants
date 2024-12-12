@@ -1,0 +1,44 @@
+{
+	# vlTestBattle bv_pirates_missile 300 bv_hegemony_lowtech 300
+	# vlSpawnfleet pirates bv_pirates_missile 200
+	"autofit":false,
+	"fleetDataId":"bv_pirates_test",
+	"minDP":40,
+	"maxDP":350,
+	"defaultFleetWidePersonality":"steady",
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":40,
+			"variants":{
+				"atlas2_Standard_bv":17,
+				"atlas2_Standard2_bv":13,
+				"atlas2_Standard3_bv":70
+			}
+		},
+		{
+			"partitionWeight":25,
+			"variants":{
+				"eradicator_pirates_Attack_bv":100
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+				"enforcer_d_pirates_Elite_bv":100,
+			}
+		},
+		{
+			"partitionWeight":4,
+			"variants":{
+				"hound_d_pirates_Shielded":3,
+				"hound_d_pirates_Standard":3,
+				"hound_d_pirates_Overdriven":4,
+				# "buffalo2_Bomber_Support_bv":90,
+				"buffalo2_Fighter_Support_bv":90,
+			}
+		}
+	]
+}
+
