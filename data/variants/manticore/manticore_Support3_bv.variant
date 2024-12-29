@@ -1,6 +1,6 @@
 {
     "displayName": "Support3B",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 19,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "manticore",
@@ -17,8 +17,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "multineedler",
-                "WS 002": "lightag"
+                "WS 001": "lightneedler",
+                "WS 002": "lightneedler",
+                "WS 003": "lightneedler"
             }
         },
         {

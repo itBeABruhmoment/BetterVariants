@@ -1,40 +1,34 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 19,
+    "fluxCapacitors": 24,
     "fluxVents": 0,
     "hullId": "doom",
     "hullMods": [
-        "safetyoverrides",
-        "hardened_subsystems"
+        "phase_anchor",
+        "unstable_injector",
+        "hardened_subsystems",
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "doom_Overdriven_bv",
     "weaponGroups": [
         {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pilum",
+                "WS 002": "pilum"
+            }
+        },
+        {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "lightneedler",
                 "WS 004": "lightneedler",
                 "WS 005": "lightneedler",
-                "WS 006": "lightneedler"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 007": "ionpulser",
-                "WS 008": "ionpulser"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 011": "pdburst",
-                "WS 012": "pdburst"
+                "WS 007": "irautolance",
+                "WS 008": "irautolance"
             }
         }
     ]

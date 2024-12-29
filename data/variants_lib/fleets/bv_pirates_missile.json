@@ -47,8 +47,8 @@
 				"hound_d_pirates_Overdriven":4,
 				"vanguard_pirates_Attack":10,
 				"vanguard_pirates_Strike":10,
-				"buffalo2_Bomber_Support_bv":5,
-				"buffalo2_Fighter_Support_bv":5,
+				"buffalo2_Standard_bv":5,
+				"buffalo2_DEM_bv":5,
 				"lasher_Standard1_bv":30,
 				"afflictor_d_pirates_Strike_bv":30
 			}

@@ -1,0 +1,41 @@
+{
+    "displayName": "CAS1B",
+    "fluxCapacitors": 32,
+    "fluxVents": 13,
+    "hullId": "astral",
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "astral_CAS_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "gravitonbeam",
+                "WS 015": "ionbeam",
+                "WS 023": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "squall",
+                "WS 012": "hurricane"
+            }
+        }
+    ],
+    "wings": [
+        "broadsword_wing",
+        "broadsword_wing",
+        "cobra_wing",
+        "cobra_wing",
+        "longbow_wing",
+        "longbow_wing"
+    ]
+}

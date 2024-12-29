@@ -1,0 +1,38 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_merc_test",
+	"minDP":40,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"aggressive",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":50,
+			"variants":{
+				"aurora_Strike_bv":100
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"heron_Attack1_bv":100
+			}
+		},
+		{
+			"partitionWeight":25,
+			"variants":{
+				"medusa_Attack_bv":100
+			}
+		},
+		{
+			"partitionWeight":10,
+			"variants":{
+				"omen_Ew_bv":50,
+				"monitor_Escort":50
+			}
+		}
+	]
+}
+

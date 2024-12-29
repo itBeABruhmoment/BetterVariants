@@ -16,11 +16,10 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 006": "breachpod",
-                "WS 010": "breach",
-                "WS 011": "breach",
-                "WS 012": "breach",
-                "WS 013": "breach"
+                "WS 010": "swarmer",
+                "WS 011": "swarmer",
+                "WS 012": "swarmer",
+                "WS 013": "swarmer"
             }
         },
         {
@@ -34,6 +33,11 @@
                 "WS 008": "heavyblaster",
                 "WS 009": "phasecl"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "breachpod"}
         }
     ]
 }

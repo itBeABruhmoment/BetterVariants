@@ -1,0 +1,24 @@
+{
+    "displayName": "Support1B",
+    "fluxCapacitors": 16,
+    "fluxVents": 0,
+    "hullId": "buffalo2",
+    "hullMods": [
+        "missleracks",
+        "frontshield",
+        "unstable_injector"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "buffalo2_Standard_bv",
+    "weaponGroups": [{
+        "autofire": false,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 004": "harpoon",
+            "WS 005": "harpoon",
+            "WS 006": "harpoon",
+            "WS 008": "harpoonpod"
+        }
+    }]
+}

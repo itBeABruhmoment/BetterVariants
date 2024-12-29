@@ -1,0 +1,47 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_independent_missile",
+	"minDP":40,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"steady",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":55,
+			"variants":{
+				"aurora_Strike_bv":20,
+				"eagle_Balanced_bv":80
+			}
+		},
+		{
+			"partitionWeight":15,
+			"variants":{
+				"heron_Attack1_bv":100
+			}
+		},
+        {
+            "partitionWeight":15,
+			"variants":{
+				"gryphon_FS_bv":100
+			}
+        },
+		{
+			"partitionWeight":10,
+			"variants":{
+				"hammerhead_Elite_bv":80,
+				"sunder_Support_bv":20
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"brawler_Elite_bv":33,
+				"omen_Ew_bv":33,
+				"monitor_Escort":33
+			}
+		}
+	]
+}
+

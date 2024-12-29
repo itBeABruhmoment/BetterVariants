@@ -6,14 +6,19 @@
     "hullId": "retribution",
     "hullMods": [
         "hardenedshieldemitter",
-        "unstable_injector",
         "fluxcoil",
-        "fluxdistributor"
+        "extendedshieldemitter",
+        "unstable_injector"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "retribution_Standard_bv",
     "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "hephag"}
+        },
         {
             "autofire": false,
             "mode": "LINKED",
@@ -27,18 +32,18 @@
             }
         },
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 000": "devastator",
-                "WS 001": "devastator",
-                "WS 002": "mjolnir",
-                "WS 003": "arbalest",
-                "WS 004": "arbalest",
-                "WS 013": "lightac",
-                "WS 014": "lightac",
-                "WS 015": "lightac"
+                "WS 000": "multineedler",
+                "WS 001": "multineedler",
+                "WS 003": "flak"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "flak"}
         }
     ]
 }

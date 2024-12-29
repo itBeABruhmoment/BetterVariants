@@ -1,7 +1,7 @@
 {
     "displayName": "Support1B",
     "fluxCapacitors": 25,
-    "fluxVents": 0,
+    "fluxVents": 12,
     "hullId": "gryphon",
     "hullMods": [
         "eccm",
@@ -14,8 +14,12 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 001": "squall"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 001": "squall",
                 "WS 008": "harpoonpod",
                 "WS 009": "harpoonpod",
                 "WS 010": "harpoon",
@@ -24,14 +28,15 @@
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "hveldriver"}
+        },
+        {
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "hveldriver",
                 "WS 003": "vulcan",
-                "WS 004": "vulcan",
-                "WS 005": "vulcan",
-                "WS 006": "vulcan",
                 "WS 007": "vulcan"
             }
         }

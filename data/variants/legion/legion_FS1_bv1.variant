@@ -1,0 +1,57 @@
+{
+    "displayName": "Fire Support1B",
+    "fluxCapacitors": 49,
+    "fluxVents": 50,
+    "hullId": "legion",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "fluxdistributor",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "legion_FS1_bv1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "gauss",
+                "WS 001": "gauss"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pilum",
+                "WS 003": "pilum",
+                "WS 004": "pilum",
+                "WS 005": "pilum",
+                "WS 007": "pilum"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "vulcan",
+                "WS 020": "vulcan"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 019": "vulcan",
+                "WS 021": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "broadsword_wing",
+        "broadsword_wing",
+        "broadsword_wing",
+        "gladius_wing"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_merc_test3",
+	"minDP":40,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"aggressive",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":45,
+			"variants":{
+				"odyssey_Balanced_bv":100
+			}
+		},
+		{
+			"partitionWeight":30,
+			"variants":{
+				"aurora_Strike_bv":100
+			}
+		},
+		{
+			"partitionWeight":17.5,
+			"variants":{
+				"medusa_Attack_bv":70,
+				"shrike_Support1_bv":30
+			}
+		},
+		{
+			"partitionWeight":7.5,
+			"variants":{
+				"omen_Ew_bv":50,
+				"monitor_Escort":50
+			}
+		}
+	]
+}
+

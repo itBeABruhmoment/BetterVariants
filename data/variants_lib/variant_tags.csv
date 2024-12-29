@@ -12,6 +12,7 @@ astral_Bounty1_bv,"se, ms, fm, gi, ta, oe, hs, im",
 astral_Bounty2_bv,"se, ms, fm, gi, ta, oe, hs, im",
 astral_Elite_bv,"se, ms, fm, gi, ta, oe, hs, im",
 astral_Strike_bv,"se, ms, fm, gi, ta, oe, hs, im",
+astral_CAS_bv,"re, se, ms, fm, gi, ta, oe, hs, im",
 atlas2_Bounty1_bv,"fm, ms, se, gi, bm, ta, oe",
 atlas2_Bounty2_bv,"fm, ms, se, gi, bm, ta, oe",
 atlas2_Standard2_bv,"fm, ms, se, gi, bm, ta, oe","turretgyros, stabilizedshieldemitter, fluxcoil"
@@ -19,9 +20,9 @@ atlas2_Standard3_bv,"fm, ms, se, gi, bm, ta, oe","turretgyros, stabilizedshielde
 atlas2_Standard4_bv,"fm, ms, se, gi, bm, ta, oe","turretgyros, stabilizedshieldemitter, fluxcoil"
 atlas2_Standard_bv,"fm, ms, se, gi, bm, ta, oe","turretgyros, stabilizedshieldemitter, fluxcoil"
 atlas_Standard_bv,,
-aurora_Bounty1_bv,"re, ce, se, fm, ms, ew, hs, im",
-aurora_Overdriven_bv,"re, ce, se, fm, ms, ew, hs, im","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
-aurora_Strike_bv,"re, ce, se, fm, ms, ew, hs, im","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
+aurora_Bounty1_bv,"re, ce, se, fm, ms, hs, ew, im",
+aurora_Overdriven_bv,"re, ce, se, fm, ms, hs, ew, im","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
+aurora_Strike_bv,"re, ce, se, fm, ms, hs, ew, im","hardenedshieldemitter, stabilizedshieldemitter, fluxcoil"
 brawler_Assault_bv,"se, ce, fm, ta, hs, bm, im, dc","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
 brawler_Bounty1_bv,"se, ce, fm, ta, hs, bm, im, dc",
 brawler_Elite_bv,"se, ce, fm, ta, hs, bm, im, dc","extendedshieldemitter, fluxcoil, hardenedshieldemitter"
@@ -34,8 +35,8 @@ brilliant_Bounty1_bv,,
 brilliant_Elite_bv,,
 brilliant_Standard_bv,,
 brilliant_Strike_bv,,
-buffalo2_Bomber_Support_bv,ms,
-buffalo2_Fighter_Support_bv,ms,
+buffalo2_Standard_bv,ms,
+buffalo2_DEM_bv,ms,
 buffalo_Standard_bv,,
 buffalo_hegemony_Standard_bv,,
 buffalo_luddic_church_Standard_bv,,
@@ -87,8 +88,8 @@ dominator_XIV_Elite4_bv,"fm, gi, bm, ms, im, dc, pa",missleracks
 dominator_XIV_Elite_bv,"fm, gi, bm, ms, im, dc, pa",missleracks
 dominator_xiv_Bounty1_bv,"fm, gi, bm, ms, im, dc, pa",
 dominator_xiv_Bounty2_bv,"fm, gi, bm, ms, im, dc, pa",
-doom_Bounty1_bv,"se, ce, fm, im, dc, pa",
-doom_Overdriven_bv,"se, ce, fm, im, dc, pa","fluxcoil, adaptive_coils"
+doom_Bounty1_bv,"se, ce, hs, fm, im, dc",
+doom_Overdriven_bv,"se, ce, hs, fm, im, dc","fluxcoil, adaptive_coils"
 doom_Support_bv,"se, ce, fm, im, dc, pa","fluxcoil, adaptive_coils"
 dram_Light_bv,,
 drover_Bounty1_bv,"ms, ce, fm, gi, hs",
@@ -198,13 +199,13 @@ lasher_luddic_church_Bounty1_bv,"se, ce, fm, ta, hs",
 lasher_luddic_church_Standard_bv,"se, ce, fm, ta, hs","fluxcoil, hardenedshieldemitter, unstable_injector"
 lasher_luddic_path_Raider_bv,"se, ce, fm, ta, hs","fluxcoil, hardenedshieldemitter, unstable_injector"
 lasher_pather_Bounty1_bv,"se, ce, fm, ta, hs",
-legion_Assault_bv,"ms, gi, ta, im, hs",turretgyros
-legion_Bounty1_bv,"ms, gi, ta, im, hs",
-legion_FS1_bv,"ms, gi, ta, im, hs",turretgyros
-legion_FS2_bv,"ms, gi, ta, im, hs",turretgyros
-legion_FS3_bv,"ms, gi, ta, im, hs",turretgyros
-legion_StrikeE_bv,"ms, gi, ta, im, hs",turretgyros
-legion_Strike_bv,"ms, gi, ta, im, hs",turretgyros
+legion_Assault_bv,"ag, ms, gi, ta, im, hs",turretgyros
+legion_Bounty1_bv,"ag, ms, gi, ta, im, hs",
+legion_FS1_bv,"ag, ms, gi, ta, im, hs",turretgyros
+legion_FS2_bv,"ag, ms, gi, ta, im, hs",turretgyros
+legion_FS3_bv,"ag, ms, gi, ta, im, hs",turretgyros
+legion_StrikeE_bv,"ag, ms, gi, ta, im, hs",turretgyros
+legion_Strike_bv,"ag, ms, gi, ta, im, hs",turretgyros
 lumen_Standard1_bv,,
 manticore_Bounty1_bv,"ce, ms, gi, fm, ta, oe, im",
 manticore_Support1_bv,"ce, ms, gi, fm, ta, oe, im",missleracks
@@ -256,8 +257,8 @@ radiant_Bounty1_bv,,
 radiant_Bounty2_bv,,
 radiant_Standard_bv,,
 radiant_Strike_bv,,
-retribution_Standard2_bv,"ag, fm, oe, hs",turretgyros
-retribution_Standard_bv,"ag, fm, oe, hs, ms",turretgyros
+retribution_Standard2_bv,"ag, fm, oe, hs, bm, ta",turretgyros
+retribution_Standard_bv,"ag, fm, oe, hs, bm, ta",turretgyros
 scarab_Emp_bv,"ce, se, fm, hs, ta, ew, im",hardened_subsystems
 scarab_Strike_bv,"ce, se, fm, hs, ta, ew, im",hardened_subsystems
 shade_Assault_bv,"ce, se, fm, hs, ta, ew, im",hardened_subsystems

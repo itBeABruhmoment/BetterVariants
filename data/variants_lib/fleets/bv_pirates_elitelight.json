@@ -10,22 +10,26 @@
 	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":50,
+			"partitionWeight":30,
 			"variants":{
-				"venture_p_Pirate_bv":20,
-				"eradicator_pirates_Attack_bv":80
+				"atlas2_Standard_bv":30,
+				"atlas2_Standard3_bv":70
 			}
 		},
 		{
-			"partitionWeight":40,
+			"partitionWeight":25,
 			"variants":{
-				"enforcer_d_pirates_Elite_bv":80,
-				# "condor_Attack_bv":20
-				"colossus3_Pirate":20
+				"eradicator_pirates_Attack_bv":100
 			}
 		},
 		{
-			"partitionWeight":10,
+			"partitionWeight":28,
+			"variants":{
+				"enforcer_d_pirates_Elite_bv":100
+			}
+		},
+		{
+			"partitionWeight":6,
 			"variants":{
 				"hound_d_pirates_Shielded":3,
 				"hound_d_pirates_Standard":3,

@@ -23,23 +23,17 @@
                 "WS 005": "ioncannon",
                 "WS 007": "kineticblaster",
                 "WS 008": "pulselaser",
-                "WS 009": "phasecl"
+                "WS 009": "phasecl",
+                "WS 010": "breach",
+                "WS 011": "breach",
+                "WS 012": "breach",
+                "WS 013": "breach"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {"WS 006": "sabotpod"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 010": "swarmer",
-                "WS 011": "swarmer",
-                "WS 012": "swarmer",
-                "WS 013": "swarmer"
-            }
         }
     ]
 }

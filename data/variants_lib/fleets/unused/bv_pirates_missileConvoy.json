@@ -50,8 +50,8 @@
 				"hound_d_pirates_Overdriven":4.00,
 				"vanguard_pirates_Attack":20.00,
 				"vanguard_pirates_Strike":20.00,
-				"buffalo2_Bomber_Support_bv":20.00,
-				"buffalo2_Fighter_Support_bv":20.00,
+				"buffalo2_Standard_bv":20.00,
+				"buffalo2_DEM_bv":20.00,
 				"lasher_Standard1_bv":10.00,
 			}
 		},

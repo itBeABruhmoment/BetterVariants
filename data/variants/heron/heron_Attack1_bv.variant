@@ -1,6 +1,6 @@
 {
     "displayName": "Attack1B",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 18,
     "fluxVents": 0,
     "hullId": "heron",
     "hullMods": [
@@ -12,22 +12,19 @@
     "variantId": "heron_Attack1_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 001": "pdburst",
-                "WS 002": "pdburst"
-            }
+            "weapons": {"WS 005": "harpoonpod"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 005": "harpoonpod"}
+            "weapons": {"WS 004": "taclaser"}
         }
     ],
     "wings": [
         "broadsword_wing",
         "longbow_wing",
-        "trident_wing"
+        "dagger_wing"
     ]
 }

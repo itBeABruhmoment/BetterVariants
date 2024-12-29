@@ -10,7 +10,7 @@
     ],
     "permaMods": [],
     "sMods": [],
-    "variantId": "buffalo2_Fighter_Support_bv",
+    "variantId": "buffalo2_DEM_bv",
     "weaponGroups": [{
         "autofire": false,
         "mode": "LINKED",

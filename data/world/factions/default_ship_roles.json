@@ -208,8 +208,8 @@
 		
 		"buffalo2_FS":0,
 		
-		"buffalo2_Bomber_Support_bv":5,
-		"buffalo2_Fighter_Support_bv":5,
+		"buffalo2_Standard_bv":5,
+		"buffalo2_DEM_bv":5,
 
 		"enforcer_Assault":0,
 		"enforcer_Balanced":0,

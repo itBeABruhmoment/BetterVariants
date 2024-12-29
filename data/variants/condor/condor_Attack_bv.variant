@@ -1,6 +1,6 @@
 {
     "displayName": "Attack1B",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 4,
     "fluxVents": 0,
     "hullId": "condor",
     "hullMods": ["expanded_deck_crew"],

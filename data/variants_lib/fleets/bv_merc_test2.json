@@ -1,0 +1,45 @@
+{
+	"autofit":false,
+	"fleetDataId":"bv_merc_test2",
+	"minDP":40,
+	"maxDP":400,
+	"defaultFleetWidePersonality":"none",
+	"spawnIfNoIndustry":false,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
+	"fleetPartitions":[
+		{
+			"partitionWeight":40,
+			"variants":{
+				"astral_CAS_bv":80
+			}
+		},
+		{
+			"partitionWeight":35,
+			"variants":{
+				"eagle_Balanced_bv":80
+			}
+		},
+        {
+            "partitionWeight":10,
+			"variants":{
+				"gryphon_FS_bv":100
+			}
+        },
+		{
+			"partitionWeight":10,
+			"variants":{
+				"hammerhead_Elite_bv":100
+			}
+		},
+		{
+			"partitionWeight":5,
+			"variants":{
+				"brawler_Elite_bv":33,
+				"omen_Ew_bv":33,
+				"monitor_Escort":33
+			}
+		}
+	]
+}
+

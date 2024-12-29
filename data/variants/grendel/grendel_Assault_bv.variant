@@ -1,0 +1,36 @@
+{
+    "displayName": "Assault1B",
+    "fluxCapacitors": 30,
+    "fluxVents": 24,
+    "goalVariant": true,
+    "hullId": "grendel",
+    "hullMods": ["adaptive_coils"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "grendel_Assault_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "lightneedler",
+                "WS 005": "lightneedler",
+                "WS 006": "lightneedler",
+                "WS 010": "lightneedler",
+                "WS 011": "heavymauler",
+                "WS 012": "heavymauler",
+                "WS 013": "lightneedler",
+                "WS 014": "lightneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "swarmer",
+                "WS 008": "swarmer",
+                "WS 009": "swarmer"
+            }
+        }
+    ]
+}

@@ -2,58 +2,42 @@
 	"autofit":false,
 	"fleetDataId":"bv_pirates_elite",
 	"minDP":40,
-	"maxDP":300,
+	"maxDP":400,
 	"defaultFleetWidePersonality":"reckless",
-	"additionalCommanderSkills":["support_doctrine","derelict_contingent",],
+	"additionalCommanderSkills":["support_doctrine","derelict_contingent"],
 	"alwaysInclude":{"ox_Standard":2},
 	"autoLogitsticsFreighterDP":0.02,
 	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":38.83,
+			"partitionWeight":40,
 			"variants":{
-				"atlas2_Standard_bv":25,
-				"atlas2_Standard2_bv":25,
-				"atlas2_Standard3_bv":25,
-				"atlas2_Standard4_bv":25,
+				"atlas2_Standard_bv":30,
+				"atlas2_Standard3_bv":70
 			}
 		},
 		{
-			"partitionWeight":24.27,
+			"partitionWeight":25,
 			"variants":{
-				"eradicator_pirates_Attack_bv":22.22,
-				"eradicator_pirates_Overdriven_bv":22.22,
-				"venture_Rocket_bv":11.11,
-				"falcon_p_StrikeE1_bv":22.22,
-				"falcon_p_StrikeE2_bv":22.22,
+				"eradicator_pirates_Attack_bv":100
 			}
 		},
 		{
-			"partitionWeight":24.27,
+			"partitionWeight":18,
 			"variants":{
-				"enforcer_d_pirates_Elite_bv":42,
-				"enforcer_d_pirates_Overdriven_bv":9,
-				"manticore_pirates_Support1_bv":5,
-				"sunder_Overdriven_bv":11,
-				"colossus3_PirateStrike1_bv":5,
-				"colossus3_PirateStrike2_bv":5,
-				"condor_Strike1_bv":5,
-				"condor_Attack_bv":5,
-				"shrike_p_Attack_bv":5,
-				"shrike_p_Support_bv":5
+				"enforcer_d_pirates_Elite_bv":80,
+				"condor_Attack_bv":10,
+				"colossus3_Pirate_bv":10
 			}
 		},
 		{
-			"partitionWeight":9.71,
+			"partitionWeight":6,
 			"variants":{
-				"hound_d_pirates_Shielded":3.00,
-				"hound_d_pirates_Standard":3.00,
-				"hound_d_pirates_Overdriven":4.00,
-				"vanguard_pirates_Attack":20.00,
-				"vanguard_pirates_Strike":20.00,
-				"buffalo2_Bomber_Support_bv":20.00,
-				"buffalo2_Fighter_Support_bv":20.00,
-				"lasher_Standard1_bv":10.00,
+				"hound_d_pirates_Shielded":3,
+				"hound_d_pirates_Standard":3,
+				"hound_d_pirates_Overdriven":4,
+				"buffalo2_Standard_bv":45,
+				"buffalo2_DEM_bv":45
 			}
 		}
 	]

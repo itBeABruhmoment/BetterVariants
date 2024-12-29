@@ -1,7 +1,7 @@
 {
     "displayName": "Balanced1B",
-    "fluxCapacitors": 31,
-    "fluxVents": 26,
+    "fluxCapacitors": 50,
+    "fluxVents": 27,
     "hullId": "odyssey",
     "hullMods": [
         "targetingunit",
@@ -15,15 +15,14 @@
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS 002": "plasma"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
             "weapons": {
-                "WS 002": "plasma",
-                "WS 003": "hil",
-                "WS 010": "mininglaser",
-                "WS 011": "mininglaser",
-                "WS 012": "mininglaser",
-                "WS 013": "mininglaser",
-                "WS 016": "mininglaser",
-                "WS 017": "mininglaser"
+                "WS 003": "tachyonlance",
+                "WS 007": "pdburst"
             }
         },
         {
@@ -35,14 +34,14 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "sabotpod",
-                "WS 005": "sabotpod",
+                "WS 004": "typhoon",
+                "WS 005": "typhoon",
                 "WS 006": "sabotpod"
             }
         }
     ],
     "wings": [
-        "warthog_wing",
-        "trident_wing"
+        "gladius_wing",
+        "gladius_wing"
     ]
 }

@@ -1,0 +1,20 @@
+{
+    "displayName": "Pirate1B",
+    "fluxCapacitors": 30,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "colossus3",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "colossus3_Pirate_bv",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS 015": "lightac"}
+    }],
+    "wings": [
+        "broadsword_wing",
+        "broadsword_wing"
+    ]
+}
