@@ -1,13 +1,14 @@
 {
     "displayName": "Brawler1B",
-    "fluxCapacitors": 35,
+    "fluxCapacitors": 47,
     "fluxVents": 50,
     "hullId": "onslaught",
     "hullMods": [
-        "targetingunit",
         "fluxdistributor",
-        "ballistic_rangefinder",
-        "missleracks",
+        "fluxcoil",
+        "hardenedshieldemitter",
+        "adaptiveshields",
+        "targetingunit",
         "armoredweapons"
     ],
     "permaMods": [],
@@ -18,26 +19,20 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 016": "tpc",
+                "WS 012": "flak",
+                "WS 016": "tpc"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "flak",
                 "WS 017": "tpc"
             }
         },
         {
             "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "heavymg",
-                "WS 002": "lightac",
-                "WS 003": "heavymg",
-                "WS 004": "lightac",
-                "WS 007": "heavymg",
-                "WS 008": "lightmortar",
-                "WS 009": "lightmortar",
-                "WS 019": "multineedler"
-            }
-        },
-        {
-            "autofire": false,
             "mode": "LINKED",
             "weapons": {
                 "WS 021": "typhoon",
@@ -50,12 +45,18 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 012": "dualflak",
-                "WS 013": "dualflak",
-                "WS 014": "flak",
-                "WS 015": "flak",
-                "WS 018": "devastator",
-                "WS 020": "devastator"
+                "WS 018": "multineedler",
+                "WS 019": "multineedler",
+                "WS 020": "multineedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymauler",
+                "WS 003": "heavymauler",
+                "WS 007": "heavymauler"
             }
         }
     ]

@@ -16,7 +16,7 @@
         "autofire": true,
         "mode": "LINKED",
         "weapons": {
-            "WS 001": "pulselaser",
+            "WS 001": "phasebeam",
             "WS 002": "ionpulser",
             "WS 003": "heavymg"
         }

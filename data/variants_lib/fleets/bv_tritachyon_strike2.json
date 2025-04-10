@@ -1,7 +1,7 @@
 {
 	# vltestbattle bv_merc_test6 240 bv_hegemony_ranged 240
 	"autofit":false,
-	"fleetDataId":"bv_tritachyon_strike",
+	"fleetDataId":"bv_tritachyon_strike2",
 	"minDP":40,
 	"maxDP":500,
 	"defaultFleetWidePersonality":"aggressive",
@@ -10,31 +10,32 @@
 	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":45,
+			"partitionWeight":50,
 			"variants":{
 				"odyssey_Balanced_bv":100
 			}
 		},
 		{
-			"partitionWeight":30,
+			"partitionWeight":20,
 			"variants":{
 				"doom_Support_bv":25,
 				"aurora_Strike_bv":75
 			}
 		},
 		{
-			"partitionWeight":17.5,
+			"partitionWeight":20,
 			"variants":{
-				"medusa_Attack_bv":100
+				"hyperion_Assault_bv":50,
+				"hyperion_Support_bv":50
 			}
 		},
 		{
-			"partitionWeight":7.5,
+			"partitionWeight":10,
 			"variants":{
-				"omen_Ew_bv":50,
-				"tempest_Attack1_bv":15,
-				"tempest_Attack2_bv":15,
-				"tempest_Attack3_bv":15
+				"afflictor_Strike_bv":10,
+				"shade_Assault_bv":10,
+				"scarab_Strike_bv":5,
+				"scarab_Emp_bv":5
 			}
 		}
 	]

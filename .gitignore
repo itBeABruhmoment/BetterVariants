@@ -1,8 +1,6 @@
-/.git
-/jars/BetterVariantsProject/.idea/*
-/jars/BetterVariantsProject/.gradle/*
-/jars/BetterVariantsProject/gradle/*
-/jars/BetterVariantsProject/build/*
-/jars/BetterVariantsProject/local.properties
-/dev_scripts/*.csv
-TODO.txt
+.gradle
+.idea
+build
+gradle
+jars
+local.properties

@@ -5,7 +5,7 @@
     "utility": "false",
     "version": "1.4.3",
     "description": "Make variants better",
-    "gameVersion": "0.97a",
+    "gameVersion": "0.98a-RC5",
     "jars":["jars/BetterVariants.jar"],
     "modPlugin":"better_variants.scripts.BetterVariantsModPlugin",
     "dependencies": [

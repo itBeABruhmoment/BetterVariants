@@ -1,0 +1,6 @@
+starSectorInstallDir=your/install/starsector-core
+modsDir=your/install/mods
+consoleCommandDir=your/install/mods/ConsoleCommands
+lazyLibDir=your/install/mods/LazyLib
+lunaLibDir=your/install/mods/LunaLib
+variantsLibDir=your/install/mods/VariantsLib

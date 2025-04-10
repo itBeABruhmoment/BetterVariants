@@ -1,6 +1,6 @@
 {
     "displayName": "Overdriven1B",
-    "fluxCapacitors": 19,
+    "fluxCapacitors": 22,
     "fluxVents": 0,
     "hullId": "aurora",
     "hullMods": [
@@ -26,7 +26,9 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "ioncannon",
+                "WS 001": "mininglaser",
+                "WS 002": "mininglaser",
+                "WS 003": "mininglaser",
                 "WS 004": "ioncannon",
                 "WS 005": "mininglaser",
                 "WS 007": "heavyblaster",

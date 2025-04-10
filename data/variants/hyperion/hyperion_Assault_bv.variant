@@ -16,8 +16,8 @@
         "autofire": false,
         "mode": "LINKED",
         "weapons": {
-            "WS 001": "pulselaser",
-            "WS 002": "pulselaser",
+            "WS 001": "phasebeam",
+            "WS 002": "phasebeam",
             "WS 003": "heavymg"
         }
     }]

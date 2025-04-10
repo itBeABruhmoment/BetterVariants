@@ -8,7 +8,7 @@
 	"spawnIfNoIndustry":false,
 	"autoLogitsticsFreighterDP":0.02,
 	"autoLogitsticsTankerDP":0.02,
-	"alwaysInclude":{"doom_Overdriven_bv":1},
+	"alwaysInclude":{"doom_Support_bv":1},
 	"fleetPartitions":[
 		{
 			"partitionWeight":45,

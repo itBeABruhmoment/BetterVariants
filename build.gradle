@@ -1,0 +1,79 @@
+plugins {
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    Properties localProps = new Properties()
+    localProps.load(new FileInputStream(file('local.properties'))) // See local.properties.example
+
+    // Local build environment config, set in local.properties
+    gameDir = localProps.getProperty('starSectorInstallDir')
+    consoleCommandsDir = localProps.getProperty('consoleCommandDir')
+    lazyLibDir = localProps.getProperty('lazyLibDir')
+    lunaLibDir = localProps.getProperty('lunaLibDir')
+    variantsLibDir = localProps.getProperty('variantsLibDir')
+    modsDir = localProps.getProperty('modsDir') + "/BetterVariants"
+}
+
+dependencies {
+    //implementation 'org.jetbrains:annotations-java5:23.0.0'
+    compileOnly files(gameDir + '/starfarer.api.jar')
+    compileOnly files(gameDir + '/starfarer_obf.jar')
+    compileOnly files(gameDir + '/fs.common_obf.jar')
+    compileOnly files(gameDir + '/xstream-1.4.10.jar')
+    compileOnly files(gameDir + '/log4j-1.2.9.jar')
+    compileOnly files(gameDir + '/json.jar')
+    compileOnly files(gameDir + '/lwjgl_util.jar')
+    compileOnly files(gameDir + '/xstream-1.4.10.jar')
+    compileOnly files(gameDir + "/lwjgl.jar")
+    compileOnly files(consoleCommandsDir + '/jars/lw_Console.jar')
+    compileOnly files(lazyLibDir + '/jars/LazyLib.jar')
+    compileOnly files(lazyLibDir + '/jars/LazyLib-Kotlin.jar')
+    compileOnly files(lunaLibDir + '/jars/LunaLib.jar')
+    compileOnly files(variantsLibDir + '/jars/VariantsLib.jar')
+}
+
+jar {
+    destinationDirectory.set(file("$rootDir/jars"))
+    archiveBaseName.set('BetterVariants')
+}
+
+task copyModFiles(type: Copy) {
+    dependsOn jar
+    doFirst {
+        delete fileTree(modsDir)
+    }
+
+    from("$rootDir") {
+        include 'mod_info.json'
+        include 'data/**'
+        include 'graphics/**'
+        include 'sounds/**'
+        include 'jars/**'
+        include 'BetterVariants.version'
+        include 'LICENSE'
+    }
+
+    into modsDir
+}
+
+task printJavaInfo {
+    doLast {
+        println "Java Version: ${System.getProperty('java.version')}"
+        println "Java Home: ${System.getProperty('java.home')}"
+        println "JVM Version: ${System.getProperty('java.vm.version')}"
+        println "JVM Name: ${System.getProperty('java.vm.name')}"
+        println "Gradle Java Version: ${JavaVersion.current()}"
+    }
+}

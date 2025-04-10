@@ -1,0 +1,30 @@
+{
+    "displayName": "Assault1B",
+    "fluxCapacitors": 15,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "manticore",
+    "hullMods": [
+        "targetingunit",
+        "escort_package",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "manticore_Assault_bv",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "multineedler"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "typhoon",
+                "WS 005": "typhoon"
+            }
+        }
+    ]
+}

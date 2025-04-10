@@ -2,39 +2,41 @@
 	"autofit":false,
 	"fleetDataId":"bv_tritachyon_wolfpack1",
 	"minDP":40,
-	"maxDP":400,
-	"defaultFleetWidePersonality":"reckless",
+	"maxDP":500,
+	"defaultFleetWidePersonality":"aggressive",
 	"spawnIfNoIndustry":false,
-	"autoLogitsticsFreighterDP":0.06,
-	"autoLogitsticsTankerDP":0.04,
+	"autoLogitsticsFreighterDP":0.02,
+	"autoLogitsticsTankerDP":0.02,
 	"fleetPartitions":[
 		{
-			"partitionWeight":37.74,
+			"partitionWeight":55,
 			"variants":{
-				"paragon_Elite_bv":20.00,
-				"paragon_Escort_bv":20.00,
-				"astral_Strike_bv":20.00,
-				"astral_Elite_bv":20.00,
-				"doom_Support_bv":20.00
+				"doom_Support_bv":25,
+				"aurora_Strike_bv":45,
+				"aurora_Overdriven_bv":30
 			}
 		},
 		{
-			"partitionWeight":56.60,
+			"partitionWeight":30,
 			"variants":{
-				"omen_Ew_bv":8.33,
-				"tempest_Attack1_bv":11.67,
-				"tempest_Attack2_bv":11.67,
-				"tempest_Attack3_bv":11.67,
-				"hyperion_Assault_bv":25.00,
-				"brawler_tritachyon_Standard1_bv":1.67,
-				"brawler_tritachyon_Standard2_bv":1.67,
-				"brawler_tritachyon_Support_bv":1.67,
-				"scarab_Emp_bv":8.33,
-				"scarab_Strike_bv":8.33,
-				"afflictor_Strike_bv":5.00,
-				"shade_Assault_bv":5.00,
+				"medusa_Attack_bv":60,
+				"hyperion_Assault_bv":20,
+				"hyperion_Support_bv":20
 			}
 		},
-	],
+		{
+			"partitionWeight":15,
+			"variants":{
+				"omen_Ew_bv":10,
+				"tempest_Attack1_bv":4,
+				"tempest_Attack2_bv":3,
+				"tempest_Attack3_bv":3,
+				"afflictor_Strike_bv":10,
+				"shade_Assault_bv":10,
+				"scarab_Strike_bv":5,
+				"scarab_Emp_bv":5
+			}
+		}
+	]
 }
 

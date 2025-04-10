@@ -1,7 +1,7 @@
 {
     "displayName": "Strike2B",
     "fluxCapacitors": 30,
-    "fluxVents": 1,
+    "fluxVents": 10,
     "hullId": "aurora",
     "hullMods": [
         "missleracks",
@@ -18,12 +18,12 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "mininglaser",
-                "WS 003": "ioncannon",
+                "WS 002": "mininglaser",
+                "WS 003": "mininglaser",
                 "WS 004": "ioncannon",
-                "WS 005": "ioncannon",
+                "WS 005": "mininglaser",
                 "WS 007": "kineticblaster",
-                "WS 008": "pulselaser",
-                "WS 009": "phasecl",
+                "WS 008": "heavyblaster",
                 "WS 010": "breach",
                 "WS 011": "breach",
                 "WS 012": "breach",
@@ -34,6 +34,11 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {"WS 006": "sabotpod"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "typhoon"}
         }
     ]
 }
