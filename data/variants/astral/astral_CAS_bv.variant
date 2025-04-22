@@ -1,11 +1,11 @@
 {
     "displayName": "CAS1B",
-    "fluxCapacitors": 32,
-    "fluxVents": 13,
+    "fluxCapacitors": 50,
+    "fluxVents": 8,
     "hullId": "astral",
     "hullMods": [
-        "missleracks",
-        "targetingunit",
+        "expanded_deck_crew",
+        "stabilizedshieldemitter",
         "hardenedshieldemitter"
     ],
     "permaMods": [],
@@ -15,27 +15,32 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 014": "gravitonbeam",
-                "WS 015": "ionbeam",
-                "WS 023": "gravitonbeam"
-            }
+            "weapons": {"WS 014": "ionbeam"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 011": "squall",
-                "WS 012": "hurricane"
+                "WS 008": "mininglaser",
+                "WS 011": "cyclone",
+                "WS 012": "cyclone"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 015": "kineticblaster",
+                "WS 023": "kineticblaster"
             }
         }
     ],
     "wings": [
         "broadsword_wing",
+        "flash_wing",
+        "thunder_wing",
+        "spark_wing",
         "broadsword_wing",
-        "cobra_wing",
-        "cobra_wing",
-        "longbow_wing",
-        "longbow_wing"
+        "flash_wing"
     ]
 }

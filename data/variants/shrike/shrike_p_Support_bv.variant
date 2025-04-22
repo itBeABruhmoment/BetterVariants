@@ -1,6 +1,6 @@
 {
     "displayName": "Support1B",
-    "fluxCapacitors": 19,
+    "fluxCapacitors": 18,
     "fluxVents": 0,
     "hullId": "shrike_pirates",
     "hullMods": [
@@ -13,19 +13,17 @@
     "variantId": "shrike_p_Support_bv",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 003": "ionpulser"}
+            "weapons": {
+                "WS 001": "lightneedler",
+                "WS 003": "ionpulser"
+            }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 005": "phasecl"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "lightdualac"}
+            "weapons": {"WS 005": "typhoon"}
         }
     ]
 }

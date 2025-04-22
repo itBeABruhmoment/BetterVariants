@@ -22,7 +22,8 @@
                 "WS 004": "heatseeker",
                 "WS 005": "heatseeker",
                 "WS 006": "heatseeker",
-                "WS 011": "pdburst"
+                "WS 011": "pdburst",
+                "WS 012": "pdburst"
             }
         },
         {
@@ -32,11 +33,6 @@
                 "WS 007": "irautolance",
                 "WS 008": "irautolance"
             }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 012": "pdburst"}
         }
     ]
 }

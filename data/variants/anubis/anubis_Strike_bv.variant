@@ -1,0 +1,33 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 30,
+    "fluxVents": 27,
+    "goalVariant": true,
+    "hullId": "anubis",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "anubis_Strike_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "guardian",
+                "WS 003": "heavyac",
+                "WS 004": "heavyac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "gigacannon"}
+        }
+    ],
+    "wings": ["talon_wing"]
+}

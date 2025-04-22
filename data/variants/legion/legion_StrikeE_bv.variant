@@ -1,7 +1,7 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 50,
-    "fluxVents": 24,
+    "fluxCapacitors": 30,
+    "fluxVents": 50,
     "hullId": "legion",
     "hullMods": [
         "missleracks",
@@ -14,11 +14,10 @@
     "weaponGroups": [
         {
             "autofire": true,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
                 "WS 000": "hephag",
-                "WS 001": "hellbore",
-                "WS 018": "vulcan"
+                "WS 001": "hephag"
             }
         },
         {
@@ -35,23 +34,18 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 019": "vulcan"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 020": "vulcan"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 021": "vulcan"}
+            "weapons": {
+                "WS 018": "vulcan",
+                "WS 019": "vulcan",
+                "WS 020": "vulcan",
+                "WS 021": "vulcan"
+            }
         }
     ],
     "wings": [
-        "broadsword_wing",
-        "broadsword_wing",
-        "thunder_wing",
-        "xyphos_wing"
+        "gladius_wing",
+        "gladius_wing",
+        "warthog_wing",
+        "thunder_wing"
     ]
 }

@@ -1,25 +1,23 @@
 {
-    "displayName": "Custom",
-    "fluxCapacitors": 55,
-    "fluxVents": 1,
+    "displayName": "CAS1B",
+    "fluxCapacitors": 50,
+    "fluxVents": 48,
     "hullId": "astral",
     "hullMods": [
-        "hardenedshieldemitter",
-        "missleracks",
-        "eccm",
-        "targetingunit",
+        "expanded_deck_crew",
         "stabilizedshieldemitter",
-        "expanded_deck_crew"
+        "turretgyros",
+        "hardenedshieldemitter"
     ],
     "permaMods": [
-        "targetingunit",
+        "expanded_deck_crew",
         "stabilizedshieldemitter",
-        "expanded_deck_crew"
+        "turretgyros"
     ],
     "sMods": [
-        "targetingunit",
+        "expanded_deck_crew",
         "stabilizedshieldemitter",
-        "expanded_deck_crew"
+        "turretgyros"
     ],
     "variantId": "astral_Bounty2_bv",
     "weaponGroups": [
@@ -27,26 +25,35 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 014": "gravitonbeam",
-                "WS 015": "ionbeam",
-                "WS 023": "ionbeam"
+                "WS 015": "kineticblaster",
+                "WS 023": "kineticblaster"
             }
         },
         {
             "autofire": false,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
-                "WS 011": "hurricane",
-                "WS 012": "hurricane"
+                "WS 011": "cyclone",
+                "WS 012": "cyclone"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 014": "ionbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "mininglaser"}
         }
     ],
     "wings": [
-        "warthog_wing",
-        "claw_wing",
         "broadsword_wing",
+        "flash_wing",
+        "thunder_wing",
+        "spark_wing",
         "broadsword_wing",
-        "warthog_wing",
-        "claw_wing"
+        "flash_wing"
     ]
 }

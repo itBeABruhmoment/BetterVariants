@@ -7,11 +7,21 @@
     "permaMods": [],
     "sMods": [],
     "variantId": "condor_Strike2_bv",
-    "weaponGroups": [{
-        "autofire": false,
-        "mode": "LINKED",
-        "weapons": {"WS 003": "pilum"}
-    }],
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "mininglaser",
+                "WS 002": "mininglaser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "pilum"}
+        }
+    ],
     "wings": [
         "perdition_wing",
         "broadsword_wing"

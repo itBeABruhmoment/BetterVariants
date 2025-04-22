@@ -1,7 +1,7 @@
 {
     "displayName": "Strike1B",
     "fluxCapacitors": 20,
-    "fluxVents": 15,
+    "fluxVents": 19,
     "goalVariant": true,
     "hullId": "manticore_luddic_path",
     "hullMods": [],

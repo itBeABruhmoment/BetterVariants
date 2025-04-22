@@ -1,6 +1,6 @@
 {
     "displayName": "Bounty1",
-    "fluxCapacitors": 38,
+    "fluxCapacitors": 46,
     "fluxVents": 55,
     "hullId": "prometheus2",
     "hullMods": [
@@ -37,7 +37,7 @@
         }
     ],
     "wings": [
-        "claw_wing",
-        "claw_wing"
+        "gladius_wing",
+        "talon_wing"
     ]
 }

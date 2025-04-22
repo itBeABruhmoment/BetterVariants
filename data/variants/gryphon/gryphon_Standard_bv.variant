@@ -1,9 +1,13 @@
 {
     "displayName": "Standard1B",
     "fluxCapacitors": 20,
-    "fluxVents": 20,
+    "fluxVents": 0,
     "hullId": "gryphon",
-    "hullMods": ["eccm"],
+    "hullMods": [
+        "eccm",
+        "missleracks",
+        "targetingunit"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "gryphon_Standard_bv",
@@ -11,23 +15,17 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 001": "cyclone"}
+            "weapons": {"WS 001": "squall"}
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 010": "reaper",
-                "WS 011": "reaper",
-                "WS 012": "reaper"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 008": "sabotpod",
-                "WS 009": "sabotpod"
+                "WS 008": "gorgonpod",
+                "WS 009": "gorgonpod",
+                "WS 010": "gorgon",
+                "WS 011": "gorgon",
+                "WS 012": "gorgon"
             }
         },
         {
@@ -39,11 +37,11 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "vulcan",
-                "WS 004": "vulcan",
-                "WS 005": "vulcan",
-                "WS 006": "vulcan",
-                "WS 007": "vulcan"
+                "WS 003": "mininglaser",
+                "WS 004": "mininglaser",
+                "WS 005": "mininglaser",
+                "WS 006": "mininglaser",
+                "WS 007": "mininglaser"
             }
         }
     ]

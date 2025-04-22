@@ -1,37 +1,36 @@
 {
-        "displayName": "Overdriven1B",
-        "fluxCapacitors": 16,
-        "fluxVents": 0,
-        "goalVariant": false,
-        "hullId": "fulgent",
-        "hullMods": [
-                "missleracks",
-                "safetyoverrides"
-        ],
-        "permaMods": [],
-        "sMods": [],
-        "variantId": "fulgent_Overdriven_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 003": "phasecl",
-                                "WS 004": "phasecl"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 009": "atropos",
-                                "WS 010": "atropos"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 001": "heavyblaster"}
-                }
-        ]
+    "displayName": "Overdriven1B",
+    "fluxCapacitors": 20,
+    "fluxVents": 1,
+    "hullId": "fulgent",
+    "hullMods": [
+        "missleracks",
+        "safetyoverrides"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "fulgent_Overdriven_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "phasecl",
+                "WS 004": "phasecl"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "atropos",
+                "WS 010": "atropos"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "heavyblaster"}
+        }
+    ]
 }

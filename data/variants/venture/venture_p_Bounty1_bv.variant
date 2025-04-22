@@ -1,37 +1,48 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 35,
-        "fluxVents": 11,
-        "goalVariant": false,
-        "hullId": "venture_p",
-        "hullMods": ["hardenedshieldemitter"],
-        "permaMods": [],
-        "sMods": [
-                "targetingunit",
-                "missleracks",
-                "missile_autoloader"
-        ],
-        "variantId": "venture_p_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 009": "squall"}
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 001": "hveldriver",
-                                "WS 002": "mininglaser",
-                                "WS 003": "hveldriver",
-                                "WS 007": "breach"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 004": "harpoon"}
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 0,
+    "fluxVents": 24,
+    "hullId": "venture_p",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "missile_autoloader"
+    ],
+    "permaMods": [
+        "targetingunit",
+        "missleracks",
+        "missile_autoloader"
+    ],
+    "sMods": [
+        "targetingunit",
+        "missleracks",
+        "missile_autoloader"
+    ],
+    "variantId": "venture_p_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "hurricane"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hveldriver",
+                "WS 003": "hveldriver",
+                "WS 005": "hveldriver",
+                "WS 006": "hveldriver"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "irautolance",
+                "WS 004": "breach",
+                "WS 007": "breach"
+            }
+        }
+    ]
 }

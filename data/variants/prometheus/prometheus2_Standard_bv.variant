@@ -1,12 +1,13 @@
 {
     "displayName": "Standard1B",
-    "fluxCapacitors": 21,
+    "fluxCapacitors": 23,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "prometheus2",
     "hullMods": [
         "targetingunit",
-        "defensive_targeting_array"
+        "fluxdistributor",
+        "missleracks"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,40 +16,29 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 032": "hellbore"}
+            "weapons": {"WS 032": "mjolnir"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 019": "squall"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 031": "mark9"}
+            "weapons": {"WS 019": "hammerrack"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "heavyac",
-                "WS 005": "heavyac"
+                "WS 004": "hveldriver",
+                "WS 005": "hveldriver"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 002": "vulcan",
-                "WS 003": "vulcan",
-                "WS 006": "vulcan",
-                "WS 012": "vulcan",
-                "WS 015": "vulcan"
-            }
+            "weapons": {"WS 031": "guardian"}
         }
     ],
     "wings": [
-        "perdition_wing",
-        "perdition_wing"
+        "gladius_wing",
+        "talon_wing"
     ]
 }

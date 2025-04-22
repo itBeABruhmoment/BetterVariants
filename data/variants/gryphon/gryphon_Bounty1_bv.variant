@@ -1,14 +1,14 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 30,
-    "fluxVents": 7,
+    "fluxCapacitors": 25,
+    "fluxVents": 0,
     "hullId": "gryphon",
     "hullMods": [
         "eccm",
         "turretgyros",
         "targetingunit",
-        "adaptiveshields",
-        "hardenedshieldemitter"
+        "hardenedshieldemitter",
+        "missleracks"
     ],
     "permaMods": [
         "eccm",

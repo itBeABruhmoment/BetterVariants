@@ -3,4 +3,5 @@
 build
 gradle
 jars
+dev_scripts/out.csv
 local.properties

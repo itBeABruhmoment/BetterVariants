@@ -68,6 +68,19 @@ task copyModFiles(type: Copy) {
     into modsDir
 }
 
+task copyModFilesSafe(type: Copy) {
+    from("$rootDir") {
+        include 'mod_info.json'
+        include 'data/**'
+        include 'graphics/**'
+        include 'sounds/**'
+        include 'BetterVariants.version'
+        include 'LICENSE'
+    }
+
+    into modsDir
+}
+
 task printJavaInfo {
     doLast {
         println "Java Version: ${System.getProperty('java.version')}"

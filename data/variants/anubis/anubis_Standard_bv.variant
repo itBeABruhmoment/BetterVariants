@@ -1,0 +1,26 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 30,
+    "fluxVents": 29,
+    "goalVariant": true,
+    "hullId": "anubis",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "anubis_Standard_bv",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 000": "guardian",
+            "WS 002": "guardian",
+            "WS 003": "hveldriver",
+            "WS 004": "hveldriver"
+        }
+    }],
+    "wings": ["thunder_wing"]
+}

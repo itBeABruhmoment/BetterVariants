@@ -1,66 +1,77 @@
 {
-        "displayName": "Custom",
-        "fluxCapacitors": 55,
-        "fluxVents": 53,
-        "goalVariant": false,
-        "hullId": "odyssey",
-        "hullMods": [
-                "targetingunit",
-                "stabilizedshieldemitter"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "missleracks",
-                "hardenedshieldemitter",
-                "fluxcoil"
-        ],
-        "variantId": "odyssey_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 001": "squall"}
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 002": "plasma",
-                                "WS 003": "plasma"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 004": "typhoon",
-                                "WS 005": "typhoon"
-                        }
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 006": "breachpod",
-                                "WS 007": "mininglaser",
-                                "WS 008": "mininglaser"
-                        }
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 009": "mininglaser",
-                                "WS 010": "mininglaser"
-                        }
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 016": "mininglaser",
-                                "WS 017": "mininglaser"
-                        }
-                }
-        ]
+    "displayName": "Custom",
+    "fluxCapacitors": 43,
+    "fluxVents": 53,
+    "hullId": "odyssey",
+    "hullMods": [
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "missleracks",
+        "hardenedshieldemitter",
+        "fluxcoil",
+        "fluxdistributor"
+    ],
+    "permaMods": [
+        "missleracks",
+        "hardenedshieldemitter",
+        "fluxcoil"
+    ],
+    "sMods": [
+        "missleracks",
+        "hardenedshieldemitter",
+        "fluxcoil"
+    ],
+    "variantId": "odyssey_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "squall"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "plasma",
+                "WS 003": "plasma"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "typhoon",
+                "WS 005": "typhoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "breachpod",
+                "WS 007": "mininglaser",
+                "WS 008": "mininglaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "mininglaser",
+                "WS 010": "mininglaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "mininglaser",
+                "WS 017": "mininglaser"
+            }
+        }
+    ],
+    "wings": [
+        "gladius_wing",
+        "talon_wing"
+    ]
 }

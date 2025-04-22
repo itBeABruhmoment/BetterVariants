@@ -1,10 +1,14 @@
 {
     "displayName": "Close Support2B",
-    "fluxCapacitors": 20,
-    "fluxVents": 19,
+    "fluxCapacitors": 18,
+    "fluxVents": 0,
     "goalVariant": true,
     "hullId": "sunder_LG",
-    "hullMods": ["fluxcoil"],
+    "hullMods": [
+        "escort_package",
+        "hardenedshieldemitter",
+        "targetingunit"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "sunder_LG_CS2_bv ",
@@ -17,17 +21,18 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 002": "ionpulser"}
+            "weapons": {
+                "WS 001": "heatseeker",
+                "WS 005": "heatseeker"
+            }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 004": "kineticblaster"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 008": "vulcan"}
+            "weapons": {
+                "WS 002": "irautolance",
+                "WS 004": "irautolance"
+            }
         }
     ]
 }

@@ -1,32 +1,48 @@
 {
-        "displayName": "Custom",
-        "fluxCapacitors": 35,
-        "fluxVents": 2,
-        "goalVariant": false,
-        "hullId": "apogee",
-        "hullMods": ["missleracks"],
-        "permaMods": [],
-        "sMods": [
-                "missile_autoloader",
-                "hardenedshieldemitter",
-                "stabilizedshieldemitter"
-        ],
-        "variantId": "apogee_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 008": "plasma"}
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 004": "mininglaser",
-                                "WS 005": "breach",
-                                "WS 006": "ionbeam",
-                                "WS 009": "hurricane"
-                        }
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 35,
+    "fluxVents": 14,
+    "hullId": "apogee",
+    "hullMods": [
+        "missleracks",
+        "missile_autoloader",
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [
+        "missile_autoloader",
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter"
+    ],
+    "sMods": [
+        "missile_autoloader",
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter"
+    ],
+    "variantId": "apogee_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "plasma"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "mininglaser",
+                "WS 006": "ionbeam"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "breach"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "hurricane"}
+        }
+    ]
 }

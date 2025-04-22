@@ -1,6 +1,6 @@
 {
     "displayName": "Fire Support2B",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 9,
     "fluxVents": 50,
     "hullId": "legion",
     "hullMods": [

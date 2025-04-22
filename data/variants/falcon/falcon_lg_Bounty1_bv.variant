@@ -1,42 +1,49 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 35,
-        "fluxVents": 8,
-        "goalVariant": false,
-        "hullId": "falcon_LG",
-        "hullMods": ["missile_autoloader"],
-        "permaMods": [],
-        "sMods": [
-                "targetingunit",
-                "stabilizedshieldemitter",
-                "hardenedshieldemitter"
-        ],
-        "variantId": "falcon_lg_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 007": "hveldriver",
-                                "WS 008": "hveldriver"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 001": "breach",
-                                "WS 002": "breach",
-                                "WS 003": "mininglaser"
-                        }
-                },
-                {
-                        "autofire": true,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 005": "ionbeam",
-                                "WS 006": "irautolance"
-                        }
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 35,
+    "fluxVents": 1,
+    "hullId": "falcon_LG",
+    "hullMods": [
+        "missile_autoloader",
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter"
+    ],
+    "sMods": [
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter"
+    ],
+    "variantId": "falcon_lg_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "hveldriver",
+                "WS 008": "hveldriver"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "breach",
+                "WS 002": "breach"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "ionbeam",
+                "WS 006": "irautolance"
+            }
+        }
+    ]
 }

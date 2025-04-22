@@ -7,8 +7,7 @@
     "hullMods": [
         "targetingunit",
         "escort_package",
-        "hardenedshieldemitter",
-        "fluxcoil"
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -22,9 +21,15 @@
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS 002": "gravitonbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 002": "gravitonbeam",
-                "WS 007": "lrpdlaser"
+                "WS 006": "mininglaser",
+                "WS 007": "mininglaser",
+                "WS 008": "mininglaser"
             }
         }
     ]

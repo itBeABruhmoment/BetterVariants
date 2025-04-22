@@ -7,7 +7,7 @@
     "hullMods": [
         "missile_autoloader",
         "missleracks",
-        "eccm"
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],

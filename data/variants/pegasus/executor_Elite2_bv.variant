@@ -1,6 +1,6 @@
 {
     "displayName": "Elite2B",
-    "fluxCapacitors": 35,
+    "fluxCapacitors": 23,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "executor",
@@ -17,40 +17,46 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "autopulse",
-                "WS 014": "mininglaser"
+                "WS 000": "gigacannon",
+                "WS 001": "gigacannon"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "autopulse",
-                "WS 015": "mininglaser"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 002": "irautolance",
-                "WS 003": "irautolance",
-                "WS 006": "irautolance",
-                "WS 007": "irautolance",
-                "WS 011": "flak",
                 "WS 012": "squall",
                 "WS 013": "squall"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "hveldriver",
+                "WS 005": "hveldriver",
+                "WS 008": "hveldriver",
+                "WS 009": "hveldriver",
+                "WS 010": "hveldriver"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "heavymauler",
-                "WS 005": "heavymauler",
-                "WS 008": "hveldriver",
-                "WS 009": "hveldriver",
-                "WS 010": "hveldriver"
+                "WS 002": "irautolance",
+                "WS 003": "irautolance",
+                "WS 006": "irautolance",
+                "WS 007": "irautolance"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "flak",
+                "WS 014": "mininglaser",
+                "WS 015": "mininglaser"
             }
         }
     ]

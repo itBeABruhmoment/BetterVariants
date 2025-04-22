@@ -1,35 +1,39 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 15,
-        "fluxVents": 3,
-        "goalVariant": false,
-        "hullId": "afflictor",
-        "hullMods": ["magazines"],
-        "permaMods": [],
-        "sMods": [
-                "fluxcoil",
-                "hardened_subsystems",
-                "adaptive_coils"
-        ],
-        "variantId": "afflictor_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 001": "amblaster"}
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 006": "amblaster"}
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {
-                                "WS 002": "lightneedler",
-                                "WS 003": "lightneedler"
-                        }
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 10,
+    "fluxVents": 4,
+    "hullId": "afflictor",
+    "hullMods": [
+        "fluxcoil",
+        "hardened_subsystems",
+        "adaptive_coils"
+    ],
+    "permaMods": [
+        "fluxcoil",
+        "hardened_subsystems",
+        "adaptive_coils"
+    ],
+    "sMods": [
+        "fluxcoil",
+        "hardened_subsystems",
+        "adaptive_coils"
+    ],
+    "variantId": "afflictor_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "lightneedler",
+                "WS 002": "lightneedler",
+                "WS 003": "lightneedler",
+                "WS 004": "lightneedler"
+            }
+        }
+    ]
 }

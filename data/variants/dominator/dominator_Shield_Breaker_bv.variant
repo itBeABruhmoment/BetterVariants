@@ -5,8 +5,8 @@
     "hullId": "dominator",
     "hullMods": [
         "targetingunit",
-        "ballistic_rangefinder",
-        "heavyarmor"
+        "missleracks",
+        "fluxdistributor"
     ],
     "permaMods": [],
     "sMods": [],
@@ -22,36 +22,34 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 014": "annihilatorpod",
-                "WS 015": "annihilatorpod",
-                "WS 016": "annihilatorpod"
+                "WS 014": "typhoon",
+                "WS 015": "typhoon",
+                "WS 016": "typhoon"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "lightmortar",
-                "WS 005": "lightmortar"
+                "WS 010": "heavymauler",
+                "WS 011": "heavymauler"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 010": "heavymortar",
-                "WS 011": "heavymortar"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 001": "vulcan",
-                "WS 004": "vulcan",
-                "WS 007": "vulcan"
+                "WS 001": "mininglaser",
+                "WS 002": "mininglaser",
+                "WS 003": "mininglaser",
+                "WS 004": "mininglaser",
+                "WS 005": "mininglaser",
+                "WS 006": "mininglaser",
+                "WS 007": "mininglaser",
+                "WS 008": "mininglaser",
+                "WS 009": "mininglaser"
             }
         }
     ]

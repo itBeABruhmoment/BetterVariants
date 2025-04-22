@@ -1,9 +1,13 @@
 {
     "displayName": "Strike1B",
-    "fluxCapacitors": 18,
-    "fluxVents": 15,
+    "fluxCapacitors": 20,
+    "fluxVents": 0,
     "hullId": "gryphon",
-    "hullMods": ["eccm"],
+    "hullMods": [
+        "missleracks",
+        "eccm",
+        "targetingunit"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "gryphon_Strike_bv",
@@ -11,49 +15,35 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 001": "locust"}
+            "weapons": {"WS 001": "squall"}
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 008": "breachpod",
-                "WS 009": "breachpod"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 010": "sabot",
-                "WS 011": "sabot",
-                "WS 012": "sabot"
+                "WS 008": "dragon",
+                "WS 009": "dragon"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "heavyac"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 003": "lightneedler",
-                "WS 004": "lightneedler"
+                "WS 010": "harpoon",
+                "WS 011": "harpoon",
+                "WS 012": "harpoon"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 005": "lightneedler"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 006": "vulcan",
-                "WS 007": "vulcan"
+                "WS 002": "hveldriver",
+                "WS 003": "mininglaser",
+                "WS 004": "mininglaser",
+                "WS 005": "mininglaser",
+                "WS 006": "mininglaser",
+                "WS 007": "mininglaser"
             }
         }
     ]

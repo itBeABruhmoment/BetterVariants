@@ -1,7 +1,7 @@
 {
     "displayName": "Close Support1B",
-    "fluxCapacitors": 1,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 23,
     "goalVariant": true,
     "hullId": "falcon_LG",
     "hullMods": [

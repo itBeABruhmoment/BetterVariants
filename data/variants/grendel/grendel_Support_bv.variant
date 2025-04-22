@@ -1,6 +1,6 @@
 {
     "displayName": "Support1B",
-    "fluxCapacitors": 23,
+    "fluxCapacitors": 22,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "grendel",
@@ -13,7 +13,7 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 010": "heavymauler",
+                "WS 010": "hveldriver",
                 "WS 011": "hveldriver",
                 "WS 012": "heavymauler",
                 "WS 013": "hveldriver",
@@ -24,30 +24,17 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "breach",
-                "WS 008": "breach",
-                "WS 009": "breach"
+                "WS 000": "mininglaser",
+                "WS 001": "vulcan",
+                "WS 002": "mininglaser",
+                "WS 003": "vulcan",
+                "WS 004": "mininglaser",
+                "WS 005": "mininglaser",
+                "WS 006": "vulcan",
+                "WS 007": "heatseeker",
+                "WS 008": "heatseeker",
+                "WS 009": "heatseeker"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "vulcan"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 003": "vulcan"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 005": "vulcan"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 006": "vulcan"}
         }
     ]
 }

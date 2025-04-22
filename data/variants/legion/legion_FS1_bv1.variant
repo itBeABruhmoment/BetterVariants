@@ -49,9 +49,9 @@
         }
     ],
     "wings": [
+        "gladius_wing",
+        "gladius_wing",
         "broadsword_wing",
-        "broadsword_wing",
-        "broadsword_wing",
-        "gladius_wing"
+        "thunder_wing"
     ]
 }

@@ -1,6 +1,6 @@
 {
     "displayName": "Outdated1B",
-    "fluxCapacitors": 45,
+    "fluxCapacitors": 41,
     "fluxVents": 50,
     "hullId": "onslaught",
     "hullMods": [
@@ -8,7 +8,8 @@
         "hardenedshieldemitter",
         "targetingunit",
         "ballistic_rangefinder",
-        "adaptiveshields"
+        "adaptiveshields",
+        "fluxdistributor"
     ],
     "permaMods": [],
     "sMods": [],
@@ -19,7 +20,6 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "heavyac",
-                "WS 002": "lightneedler",
                 "WS 007": "heavyac",
                 "WS 009": "lightneedler",
                 "WS 012": "flak",
@@ -31,7 +31,6 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "heavyac",
-                "WS 004": "lightneedler",
                 "WS 008": "lightneedler",
                 "WS 013": "flak",
                 "WS 017": "tpc"

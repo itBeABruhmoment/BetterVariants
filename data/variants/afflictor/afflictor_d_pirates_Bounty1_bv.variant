@@ -1,30 +1,37 @@
 {
-        "displayName": "Bounty1",
-        "fluxCapacitors": 14,
-        "fluxVents": 0,
-        "goalVariant": false,
-        "hullId": "afflictor_d_pirates",
-        "hullMods": [],
-        "permaMods": [],
-        "sMods": [
-                "hardened_subsystems",
-                "fluxcoil",
-                "adaptive_coils"
-        ],
-        "variantId": "afflictor_d_pirates_Bounty1_bv",
-        "weaponGroups": [
-                {
-                        "autofire": false,
-                        "mode": "ALTERNATING",
-                        "weapons": {
-                                "WS 002": "amblaster",
-                                "WS 003": "lightneedler"
-                        }
-                },
-                {
-                        "autofire": false,
-                        "mode": "LINKED",
-                        "weapons": {"WS 006": "amblaster"}
-                }
-        ]
+    "displayName": "Bounty1",
+    "fluxCapacitors": 14,
+    "fluxVents": 1,
+    "hullId": "afflictor_d_pirates",
+    "hullMods": [
+        "hardened_subsystems",
+        "fluxcoil",
+        "adaptive_coils"
+    ],
+    "permaMods": [
+        "hardened_subsystems",
+        "fluxcoil",
+        "adaptive_coils"
+    ],
+    "sMods": [
+        "hardened_subsystems",
+        "fluxcoil",
+        "adaptive_coils"
+    ],
+    "variantId": "afflictor_d_pirates_Bounty1_bv",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "lightneedler",
+                "WS 003": "lightneedler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "amblaster"}
+        }
+    ]
 }

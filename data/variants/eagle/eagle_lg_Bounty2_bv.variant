@@ -1,30 +1,35 @@
 {
-        "displayName": "Bounty2",
-        "fluxCapacitors": 28,
-        "fluxVents": 0,
-        "goalVariant": false,
-        "hullId": "eagle_LG",
-        "hullMods": [
-                "hardened_subsystems",
-                "safetyoverrides"
-        ],
-        "permaMods": [],
-        "sMods": [
-                "stabilizedshieldemitter",
-                "hardenedshieldemitter",
-                "extendedshieldemitter"
-        ],
-        "variantId": "eagle_lg_Bounty2_bv",
-        "weaponGroups": [{
-                "autofire": false,
-                "mode": "LINKED",
-                "weapons": {
-                        "WS 005": "pulselaser",
-                        "WS 006": "pulselaser",
-                        "WS 007": "heavymg",
-                        "WS 008": "chaingun",
-                        "WS 009": "ionpulser",
-                        "WS 013": "shredder"
-                }
-        }]
+    "displayName": "Bounty2",
+    "fluxCapacitors": 25,
+    "fluxVents": 0,
+    "hullId": "eagle_LG",
+    "hullMods": [
+        "safetyoverrides",
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter",
+        "extendedshieldemitter"
+    ],
+    "permaMods": [
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter",
+        "extendedshieldemitter"
+    ],
+    "sMods": [
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter",
+        "extendedshieldemitter"
+    ],
+    "variantId": "eagle_lg_Bounty2_bv",
+    "weaponGroups": [{
+        "autofire": false,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 005": "kineticblaster",
+            "WS 006": "kineticblaster",
+            "WS 007": "chaingun",
+            "WS 008": "chaingun",
+            "WS 009": "ionpulser",
+            "WS 013": "heavymg"
+        }
+    }]
 }
