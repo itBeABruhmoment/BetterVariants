@@ -69,7 +69,9 @@
 		"vigilance_FS":3,
 		"vigilance_Standard":3,
 		"vigilance_Strike":3,
-		
+		"vigilance_Support1":0, # PL-only variant
+		"vigilance_Support2":0, # PL-only variant
+
 		"wolf_Assault":0,
 		"wolf_Overdriven":0,
 		"wolf_PD":0,
@@ -89,6 +91,9 @@
 		"shard_left_Attack":5,
 		"shard_left_Attack2":5,
 		"shard_right_Attack":10,
+
+		"skirmish_unit_Type100":5,
+		"skirmish_unit_Type101":5,
 		
 		"fallback":{"combatSmall":1},
 	},
@@ -102,10 +107,12 @@
 		"glimmer_Support":5,
 		"lumen_Standard":10,
 		
+		"brawler_LG_Elite":10,
 		"brawler_Assault":0,
 		"brawler_Elite":0,
 		"brawler_tritachyon_Standard":0,
 		"brawler_pather_Raider":0,
+		"brawler_Support":0, # PL-only variant
 		
 		"brawler_Assault_bv":7,
 		"brawler_Elite_bv":3,
@@ -114,6 +121,7 @@
 		"brawler_tritachyon_Support_bv":4,
 		"brawler_pather_Raider_bv":10,
 		
+		"centurion_LG_Assault":10,
 		"centurion_Assault":0,
 		
 		"centurion_Assault_bv":10,
@@ -164,13 +172,17 @@
 		"lasher_luddic_church_Standard_bv":10,
 		"lasher_luddic_path_Raider_bv":10,
 		
-		"monitor_Escort":10,
+		"monitor_Escort":0,
+
+		"monitor_Standard_bv":10,
 		
 		"mudskipper2_CS":3,
 		"mudskipper2_Hellbore":3,
 		
-		"vanguard_Attack":5,
-		"vanguard_Strike":5,
+		"vanguard_Attack":4,
+		"vanguard_Strike":4,
+		"vanguard_Outdated":1,
+		"vanguard_Outdated2":1,
 		"vanguard_pirates_Attack":5,
 		"vanguard_pirates_Strike":5,
 		
@@ -178,6 +190,8 @@
 		"vigilance_FS":3,
 		"vigilance_Standard":3,
 		"vigilance_Strike":3,
+		"vigilance_Support1":0, # PL-only variant
+		"vigilance_Support2":0, # PL-only variant
 		
 		"wolf_Assault":0,
 		"wolf_CS":0,
@@ -199,6 +213,9 @@
 		"shard_left_Attack":5,
 		"shard_left_Attack2":5,
 		"shard_right_Attack":10,
+
+		"skirmish_unit_Type100":5,
+		"skirmish_unit_Type101":5,
 		
 		"fallback":{"combatMedium":0.5},
 	},
@@ -247,11 +264,13 @@
 		"hammerhead_LG_Elite_bv":8,
 		"hammerhead_LG_Overdriven_bv":2,
 		
-		"hyperion_Assault_bv":3,
-		"hyperion_Support_bv":3,
+		"hyperion_Assault_bv":5,
+		"hyperion_Support_bv":5,
 		
 		"manticore_Support":0,
 		"manticore_Assault":0,
+		"manticore_Balanced":0,
+		"manticore_Outdated":0,
 		"manticore_pirates_Support":0,
 		"manticore_pirates_Assault":0,
 		"manticore_luddic_path_Strike":0,
@@ -288,6 +307,7 @@
 		"sunder_Assault":0,
 		"sunder_CS":0,
 		"sunder_Overdriven":0,
+		"sunder_Support":0, # PL-only variant
 		"sunder_LG_Assault":0,
 		"sunder_LG_CS":0,
 		
@@ -298,6 +318,13 @@
 		
 		"facet_Attack":5,
 		"facet_Attack2":5,
+
+		"assault_unit_Type200":5,
+		"assault_unit_Type201":5,
+		
+		"overseer_unit_Type250":10,
+		
+		"shrouded_tendril_Roiling":10,
 		
 		"fallback":{"combatSmall":1},
 	},
@@ -335,6 +362,7 @@
 		"eagle_Assault":0,
 		"eagle_Balanced":0,
 		"eagle_xiv_Elite":0,
+		"eagle_Support":0, # PL-only variant
 		"eagle_LG_Assault":0,
 		"eagle_LG_Support":0,
 		
@@ -349,6 +377,7 @@
 		
 		"falcon_Attack":0,
 		"falcon_CS":0,
+		"falcon_Escort":0, # PL-only variant
 		"falcon_xiv_Elite":0,
 		"falcon_xiv_Escort":0,
 		"falcon_p_Strike":0,
@@ -366,10 +395,13 @@
 		
 		"eradicator_Assault":0,
 		"eradicator_Strike":0,
+		"eradicator_Outdated":0,
+		"eradicator_Outdated2":0,
 		"eradicator_Support":0,
 		"eradicator_Overdriven":0,
 		"eradicator_pirates_Attack":0,
 		"eradicator_pirates_Overdriven":0,
+		"eradicator_Fighter_Support":0,
 		
 		"eradicator_Assault_bv":4,
 		"eradicator_Strike_bv":3,
@@ -389,6 +421,8 @@
 		"champion_Elite":0,
 		"champion_Support":0,
 		"champion_Escort":0,
+		"champion_DEMEscort":0,
+		"champion_Strike":0,
 		
 		"champion_Overdriven_bv":2,
 		"champion_Elite_bv":4,
@@ -396,6 +430,7 @@
 		
 		"gryphon_Standard":0,
 		"gryphon_FS":0,
+		"gryphon_DEM":0,
 		
 		"gryphon_FS_bv":3,
 		"gryphon_Overdriven_bv":2,
@@ -413,6 +448,15 @@
 		"tesseract_Attack2":2.5,
 		"tesseract_Strike":2.5,
 		"tesseract_Disruptor":2.5,
+
+		"standoff_unit_Type300":3.33,
+		"standoff_unit_Type301":3.33,
+		"standoff_unit_Type302":3.34,
+		
+		"hive_unit_Type350":10,
+		
+		"shrouded_eye_Darkened":10,
+		"shrouded_maelstrom_Menacing":10,
 		
 		"fallback":{"combatMedium":1},
 	},
@@ -437,12 +481,18 @@
 		
 		"radiant_Standard":0,
 		"radiant_Strike":0,
+		"radiant_Assault":0,
 		
-		"nova_Standard":5,
-		"nova_Attack":5,
+		"nova_Standard":0,
+		"nova_Attack":0,
+
+		"nova_Strike_bv":5,
+		"nova_Support1B_bv":5,
 		
 		"atlas2_Standard":0,
-		"prometheus2_Standard":10,
+		"prometheus2_Standard":0,
+
+		"prometheus2_Standard_bv":10,
 
 		"conquest_Standard_bv":2,
 		"conquest_Elite_bv":2,
@@ -452,6 +502,9 @@
 
 		"pegasus_Balanced_bv":5,
 		"pegasus_Strike_bv":5,
+
+        "executor_Elite2_bv":5,
+        "executor_Elite_bv":5,
 	
 		"onslaught_Standard_bv":5,
 		"onslaught_Outdated_bv":5,
@@ -462,9 +515,8 @@
 		"odyssey_Balanced_bv":10,
 		
 		"guardian_Standard":10,
-		"radiant_Standard_bv":4,
-		"radiant_Strike_bv":3,
-		"radiant_Assault":3,
+		"radiant_Standard_bv":5,
+		"radiant_Strike_bv":5,
 		
 		"atlas2_Standard_bv":2.5,
 		"atlas2_Standard2_bv":2.5,
@@ -475,6 +527,10 @@
 		"invictus_Support_bv":5,
 		
 		"retribution_Standard_bv":10,
+
+		"fabricator_unit_Type450":10,
+		
+		"shrouded_maw_Ravenous":10,
 		
 		"fallback":{"combatLarge":1},
 	},
@@ -567,6 +623,7 @@
 		"condor_Attack":0,
 		"condor_Support":0,
 		"drover_Strike":0,
+		"drover_Support":0, # probability overridden in persean_league.faction
 
 	
 		"shepherd_Frontier":2,
@@ -588,9 +645,10 @@
 		"mora_Support":0,
 		"mora_Strike":0,
 		
-	
 		"heron_Strike":0,
 		"heron_Attack":0,
+		"heron_Attack1":0, # PL-only variant
+		"heron_Attack2":0, # PL-only variant
 		
 		"heron_FS_bv":3,
 		"heron_Attack1_bv":3,
@@ -654,10 +712,17 @@
 	"phaseLarge":{
 		"doom_Strike":0,
 		"doom_Support":0,
+
+		"grendel_Assault":0,
+		"grendel_Support":0,
 		
-	
 		"doom_Overdriven_bv":2,
 		"doom_Support_bv":8,
+
+		"grendel_Assault_bv":5,
+		"grendel_Support_bv":5,
+
+
 		"fallback":{"phaseMedium":1},
 		"fallback2":{"phaseSmall":1},
 	},
